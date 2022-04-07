@@ -36,13 +36,15 @@
 
     
 </head>
-<header class="header header-intro-clearance header-4">
-    <div class="header-top">
+<body >
+    <div class="page-wrapper">
+<header class="header header-intro-clearance header-4 " >
+    <div class="header-top " style="background-color:#5450a0 ">
         <div class="container ">
-        <div class="header-left">
-                <a href=""><i class="icon-location"></i>   01 BP 6586 Ouagadougou 01</a>  
+          <div class="header-left col-3">
+                <a href=""><i class="icon-location"></i>01 BP 6586 Ouagadougou 01</a>  
             </div>
-            <div class="header-left">
+            <div class="header-left col-2">
                 <a href="tel:#"> <i class="icon-phone"></i>+226 01 74 74 74</a>  
             </div>
             <div class="header-left">
@@ -56,8 +58,8 @@
                         <a href="#"></a>
                         <ul>
                             <li>
-                                <div class="header-dropdown">
-                                    <a href="#">Fcfa</a>
+                                 <div class="header-dropdown text-black">
+                                    <a class="text-black" href="#">Fcfa</a>
                                     <div class="header-menu">
                                         <ul>
                                             <li><a href="#">Eur</a></li>
@@ -86,6 +88,7 @@
 
         </div><!-- End .container -->
     </div><!-- End .header-top -->
+    <!--top-header-->
 
     <div class="header-middle">
         <div class="container">
@@ -96,7 +99,7 @@
                 </button>
                 
                 <a href="index.html" class="logo">
-                    <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
+                    <img src="assets/images/demos/demo-4/logo.png" alt="vendeurexpress" width="105" height="25">
                 </a>
             </div><!-- End .header-left -->
 
@@ -193,10 +196,10 @@
         </div><!-- End .container -->
     </div><!-- End .header-middle -->
 
-    <div class="header-bottom sticky-header">
-        <div class="container">
+    <div class="header-bottom sticky-header" style="background-color: #5450a0">
+        <div class="container" style="background-color: #5450a0">
             <div class="header-left">
-                <div class="dropdown category-dropdown">
+                <div class="dropdown category-dropdown" style="background-color: #5450a0; color:white">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
                         Categories Produits <i class="icon-angle-down"></i>
                     </a>
@@ -219,153 +222,43 @@
                 </div><!-- End .category-dropdown -->
             </div><!-- End .header-left -->
 
-            <div class="header-center">
+            <div class="header-center " >
                 <nav class="main-nav">
-                    <ul class="menu sf-arrows">
-                        <li class="megamenu-container active">
-                            <a href="{{route('acceuil')}}" class="sf-with-ul">Acceuil</a>
+                    <ul class="menu sf-arrows  " >
+                        <li class="megamenu-container active ">
+                            <a style="color: white" href="#" >Acceuil</a>
                         </li>
                         <li>
-                            <a href="#" class="sf-with-ul">VexShop</a>
+                            <a style="color: white" href="#" >VexShop</a>
                         </li>
                         <li>
-                            <a href="product.html" class="sf-with-ul">Product</a>
-
-                            <div class="megamenu megamenu-sm">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6">
-                                        <div class="menu-col">
-                                            <div class="menu-title">Product Details</div><!-- End .menu-title -->
-                                            <ul>
-                                                <li><a href="product.html">Default</a></li>
-                                                <li><a href="product-centered.html">Centered</a></li>
-                                                <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                                                <li><a href="product-gallery.html">Gallery</a></li>
-                                                <li><a href="product-sticky.html">Sticky Info</a></li>
-                                                <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
-                                                <li><a href="product-fullwidth.html">Full Width</a></li>
-                                                <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
-                                            </ul>
-                                        </div><!-- End .menu-col -->
-                                    </div><!-- End .col-md-6 -->
-
-                                    <div class="col-md-6">
-                                        <div class="banner banner-overlay">
-                                            <a href="category.html">
-                                                <img src="assets/images/menu/banner-2.jpg" alt="Banner">
-
-                                                <div class="banner-content banner-content-bottom">
-                                                    <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div><!-- End .banner-title -->
-                                                </div><!-- End .banner-content -->
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-md-6 -->
-                                </div><!-- End .row -->
-                            </div><!-- End .megamenu megamenu-sm -->
+                            <a style="color: white" href="product.html">A Propos</a>
                         </li>
                         <li>
-                            <a href="#" class="sf-with-ul">Pages</a>
-
-                            <ul>
-                                <li>
-                                    <a href="about.html" class="sf-with-ul">About</a>
-
-                                    <ul>
-                                        <li><a href="about.html">About 01</a></li>
-                                        <li><a href="about-2.html">About 02</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html" class="sf-with-ul">Contact</a>
-
-                                    <ul>
-                                        <li><a href="contact.html">Contact 01</a></li>
-                                        <li><a href="contact-2.html">Contact 02</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="404.html">Error 404</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                            </ul>
+                            <a style="color: white" href="#" >Bog</a>
                         </li>
                         <li>
-                            <a href="blog.html" class="sf-with-ul">Blog</a>
-
-                            <ul>
-                                <li><a href="blog.html">Classic</a></li>
-                                <li><a href="blog-listing.html">Listing</a></li>
-                                <li>
-                                    <a href="#">Grid</a>
-                                    <ul>
-                                        <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
-                                        <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
-                                        <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
-                                        <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Masonry</a>
-                                    <ul>
-                                        <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
-                                        <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
-                                        <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
-                                        <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Mask</a>
-                                    <ul>
-                                        <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
-                                        <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Single Post</a>
-                                    <ul>
-                                        <li><a href="single.html">Default with sidebar</a></li>
-                                        <li><a href="single-fullwidth.html">Fullwidth no sidebar</a></li>
-                                        <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <a style="color: white" href="blog.html" >Contact</a>
                         </li>
                         <li>
-                            <a href="elements-list.html" class="sf-with-ul">Elements</a>
-
-                            <ul>
-                                <li><a href="elements-products.html">Products</a></li>
-                                <li><a href="elements-typography.html">Typography</a></li>
-                                <li><a href="elements-titles.html">Titles</a></li>
-                                <li><a href="elements-banners.html">Banners</a></li>
-                                <li><a href="elements-product-category.html">Product Category</a></li>
-                                <li><a href="elements-video-banners.html">Video Banners</a></li>
-                                <li><a href="elements-buttons.html">Buttons</a></li>
-                                <li><a href="elements-accordions.html">Accordions</a></li>
-                                <li><a href="elements-tabs.html">Tabs</a></li>
-                                <li><a href="elements-testimonials.html">Testimonials</a></li>
-                                <li><a href="elements-blog-posts.html">Blog Posts</a></li>
-                                <li><a href="elements-portfolio.html">Portfolio</a></li>
-                                <li><a href="elements-cta.html">Call to Action</a></li>
-                                <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
-                            </ul>
+                            <a style="color: white" href="elements-list.html"> compte</a>
                         </li>
                     </ul><!-- End .menu -->
                 </nav><!-- End .main-nav -->
             </div><!-- End .header-center -->
 
-            <div class="header-right">
-                <div class="dropdown category-dropdown">
-                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+            <div class="header-right offset-4">
+                <div class="dropdown category-dropdown text-write"style="background-color: #5450a0;color: white; ">
+                    <a style="color: white" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
                         Categories Produits <i class="icon-angle-down"></i>
                     </a>
 
-                    <div class="dropdown-menu">
-                        <nav class="side-nav">
-                            <ul class="menu-vertical sf-arrows">
-                                <li><a href="#">Appareils Electronique</a></li>
+                    <div class="dropdown-menu ">
+                        <nav class="side-nav " >
+                            <ul class="menu-vertical sf-arrows " >
+                                <li ><a href="#">Appareils Electronique</a></li>
                                 <li><a href="#">Appareils Menager</a></li>
-                                <li><a href="#"></a></li>
+                                <li><a href="#"></a>ordinateurs</li>
                                 <li><a href="#">Storage</a></li>
                                 <li><a href="#">Armchairs & Chaises</a></li>
                                 <li><a href="#">Decoration </a></li>
@@ -380,7 +273,8 @@
         </div><!-- End .container -->
     </div><!-- End .header-bottom -->
 </header><!-- End .header -->
-
+    </div>
+</body>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
