@@ -1,6 +1,6 @@
 @extends('layouts.client.app')
 @section('titre')
-    Acceuil | Client
+    A propos
 @endsection
 @section('contenu')
     

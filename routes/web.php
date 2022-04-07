@@ -24,3 +24,15 @@ Route::get('/home', function(){
 Route::get('/client',function(){
     return view('client');
 });
+Route::get('/a-propos',function(){
+    return view('apropos');
+});
+Route::get('/contact',function(){
+    return view('contact');
+});
+Route::get('/inscription',function(){
+    return view('inscription');
+});
+Route::get('/vexshop',function(){
+    return view('vexshop');
+});
