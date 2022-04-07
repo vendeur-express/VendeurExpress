@@ -33,6 +33,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/skins/skin-demo-4.css">
     <link rel="stylesheet" href="assets/css/demos/demo-4.css">
+    <style>
+        .panel-footer.panel-custom {
+        background: #011628;
+        color: white;
+    }
+    </style>
 </head>
 <body>
     <div class="page-wrapper">
@@ -632,15 +638,72 @@
         <!-- Main JS File -->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/demos/demo-4.js"></script>
-        <footer>
-            <div class="footer-bottom">
-                <div class="container">
-                    
-                </div><!-- End .container -->
-            </div><!-- End .footer-bottom -->
+        <footer class="footer panel-footer panel-custom">
         	<div class="footer-middle">
 	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-sm-4 col-lg-2">
+	            			<div class="widget widget-about">
+	            				<img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="50">
+                                <ul class="widget-list">
+	            					<li><a href="#">Devenir un Vendeur Express</a></li>
+	            					<li><a href="#">Devenir un Demarcheur</a></li>
+	            				</ul>
+	            			</div><!-- End .widget about-widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
 
+	            		<div class="col-sm-4 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title text-white">Nos Formulaires</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="#">Devenir un Vendeur Express</a></li>
+	            					<li><a href="#">Devenir un Demarcheur</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-4 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title text-white">Informations utiles</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="#">A Propos</a></li>
+	            					<li><a href="#">VEX SHOP</a></li>
+	            					<li><a href="#">Contactez-nous</a></li>
+	            					<li><a href="#">Livraison & Expédition</a></li>
+	            					<li><a href="#">Actualités</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-4 col-lg-2">
+	            			<div class="widget">
+	            				<h4 class="widget-title text-white">Nos Services</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="#">Politique de confidentialité</a></li>
+	            					<li><a href="#">Condition d'utilisation</a></li>
+	            					<li><a href="#">Srvice Clientèle</a></li>
+	            					<li><a href="#">Informations de Livraison</a></li>
+	            					<li><a href="#">Paiements</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+                        <div class="col-sm-4 col-lg-2">
+	            			<div class="widget">
+	            				<h4 class="widget-title text-white">NEWSLETTER</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="#">Abonnez-vous à notre newsletter</a></li>
+	            					<li><a href="#">Condition d'utilisation</a></li>
+	            					<li><a href="#">Srvice Clientèle</a></li>
+	            					<li><a href="#">Informations de Livraison</a></li>
+	            					<li><a href="#">Paiements</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+	            	</div><!-- End .row -->
 	            </div><!-- End .container -->
 	        </div><!-- End .footer-middle -->
 
