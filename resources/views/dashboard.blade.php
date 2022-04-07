@@ -1,28 +1,4 @@
-<head>
-	<style>
-	.panel-footer.panel-custom {
-		background: #000000;
-		color: white;
-	}
-	</style>
-    <meta charset="UTF-8">
-    <title>Vendeur Express</title>
-    <link rel="manifest" href="assets/images/icons/site.html">
-    <meta name="apple-mobile-web-app-title" content="Molla">
-    <meta name="application-name" content="Molla">
-    <meta name="msapplication-TileColor" content="#cc9966">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
-    <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/skins/skin-demo-4.css">
-    <link rel="stylesheet" href="assets/css/demos/demo-4.css">
-</head>
+@extends('layouts.client.app')
 
 
 
@@ -30,9 +6,7 @@
 
 
 
-
-
-
+{{-- 
 <footer class="footer panel-footer panel-custom">
         	<div class="footer-middle">
 	            <div class="container">
@@ -114,4 +88,4 @@
 	        		</figure><!-- End .footer-payments -->
 	        	</div><!-- End .container -->
 	        </div><!-- End .footer-bottom -->
-        </footer><!-- End .footer -->
+        </footer><!-- End .footer --> --}}
