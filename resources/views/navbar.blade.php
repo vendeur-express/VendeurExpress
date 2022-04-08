@@ -122,9 +122,9 @@
                     <a href="wishlist.html" title="Wishlist">
                         <div class="icon">
                             <i class="icon-heart-o"></i>
-                            <span class="wishlist-count badge">3</span>
+                            <span class="wishlist-count badge">0</span>
                         </div>
-                        <p>Favorie</p>
+                        <p>Favorite</p>
                     </a>
                 </div><!-- End .compare-dropdown -->
 
@@ -142,7 +142,7 @@
                             <div class="product">
                                 <div class="product-cart-details">
                                     <h4 class="product-title">
-                                        <a href="product.html">Beige knitted elastic runner shoes</a>
+                                        <a href="product.html">chaussures weston</a>
                                     </h4>
 
                                     <span class="cart-product-info">
@@ -200,7 +200,8 @@
         <div class="container" style="background-color: #5450a0">
             <div class="header-left">
                 <div class="dropdown category-dropdown" style="background-color: #5450a0; color:white">
-                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" 
+                    aria-expanded="false" data-display="static" title="Browse Categories">
                         Categories Produits <i class="icon-angle-down"></i>
                     </a>
 
@@ -235,7 +236,7 @@
                             <a style="color: white" href="product.html">A Propos</a>
                         </li>
                         <li>
-                            <a style="color: white" href="#" >Bog</a>
+                            <a style="color: white" href="#" >Blog</a>
                         </li>
                         <li>
                             <a style="color: white" href="blog.html" >Contact</a>
@@ -247,10 +248,11 @@
                 </nav><!-- End .main-nav -->
             </div><!-- End .header-center -->
 
-            <div class="header-right offset-4">
-                <div class="dropdown category-dropdown text-write"style="background-color: #5450a0;color: white; ">
-                    <a style="color: white" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
-                        Categories Produits <i class="icon-angle-down"></i>
+            <div class="header-right ">
+                <div class="dropdown category-dropdown "style="background-color: #5450a0;color: white; ">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" 
+                    aria-expanded="false" data-display="static" title="Browse Categories">
+                        Categories Services <i class="icon-angle-down"></i>
                     </a>
 
                     <div class="dropdown-menu ">
@@ -258,7 +260,7 @@
                             <ul class="menu-vertical sf-arrows " >
                                 <li ><a href="#">Appareils Electronique</a></li>
                                 <li><a href="#">Appareils Menager</a></li>
-                                <li><a href="#"></a>ordinateurs</li>
+                                <li><a href="#">ordinateurs</a></li>
                                 <li><a href="#">Storage</a></li>
                                 <li><a href="#">Armchairs & Chaises</a></li>
                                 <li><a href="#">Decoration </a></li>
