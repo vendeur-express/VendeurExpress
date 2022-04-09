@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/acceuil', function () {
     return view('navbar');
 })->name('acceuil');
 
@@ -21,6 +21,6 @@ Route::get('/home', function(){
     return view('dashboard');
 })->name('home');
 
-Route::get('/client',function(){
+Route::get('/',function(){
     return view('client');
 });
