@@ -13,26 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcom', function () {
-    return view('welcome');
+Route::get('navbar', function () {
+    return view('navbar');
 });
 
-Route::get('/home', function(){
-    return view('dashboard');
-})->name('home');
+// Route::get('/home', function(){
+//     return view('dashboard');
+// })->name('home');
 
-Route::get('/client',function(){
-    return view('client');
-});
-Route::get('/a-propos',function(){
-    return view('apropos');
-});
-Route::get('/contact',function(){
-    return view('contact');
-});
-Route::get('/inscription',function(){
-    return view('inscription');
-});
-Route::get('/vexshop',function(){
-    return view('vexshop');
-});
+
+// Route::get('/client',function(){
+//     return view('client');
+// });
+// Route::get('/a-propos',function(){
+//     return view('apropos');
+// });
+// Route::get('/contact',function(){
+//     return view('contact');
+// });
+// Route::get('/inscription',function(){
+//     return view('inscription');
+// });
+// Route::get('/vexshop',function(){
+//     return view('vexshop');
+// });
+
+// // Route::get('/client',function(){
+// //     return view('client');
+// // });
+
