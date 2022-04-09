@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Molla - Bootstrap eCommerce Template</title>
+    <title>@yield('titre')</title>
     <meta name="keywords" content="HTML5 Template">
     <meta name="description" content="Molla - Bootstrap eCommerce Template">
     <meta name="author" content="p-themes">
@@ -231,22 +231,22 @@
                         <nav class="main-nav">
                             <ul class="menu sf-arrows  " >
                                 <li class="megamenu-container active ">
-                                    <a style="color: white" href="#" >Acceuil</a>
+                                    <a style="color: white" href="{{Route('client')}}" >Acceuil</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="#" >VexShop</a>
+                                    <a style="color: white" href="{{Route('vexshop')}}" >VexShop</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="product.html">A Propos</a>
+                                    <a style="color: white" href="{{Route('apropos')}}">A Propos</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="#" >Blog</a>
+                                    <a style="color: white" href="{{Route('blog')}}" >Blog</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="blog.html" >Contact</a>
+                                    <a style="color: white" href="{{Route('contact')}}" >Contact</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="elements-list.html"> compte</a>
+                                    <a style="color: white" href="{{Route('compte')}}"> compte</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->

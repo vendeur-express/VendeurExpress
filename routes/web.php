@@ -23,4 +23,19 @@ Route::get('/home', function(){
 
 Route::get('/',function(){
     return view('client');
-});
+})->name('client');
+Route::get('/vexshop',function(){
+    return view('vexshop');
+})->name('vexshop');
+Route::get('/apropos',function(){
+    return view('apropos');
+})->name('apropos');
+Route::get('/blog',function(){
+    return view('blog');
+})->name('blog');
+Route::get('/contact',function(){
+    return view('contact');
+})->name('contact');
+Route::get('/compte',function(){
+    return view('compte');
+})->name('compte');
