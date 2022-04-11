@@ -39,3 +39,9 @@ Route::get('/contact',function(){
 Route::get('/compte',function(){
     return view('compte');
 })->name('compte');
+Route::get('/panier',function(){
+    return view('panier');
+})->name('panier');
+Route::get('/paiement',function(){
+    return view('paiement');
+})->name('paiement');

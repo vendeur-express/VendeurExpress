@@ -13,11 +13,11 @@
     <meta name="author" content="p-themes">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    {{-- <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png"> --}}
     <link rel="manifest" href="assets/images/icons/site.html">
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
-    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    {{-- <link rel="shortcut icon" href="assets/images/icons/favicon.ico"> --}}
     <meta name="apple-mobile-web-app-title" content="Molla">
     <meta name="application-name" content="Molla">
     <meta name="msapplication-TileColor" content="#cc9966">
@@ -102,7 +102,7 @@
                             <i class="icon-bars"></i>
                         </button>
                         
-                        <a href="index.html" class="logo">
+                        <a href="{{route('client')}}" class="logo">
                             <img src="assets/images/demos/demo-4/logo.png" alt="vendeurexpress" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
@@ -191,7 +191,7 @@
                                 </div><!-- End .dropdown-cart-total -->
         
                                 <div class="dropdown-cart-action">
-                                    <a href="cart.html" class="btn btn-primary">Voir Panier</a>
+                                    <a href="{{route('panier')}}" class="btn btn-primary">Voir Panier</a>
                                     <a href="checkout.html" class="btn btn-outline-primary-2"><span>Commander</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
@@ -227,26 +227,26 @@
                         </div><!-- End .category-dropdown -->
                     </div><!-- End .header-left -->
         
-                    <div class="header-center " >
-                        <nav class="main-nav">
-                            <ul class="menu sf-arrows  " >
+                    <div class="header-center" >
+                        <nav class="main-nav ">
+                            <ul class="menu sf-arrows" >
                                 <li class="megamenu-container active ">
-                                    <a style="color: white" href="{{Route('client')}}" >Acceuil</a>
+                                    <a style="color: white" href="{{route('client')}}" >ACCEUIL</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{Route('vexshop')}}" >VexShop</a>
+                                    <a style="color: white" href="{{route('vexshop')}}" >VEX SHOP</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{Route('apropos')}}">A Propos</a>
+                                    <a style="color: white" href="{{route('apropos')}}">A PROPOS</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{Route('blog')}}" >Blog</a>
+                                    <a style="color: white" href="{{route('blog')}}" >BLOG</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{Route('contact')}}" >Contact</a>
+                                    <a style="color: white" href="{{route('contact')}}" >CONTACTEZ-NOUS</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{Route('compte')}}"> compte</a>
+                                    <a style="color: white" href="{{route('compte')}}"> S'INSCRIRE</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
@@ -279,6 +279,7 @@
                 </div><!-- End .container -->
             </div><!-- End .header-bottom -->
         </header><!-- End .header -->
+        @yield('contenu')
         </div>
         <!-- Plugins JS File -->
         <script src="assets/js/jquery.min.js"></script>
