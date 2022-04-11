@@ -36,13 +36,12 @@
 
     
 </head>
-<body >
-    <div class="page-wrapper">
+
 <header class="header header-intro-clearance header-4 " >
-    <div class="header-top " style="background-color:#5450a0 ">
+     <div class="header-top " style="background-color:#5450a0 ">
         <div class="container ">
           <div class="header-left col-3">
-                <a href=""><i class="icon-location"></i>01 BP 6586 Ouagadougou 01</a>  
+                <a href=""><i class="icon-gps"></i>01 BP 6586 Ouagadougou 01</a>  
             </div>
             <div class="header-left col-2">
                 <a href="tel:#"> <i class="icon-phone"></i>+226 01 74 74 74</a>  
@@ -87,10 +86,10 @@
             </div><!-- End .header-right -->
 
         </div><!-- End .container -->
-    </div><!-- End .header-top -->
-    <!--top-header-->
+     </div><!-- End .header-top -->
+     <!--top-header-->
 
-    <div class="header-middle">
+     <div class="header-middle">
         <div class="container">
             <div class="header-left">
                 <button class="mobile-menu-toggler">
@@ -194,9 +193,9 @@
                 </div><!-- End .cart-dropdown -->
             </div><!-- End .header-right -->
         </div><!-- End .container -->
-    </div><!-- End .header-middle -->
+     </div><!-- End .header-middle -->
 
-    <div class="header-bottom sticky-header" style="background-color: #5450a0">
+     <div class="header-bottom sticky-header" style="background-color: #5450a0">
         <div class="container" style="background-color: #5450a0">
             <div class="header-left">
                 <div class="dropdown category-dropdown" style="background-color: #5450a0; color:white">
@@ -273,11 +272,16 @@
                 </div><!-- End .category-dropdown -->
             </div><!-- End .header-left -->
         </div><!-- End .container -->
-    </div><!-- End .header-bottom -->
-</header><!-- End .header -->
-    </div>
-</body>
+     </div><!-- End .header-bottom -->
+    </header><!-- End .header -->
+   
 
+    <script src="jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="npm/popper.js@1.14.7/dist/umd/popper.min.js"
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.hoverIntent.min.js"></script>
@@ -291,4 +295,4 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-4.js"></script>
-</body>
+</html>

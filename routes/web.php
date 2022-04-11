@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/acceuil', function () {
-    return view('navbar');
+    return view('acceuil.acceuil');
 })->name('acceuil');
 
 Route::get('/home', function(){
