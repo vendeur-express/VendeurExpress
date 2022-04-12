@@ -45,3 +45,6 @@ Route::get('/panier',function(){
 Route::get('/paiement',function(){
     return view('paiement');
 })->name('paiement');
+Route::get('/favorie',function(){
+    return view(('favorie'));
+})->name('favorie');
