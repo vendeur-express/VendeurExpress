@@ -18,92 +18,135 @@
                     }
                 }
             }'>
-            <div class="intro-slide" style=" height : 600px;text-align :center">
-                <div>
-                <img src="assets/images/demos/demo-4/slider/banniere2.jpg">
-                </div>
-                <h1 style="text-align: center; color:black"> Vendre et Acheter en ligne</h1>
-                {{-- <div class="container intro-content">
-                    <div class="row justify-content-end">
-                        <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                            <h3 class="intro-subtitle text-third">Deals and Promotions</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">Beats by</h1>
-                            <h1 class="intro-title">Dre Studio 3</h1><!-- End .intro-title -->
-
-                            <div class="intro-price">
-                                <sup class="intro-old-price">$349,95</sup>
-                                <span class="text-third">
-                                    $279<sup>.99</sup>
-                                </span>
-                            </div><!-- End .intro-price -->
-
-                            <a href="category.html" class="btn btn-primary btn-round">
-                                <span>Shop More</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .col-lg-11 offset-lg-1 -->
-                    </div><!-- End .row -->
-                </div><!-- End .intro-content --> --}}
-            </div><!-- End .intro-slide -->
-
-            <div class="intro-slide" style="height : 600px">
-                <img src="assets/images/demos/demo-4/slider/banniere2.jpg">
-                <h1 style="text-align: center; color:black"> Vendre et Acheter en ligne</h1>
-                {{-- <div class="container intro-content">
-                    <div class="row justify-content-end">
-                        <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                            <h3 class="intro-subtitle text-primary">New Arrival</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1><!-- End .intro-title -->
-
-                            <div class="intro-price">
-                                <sup>Today:</sup>
-                                <span class="text-primary">
-                                    $999<sup>1.99</sup>
-                                </span>
-                            </div><!-- End .intro-price -->
-
-                            <a href="category.html" class="btn btn-primary btn-round">
-                                <span>Shop More</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .col-md-6 offset-md-6 -->
-                    </div><!-- End .row -->
-                </div><!-- End .intro-content --> --}}
-            </div><!-- End .intro-slide -->
-
-            <div class="intro-slide" style="height : 600px">
-                <img src="assets/images/demos/demo-4/slider/banniere3.jpg">
-                <div class="row justify-content-center">
-                    <h1 style="text-align: center; color:black"> Vendre et Acheter en ligne</h1>
+            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.jpg);height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center "style="text-align: center; color: white">
+                    <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
-                {{-- <div class="container intro-content">
-                   
-                        <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                            <h3 class="intro-subtitle text-primary">New Arrival</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1><!-- End .intro-title -->
+                </div>
+                
+            </div><!-- End .intro-slide -->
 
-                            <div class="intro-price">
-                                <sup>Today:</sup>
-                                <span class="text-primary">
-                                    $999<sup>1.99</sup>
-                                </span>
-                            </div><!-- End .intro-price -->
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere2.jpg);height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center "style="text-align: center; color:black">
+                    <h1 > Vendre et Acheter en ligne</h1>
+                </div><!-- End .row -->
+                </div>
+                
+            </div><!-- End .intro-slide -->
 
-                            <a href="category.html" class="btn btn-primary btn-round">
-                                <span>Shop More</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .col-md-6 offset-md-6 -->
-                    
-                </div><!-- End .intro-content --> --}}
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere3.jpg); height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center "style="text-align: center; color:black">
+                    <h1 > Vendre et Acheter en ligne</h1>
+                </div><!-- End .row -->
+                </div>
+            </div><!-- End .intro-slide -->
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere4.jpg); height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center "style="text-align: center; color:black">
+                    <h1 > Vendre et Acheter en ligne</h1>
+                </div><!-- End .row -->
+                </div>
+               
+            </div><!-- End .intro-slide -->
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere5.png); height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center"style="text-align: center; color:black">
+                    <h1 > Vendre et Acheter en ligne</h1>
+                </div><!-- End .row -->
+                </div>
+            </div><!-- End .intro-slide -->
+            
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere6.png); height : 600px">
+                <div class="container intro-content">
+                <div class="row justify-content-center "style="text-align: center; color:white;">
+                    <h1 > Vendre et Acheter en ligne</h1>
+                </div><!-- End .row -->
+            </div>
             </div><!-- End .intro-slide -->
         </div><!-- End .intro-slider owl-carousel owl-simple -->
 
         <span class="slider-loader"></span><!-- End .slider-loader -->
      </div><!-- End .intro-slider-container -->
+    </div>
 
-     <div class="container">
-        <h2 class="title text-center mb-8">Explore Popular Categories</h2><!-- End .title text-center -->
+    <!-- **********************************************end of slide *****************************************************-->
+    <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+          <div class="col py-3 px-lg-5 border bg-light">
+              
+           </div>
+          <div class="col py-3 px-lg-5 border bg-white" style="text-align: center">
+           <h1> A propos </h1>
+           <b> <h2> Vendeur Express </h2> </b>
+           <p style=>
+            Nous vendons des biens et des services de tout genres en ligne. Notre 
+            ambition est de redorer le blason des artisans, des petits entrepreneurs,
+            des commerçants et des laissés-pour-compte du marketing digital, d’avoir
+            une visibilité à travers notre plateforme.
+           </p>
+            <img style="width: 100px; height:100px" src="assets/images/demos/demo-4/logo.png">
+            
+            <b> <h6> Votre satisfaction, notre source de motivation.</h6></b> 
+          </div>
+          <div class="col py-3 px-lg-5 border bg-light">
+
+          </div>
+        </div>
+      </div>
+
+ 
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-3">
+                <div class="banner banner-overlay banner-overlay-light">
+                    <a href="#">
+                        <img src="assets/images/demos/demo-4/banners/banner-1.png" alt="Banner">
+                    </a>
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle"><a href="#">Smart Offer</a></h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title"><a href="#">Save $150 <strong>on Samsung <br>Galaxy Note9</strong></a></h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-4 -->
+
+            <div class="col-md-6 col-lg-4 w-500">
+                <div class="banner banner-overlay banner-overlay-light">
+                    <a href="#">
+                        <img src="assets/images/demos/demo-4/banners/banner-2.jpg" alt="Banner">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle"><a href="#">Time Deals</a></h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title"><a href="#"><strong>Bose SoundSport</strong> <br>Time Deal -30%</a></h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-md-4 -->
+
+            <div class="col-md-6 col-lg-4">
+                <div class="banner banner-overlay banner-overlay-light">
+                    <a href="#">
+                        <img src="assets/images/demos/demo-4/banners/banner-3.png" alt="Banner">
+                    </a>
+
+                    <div class="banner-content">
+                        <h4 class="banner-subtitle"><a href="#">Clearance</a></h4><!-- End .banner-subtitle -->
+                        <h3 class="banner-title"><a href="#"><strong>GoPro - Fusion 360</strong> <br>Save $70</a></h3><!-- End .banner-title -->
+                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .banner-content -->
+                </div><!-- End .banner -->
+            </div><!-- End .col-lg-4 -->
+        </div><!-- End .row -->
+    </div><!-- End .container -->
+    
+    <div class="container">
+        <h2 class="title text-center mb-8">Explorez Categories populaire</h2><!-- End .title text-center -->
         
         <div class="cat-blocks-container">
             <div class="row">
@@ -178,20 +221,88 @@
                         <h3 class="cat-block-title">Smart Watches</h3><!-- End .cat-block-title -->
                     </a>
                 </div><!-- End .col-sm-4 col-lg-2 -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Audio</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
+
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Smart Watches</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Audio</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
+
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Smart Watches</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Audio</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
+
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <a href="category.html" class="cat-block">
+                        <figure>
+                            <span>
+                                <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
+                            </span>
+                        </figure>
+
+                        <h3 class="cat-block-title">Smart Watches</h3><!-- End .cat-block-title -->
+                    </a>
+                </div><!-- End .col-sm-4 col-lg-2 -->
             </div><!-- End .row -->
         </div><!-- End .cat-blocks-container -->
     </div><!-- End .container -->
 
-    <div class="mb-4"></div><!-- End .mb-4 -->
 
+    <div class="mb-4"></div><!-- End .mb-4 -->
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-12 col-lg-4">
                 <div class="banner banner-overlay banner-overlay-light">
                     <a href="#">
                         <img src="assets/images/demos/demo-4/banners/banner-1.png" alt="Banner">
                     </a>
-
                     <div class="banner-content">
                         <h4 class="banner-subtitle"><a href="#">Smart Offer</a></h4><!-- End .banner-subtitle -->
                         <h3 class="banner-title"><a href="#">Save $150 <strong>on Samsung <br>Galaxy Note9</strong></a></h3><!-- End .banner-title -->
@@ -2605,7 +2716,7 @@
                 </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
             </div><!-- End .row -->
         </div><!-- End .products -->
-    </div><!-- End .container -->
+    <!-- End .container -->
 
     <div class="mb-4"></div><!-- End .mb-4 -->
 
@@ -2671,3 +2782,24 @@
     </div><!-- End .icon-boxes-container -->
 </main><!-- End .main -->
 @endsection
+
+{{-- <div class="container intro-content">
+                    <div class="row justify-content-end">
+                        <div class="col-auto col-sm-7 col-md-6 col-lg-5">
+                            <h3 class="intro-subtitle text-primary">New Arrival</h3><!-- End .h3 intro-subtitle -->
+                            <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1><!-- End .intro-title -->
+
+                            <div class="intro-price">
+                                <sup>Today:</sup>
+                                <span class="text-primary">
+                                    $999<sup>1.99</sup>
+                                </span>
+                            </div><!-- End .intro-price -->
+
+                            <a href="category.html" class="btn btn-primary btn-round">
+                                <span>Shop More</span>
+                                <i class="icon-long-arrow-right"></i>
+                            </a>
+                        </div><!-- End .col-md-6 offset-md-6 -->
+                    </div><!-- End .row -->
+                </div><!-- End .intro-content --> --}}
