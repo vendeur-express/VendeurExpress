@@ -59,7 +59,7 @@
         
                         <ul class="top-menu">
                             <li>
-                                <a href="#"></a>
+                                <a href="#"> link</a>
                                 <ul>
                                     <li>
                                          <div class="header-dropdown text-black">
@@ -403,7 +403,7 @@
 	            					<li><a href="#">Abonnez-vous à notre newsletter</a></li>
 	            					<li><a href="#">Condition d'utilisation</a></li>
 	            					<li><a href="#">Srvice Clientèle</a></li>
-	            					<li><a href="#">Informations de Livraison</a></li>
+	            					<li><a href="#">Informations de Livraison</a></li>  
 	            					<li><a href="#">Paiements</a></li>
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->
