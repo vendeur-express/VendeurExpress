@@ -40,7 +40,10 @@
 <header class="header header-intro-clearance header-4 " >
      <div class="header-top " style="background-color:#5450a0 ">
         <div class="container ">
-          <div class="header-left col-3">
+            <div class="row header-left">
+
+            </div>
+          <div class="header-left col-3 bg-danger h1">
                 <a href=""><i class="icon-gps"></i>01 BP 6586 Ouagadougou 01</a>  
             </div>
             <div class="header-left col-2">

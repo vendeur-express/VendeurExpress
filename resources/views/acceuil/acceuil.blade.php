@@ -72,13 +72,13 @@
      </div><!-- End .intro-slider-container -->
     </div>
 
-    <!-- **********************************************end of slide *****************************************************-->
+    <!-- **********************************************End of slide *****************************************************-->
     <div class="container px-lg-5">
         <div class="row mx-lg-n5">
-          <div class="col py-3 px-lg-5 border bg-light">
+          <div class="col py-3 px-lg-5  bg-light">
               
            </div>
-          <div class="col py-3 px-lg-5 border bg-white" style="text-align: center">
+          <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
            <h1> A propos </h1>
            <b> <h2> Vendeur Express </h2> </b>
            <p style=>
@@ -91,7 +91,7 @@
             
             <b> <h6> Votre satisfaction, notre source de motivation.</h6></b> 
           </div>
-          <div class="col py-3 px-lg-5 border bg-light">
+          <div class="col py-3 px-lg-5  bg-light">
 
           </div>
         </div>
@@ -1507,7 +1507,7 @@
                                 <div class="ratings">
                                     <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
                                 </div><!-- End .ratings -->
-                                <span class="ratings-text">( 4 Reviews )</span>
+                                <span class="ratings-text">(4 Reviews)</span>
                             </div><!-- End .rating-container -->
                         </div><!-- End .product-body -->
                     </div><!-- End .product -->
@@ -2713,7 +2713,7 @@
                             </div><!-- End .rating-container -->
                         </div><!-- End .product-body -->
                     </div><!-- End .product -->
-                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                </div><!-- End .col-sm-6 col-yimd-4 col-lg-3 -->
             </div><!-- End .row -->
         </div><!-- End .products -->
     <!-- End .container -->
@@ -2782,6 +2782,7 @@
     </div><!-- End .icon-boxes-container -->
 </main><!-- End .main -->
 @endsection
+
 
 {{-- <div class="container intro-content">
                     <div class="row justify-content-end">

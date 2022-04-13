@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +47,7 @@ Route::get('/paiement',function(){
 Route::get('/favorie',function(){
     return view(('favorie'));
 })->name('favorie');
+Route::get('/index',function(){
+    return view('testresponsible.index-4');
+
+});
