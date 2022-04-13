@@ -103,7 +103,7 @@
                         <textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Message *"></textarea>
 
                         <button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm">
-                            <span>SUBMIT</span>
+                            <span>Envoyez</span>
                             <i class="icon-long-arrow-right"></i>
                         </button>
                     </form><!-- End .contact-form -->

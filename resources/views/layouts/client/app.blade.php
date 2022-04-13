@@ -192,7 +192,7 @@
         
                                 <div class="dropdown-cart-action">
                                     <a href="{{route('panier')}}" class="btn btn-primary">Voir Panier</a>
-                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Commander</span><i class="icon-long-arrow-right"></i></a>
+                                    <a href="{{route('paiement')}}" class="btn btn-outline-primary-2"><span>Commander</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
@@ -231,22 +231,22 @@
                         <nav class="main-nav ">
                             <ul class="menu sf-arrows" >
                                 <li class="megamenu-container active ">
-                                    <a style="color: white" href="{{route('client')}}" >ACCEUIL</a>
+                                    <a style="color: white" href="{{route('client')}}" >Acceuil</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('vexshop')}}" >VEX SHOP</a>
+                                    <a style="color: white" href="{{route('vexshop')}}" >Vex shop</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('apropos')}}">A PROPOS</a>
+                                    <a style="color: white" href="{{route('apropos')}}">A propos</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('blog')}}" >BLOG</a>
+                                    <a style="color: white" href="{{route('blog')}}" >Blog</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('contact')}}" >CONTACTEZ-NOUS</a>
+                                    <a style="color: white" href="{{route('contact')}}" >Contactez-nous</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('compte')}}"> S'INSCRIRE</a>
+                                    <a style="color: white" href="{{route('compte')}}"> S'inscrire</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
@@ -281,6 +281,53 @@
         </header><!-- End .header -->
         @yield('contenu')
         </div>
+        <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+    
+        <div class="mobile-menu-container">
+            <div class="mobile-menu-wrapper">
+                <span class="mobile-menu-close"><i class="icon-close"></i></span>
+    
+                <form action="#" method="get" class="mobile-search">
+                    <label for="mobile-search" class="sr-only">Search</label>
+                    <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
+                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                </form>
+                
+                <nav class="mobile-nav">
+                    <ul class="mobile-menu">
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="category.html">Shop</a>
+                        </li>
+                        <li>
+                            <a href="product.html" class="sf-with-ul">Product</a>
+                        </li>
+                        <li>
+                            <a href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+    
+                        </li>
+                        <li>
+                            <a href="elements-list.html">Elements</a>
+                        </li>
+                    </ul>
+                </nav><!-- End .mobile-nav -->
+    
+                <div class="social-icons">
+                    <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+                </div><!-- End .social-icons -->
+            </div><!-- End .mobile-menu-wrapper -->
+        </div><!-- End .mobile-menu-container -->
         <!-- Plugins JS File -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
