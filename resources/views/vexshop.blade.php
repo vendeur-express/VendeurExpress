@@ -91,13 +91,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -140,13 +140,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -186,13 +186,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -222,13 +222,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -259,13 +259,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -304,13 +304,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -353,13 +353,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -402,13 +402,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
@@ -438,13 +438,13 @@
                                         </a>
 
                                         <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>Ajouter au Favories</span></a>
                                             <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
                                             <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
                                         </div><!-- End .product-action-vertical -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
 
