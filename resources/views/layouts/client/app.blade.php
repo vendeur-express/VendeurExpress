@@ -44,54 +44,27 @@
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
-                <div class="container ">
-                  <div class="header-left col-3">
-                        <a href=""><i class="icon-location"></i>01 BP 6586 Ouagadougou 01</a>  
-                    </div>
-                    <div class="header-left col-2">
-                        <a href="tel:#"> <i class="icon-phone"></i>+226 01 74 74 74</a>  
-                    </div>
-                    <div class="header-left">
-                        <a href="tel:#"><i class="icon-whatsapp"></i>+226 78 02 11 57</a>  
-                    </div>
-        
-                    <div class="header-right">
-        
-                        <ul class="top-menu">
-                            <li>
-                                <a href="#"> link</a>
-                                <ul>
-                                    <li>
-                                         <div class="header-dropdown text-black">
-                                            <a class="text-black" href="#">Fcfa</a>
-                                            <div class="header-menu">
-                                                <ul>
-                                                    <li><a href="#">Eur</a></li>
-                                                    <li><a href="#">Usd</a></li>
-                                                </ul>
-                                            </div><!-- End .header-menu -->
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="header-dropdown">
-                                            <a href="#">Français</a>
-                                            <div class="header-menu">
-                                                <ul>
-                                                    <li><a href="#">Français</a></li>
-                                                    <li><a href="#">Anglais</a></li>
-                                                    
-                                                </ul>
-                                            </div><!-- End .header-menu -->
-                                        </div>
-                                    </li>
-                                    <li><a href="#signin-modal" data-toggle="modal">se connecter / S'enregister</a></li>
-                                </ul>
-                            </li>
-                        </ul><!-- End .top-menu -->
-                    </div><!-- End .header-right -->
-        
-                </div><!-- End .container -->
-            </div><!-- End .header-top -->
+                <div class="header-left">
+                    <a href=""><i class="icon-location"></i>01 BP 6586 Ouagadougou 01</a>  
+                </div>
+                <div class="header-left">
+                    <a href="tel:#"> <i class="icon-phone"></i>+226 01 74 74 74</a>  
+                </div>
+                <div class="header-left">
+                    <a href="tel:#"><i class="icon-whatsapp"></i>+226 78 02 11 57</a>  
+                </div>
+                <div class="header-left">
+                    <a class="text-black" href="#">Fcfa</a>
+                </div>
+                <div class="header-center">
+                    <li><a href="#">Français /</a></li>
+                    <li><a href="#">Anglais</a></li>
+                </div><!-- End .header-menu -->
+                <div class="header-center">
+                    <li><a href="#">Eur</a></li>
+                        <li><a href="#">Usd</a></li>
+                </div><!-- End .header-menu -->     
+            </div>
             <!--top-header-->
         
             <div class="header-middle">
@@ -112,7 +85,7 @@
                             <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper search-wrapper-wide">
-                                    <label for="q" class="sr-only">Search</label>
+                                    <label for="q" class="sr-only">Rechercer</label>
                                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
                                     <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
                                 </div><!-- End .header-search-wrapper -->
@@ -123,7 +96,7 @@
                     <div class="header-right">
         
                         <div class="wishlist">
-                            <a href="{{route('favorie')}}" title="Wishlist">
+                            <a href="{{route('favorie')}}" title="Favories">
                                 <div class="icon">
                                     <i class="icon-heart-o"></i>
                                     <span class="wishlist-count badge">0</span>
@@ -300,19 +273,19 @@
                 <nav class="mobile-nav">
                     <ul class="mobile-menu">
                         <li class="active">
-                            <a href="index.html">Home</a>
+                            <a href="{{route('client')}}">Home</a>
                         </li>
                         <li>
-                            <a href="category.html">Shop</a>
+                            <a href="{{route('vexshop')}}">Shop</a>
                         </li>
                         <li>
-                            <a href="product.html" class="sf-with-ul">Product</a>
+                            <a href="{{route('apropos')}}" class="sf-with-ul">A propos</a>
                         </li>
                         <li>
-                            <a href="#">Pages</a>
+                            <a href="{{route('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="{{route('contact')}}">Blog</a>
     
                         </li>
                         <li>
@@ -403,7 +376,7 @@
 	            					<li><a href="#">Abonnez-vous à notre newsletter</a></li>
 	            					<li><a href="#">Condition d'utilisation</a></li>
 	            					<li><a href="#">Srvice Clientèle</a></li>
-	            					<li><a href="#">Informations de Livraison</a></li>  
+	            					<li><a href="#">Informations de Livraison</a></li>
 	            					<li><a href="#">Paiements</a></li>
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->
@@ -425,8 +398,6 @@
 	        	</div><!-- End .container -->
 	        </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
-       
-    
     </body>
     <!-- molla/index-4.html  22 Nov 2019 09:54:18 GMT -->
 </html>
