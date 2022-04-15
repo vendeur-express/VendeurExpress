@@ -1569,7 +1569,7 @@
                         <figure class="product-media">
                             <span class="product-label label-circle label-new">New</span>
                             <a href="product.html">
-                                <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                <img src="assets/images/demos/demo-4/products/product-3.png" alt="Product image" class="product-image">
                             </a>
 
                             <div class="product-action-vertical">
@@ -1798,7 +1798,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-circle label-top">Top</span>
                                         <a href="product.html">
-                                            <img src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
+                                            <img src="assets/images/demos/demo-4/products/product-6.png" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -1871,7 +1871,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-circle label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/demos/demo-4/products/product-8.jpg" alt="Product image" class="product-image">
+                                            <img src="assets/images/demos/demo-4/products/product-8.png" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
@@ -2181,7 +2181,7 @@
                                     <figure class="product-media">
                                         <span class="product-label label-circle label-new">New</span>
                                         <a href="product.html">
-                                            <img src="assets/images/demos/demo-4/products/product-8.jpg" alt="Product image" class="product-image">
+                                            <img src="assets/images/demos/demo-4/products/product-8.png" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
