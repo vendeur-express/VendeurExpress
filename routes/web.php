@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/acceuil', function () {
     return view('acceuil.acceuil');
 })->name('acceuil');
@@ -49,5 +48,4 @@ Route::get('/favorie',function(){
 })->name('favorie');
 Route::get('/index',function(){
     return view('testresponsible.index-4');
-
 });

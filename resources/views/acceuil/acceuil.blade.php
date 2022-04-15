@@ -3,11 +3,10 @@
     Acceuil - VENDEUR EXPRESS
 @endsection
 @section('contenu')
-
+<div class="mb-1"></div>
 <main class="main">
-      
-    <div class="intro-slider-container mb-5">
-        <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
+     <div class="intro-slider-container">
+         <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
             data-owl-options='{
                 "dots": true,
                 "nav": false, 
@@ -18,7 +17,7 @@
                     }
                 }
             }'>
-            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.jpg);height : 600px">
+            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.png);height : 600px">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color: white">
                     <h1 > Vendre et Acheter en ligne</h1>
@@ -48,7 +47,6 @@
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
-               
             </div><!-- End .intro-slide -->
             <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere5.png); height : 600px">
                 <div class="container intro-content">
@@ -65,12 +63,13 @@
                 </div><!-- End .row -->
             </div>
             </div><!-- End .intro-slide -->
+
         </div><!-- End .intro-slider owl-carousel owl-simple -->
 
         <span class="slider-loader"></span><!-- End .slider-loader -->
      </div><!-- End .intro-slider-container -->
     </div>
-
+<div class="mb-1"></div>
     <!-- **********************************************End of slide *****************************************************-->
     <div class="container" style="width: 2000px" >
         <div class="row justify-content-center">
@@ -102,16 +101,13 @@
                 <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
                    <div ><h3 style="color:#6699cc"> A propos </h3></div> 
                      <h4> Vendeur Express </h4> 
-                    <p style=" font: 18px Tillana, sans-serif;" >
+                    <p style=" font: 18px Tillana, sans-serif; text-align " >
                      Nous vendons des biens et des services de tout genres en ligne. Notre 
                      ambition est de redorer le blason des artisans, des petits entrepreneurs,
                      des commerçants et des laissés-pour-compte du marketing digital, d’avoir
                      une visibilité à travers notre plateforme.
                     </p>
-                    
                         <img style="align-content: center; height:50px" src="assets/images/demos/demo-4/logo.png">
-                
-                    
                      <p> Votre satisfaction, notre source de motivation.</p> 
                    </div>
             </div><!-- End .col-md-4 -->
@@ -141,10 +137,7 @@
             </div><!-- End .col-lg-4 -->
         </div><!-- End .row -->
 </div>
-<div class="mb-4" style="background-color: red"></div>
-
-
-    <!-- explorez les categories populaire -->
+<!-- explorez les categories populaire -->
     <div class="container">
         <h2 class="title text-center mb-8">Explorez Categories populaire</h2><!-- End .title text-center -->
         
@@ -181,7 +174,6 @@
                                 <img src="assets/images/demos/demo-4/cats/3.png" alt="Category image">
                             </span>
                         </figure>
-
                         <h3 class="cat-block-title">Smart Phones</h3><!-- End .cat-block-title -->
                     </a>
                 </div><!-- End .col-sm-4 col-lg-2 -->
@@ -298,7 +290,7 @@
     <div class="container new-arrivals">
         <div class="heading heading-flex mb-3">
             <div class="heading-left">
-                <h2 class="title">New Arrivals</h2><!-- End .title -->
+                <h2 class="title">Les Nouveau Produits</h2><!-- End .title -->
             </div><!-- End .heading-left -->
 
            <div class="heading-right">
@@ -353,7 +345,6 @@
                     }'>
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
                             </a>
@@ -363,7 +354,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -396,7 +387,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -430,7 +421,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -439,7 +430,7 @@
                             <div class="product-cat">
                                 <a href="#">Tablets</a>
                             </div><!-- End .product-cat -->
-                            <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                            <h3 class="product-title"><a href="product.html">Apple iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
                             <div class="product-price">
                                 $899.99
                             </div><!-- End .product-price -->
@@ -471,7 +462,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -512,7 +503,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -546,7 +537,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -606,7 +597,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -645,7 +636,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -680,7 +671,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -721,7 +712,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -755,7 +746,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -815,7 +806,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -849,7 +840,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -883,7 +874,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -922,7 +913,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -957,7 +948,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1024,7 +1015,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1057,7 +1048,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1091,7 +1082,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1131,7 +1122,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1165,7 +1156,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1200,7 +1191,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1268,7 +1259,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1309,7 +1300,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1342,7 +1333,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1376,7 +1367,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1442,7 +1433,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1476,7 +1467,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1510,7 +1501,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1543,7 +1534,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1577,7 +1568,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -1806,7 +1797,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -1845,7 +1836,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -1879,7 +1870,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -1920,7 +1911,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -1983,7 +1974,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2022,7 +2013,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2057,7 +2048,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2098,7 +2089,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2132,7 +2123,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2189,7 +2180,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2229,7 +2220,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2268,7 +2259,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2302,7 +2293,7 @@
                                         </div><!-- End .product-action -->
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                            <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                                         </div><!-- End .product-action -->
                                     </figure><!-- End .product-media -->
@@ -2365,7 +2356,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2409,7 +2400,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2446,7 +2437,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2487,7 +2478,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2523,7 +2514,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2558,7 +2549,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2600,7 +2591,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
@@ -2644,7 +2635,7 @@
                             </div><!-- End .product-action -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                                <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
                                 <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
