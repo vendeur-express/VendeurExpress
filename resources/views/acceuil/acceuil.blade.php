@@ -33,7 +33,6 @@
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
-                
             </div><!-- End .intro-slide -->
 
             <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere3.jpg); height : 600px">
@@ -73,78 +72,79 @@
     </div>
 
     <!-- **********************************************End of slide *****************************************************-->
-    <div class="container px-lg-5">
-        <div class="row mx-lg-n5">
-          <div class="col py-3 px-lg-5  bg-light">
-              
-           </div>
-          <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
-           <h1> A propos </h1>
-           <b> <h2> Vendeur Express </h2> </b>
-           <p style=>
-            Nous vendons des biens et des services de tout genres en ligne. Notre 
-            ambition est de redorer le blason des artisans, des petits entrepreneurs,
-            des commerçants et des laissés-pour-compte du marketing digital, d’avoir
-            une visibilité à travers notre plateforme.
-           </p>
-            <img style="width: 100px; height:100px" src="assets/images/demos/demo-4/logo.png">
-            
-            <b> <h6> Votre satisfaction, notre source de motivation.</h6></b> 
-          </div>
-          <div class="col py-3 px-lg-5  bg-light">
-
-          </div>
-        </div>
-      </div>
-
- 
-
-
-    <div class="container">
+    <div class="container" style="width: 2000px" >
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-3">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-1.png" alt="Banner">
+            <div class="col-md-6 col-lg-4">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a  href="#"> <img  style="height: 350px" src="assets/images/demos/demo-4/slider/slide4.png" alt="First slide"></a>
+                        </div>
+                    <div class="carousel-item">
+                        <a href="#"><img style="height: 350px" src="assets/images/demos/demo-4/slider/banniere4.jpg" alt="Second slide"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"> <img style="height: 350px"  src="assets/images/demos/demo-4/slider/banniere4.jpg" alt="Third slide"></a>
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
                     </a>
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Smart Offer</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#">Save $150 <strong>on Samsung <br>Galaxy Note9</strong></a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 w-500">
+                <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
+                   <div ><h3 style="color:#6699cc"> A propos </h3></div> 
+                     <h4> Vendeur Express </h4> 
+                    <p style=" font: 18px Tillana, sans-serif;" >
+                     Nous vendons des biens et des services de tout genres en ligne. Notre 
+                     ambition est de redorer le blason des artisans, des petits entrepreneurs,
+                     des commerçants et des laissés-pour-compte du marketing digital, d’avoir
+                     une visibilité à travers notre plateforme.
+                    </p>
+                    
+                        <img style="align-content: center; height:50px" src="assets/images/demos/demo-4/logo.png">
+                
+                    
+                     <p> Votre satisfaction, notre source de motivation.</p> 
+                   </div>
             </div><!-- End .col-md-4 -->
 
             <div class="col-md-6 col-lg-4 w-500">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-2.jpg" alt="Banner">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                      <a href="#">  <img style="height: 350px" class="d-block w-500 " src="assets/images/demos/demo-4/slider/slide1.jpg" alt="First slide"></a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="#"> <img style="height: 350px" class="d-block w-500" src="assets/images/demos/demo-4/slider/slide2.png" alt="Second slide"></a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="#"> <img style="height: 350px" class="d-block w-500" src="assets/images/demos/demo-4/slider/slide3.png" alt="Third slide"></a>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
                     </a>
-
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Time Deals</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#"><strong>Bose SoundSport</strong> <br>Time Deal -30%</a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
-            </div><!-- End .col-md-4 -->
-
-            <div class="col-md-6 col-lg-4">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-3.png" alt="Banner">
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
                     </a>
-
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Clearance</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#"><strong>GoPro - Fusion 360</strong> <br>Save $70</a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
+                  </div>
             </div><!-- End .col-lg-4 -->
         </div><!-- End .row -->
-    </div><!-- End .container -->
-    
+</div>
+<div class="mb-4" style="background-color: red"></div>
+
+
+    <!-- explorez les categories populaire -->
     <div class="container">
         <h2 class="title text-center mb-8">Explorez Categories populaire</h2><!-- End .title text-center -->
         
@@ -225,7 +225,7 @@
                     <a href="category.html" class="cat-block">
                         <figure>
                             <span>
-                                <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
+                                <img src="assets/images/demos/demo-4/cats/7.png" alt="Category image">
                             </span>
                         </figure>
 
@@ -237,7 +237,7 @@
                     <a href="category.html" class="cat-block">
                         <figure>
                             <span>
-                                <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
+                                <img src="assets/images/demos/demo-4/cats/8.png" alt="Category image">
                             </span>
                         </figure>
 
@@ -248,7 +248,7 @@
                     <a href="category.html" class="cat-block">
                         <figure>
                             <span>
-                                <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
+                                <img src="assets/images/demos/demo-4/cats/9.png" alt="Category image">
                             </span>
                         </figure>
 
@@ -260,7 +260,7 @@
                     <a href="category.html" class="cat-block">
                         <figure>
                             <span>
-                                <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
+                                <img src="assets/images/demos/demo-4/cats/10.png" alt="Category image">
                             </span>
                         </figure>
 
@@ -293,55 +293,7 @@
             </div><!-- End .row -->
         </div><!-- End .cat-blocks-container -->
     </div><!-- End .container -->
-
-
     <div class="mb-4"></div><!-- End .mb-4 -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-4">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-1.png" alt="Banner">
-                    </a>
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Smart Offer</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#">Save $150 <strong>on Samsung <br>Galaxy Note9</strong></a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
-            </div><!-- End .col-md-4 -->
-
-            <div class="col-md-6 col-lg-4">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-2.jpg" alt="Banner">
-                    </a>
-
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Time Deals</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#"><strong>Bose SoundSport</strong> <br>Time Deal -30%</a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
-            </div><!-- End .col-md-4 -->
-
-            <div class="col-md-6 col-lg-4">
-                <div class="banner banner-overlay banner-overlay-light">
-                    <a href="#">
-                        <img src="assets/images/demos/demo-4/banners/banner-3.png" alt="Banner">
-                    </a>
-
-                    <div class="banner-content">
-                        <h4 class="banner-subtitle"><a href="#">Clearance</a></h4><!-- End .banner-subtitle -->
-                        <h3 class="banner-title"><a href="#"><strong>GoPro - Fusion 360</strong> <br>Save $70</a></h3><!-- End .banner-title -->
-                        <a href="#" class="banner-link">Shop Now<i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .banner-content -->
-                </div><!-- End .banner -->
-            </div><!-- End .col-lg-4 -->
-        </div><!-- End .row -->
-    </div><!-- End .container -->
-
-    <div class="mb-3"></div><!-- End .mb-5 -->
 
     <div class="container new-arrivals">
         <div class="heading heading-flex mb-3">
@@ -1666,9 +1618,9 @@
                 <div class="col-md-12">
                     <div class="cta-content">
                         <div class="cta-text text-right text-white">
-                            <p>Shop Today’s Deals <br><strong>Awesome Made Easy. HERO7 Black</strong></p>
+                            <p><strong>Produits de Luxe POUR LES GENS UNIQUES</strong></p>
                         </div><!-- End .cta-text -->
-                        <a href="#" class="btn btn-primary btn-round"><span>Shop Now - $429.99</span><i class="icon-long-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary btn-round"><span>TROUVEZ VOTRE PLAISIR</span><i class="icon-long-arrow-right"></i></a>
                     </div><!-- End .cta-content -->
                 </div><!-- End .col-md-12 -->
             </div><!-- End .row -->
