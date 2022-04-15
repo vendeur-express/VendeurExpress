@@ -44,14 +44,11 @@
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
-                
-                
-
-
-
-                <div class="header-right">
+                <div class="header-right" style="bacgrun">
                     <button>
-                        <i></i>
+                        <i >
+                            01 BP 6586 Ouagadougou 01
+                        </i>
                         <i class="icon-instagram">
 
                         </i>
