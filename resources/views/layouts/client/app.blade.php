@@ -44,26 +44,22 @@
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
-                <div class="header-left">
-                    <a href=""><i class="icon-location"></i>01 BP 6586 Ouagadougou 01</a>  
+                
+                
+
+
+
+                <div class="header-right">
+                    <button>
+                        <i></i>
+                        <i class="icon-instagram">
+
+                        </i>
+                        <i class="icon-facebook">
+
+                        </i>
+                    </button>
                 </div>
-                <div class="header-left">
-                    <a href="tel:#"> <i class="icon-phone"></i>+226 01 74 74 74</a>  
-                </div>
-                <div class="header-left">
-                    <a href="tel:#"><i class="icon-whatsapp"></i>+226 78 02 11 57</a>  
-                </div>
-                <div class="header-left">
-                    <a class="text-black" href="#">Fcfa</a>
-                </div>
-                <div class="header-center">
-                    <li><a href="#">Français /</a></li>
-                    <li><a href="#">Anglais</a></li>
-                </div><!-- End .header-menu -->
-                <div class="header-center">
-                    <li><a href="#">Eur</a></li>
-                        <li><a href="#">Usd</a></li>
-                </div><!-- End .header-menu -->     
             </div>
             <!--top-header-->
         
@@ -260,7 +256,7 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
     
-        <div class="mobile-menu-container">
+        <div class="mobile-menu-container" style="background-color: #5450a0">
             <div class="mobile-menu-wrapper">
                 <span class="mobile-menu-close"><i class="icon-close"></i></span>
     
@@ -371,33 +367,38 @@
                         <div class="col-sm-4 col-lg-2">
 	            			<div class="widget">
 	            				<h4 class="widget-title text-white">NEWSLETTER</h4><!-- End .widget-title -->
-
-	            				<ul class="widget-list">
-	            					<li><a href="#">Abonnez-vous à notre newsletter</a></li>
-	            					<li><a href="#">Condition d'utilisation</a></li>
-	            					<li><a href="#">Srvice Clientèle</a></li>
-	            					<li><a href="#">Informations de Livraison</a></li>
-	            					<li><a href="#">Paiements</a></li>
-	            				</ul><!-- End .widget-list -->
+                                <div>
+                                    <div>
+                                        <form action="#">
+                                            <input type="email" class="form-control form-control-rounded" placeholder="Sisissez vote email" aria-label="Email Adress" required>
+                                            <button class="btn btn-primary" type="submit"><span>Subscribe</span><i class="icon-long-arrow-right"></i></button>
+                                        </form>
+                                    </div><!-- End .cta-wrapper -->
+                                </div><!-- End .col-lg-6 -->
 	            			</div><!-- End .widget -->
 	            		</div><!-- End .col-sm-6 col-lg-3 -->
 	            	</div><!-- End .row -->
 	            </div><!-- End .container -->
 	        </div><!-- End .footer-middle -->
-
-	        <div class="footer-bottom" backgroundcolor="red">
-	        	<div class="container">
-                <p class="footer-copyright"> ©
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-	        		VENDEUR EXPRESS</p><!-- End .footer-copyright -->
-	        		<figure class="footer-payments">
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-	        		</figure><!-- End .footer-payments -->
-	        	</div><!-- End .container -->
-	        </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
+        <div {{-- class="footer-bottom" --}} style="background-color: #001056">
+            <div class="container">
+                <div>
+                    <p class="footer-copyright"> ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        VENDEUR EXPRESS
+                    </p><!-- End .footer-copyright -->
+                    <div class="header-right">
+                        <figure class="header-right">
+                            <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                        </figure><!-- End .footer-payments -->
+                    </div>
+                </div>
+                
+                </div><!-- End .container -->
+        </div><!-- End .footer-bottom -->
     </body>
     <!-- molla/index-4.html  22 Nov 2019 09:54:18 GMT -->
 </html>
