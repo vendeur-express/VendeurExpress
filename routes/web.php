@@ -51,3 +51,7 @@ Route::get('/favorie',function(){
 Route::get('/produit',function(){
     return view('produit');
 })->name('produit');
+
+Route::get('/inscription',function(){
+    return view('inscription');
+})->name('inscription');

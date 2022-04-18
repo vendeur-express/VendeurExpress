@@ -44,7 +44,7 @@
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
-                <div class="header-right" style="bacgrun">
+                <div class="header-right" style="text-white">
                     <button>
                         <i >
                             01 BP 6586 Ouagadougou 01
@@ -212,7 +212,7 @@
                                     <a style="color: white" href="{{route('contact')}}" >Contactez-nous</a>
                                 </li>
                                 <li>
-                                    <a style="color: white" href="{{route('compte')}}"> S'inscrire</a>
+                                    <a style="color: white" href="{{route('inscription')}}"> S'inscrire</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
@@ -250,7 +250,7 @@
         </div>
         <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
-        <!-- Mobile Menu -->
+        {{-- <!-- Mobile Menu -->
         <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
     
         <div class="mobile-menu-container" style="background-color: #5450a0">
@@ -294,7 +294,85 @@
                     <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
                 </div><!-- End .social-icons -->
             </div><!-- End .mobile-menu-wrapper -->
+        </div><!-- End .mobile-menu-container --> --}}
+
+            <!-- Mobile Menu -->
+        <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+        <div class="mobile-menu-container"{{--  mobile-menu-light " --}} style="background-color: #5450a0">
+            <div class="mobile-menu-wrapper">
+                <span class="mobile-menu-close"><i class="icon-close"></i></span>
+                
+                <form action="#" method="get" class="mobile-search">
+                    <label for="mobile-search" class="sr-only">Recherche</label>
+                    <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
+                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                </form>
+
+                <ul class="nav nav-pills-mobile nav-border-anim" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
+                        <nav class="mobile-nav">
+                            <ul class="mobile-menu">
+                                <li class="active">
+                                    <a href="{{route('client')}}">ACCEUIL</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('vexshop')}}">VEX SHOP</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('apropos')}}" class="sf-with-ul">A PROPOS</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('blog')}}">BLOG</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('contact')}}">CONTACTEZ-NOUS</a>
+            
+                                </li>
+                                <li>
+                                    <a href="{{route('inscription')}}">S'INSCRIRE</a>
+                                </li>
+                            </ul>
+                        </nav><!-- End .mobile-nav -->
+                    </div><!-- .End .tab-pane -->
+                    <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
+                        <nav class="mobile-cats-nav">
+                            <ul class="mobile-cats-menu">
+                                <li><a class="mobile-cats-lead" href="#">Daily offers</a></li>
+                                <li><a class="mobile-cats-lead" href="#">Gift Ideas</a></li>
+                                <li><a href="#">Beds</a></li>
+                                <li><a href="#">Lighting</a></li>
+                                <li><a href="#">Sofas & Sleeper sofas</a></li>
+                                <li><a href="#">Storage</a></li>
+                                <li><a href="#">Armchairs & Chaises</a></li>
+                                <li><a href="#">Decoration </a></li>
+                                <li><a href="#">Kitchen Cabinets</a></li>
+                                <li><a href="#">Coffee & Tables</a></li>
+                                <li><a href="#">Outdoor Furniture </a></li>
+                            </ul><!-- End .mobile-cats-menu -->
+                        </nav><!-- End .mobile-cats-nav -->
+                    </div><!-- .End .tab-pane -->
+                    
+                </div><!-- End .tab-content -->
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+                    <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+                </div><!-- End .social-icons -->
+            </div><!-- End .mobile-menu-wrapper -->
         </div><!-- End .mobile-menu-container -->
+
         <!-- Plugins JS File -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -339,9 +417,9 @@
 	            				<h4 class="widget-title text-white">Informations utiles</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-	            					<li><a href="#">A Propos</a></li>
-	            					<li><a href="#">VEX SHOP</a></li>
-	            					<li><a href="#">Contactez-nous</a></li>
+	            					<li><a href="{{route('apropos')}}">A Propos</a></li>
+	            					<li><a href="{{route('vexshop')}}">VEX SHOP</a></li>
+	            					<li><a href="{{route('contact')}}">Contactez-nous</a></li>
 	            					<li><a href="#">Livraison & Expédition</a></li>
 	            					<li><a href="#">Actualités</a></li>
 	            				</ul><!-- End .widget-list -->
