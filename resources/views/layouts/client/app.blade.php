@@ -44,18 +44,26 @@
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
-                <div class="header-right" style="text-white">
-                    <button>
-                        <i >
-                            01 BP 6586 Ouagadougou 01
-                        </i>
-                        <i class="icon-instagram">
-
-                        </i>
-                        <i class="icon-facebook">
-
-                        </i>
-                    </button>
+                <div>
+                    <div class="header-right" style="text-white">
+                        <ul class="top-menu">
+                            <li>
+                                <ul>
+                                    <li> <i class="icon-map-marker"> </i> BP 6586 Ouagadougou 01  |</li>
+                                    <li><i class="icon-phone"> </i> +226 78 02 11 57 | </li>
+                                    <li><i class="icon-whatsapp"> +226 01 74 74 74 </i></li>
+                                    <li><i class="icon-email"> contact@vendeurexpress.com</i></li>
+                                    <li class="my-2 my-lg-0">
+                                        <a href="#"> <i class="icon-facebook "></i></a>
+                                        <a href="#"> <i class="icon-twitter"></i></a>
+                                        <a href="#"><i class="icon-instagram"></i></a>
+                                        <a href="#"><i class="icon-linkedin"></i></a> 
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>
             <!--top-header-->

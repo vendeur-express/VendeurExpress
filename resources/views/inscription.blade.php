@@ -1,6 +1,6 @@
 @extends('layouts.client.app')
 @section('titre')
-    Inscription | VENDEUR-EXPRESS
+    INSCRIPTION | VENDEUR-EXPRESS
 @endsection
 @section('contenu')
     <main class="main">
@@ -74,9 +74,9 @@
                             <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
                                 <form action="#">
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <label for="cname" class="sr-only">Nom *</label>
-                                            <input type="text" class="form-control" id="cname" placeholder="Nom" required>
+                                        <div class="col-sm-6" >
+                                            <label for="cname" class="sr-only"> Nom *</label>
+                                            <input type="text" class="form-control icon-phone" id="cname" placeholder="Nom"  required>
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="sr-only">Prenom *</label>
@@ -130,6 +130,17 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="form-footer">
+                                        <button type="submit" class="btn btn-outline-primary-2">
+                                            <span>S'enregistrer</span>
+                                            <i class="icon-long-arrow-right"></i>
+                                        </button>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="register-policy" required>
+                                            <label class="custom-control-label" for="register-policy">je suis d'accord avec la <a href="#">politique de confidentialité</a> *</label>
+                                        </div><!-- End .custom-checkbox -->
+                                    </div><!-- End .form-footer -->
 
                                 </form>
                                 <div class="form-choice">
