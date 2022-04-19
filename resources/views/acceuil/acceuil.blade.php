@@ -17,7 +17,7 @@
                     }
                 }
             }'>
-            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.png);height : 600px">
+            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.png);height : 650px">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color: white">
                     <h1 > Vendre et Acheter en ligne</h1>
@@ -26,7 +26,7 @@
                 
             </div><!-- End .intro-slide -->
 
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere2.jpg);height : 600px">
+            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere2.jpg);height : 625px">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color:black">
                     <h1 > Vendre et Acheter en ligne</h1>
@@ -58,7 +58,7 @@
             
             <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere6.png); height : 600px">
                 <div class="container intro-content">
-                <div class="row justify-content-center "style="text-align: center; color:white;">
+                <div class="row justify-content-center "style="text-align: center; color: white">
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
             </div>
@@ -68,8 +68,8 @@
 
         <span class="slider-loader"></span><!-- End .slider-loader -->
      </div><!-- End .intro-slider-container -->
+     <div class="mb-0"></div>
     </div>
-<div class="mb-1"></div>
     <!-- **********************************************End of slide *****************************************************-->
     <div class="container" style="width: 2000px" >
         <div class="row justify-content-center">
@@ -2676,8 +2676,8 @@
                             <i class="icon-rocket"></i>
                         </span>
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Free Shipping</h3><!-- End .icon-box-title -->
-                            <p>Orders $50 or more</p>
+                            <h3 class="icon-box-title">LIVRAISON RAPIDE</h3><!-- End .icon-box-title -->
+                            <a href="#">Plus d'informations</a>
                         </div><!-- End .icon-box-content -->
                     </div><!-- End .icon-box -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
@@ -2689,8 +2689,8 @@
                         </span>
 
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Free Returns</h3><!-- End .icon-box-title -->
-                            <p>Within 30 days</p>
+                            <h3 class="icon-box-title">RETOURS SANS FRAIS</h3><!-- End .icon-box-title -->
+                            <a href="#">Plus d'informations</a>
                         </div><!-- End .icon-box-content -->
                     </div><!-- End .icon-box -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
@@ -2702,8 +2702,8 @@
                         </span>
 
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Get 20% Off 1 Item</h3><!-- End .icon-box-title -->
-                            <p>when you sign up</p>
+                            <h3 class="icon-box-title">SUIVI DE COMMANDE</h3><!-- End .icon-box-title -->
+                            <a href="#">Plus d'informations</a>
                         </div><!-- End .icon-box-content -->
                     </div><!-- End .icon-box -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
@@ -2715,8 +2715,8 @@
                         </span>
 
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">We Support</h3><!-- End .icon-box-title -->
-                            <p>24/7 amazing services</p>
+                            <h3 class="icon-box-title">24H SERVICE</h3><!-- End .icon-box-title -->
+                            <a href="#">Plus d'informations</a>
                         </div><!-- End .icon-box-content -->
                     </div><!-- End .icon-box -->
                 </div><!-- End .col-sm-6 col-lg-3 -->

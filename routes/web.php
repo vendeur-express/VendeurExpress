@@ -55,3 +55,6 @@ Route::get('/produit',function(){
 Route::get('/inscription',function(){
     return view('inscription');
 })->name('inscription');
+Route::get('/inscriptionfournisseur',function(){
+    return view('acceuil.inscriptionfournisseur');
+})->name('inscriptionfournisseur');
