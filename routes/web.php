@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,44 +21,16 @@ Route::get('/home', function(){
     return view('dashboard');
 })->name('home');
 
-Route::get('/',function(){
-    return view('client');
-})->name('client');
-Route::get('/vexshop',function(){
-    return view('vexshop');
-})->name('vexshop');
-Route::get('/apropos',function(){
-    return view('apropos');
-})->name('apropos');
-Route::get('/blog',function(){
-    return view('blog');
-})->name('blog');
-Route::get('/contact',function(){
-    return view('contact');
-})->name('contact');
-Route::get('/compte',function(){
-    return view('compte');
-})->name('compte');
-Route::get('/panier',function(){
-    return view('panier');
-})->name('panier');
-Route::get('/paiement',function(){
-    return view('paiement');
-})->name('paiement');
-Route::get('/favorie',function(){
-    return view('favorie');
-})->name('favorie');
-
-Route::get('/produit',function(){
-    return view('produit');
-})->name('produit');
-
-Route::get('/inscription',function(){
-    return view('inscription');
-})->name('inscription');
-Route::get('/fournisseur',function(){
-    return view('acceuil.fournisseur');
-});
-Route::get('/demarcheur',function(){
-    return view('acceuil.demarcheur');
-});
+Route::get('/',[ClientController::class, 'home'])->name('client');
+Route::get('/vexshop',[ClientController::class,'vexshop'])->name('vexshop');
+Route::get('/apropos',[ClientController::class,'apropos'])->name('apropos');
+Route::get('/blog',[ClientController::class,'blog'])->name('blog');
+Route::get('/contact',[ClientController::class,'contact'])->name('contact');
+Route::get('/compte',[ClientController::class,'compte'])->name('compte');
+Route::get('/panier',[ClientController::class,'panier'])->name('panier');
+Route::get('/paiement',[ClientController::class,'paiement'])->name('paiement');
+Route::get('/favorie',[ClientController::class,'favorie'])->name('favorie');
+Route::get('/produit',[ClientController::class,'produit'])->name('produit');
+Route::get('/inscription',[ClientController::class,'inscription'])->name('inscription');
+// route admin fournisseur
+Route::get('/admin1',[AdminController::class,'index'])->name('admin');

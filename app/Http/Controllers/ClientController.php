@@ -83,4 +83,37 @@ class ClientController extends Controller
     {
         //
     }
+
+    public function home(){
+        return view('client.client');
+    }
+    public function vexshop(){
+        return view('client.vexshop');
+    }
+    public function apropos(){
+        return view('client.apropos');
+    }
+    public function blog(){
+        return view('client.blog');
+    }
+    public function inscription(){
+        return view('client.inscription');
+    }
+    public function panier(){
+        return view('client.panier');
+    }
+    public function produit(){
+        return view('client.produit');
+    }
+    public function paiement(){
+        return view('client.paiement');
+    }
+    public function favorie(){
+        return view('client.favorie');
+    }
+    public function contact(){
+        return view('client.contact');
+    }
+
+    
 }
