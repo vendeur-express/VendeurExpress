@@ -83,4 +83,35 @@ class AdminController extends Controller
     {
         //
     }
+    public function ajout_produit(){
+        return view('admin.ajout_produit');
+    }
+    public function avis(){
+        return view('admin.avis');
+    }
+    public function commande(){
+        return view('admin.commande');
+    }
+    public function coupon(){
+        return view('admin.coupon');
+    }
+    public function magasin(){
+        return view('admin.magasin');
+    }
+    public function produits(){
+        return view('admin.produits');
+    }
+    public function reglage(){
+        return view('admin.reglage');
+    }
+    public function rembourser(){
+        return view('admin.rembourser');
+    }
+    public function retrait(){
+        return view('admin.retrait');
+    }
+    public function rapport(){
+        return view('admin.rapport');
+    }
+
 }

@@ -34,3 +34,13 @@ Route::get('/produit',[ClientController::class,'produit'])->name('produit');
 Route::get('/inscription',[ClientController::class,'inscription'])->name('inscription');
 // route admin fournisseur
 Route::get('/admin1',[AdminController::class,'index'])->name('admin');
+Route::get('/coupon',[AdminController::class,'coupon'])->name('coupon');
+Route::get('/commande',[AdminController::class,'commande'])->name('commande');
+Route::get('/magasin',[AdminController::class,'magasin'])->name('magasin');
+Route::get('/rembourser',[AdminController::class,'rembourser'])->name('rembourser');
+Route::get('/reglage',[AdminController::class,'reglage'])->name('reglage');
+Route::get('/retrait',[AdminController::class,'retrait'])->name('retrait');
+Route::get('/produits',[AdminController::class,'produits'])->name('produits');
+Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajout_produit');
+Route::get('/avis',[AdminController::class,'avis'])->name('avis');
+Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');

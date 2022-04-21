@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>@yield('titre')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -168,85 +168,84 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('produits')}}" class="nav-link">
               <i class="fas fa-dice-d6 nav-icon"></i>
               <p>
                 Produits
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('commande')}}" class="nav-link">
               <i class="fas fa-shopping-cart nav-icon"></i>
               <p>
                 Commandes
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('rembourser')}}" class="nav-link">
               <i class="fas fa-search-dollar nav-icon"></i>
               <p>
                 Rembourser
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('reglage')}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Réglages
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('coupon')}}" class="nav-link">
               <i class="fas fa-gift nav-icon"></i>
               <p>
                 Coupons
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('magasin')}}" class="nav-link">
               <i class="fas fa-store-alt nav-icon"></i>
               <p>
                 Magasin Vendeurs
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
 
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('retrait')}}" class="nav-link">
               <i class="far fa-credit-card nav-icon"></i>
               <p>
                 Retrait
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('rapport')}}" class="nav-link">
               <i class="fas fa-chart-pie nav-icon"></i>
               <p>
                 Rapports
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
           <li class="has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('avis')}}" class="nav-link">
               <i class=" 	fas fa-comment nav-icon"></i>
               <p>
                 Avis
-                <i class="fas fa-angle-left right"></i>
+                
               </p>
             </a>
           </li>
@@ -255,7 +254,6 @@
               <i class="fas fa-sign-out-alt nav-icon"></i>
               <p>
                 Deconnexion
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
           </li>
