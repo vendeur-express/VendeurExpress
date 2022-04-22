@@ -260,7 +260,7 @@
                     <div class="dropdown-menu ">
                         <nav class="side-nav " >
                             <ul class="menu-vertical sf-arrows " >
-                                <li ><a href="#">Appareils Electronique</a></li>
+                                <li><a href="#">Appareils Electronique</a></li>
                                 <li><a href="#">Appareils Menager</a></li>
                                 <li><a href="#">ordinateurs</a></li>
                                 <li><a href="#">Storage</a></li>
@@ -277,7 +277,6 @@
         </div><!-- End .container -->
      </div><!-- End .header-bottom -->
     </header><!-- End .header -->
-   
 
     <script src="jquery-3.3.1.slim.min.js"
      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

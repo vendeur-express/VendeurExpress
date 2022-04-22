@@ -101,7 +101,7 @@
                 <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
                    <div ><h3 style="color:#6699cc"> A propos </h3></div> 
                      <h4> Vendeur Express </h4> 
-                    <p style=" font: 18px Tillana, sans-serif; text-align " >
+                    <p style=" font: 18px Tillana, sans-serif; text-align: justify; " >
                      Nous vendons des biens et des services de tout genres en ligne. Notre 
                      ambition est de redorer le blason des artisans, des petits entrepreneurs,
                      des commerçants et des laissés-pour-compte du marketing digital, d’avoir
@@ -138,7 +138,7 @@
         </div><!-- End .row -->
 </div>
 <!-- explorez les categories populaire -->
-    <div class="container">
+    {{-- <div class="container">
         <h2 class="title text-center mb-8">Explorez Categories populaire</h2><!-- End .title text-center -->
         
         <div class="cat-blocks-container">
@@ -284,7 +284,7 @@
                 </div><!-- End .col-sm-4 col-lg-2 -->
             </div><!-- End .row -->
         </div><!-- End .cat-blocks-container -->
-    </div><!-- End .container -->
+    </div><!-- End .container --> --}}
     <div class="mb-4"></div><!-- End .mb-4 -->
 
     <div class="container new-arrivals">
@@ -422,7 +422,7 @@
 
                             <div class="product-action">
                                 <a href="#" class="btn-product btn-cart" title="Ajouter au panier"><span>Ajouter au panier</span></a>
-                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span></span></a>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
 
@@ -469,7 +469,7 @@
 
                         <div class="product-body">
                             <div class="product-cat">
-                                <a href="#">Cell Phone</a>
+                                <a href="#">Telephone</a>
                             </div><!-- End .product-cat -->
                             <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
                             <div class="product-price">
@@ -678,7 +678,7 @@
 
                         <div class="product-body">
                             <div class="product-cat">
-                                <a href="#">Cell Phone</a>
+                                <a href="#">Telephone</a>
                             </div><!-- End .product-cat -->
                             <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
                             <div class="product-price">
@@ -1180,8 +1180,8 @@
 
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
-                            <span class="product-label label-circle label-sale">Sale</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span>
+                            <span class="product-label label-circle label-sale">Sale</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1248,8 +1248,8 @@
                     }'>
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
-                            <span class="product-label label-circle label-sale">Sale</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span>
+                            <span class="product-label label-circle label-sale">Sale</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1290,7 +1290,7 @@
 
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1423,7 +1423,7 @@
                     }'>
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1457,7 +1457,7 @@
 
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1491,7 +1491,7 @@
 
                     <div class="product product-2">
                         <figure class="product-media">
-                            <span class="product-label label-circle label-top">Top</span>
+                            {{-- <span class="product-label label-circle label-top">Top</span> --}}
                             <a href="product.html">
                                 <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
                             </a>
@@ -1618,7 +1618,7 @@
         </div><!-- End .cta -->
     </div><!-- End .container -->
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="heading text-center mb-3">
             <h2 class="title">Deals & Outlet</h2><!-- End .title -->
             <p class="title-desc">Today’s deal and more</p><!-- End .title-desc -->
@@ -1676,7 +1676,7 @@
         <div class="more-container text-center mt-1 mb-5">
             <a href="#" class="btn btn-outline-dark-2 btn-round btn-more"><span>Shop more Outlet deals</span><i class="icon-long-arrow-right"></i></a>
         </div><!-- End .more-container -->
-    </div><!-- End .container -->
+    </div><!-- End .container --> --}}
 
     <div class="container">
         <hr class="mb-0">
@@ -1734,7 +1734,7 @@
         <div class="container trending-products">
             <div class="heading heading-flex mb-3">
                 <div class="heading-left">
-                    <h2 class="title">Trending Products</h2><!-- End .title -->
+                    <h2 class="title">Les produits les plus vendu</h2><!-- End .title -->
                 </div><!-- End .heading-left -->
 
                <div class="heading-right">
@@ -2037,8 +2037,8 @@
 
                                 <div class="product product-2">
                                     <figure class="product-media">
-                                        <span class="product-label label-circle label-top">Top</span>
-                                        <span class="product-label label-circle label-sale">Sale</span>
+                                        {{-- <span class="product-label label-circle label-top">Top</span>
+                                        <span class="product-label label-circle label-sale">Sale</span> --}}
                                         <a href="product.html">
                                             <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
@@ -2333,11 +2333,11 @@
     <div class="container for-you">
         <div class="heading heading-flex mb-3">
             <div class="heading-left">
-                <h2 class="title">Recommendation For You</h2><!-- End .title -->
+                <h2 class="title">Les Produits populaire</h2><!-- End .title -->
             </div><!-- End .heading-left -->
 
            <div class="heading-right">
-                <a href="#" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
+                <a href="#" class="title-link">Voir tous <i class="icon-long-arrow-right"></i></a>
            </div><!-- End .heading-right -->
         </div><!-- End .heading -->
 
@@ -2725,25 +2725,3 @@
     </div><!-- End .icon-boxes-container -->
 </main><!-- End .main -->
 @endsection
-
-
-{{-- <div class="container intro-content">
-                    <div class="row justify-content-end">
-                        <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                            <h3 class="intro-subtitle text-primary">New Arrival</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1><!-- End .intro-title -->
-
-                            <div class="intro-price">
-                                <sup>Today:</sup>
-                                <span class="text-primary">
-                                    $999<sup>1.99</sup>
-                                </span>
-                            </div><!-- End .intro-price -->
-
-                            <a href="category.html" class="btn btn-primary btn-round">
-                                <span>Shop More</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .col-md-6 offset-md-6 -->
-                    </div><!-- End .row -->
-                </div><!-- End .intro-content --> --}}

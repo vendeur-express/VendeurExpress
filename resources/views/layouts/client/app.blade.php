@@ -62,7 +62,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        
                     </div>
                 </div>
             </div>
@@ -322,7 +321,10 @@
                         <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a>
+                        <ul>
+                        <li><a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a></li>
+                        <li><a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a></li>
+                    </ul>
                     </li>
                 </ul>
 
@@ -331,7 +333,7 @@
                         <nav class="mobile-nav">
                             <ul class="mobile-menu">
                                 <li class="active">
-                                    <a href="{{route('client')}}">ACCEUIL</a>
+                                    <a href="{{route('acceuil')}}">ACCEUIL</a>
                                 </li>
                                 <li>
                                     <a href="{{route('vexshop')}}">VEX SHOP</a>
