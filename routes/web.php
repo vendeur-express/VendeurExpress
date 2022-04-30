@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< Updated upstream
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
+=======
+
+>>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,17 +14,19 @@ use App\Http\Controllers\ClientController;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!c 
+| contains the "web" middleware group. Now create something great!
+|
 */
 
-Route::get('/acceuil', function () {
-    return view('acceuil.acceuil');
-})->name('acceuil');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/home', function(){
+Route::get('/dashboard', function () {
     return view('dashboard');
-})->name('home');
+})->middleware(['auth'])->name('dashboard');
 
+<<<<<<< Updated upstream
 Route::get('/',[ClientController::class, 'home'])->name('client');
 Route::get('/vexshop',[ClientController::class,'vexshop'])->name('vexshop');
 Route::get('/apropos',[ClientController::class,'apropos'])->name('apropos');
@@ -44,3 +50,6 @@ Route::get('/produits',[AdminController::class,'produits'])->name('produits');
 Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajout_produit');
 Route::get('/avis',[AdminController::class,'avis'])->name('avis');
 Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
+=======
+require __DIR__.'/auth.php';
+>>>>>>> Stashed changes
