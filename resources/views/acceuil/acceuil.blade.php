@@ -6,10 +6,10 @@
 <div class="mb-1"></div>
 <main class="main">
      <div class="intro-slider-container">
-         <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
+         <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
             data-owl-options='{
                 "dots": true,
-                "nav": false, 
+                "nav": false,
                 "responsive": {
                     "1200": {
                         "nav": true,
@@ -23,7 +23,7 @@
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
-                
+
             </div><!-- End .intro-slide -->
 
             <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere2.jpg);height : 625px">
@@ -55,7 +55,7 @@
                 </div><!-- End .row -->
                 </div>
             </div><!-- End .intro-slide -->
-            
+
             <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere6.png); height : 600px">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color: white">
@@ -99,16 +99,16 @@
 
             <div class="col-md-6 col-lg-4 w-500">
                 <div class="col py-3 px-lg-5  bg-white" style="text-align: center">
-                   <div ><h3 style="color:#6699cc"> A propos </h3></div> 
-                     <h4> Vendeur Express </h4> 
+                   <div ><h3 style="color:#6699cc"> A propos </h3></div>
+                     <h4> Vendeur Express </h4>
                     <p style=" font: 18px Tillana, sans-serif; text-align: justify; " >
-                     Nous vendons des biens et des services de tout genres en ligne. Notre 
+                     Nous vendons des biens et des services de tout genres en ligne. Notre
                      ambition est de redorer le blason des artisans, des petits entrepreneurs,
                      des commerçants et des laissés-pour-compte du marketing digital, d’avoir
                      une visibilité à travers notre plateforme.
                     </p>
                         <img style="align-content: center; height:50px" src="assets/images/demos/demo-4/logo.png">
-                     <p> Votre satisfaction, notre source de motivation.</p> 
+                     <p> Votre satisfaction, notre source de motivation.</p>
                    </div>
             </div><!-- End .col-md-4 -->
 
@@ -140,7 +140,7 @@
 <!-- explorez les categories populaire -->
     {{-- <div class="container">
         <h2 class="title text-center mb-8">Explorez Categories populaire</h2><!-- End .title text-center -->
-        
+
         <div class="cat-blocks-container">
             <div class="row">
                 <div class="col-6 col-sm-4 col-lg-2">
@@ -319,9 +319,9 @@
 
         <div class="tab-content tab-content-carousel just-action-icons-sm">
             <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel" aria-labelledby="new-all-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -561,9 +561,9 @@
                 </div><!-- End .owl-carousel -->
             </div><!-- .End .tab-pane -->
             <div class="tab-pane p-0 fade" id="new-tv-tab" role="tabpanel" aria-labelledby="new-tv-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -770,9 +770,9 @@
                 </div><!-- End .owl-carousel -->
             </div><!-- .End .tab-pane -->
             <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -979,9 +979,9 @@
                 </div><!-- End .owl-carousel -->
             </div><!-- .End .tab-pane -->
             <div class="tab-pane p-0 fade" id="new-phones-tab" role="tabpanel" aria-labelledby="new-phones-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -1222,9 +1222,9 @@
                 </div><!-- End .owl-carousel -->
             </div><!-- .End .tab-pane -->
             <div class="tab-pane p-0 fade" id="new-watches-tab" role="tabpanel" aria-labelledby="new-watches-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -1397,9 +1397,9 @@
                 </div><!-- End .owl-carousel -->
             </div><!-- .End .tab-pane -->
             <div class="tab-pane p-0 fade" id="new-acc-tab" role="tabpanel" aria-labelledby="new-acc-link">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                     data-owl-options='{
-                        "nav": true, 
+                        "nav": true,
                         "dots": true,
                         "margin": 20,
                         "loop": false,
@@ -1680,9 +1680,9 @@
 
     <div class="container">
         <hr class="mb-0">
-        <div class="owl-carousel mt-5 mb-5 owl-simple" data-toggle="owl" 
+        <div class="owl-carousel mt-5 mb-5 owl-simple" data-toggle="owl"
             data-owl-options='{
-                "nav": false, 
+                "nav": false,
                 "dots": false,
                 "margin": 30,
                 "loop": false,
@@ -1764,9 +1764,9 @@
                 <div class="col-xl-4-5col">
                     <div class="tab-content tab-content-carousel just-action-icons-sm">
                         <div class="tab-pane p-0 fade show active" id="trending-top-tab" role="tabpanel" aria-labelledby="trending-top-link">
-                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                 data-owl-options='{
-                                    "nav": true, 
+                                    "nav": true,
                                     "dots": false,
                                     "margin": 20,
                                     "loop": false,
@@ -1941,9 +1941,9 @@
                             </div><!-- End .owl-carousel -->
                         </div><!-- .End .tab-pane -->
                         <div class="tab-pane p-0 fade" id="trending-best-tab" role="tabpanel" aria-labelledby="trending-best-link">
-                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                 data-owl-options='{
-                                    "nav": true, 
+                                    "nav": true,
                                     "dots": false,
                                     "margin": 20,
                                     "loop": false,
@@ -2147,9 +2147,9 @@
                             </div><!-- End .owl-carousel -->
                         </div><!-- .End .tab-pane -->
                         <div class="tab-pane p-0 fade" id="trending-sale-tab" role="tabpanel" aria-labelledby="trending-sale-link">
-                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                                 data-owl-options='{
-                                    "nav": true, 
+                                    "nav": true,
                                     "dots": false,
                                     "margin": 20,
                                     "loop": false,

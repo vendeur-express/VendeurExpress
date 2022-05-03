@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< Updated upstream
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
-=======
 
->>>>>>> Stashed changes
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,16 +15,15 @@ use App\Http\Controllers\ClientController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-<<<<<<< Updated upstream
-Route::get('/',[ClientController::class, 'home'])->name('client');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/',[ClientController::class, 'home'])->middleware(['auth'])->name('client');
+Route::get('/acceuil',[ClientController::class, 'index'])->middleware(['auth'])->name('acceuil');
 Route::get('/vexshop',[ClientController::class,'vexshop'])->name('vexshop');
 Route::get('/apropos',[ClientController::class,'apropos'])->name('apropos');
 Route::get('/blog',[ClientController::class,'blog'])->name('blog');
@@ -50,6 +46,5 @@ Route::get('/produits',[AdminController::class,'produits'])->name('produits');
 Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajout_produit');
 Route::get('/avis',[AdminController::class,'avis'])->name('avis');
 Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
-=======
+
 require __DIR__.'/auth.php';
->>>>>>> Stashed changes

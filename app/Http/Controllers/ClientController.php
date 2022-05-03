@@ -15,7 +15,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        return view('acceuil.acceuil');
     }
 
     /**
@@ -115,5 +115,5 @@ class ClientController extends Controller
         return view('client.contact');
     }
 
-    
+
 }

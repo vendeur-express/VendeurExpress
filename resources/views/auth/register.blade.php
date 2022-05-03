@@ -25,6 +25,30 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+              <!-- Email Address -->
+              <div class="mt-4">
+                <x-label for="image_id" :value="__('ImageId')" />
+
+                <x-input id="image_id" class="block mt-1 w-full" type="image_id" name="image_id" required />
+            </div>
+            <!-- Email Address -->
+            <div class="mt-4">
+                <x-label for="userable_id" :value="__('Userable_ID')" />
+
+                <x-input id="userable_id" class="block mt-1 w-full" type="userable_id" name="userable_id" required />
+            </div>
+             <!-- Email Address -->
+             <div class="mt-4">
+                <x-label for="userable_type" :value="__('Userable_ype')" />
+
+                <x-input id="userable_type" class="block mt-1 w-full" type="userable_type" name="userable_type" required />
+            </div>
+             <!-- Email Address -->
+             <div class="mt-4">
+                <x-label for="tel_us" :value="__('Tel')" />
+
+                <x-input id="tel_us" class="block mt-1 w-full" type="tel_us" name="tel_us" required />
+            </div>
 
             <!-- Password -->
             <div class="mt-4">
