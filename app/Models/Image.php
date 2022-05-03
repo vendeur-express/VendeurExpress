@@ -39,4 +39,7 @@ class Image extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+    
+
 }
+

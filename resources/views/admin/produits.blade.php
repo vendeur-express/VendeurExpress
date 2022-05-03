@@ -20,9 +20,9 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                    <h2>
-                        Liste des produits
-                    </h2>
+                    <ul class="ml-auto">
+                      <li class="btn btn-secondary  float-right"> <a class="text-white" href="{{route('ajout_produit')}}">Ajouter Produit</a> </li>
+                    </ul>
                 </div> 
             </div>
         </div>
@@ -30,12 +30,9 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Liste des produits</h3>
-                </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                  <table id="example2" class="table table-bordered table-striped">
                     <thead>
                     <tr>
                       <th>NOM</th>
@@ -270,7 +267,7 @@
       </section>
     <!-- /.content -->
   </div>
-  !-- Bootstrap 4 -->
+  <!-- Bootstrap 4 -->
   <script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- DataTables  & Plugins -->
   <script src="admin/plugins/datatables/jquery.dataTables.min.js"></script>
