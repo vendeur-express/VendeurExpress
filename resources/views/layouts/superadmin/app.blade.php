@@ -87,10 +87,10 @@
               <img src="admin/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                  ZONGO Celestin
+                  OUEDRAOGO Adama
                   <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">I got your message</p>
+                <p class="text-sm">j'ai besion d'un sac de riz de 25kg darly mather</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
@@ -176,6 +176,14 @@
             </a>
           </li>
           <li class="has-treeview">
+            <a href="{{route('article')}}" class="nav-link">
+              <i class="fas fa-shopping-cart nav-icon"></i>
+              <p>
+             articles
+              </p>
+            </a>
+          </li>
+          <li class="has-treeview">
             <a href="{{route('supercommande')}}" class="nav-link">
               <i class="fas fa-shopping-cart nav-icon"></i>
               <p>
@@ -185,7 +193,7 @@
           </li>
   
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('superclient')}}" class="nav-link">
               <i class="fas fa-search-dollar nav-icon"></i>
               <p>
              Clients
@@ -193,7 +201,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('superproduit')}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Produits
@@ -201,7 +209,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('categorie')}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Categories
@@ -209,7 +217,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('supercoupon')}}" class="nav-link">
               <i class="fas fa-gift nav-icon"></i>
               <p>
                 Coupons
@@ -217,7 +225,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('publicite')}}" class="nav-link">
               <i class="fas fa-store-alt nav-icon"></i>
               <p>
            Publicités
@@ -226,7 +234,7 @@
           </li>
 
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('banniere')}}" class="nav-link">
               <i class="far fa-credit-card nav-icon"></i>
               <p>
               Ajouter_banniere
@@ -235,7 +243,7 @@
           </li>
 
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('compte')}}" class="nav-link">
               <i class="fas fa-chart-pie nav-icon"></i>
               <p>
                 Comptes
@@ -243,7 +251,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('commentaire')}}" class="nav-link">
               <i class=" 	fas fa-comment nav-icon"></i>
               <p>
                 Commentaires
@@ -251,7 +259,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="" class="nav-link">
+            <a href="{{route('parametre')}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Réglages

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="admin/dist/css/adminlte.min.css"
-@extends('layouts.admin.app')
+@extends('layouts.superadmin.app')
 @section('titre')
     PRODUITS | VENDEUR EXPRESS
 @endsection
@@ -60,12 +60,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -82,12 +82,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                          Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Supprimer
                         </a>
                         </td>
                     </tr>
@@ -104,12 +104,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -126,12 +126,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -148,12 +148,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -170,12 +170,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -192,12 +192,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -214,12 +214,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>
@@ -227,7 +227,7 @@
                       <td>KHTML</td>
                       <td>Konqureror 3.5</td>
                       <td class="project-state">
-                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-success">Reussi</span>
                       </td>
                       <td>3.5</td>
                       <td>fsdg</td>
@@ -236,12 +236,12 @@
                         <a class="btn btn-info btn-sm" href="#">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Edit
+                            Editer
                         </a>
                         <a class="btn btn-danger btn-sm" href="#">
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            supprimer
                         </a>
                         </td>
                     </tr>

@@ -123,14 +123,17 @@ class AdminController extends Controller
     public function ajout_categorie(){
         return view('superadmin.ajout_categorie');
     }
+    public function categorie(){
+        return view('superadmin.categorie');
+    }
     public function article(){
         return view('superadmin.article');
     }
     public function banniere(){
         return view('superadmin.banniere');
     }
-    public function client(){
-        return view('superadmin.client');
+    public function superclient(){
+        return view('superadmin.superclient');
     }
     public function commentaire(){
         return view('superadmin.commentaire');
@@ -150,7 +153,7 @@ class AdminController extends Controller
     public function publicite(){
         return view('superadmin.publicite');
     }
-    public function coupons(){
-        return view('superadmin.coupons');
+    public function supercoupon(){
+        return view('superadmin.supercoupon');
     }
 }

@@ -51,7 +51,6 @@
       <div class="col" > 
         <button style="align-content: center" type="submit" class="btn btn-success">Enregistre</button>
       </div>
-      
   </form>
 </div>
 <div class="mb-1"></div>
