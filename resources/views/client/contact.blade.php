@@ -5,14 +5,7 @@
 @section('contenu')
 
 <main class="main">
-    <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contactez-nous</li>
-            </ol>
-        </div><!-- End .container -->
-    </nav><!-- End .breadcrumb-nav -->
+    
     <div class="container">
         <div class="page-header page-header-big text-center" style="background-image: url('assets/images/contact-header-bg.jpg')">
             <h1 class="page-title text-white">Contactez-nous<span class="text-white">Restez en contact avec nous</span></h1>

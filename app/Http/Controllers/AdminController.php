@@ -113,5 +113,47 @@ class AdminController extends Controller
     public function rapport(){
         return view('admin.rapport');
     }
-
+    // supper admin
+    public function dashboard(){
+        return view('superadmin.dashboard');
+    }
+    public function supercommande(){
+        return view('superadmin.supercommande');
+    }
+    public function ajout_categorie(){
+        return view('superadmin.ajout_categorie');
+    }
+    public function categorie(){
+        return view('superadmin.categorie');
+    }
+    public function article(){
+        return view('superadmin.article');
+    }
+    public function banniere(){
+        return view('superadmin.banniere');
+    }
+    public function superclient(){
+        return view('superadmin.superclient');
+    }
+    public function commentaire(){
+        return view('superadmin.commentaire');
+    }
+    public function compte(){
+        return view('superadmin.compte');
+    }
+    public function parametre(){
+        return view('superadmin.parametre');
+    }
+    public function superajout_produit(){
+        return view('superadmin.commentaire');
+    }
+    public function superproduit(){
+        return view('superadmin.superproduit');
+    }
+    public function publicite(){
+        return view('superadmin.publicite');
+    }
+    public function supercoupon(){
+        return view('superadmin.supercoupon');
+    }
 }

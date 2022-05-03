@@ -47,4 +47,22 @@ Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajo
 Route::get('/avis',[AdminController::class,'avis'])->name('avis');
 Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
 
+
+// route pour superadmin
+Route::get('/superadmin',[AdminController::class,'dashboard'])->name('superadmin');
+Route::get('/supercommande',[AdminController::class,'supercommande'])->name('supercommande');
+Route::get('/ajout_categorie',[AdminController::class,'ajout_categorie'])->name('ajout_categorie');
+Route::get('/article',[AdminController::class,'article'])->name('article');
+Route::get('/superclient',[AdminController::class,'superclient'])->name('superclient');
+Route::get('/categorie',[AdminController::class,'categorie'])->name('categorie');
+Route::get('/compte',[AdminController::class,'compte'])->name('compte');
+Route::get('/superclient',[AdminController::class,'superclient'])->name('superclient');
+Route::get('/superproduit',[AdminController::class,'superproduit'])->name('superproduit');
+Route::get('/supercoupon',[AdminController::class,'supercoupon'])->name('supercoupon');
+Route::get('/parametre',[AdminController::class,'parametre'])->name('parametre');
+Route::get('/publicite',[AdminController::class,'publicite'])->name('publicite');
+Route::get('/commentaire',[AdminController::class,'commentaire'])->name('commentaire');
+Route::get('/banniere',[AdminController::class,'banniere'])->name('banniere');
+Route::get('/superajout_produit',[AdminController::class,'superajout_produit'])->name('superajout_produit');
+
 require __DIR__.'/auth.php';
