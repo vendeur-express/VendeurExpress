@@ -15,6 +15,12 @@ use App\Http\Controllers\ClientController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/acceuil',function(){
+//     return view('acceuil.acceuil');
+// })->name('acceuil');
 
 
 // Route::get('/dashboard', function () {
