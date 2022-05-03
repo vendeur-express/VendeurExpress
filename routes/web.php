@@ -20,7 +20,7 @@ Route::get('/acceuil', function () {
 Route::get('/home', function(){
     return view('dashboard');
 })->name('home');
-
+// route clients
 Route::get('/',[ClientController::class, 'home'])->name('client');
 Route::get('/vexshop',[ClientController::class,'vexshop'])->name('vexshop');
 Route::get('/apropos',[ClientController::class,'apropos'])->name('apropos');
@@ -44,3 +44,6 @@ Route::get('/produits',[AdminController::class,'produits'])->name('produits');
 Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajout_produit');
 Route::get('/avis',[AdminController::class,'avis'])->name('avis');
 Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
+// route pour superadmin
+Route::get('/superadmin',[AdminController::class,'dashboard'])->name('superadmin');
+Route::get('/superadmin',[AdminController::class,'supercommande'])->name('supercommande');

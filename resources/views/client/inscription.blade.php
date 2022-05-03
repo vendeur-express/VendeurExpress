@@ -29,6 +29,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
                                 <form action="#">
+                                    
                                     <div class="form-group">
                                         <label for="singin-email-2">Nom d'utilisateur ou adresse e-mail *</label>
                                         <input type="text" class="form-control" id="singin-email-2" name="singin-email" required>
@@ -73,6 +74,17 @@
                             </div><!-- .End .tab-pane -->
                             <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
                                 <form action="#">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label class="sr-only">Pays</label>
+                                            <select name="Type de compte" class="form-control">
+                                                <option>Type de compte</option>
+                                                <option>Demarcheur</option>
+                                                <option>Fournisseur</option>
+                                                <option>Vendeur</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-sm-6" >
                                             <label for="cname" class="sr-only"> Nom *</label>
