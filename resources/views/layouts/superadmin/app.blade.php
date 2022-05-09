@@ -39,9 +39,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="{{route('acceuil')}}" class="nav-link">visite le site</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('contact')}}" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- SEARCH FORM -->

@@ -4,16 +4,6 @@
 @endsection
 @section('contenu')
     <main class="main">
-        {{-- <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
-            <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Login</li>
-                </ol>
-            </div><!-- End .container -->
-        </nav><!-- End .breadcrumb-nav --> --}}
-
         <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17" style="background-image: url('assets/images/backgrounds/login-bg.jpg')">
             <div class="container">
                 <div class="form-box">
@@ -29,23 +19,19 @@
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
                                 <form action="#">
-                                    
                                     <div class="form-group">
                                         <label for="singin-email-2">Nom d'utilisateur ou adresse e-mail *</label>
                                         <input type="text" class="form-control" id="singin-email-2" name="singin-email" required>
                                     </div><!-- End .form-group -->
-
                                     <div class="form-group">
                                         <label for="singin-password-2">Mot de passe *</label>
                                         <input type="password" class="form-control" id="singin-password-2" name="singin-password" required>
                                     </div><!-- End .form-group -->
-
                                     <div class="form-footer">
                                         <button type="submit" class="btn btn-outline-primary-2">
                                             <span>CONNEXION</span>
                                             <i class="icon-long-arrow-right"></i>
                                         </button>
-
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="signin-remember-2">
                                             <label class="custom-control-label" for="signin-remember-2">Me souvenir de</label>
@@ -132,7 +118,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <label class="sr-only">Pays</label>
+                                         
                                             <select name="country" class="form-control">
                                                 <option>Burkina Faso</option>
                                                 <option>Côte d'Ivoire</option>

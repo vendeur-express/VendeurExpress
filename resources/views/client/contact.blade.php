@@ -22,7 +22,6 @@
                         <div class="col-sm-7">
                             <div class="contact-info">
                                 <h3>Adresses</h3>
-
                                 <ul class="contact-list">
                                     <li>
                                         <i class="icon-map-marker"></i>
