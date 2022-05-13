@@ -174,7 +174,7 @@
           </li>
           <li class="has-treeview">
             <a href="{{route('article')}}" class="nav-link">
-              <i class="fas fa-shopping-cart nav-icon"></i>
+              <i class="fa fa-pencil nav-icon"></i>
               <p>
              articles
               </p>
@@ -199,7 +199,7 @@
           </li>
           <li class="has-treeview">
             <a href="{{route('superproduit')}}" class="nav-link">
-              <i class="far fa-sun nav-icon"></i>
+              <i class="fa fa-bomb nav-icon"></i>
               <p>
                 Produits
               </p>
@@ -215,7 +215,7 @@
           </li>
           <li class="has-treeview">
             <a href="{{route('supercoupon')}}" class="nav-link">
-              <i class="fas fa-gift nav-icon"></i>
+              <i class="fa fa-user-circle-o nav-icon"></i>
               <p>
                 Coupons
               </p>
@@ -241,7 +241,7 @@
 
           <li class="has-treeview">
             <a href="{{route('compte')}}" class="nav-link">
-              <i class="fas fa-chart-pie nav-icon"></i>
+              <i class="fa fa-user nav-icon"></i>
               <p>
                 Comptes
               </p>

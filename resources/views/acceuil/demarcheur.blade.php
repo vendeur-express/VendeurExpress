@@ -28,7 +28,7 @@
       </div>
       
     </div>
-    <div class="row">
+    <div class="row" id="boutique">
         <div class="col">
           <input type="text" class="form-control" placeholder="Nom de la Boutique" required>
         </div>

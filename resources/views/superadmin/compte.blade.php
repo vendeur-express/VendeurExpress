@@ -13,8 +13,7 @@
                                 <a class="nav-link active" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab" aria-controls="register-2" aria-selected="true">S'inscrire</a>
                             </li>
                         </ul>
-                        <div class="tab-content">
-                            
+                        <div class="tab-content">   
                             <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
                                 <form action="#">
                                     <div class="row">
@@ -108,5 +107,5 @@
             </div><!-- End .container -->
         </div><!-- End .login-page section-bg -->
     </main><!-- End .main -->
-    
+
 @endsection
