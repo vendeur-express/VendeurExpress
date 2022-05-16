@@ -69,13 +69,12 @@
                                                 <option value="2">Vendeur</option>
                                             </select>  
                                         </div>
-                                    </div>
-                                    <div class="row" id="identifiant">
-                                        <div class="col-sm-12">
+
+                                        <div class="col-sm-12" id="identifiant">
                                             <input type="text" class="form-control" placeholder="Identifiant" required>
                                           </div>
-                                     </div>
-                                    <div class="row" >
+                                  
+                                     
                                         <div class="col-sm-6" id="nom">
                                             <label for="cname" class="sr-only"> Nom *</label>
                                             <input type="text" class="form-control icon-phone" id="cname" placeholder="Nom"  required>
@@ -85,9 +84,8 @@
                                             <label class="sr-only">Prenom *</label>
 		                					<input type="text" class="form-control" placeholder="Prenom" required>
                                         </div>
-                                    </div>
+                                   
 
-                                    <div class="row" >
                                        
                                         <div class="col-sm-6" id="email">
                                             <label class="sr-only">Email</label>
@@ -99,9 +97,7 @@
                                             <label class="sr-only">Nom du magasin*</label>
 		                					<input type="text" class="form-control" placeholder="Nom du magasin" required>
                                         </div>
-                                    </div>
-
-                                    <div class="row" >
+                                   
                                         <div class="col-sm-6" id="cnib">
                                           <input type="text" class="form-control" placeholder="N* CNIB" required>
                                         </div>
@@ -109,10 +105,8 @@
                                             <label class="sr-only">Telephone </label>
                                             <input type="phone" placeholder="Telephone" class="form-control">
                                         </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
+                         
+                                        <div class="col-sm-6" id="pays-container">
                                             <select name="country" class="form-control pays" id="pays">
                                                 <option >Burkina Faso</option>
                                                 <option>Côte d'Ivoire</option>
@@ -125,54 +119,49 @@
                                             <label class="sr-only">Ville</label>
                                             <input type="text" class="form-control" placeholder="Ville" required>
                                         </div>
-                                    </div>
-                                    <div class="row">
+                                    
+                                     
                                         <div class="col-sm-12 " id="naissance">
                                             <label class="sr-only">date_naissance </label>
                                             <input type="date" placeholder="" class="form-control">
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                    <div class="col-sm-6">
-                                            <select name="country" class="form-control pays" id="sexe">
+                                     
+                                     <div class="col-sm-6" id="sexe">
+                                            <select name="sexe" class="form-control pays" >
                                                 <option >Sexe</option>
                                                 <option>Masculin</option>
                                                 <option>Feminin</option>
                                             </select>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <select name="country" class="form-control pays" id="paiement">
-                                                <option >Type_de_paiement</option>
-                                                <option>Orange</option>
-                                                <option>orange</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row" id="pass1">
-                                        <div class="col-sm-6">
+                                           <div class="col-sm-6" id="paiement-container">
+                                                 <select name="paiement" class="form-control pays" id="paiement">
+                                                    <option >Type_de_paiement</option>
+                                                    <option>Orange</option>
+                                                    <option>orange</option>
+                                                 </select>
+                                                </div>
+                                        <div class="col-sm-6" id="pass1-container">
                                             <label class="sr-only icon icon-user">Mot de passe</label>
-                                            <input type="password" class="form-control" placeholder="Mot de Passe" required>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="sr-only">Confirmation du mot de passe</label>
-                                            <input type="password" class="form-control" placeholder="Mot de Passe" required>
+                                            <input type="password" id="pass1" class="form-control" placeholder="Mot de Passe" required>
                                         </div>
 
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
+                                        <div class="col-sm-6" id="pass2-container">
+                                            <label class="sr-only">Confirmation du mot de passe</label>
+                                            <input type="password" id="pass2" class="form-control" placeholder="Mot de Passe" required>
+                                        </div>
+
+                                  
+                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="register-policy" required>
                                         <label class="custom-control-label" for="register-policy">je suis d'accord avec la <a href="#">politique de confidentialité</a> *</label>
-                                    </div><!-- End .custom-checkbox -->   
-                                    <div class="form-footer">
-                                        
-                                        <button type="submit" class="btn btn-outline-primary-2">
-                                            <span>S'enregistrer</span>
-                                            <i class="icon-long-arrow-right"></i>
-                                        </button>
-
-                                        
-                                    </div><!-- End .form-footer -->
-
+                                     </div><!-- End .custom-checkbox -->   
+                                       <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>S'enregistrer</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+                                      </div><!-- End .form-footer -->
+                                </div>
                                 </form>
                                 
                             </div><!-- .End .tab-pane -->
@@ -184,26 +173,7 @@
     </main><!-- End .main -->
     <script>
  
-// window.onload=function()
-// {
-//     document.getElementById("type").onchange = function()
-//     {
-//         if(this.checked == true)
-//         {
-//             document.getElementById("nom").style.visibility = "hidden";
-//             document.getElementById("nom,prenom,email").style.display = "none";
-//         }
-//     };
 
-//     document.getElementById("demarcheur").onchange = function()
-//     {
-//         if(this.checked == true)
-//         {
-//             document.getElementById(" boutique").style.visibility = "visible";
-//             document.getElementById("boutique").style.display = "block";
-//         }
-//     };
-// }
     var email=document.getElementById('email')
     var ville=document.getElementById('ville')
     var pays=document.getElementById('pays')
@@ -218,7 +188,12 @@
     var sexe=document.getElementById('sexe')
     var paiement=document.getElementById('paiement')
     var compte_type = document.getElementById('compte');
-
+    var pass1 = document.getElementById('pass1-container');
+    var pass2 = document.getElementById('pass2-container');
+    var paiement = document.getElementById('paiement-container');
+    var pays_container = document.getElementById('pays-container');
+    
+    client()
         compte_type.addEventListener('change',function(){
         if(compte_type.value==""){
        client()
@@ -246,14 +221,34 @@
         sexe.style.display='none'
         ville.style.display='none'
         naissance.style.display='none'
-        paiement.style.display='none'
-        
+        paiement.style.display='none' 
         cnib.style.display='none'
         identifiant.style.display='block'
+        pass1.style.display='none'
+        pass2.style.display='none'
+        paiement.style.display='none'
+        pays_container.style.display='none'
 
 
     }
     function demarcheur() {
+        email.style.display='block'
+        ville.style.display='block'
+        pays.style.display='block'
+        telephone.style.display='block'
+        boutique.style.display='block'
+        nom.style.display='block'
+        prenom.style.display='block'
+        sexe.style.display='block'
+        ville.style.display='block'
+        naissance.style.display='block'
+        paiement.style.display='block'
+        cnib.style.display='block'
+        identifiant.style.display='block'
+        pass1.style.display='block'
+        pass2.style.display='block'
+        paiement.style.display='block'
+        pays_container.style.display='block'
 
     }
     function fournisseur() {
@@ -271,6 +266,11 @@
         
         cnib.style.display='none'
         identifiant.style.display='block'
+        pass1.style.display='none'
+        pass2.style.display='none'
+        paiement.style.display='none'
+        pays_container.style.display='none'
+
        
        
         
@@ -290,6 +290,11 @@
         
         cnib.style.display='block'
         identifiant.style.display='block'
+        pass1.style.display='none'
+        pass2.style.display='none'
+        paiement.style.display='none'
+        pays_container.style.display='none'
+
     }
  </script>
 
