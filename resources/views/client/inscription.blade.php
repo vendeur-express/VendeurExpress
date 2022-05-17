@@ -279,17 +279,12 @@
         ville.style.display='block'
         naissance.style.display='none'
         paiement.style.display='none'
-        
         cnib.style.display='none'
         identifiant.style.display='block'
         pass1.style.display='none'
         pass2.style.display='none'
         paiement.style.display='none'
-        pays_container.style.display='none'
-
-       
-       
-        
+        pays_container.style.display='none'      
     }
     function vendeur() {
         email.style.display='block'
@@ -303,7 +298,6 @@
         ville.style.display='block'
         naissance.style.display='block'
         paiement.style.display='block'
-        
         cnib.style.display='block'
         identifiant.style.display='block'
         pass1.style.display='none'
