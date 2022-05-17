@@ -29,7 +29,7 @@
                 <x-input id="password_us" class="block mt-1 w-full"
                                 type="password"
                                 name="password_us"
-                                required autocomplete="current-password" />
+                                required  />
             </div>
 
             <!-- Remember Me -->

@@ -16,48 +16,48 @@
             <div>
                 <x-label for="name" :value="__('Name')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name_us" :value="old('name_us')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email_us" :value="old('email_us')" required />
             </div>
               <!-- Email Address -->
               <div class="mt-4">
                 <x-label for="image_id" :value="__('ImageId')" />
 
-                <x-input id="image_id" class="block mt-1 w-full" type="image_id" name="image_id" required />
+                <x-input id="image_id" class="block mt-1 w-full" type="number" name="image_id"  required />
             </div>
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="userable_id" :value="__('Userable_ID')" />
 
-                <x-input id="userable_id" class="block mt-1 w-full" type="userable_id" name="userable_id" required />
+                <x-input id="userable_id" class="block mt-1 w-full" type="number" name="userable_id" required />
             </div>
              <!-- Email Address -->
              <div class="mt-4">
                 <x-label for="userable_type" :value="__('Userable_ype')" />
 
-                <x-input id="userable_type" class="block mt-1 w-full" type="userable_type" name="userable_type" required />
+                <x-input id="userable_type" class="block mt-1 w-full" type="text" name="userable_type" required />
             </div>
              <!-- Email Address -->
              <div class="mt-4">
                 <x-label for="tel_us" :value="__('Tel')" />
 
-                <x-input id="tel_us" class="block mt-1 w-full" type="tel_us" name="tel_us" required />
+                <x-input id="tel_us" class="block mt-1 w-full" type="tel" name="tel_us" required />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password_us" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
+                <x-input id="password_us" class="block mt-1 w-full"
                                 type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                                name="password_us"
+                                required autocomplete="new-password_us" />
             </div>
 
             <!-- Confirm Password -->
@@ -66,7 +66,7 @@
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
-                                name="password_confirmation" required />
+                                name="password_us_confirmation" required />
             </div>
 
             <div class="flex items-center justify-end mt-4">
