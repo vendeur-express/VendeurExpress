@@ -7,7 +7,7 @@
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'UTC',
-    'locale' => 'en',
+    'locale' => 'fr',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => 'base64:BHXpJVedP0G3moJv+v251kylb1yK0wpQwIC+58Wos2c=',
@@ -187,7 +187,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework/cache/data',
+        'path' => 'C:\\laragon\\www\\VendeurExpress\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -360,13 +360,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app',
+        'root' => 'C:\\laragon\\www\\VendeurExpress\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app/public',
+        'root' => 'C:\\laragon\\www\\VendeurExpress\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -386,7 +386,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\VEX\\vendeurexpress-app\\public\\storage' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app/public',
+      'C:\\laragon\\www\\VendeurExpress\\public\\storage' => 'C:\\laragon\\www\\VendeurExpress\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -421,13 +421,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\laragon\\www\\VendeurExpress\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\laragon\\www\\VendeurExpress\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -479,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\laragon\\www\\VendeurExpress\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -544,7 +544,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\VEX\\vendeurexpress-app\\resources\\views/vendor/mail',
+        0 => 'C:\\laragon\\www\\VendeurExpress\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -650,7 +650,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework/sessions',
+    'files' => 'C:\\laragon\\www\\VendeurExpress\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -670,9 +670,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\VEX\\vendeurexpress-app\\resources\\views',
+      0 => 'C:\\laragon\\www\\VendeurExpress\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework\\views',
+    'compiled' => 'C:\\laragon\\www\\VendeurExpress\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -745,7 +745,7 @@
     array (
     ),
     'enable_runnable_solutions' => true,
-    'remote_sites_path' => 'C:\\Users\\VEX\\vendeurexpress-app',
+    'remote_sites_path' => 'C:\\laragon\\www\\VendeurExpress',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

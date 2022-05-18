@@ -32,7 +32,7 @@
               <div class="card">
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example2" class="table table-bordered table-striped">
+                  <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
                       <th>NOM</th>
@@ -198,6 +198,7 @@
                         </a>
                         </td>
                     </tr>
+                    
                     <tr>
                       <td>KHTML</td>
                       <td>Konqureror 3.3</td>
@@ -287,15 +288,27 @@
   <!-- AdminLTE for demo purposes -->
   <script src="admin/dist/js/demo.js"></script>
   <script>
+    
+    $(document).on("click","#delete",function(e){
+        e.preventDefault();
+        var link=$(this).attr("href");
+        bootbox.confirm("Voulez vraiment supprimer cet élement ?", function(confirmed){
+            if(confirmed){
+                window.location.href=link;
+            };
+        });
+    });
+  </script>
+  <script>
       $(function () {
         $("#example1").DataTable({
           "responsive": true, "lengthChange": false, "autoWidth": false,
           "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
+        $('#example1').DataTable({
           "paging": true,
           "lengthChange": false,
-          "searching": false,
+          "searching": true,
           "ordering": true,
           "info": true,
           "autoWidth": false,

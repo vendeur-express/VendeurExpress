@@ -85,6 +85,15 @@
             'reference' => 'ee0db30118f661fb166bcffbf5d82032df484697',
             'dev_requirement' => false,
         ),
+        'enyo/dropzone' => array(
+            'pretty_version' => 'v5.9.3',
+            'version' => '5.9.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../enyo/dropzone',
+            'aliases' => array(),
+            'reference' => '286b2dc1f1195bd12169e4c9d5f91cfbe46e245f',
+            'dev_requirement' => false,
+        ),
         'facade/ignition-contracts' => array(
             'pretty_version' => '1.0.2',
             'version' => '1.0.2.0',

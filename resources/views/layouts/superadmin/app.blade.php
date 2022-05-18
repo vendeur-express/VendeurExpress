@@ -302,7 +302,7 @@
         <!-- ChartJS -->
         <script src="admin/plugins/chart.js/Chart.min.js"></script>
         <!-- Sparkline -->
-        <script src="admin/plugins/sparklines/sparkline.js"></script>
+        {{-- <script src="admin/plugins/sparklines/sparkline.js"></script> --}}
         <!-- JQVMap -->
         <script src="admin/plugins/jqvmap/jquery.vmap.min.js"></script>
         <script src="admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>

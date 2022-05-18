@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('titre')</title>
-
+  <link rel="stylesheet" href="admin/dist/css/image-uploader.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -25,6 +25,14 @@
   <link rel="stylesheet" href="admin/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.min.css">
+   <!-- jQuery -->
+   <script src="admin/plugins/jquery/jquery.min.js"></script>
+   <!-- jQuery UI 1.11.4 -->
+   <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+   
+   <script src="admin/dist/js/image-uploader.min.js"></script>
+   <script src="admin/dist/js/BsMultiSelect.bs4.min.js"></script>
+   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -257,6 +265,22 @@
               </p>
             </a>
           </li>
+          <li class="has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-folder"></i>
+              <p>
+                Catégories
+              </p>
+            </a>
+          </li>
+          <li class="has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-folder-plus"></i>
+              <p>
+                Ajouter catégories
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -274,7 +298,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+        
         <!-- jQuery -->
         <script src="admin/plugins/jquery/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
@@ -288,7 +312,7 @@
         <!-- ChartJS -->
         <script src="admin/plugins/chart.js/Chart.min.js"></script>
         <!-- Sparkline -->
-        <script src="admin/plugins/sparklines/sparkline.js"></script>
+        {{-- <script src="admin/plugins/sparklines/sparkline.js"></script> --}}
         <!-- JQVMap -->
         <script src="admin/plugins/jqvmap/jquery.vmap.min.js"></script>
         <script src="admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
@@ -306,7 +330,7 @@
         <!-- AdminLTE App -->
         <script src="admin/dist/js/adminlte.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="admin/dist/js/pages/dashboard.js"></script>
+        {{-- <script src="admin/dist/js/pages/dashboard.js"></script> --}}
         <!-- AdminLTE for demo purposes -->
         <script src="admin/dist/js/demo.js"></script>
     </body>

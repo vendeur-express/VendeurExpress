@@ -636,6 +636,25 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/sauvercategorie' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'sauvercategorie',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/article' => 
       array (
         0 => 
@@ -2260,6 +2279,79 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'ajout_categorie',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'sauvercategorie' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'sauvercategorie',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CategorieController@sauvercategorie',
+        'controller' => 'App\\Http\\Controllers\\CategorieController@sauvercategorie',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'sauvercategorie',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::0QzVBfmsbQJinUDu' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delete_categorie/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CategorieProduitController@delete_categorie',
+        'controller' => 'App\\Http\\Controllers\\CategorieProduitController@delete_categorie',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::0QzVBfmsbQJinUDu',
       ),
       'fallback' => false,
       'defaults' => 

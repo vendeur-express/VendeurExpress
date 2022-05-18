@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
 
 /*
@@ -58,6 +60,9 @@ Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
 Route::get('/superadmin',[AdminController::class,'dashboard'])->name('superadmin');
 Route::get('/supercommande',[AdminController::class,'supercommande'])->name('supercommande');
 Route::get('/ajout_categorie',[AdminController::class,'ajout_categorie'])->name('ajout_categorie');
+Route::post('/sauvercategorie',[CategorieController::class,'sauvercategorie'])->name('sauvercategorie');
+
+Route::get('/delete_categorie/{id}',[CategorieProduitController::class,'delete_categorie']);
 Route::get('/article',[AdminController::class,'article'])->name('article');
 Route::get('/superclient',[AdminController::class,'superclient'])->name('superclient');
 Route::get('/categorie',[AdminController::class,'categorie'])->name('categorie');

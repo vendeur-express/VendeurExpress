@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produits;
-use App\Http\Requests\StoreProduitsRequest;
-use App\Http\Requests\UpdateProduitsRequest;
+use App\Models\ClentVendeur;
+use App\Http\Requests\StoreClentVendeurRequest;
+use App\Http\Requests\UpdateClentVendeurRequest;
 
-class ProduitsController extends Controller
+class ClentVendeurController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,6 @@ class ProduitsController extends Controller
     public function index()
     {
         //
-        
     }
 
     /**
@@ -32,10 +31,10 @@ class ProduitsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreProduitsRequest  $request
+     * @param  \App\Http\Requests\StoreClentVendeurRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProduitsRequest $request)
+    public function store(StoreClentVendeurRequest $request)
     {
         //
     }
@@ -43,10 +42,10 @@ class ProduitsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Produits  $produits
+     * @param  \App\Models\ClentVendeur  $clentVendeur
      * @return \Illuminate\Http\Response
      */
-    public function show(Produits $produits)
+    public function show(ClentVendeur $clentVendeur)
     {
         //
     }
@@ -54,10 +53,10 @@ class ProduitsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Produits  $produits
+     * @param  \App\Models\ClentVendeur  $clentVendeur
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produits $produits)
+    public function edit(ClentVendeur $clentVendeur)
     {
         //
     }
@@ -65,11 +64,11 @@ class ProduitsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateProduitsRequest  $request
-     * @param  \App\Models\Produits  $produits
+     * @param  \App\Http\Requests\UpdateClentVendeurRequest  $request
+     * @param  \App\Models\ClentVendeur  $clentVendeur
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProduitsRequest $request, Produits $produits)
+    public function update(UpdateClentVendeurRequest $request, ClentVendeur $clentVendeur)
     {
         //
     }
@@ -77,10 +76,10 @@ class ProduitsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Produits  $produits
+     * @param  \App\Models\ClentVendeur  $clentVendeur
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produits $produits)
+    public function destroy(ClentVendeur $clentVendeur)
     {
         //
     }

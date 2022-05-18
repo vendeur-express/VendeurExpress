@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Post;
+use App\Models\Droit;
 use App\Models\Image;
 use App\Models\Jaime;
 use App\Models\Service;
@@ -107,5 +108,9 @@ class User extends Authenticatable
      {
          return $this->hasMany(Favorite::class);
      }
+     public function droits()
+    {
+        return $this->belongsToMany(Droit::class);
+    }
 
 }

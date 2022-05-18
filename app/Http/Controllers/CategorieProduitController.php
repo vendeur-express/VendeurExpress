@@ -83,4 +83,11 @@ class CategorieProduitController extends Controller
     {
         //
     }
+    public function delete_categorie($id){
+        $category=CategorieProduit::find($id);
+        $category->delete();
+        return back()->with('status','Catégorie Supprimée avec succès !');
+        
+    }
+    
 }
