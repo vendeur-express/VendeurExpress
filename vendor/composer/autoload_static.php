@@ -684,6 +684,7 @@ class ComposerStaticInitd9ed93ed76109e4769120d51a59b6e73
         'App\\Models\\Favorite' => __DIR__ . '/../..' . '/app/Models/Favorite.php',
         'App\\Models\\FavoriteProduit' => __DIR__ . '/../..' . '/app/Models/FavoriteProduit.php',
         'App\\Models\\Fournisseur' => __DIR__ . '/../..' . '/app/Models/Fournisseur.php',
+        'App\\Models\\Gallery' => __DIR__ . '/../..' . '/app/Models/Gallery.php',
         'App\\Models\\Image' => __DIR__ . '/../..' . '/app/Models/Image.php',
         'App\\Models\\ImagePost' => __DIR__ . '/../..' . '/app/Models/ImagePost.php',
         'App\\Models\\ImageProduit' => __DIR__ . '/../..' . '/app/Models/ImageProduit.php',

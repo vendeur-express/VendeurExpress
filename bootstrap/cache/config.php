@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Vendeur-Express',
+    'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost',
@@ -10,11 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-<<<<<<< Updated upstream
     'key' => 'base64:BHXpJVedP0G3moJv+v251kylb1yK0wpQwIC+58Wos2c=',
-=======
-    'key' => 'base64:iMaVZZ0utmkNAe1nDAatRgxIqBwJt7hwGIGsetgkNF8=',
->>>>>>> Stashed changes
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -191,7 +187,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -235,7 +231,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'vendeur_express_cache_',
+    'prefix' => 'laravel_cache_',
   ),
   'cors' => 
   array (
@@ -334,7 +330,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'vendeur_express_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
@@ -364,13 +360,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\app',
+        'root' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\app/public',
+        'root' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -390,7 +386,7 @@
     ),
     'links' => 
     array (
-      'C:\\wamp64\\www\\VendeurExpress\\public\\storage' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\app/public',
+      'C:\\Users\\VEX\\vendeurexpress-app\\public\\storage' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -425,13 +421,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -483,7 +479,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -541,14 +537,14 @@
     'from' => 
     array (
       'address' => 'hello@example.com',
-      'name' => 'Vendeur-Express',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\wamp64\\www\\VendeurExpress\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\VEX\\vendeurexpress-app\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -654,7 +650,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -663,7 +659,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'vendeur_express_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -674,9 +670,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\wamp64\\www\\VendeurExpress\\resources\\views',
+      0 => 'C:\\Users\\VEX\\vendeurexpress-app\\resources\\views',
     ),
-    'compiled' => 'C:\\wamp64\\www\\VendeurExpress\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\VEX\\vendeurexpress-app\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -749,7 +745,7 @@
     array (
     ),
     'enable_runnable_solutions' => true,
-    'remote_sites_path' => 'C:\\wamp64\\www\\VendeurExpress',
+    'remote_sites_path' => 'C:\\Users\\VEX\\vendeurexpress-app',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

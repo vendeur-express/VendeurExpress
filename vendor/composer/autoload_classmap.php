@@ -170,6 +170,7 @@ return array(
     'App\\Models\\Favorite' => $baseDir . '/app/Models/Favorite.php',
     'App\\Models\\FavoriteProduit' => $baseDir . '/app/Models/FavoriteProduit.php',
     'App\\Models\\Fournisseur' => $baseDir . '/app/Models/Fournisseur.php',
+    'App\\Models\\Gallery' => $baseDir . '/app/Models/Gallery.php',
     'App\\Models\\Image' => $baseDir . '/app/Models/Image.php',
     'App\\Models\\ImagePost' => $baseDir . '/app/Models/ImagePost.php',
     'App\\Models\\ImageProduit' => $baseDir . '/app/Models/ImageProduit.php',
