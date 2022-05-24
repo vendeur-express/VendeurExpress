@@ -28,18 +28,15 @@
     24 => 'Laravel\\Sanctum\\SanctumServiceProvider',
     25 => 'Laravel\\Tinker\\TinkerServiceProvider',
     26 => 'Laravel\\Ui\\UiServiceProvider',
-<<<<<<< Updated upstream
-    27 => 'Livewire\\LivewireServiceProvider',
-=======
     27 => 'Collective\\Html\\HtmlServiceProvider',
->>>>>>> Stashed changes
-    28 => 'Carbon\\Laravel\\ServiceProvider',
-    29 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    30 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    31 => 'App\\Providers\\AppServiceProvider',
-    32 => 'App\\Providers\\AuthServiceProvider',
-    33 => 'App\\Providers\\EventServiceProvider',
-    34 => 'App\\Providers\\RouteServiceProvider',
+    28 => 'Livewire\\LivewireServiceProvider',
+    29 => 'Carbon\\Laravel\\ServiceProvider',
+    30 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    31 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\EventServiceProvider',
+    35 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
