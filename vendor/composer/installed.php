@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< Updated upstream
         'reference' => 'd428636df07da605dd626da7d33b8deb7ed06c8a',
+=======
+        'reference' => 'f89bffc63e5289b8d5688c1d6e4f95357e3b0a95',
+>>>>>>> Stashed changes
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -397,7 +401,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< Updated upstream
             'reference' => 'd428636df07da605dd626da7d33b8deb7ed06c8a',
+=======
+            'reference' => 'f89bffc63e5289b8d5688c1d6e4f95357e3b0a95',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -443,6 +451,15 @@
             'install_path' => __DIR__ . '/../laravel/ui',
             'aliases' => array(),
             'reference' => 'f11d295de1508c5bb56206a620b00b6616de414c',
+            'dev_requirement' => false,
+        ),
+        'laravelcollective/html' => array(
+            'pretty_version' => 'v6.3.0',
+            'version' => '6.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravelcollective/html',
+            'aliases' => array(),
+            'reference' => '78c3cb516ac9e6d3d76cad9191f81d217302dea6',
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(

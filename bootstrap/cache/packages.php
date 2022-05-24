@@ -34,6 +34,7 @@
       0 => 'Laravel\\Ui\\UiServiceProvider',
     ),
   ),
+<<<<<<< Updated upstream
   'livewire/livewire' => 
   array (
     'providers' => 
@@ -43,6 +44,18 @@
     'aliases' => 
     array (
       'Livewire' => 'Livewire\\Livewire',
+=======
+  'laravelcollective/html' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Collective\\Html\\HtmlServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Form' => 'Collective\\Html\\FormFacade',
+      'Html' => 'Collective\\Html\\HtmlFacade',
+>>>>>>> Stashed changes
     ),
   ),
   'nesbot/carbon' => 

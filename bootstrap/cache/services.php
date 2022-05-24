@@ -28,7 +28,11 @@
     24 => 'Laravel\\Sanctum\\SanctumServiceProvider',
     25 => 'Laravel\\Tinker\\TinkerServiceProvider',
     26 => 'Laravel\\Ui\\UiServiceProvider',
+<<<<<<< Updated upstream
     27 => 'Livewire\\LivewireServiceProvider',
+=======
+    27 => 'Collective\\Html\\HtmlServiceProvider',
+>>>>>>> Stashed changes
     28 => 'Carbon\\Laravel\\ServiceProvider',
     29 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     30 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
