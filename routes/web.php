@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +56,6 @@ Route::get('/ajout_produit',[AdminController::class,'ajout_produit'])->name('ajo
 Route::get('/avis',[AdminController::class,'avis'])->name('avis');
 Route::get('/rapport',[AdminController::class,'rapport'])->name('rapport');
 
-
 // route pour superadmin
 Route::get('/superadmin',[AdminController::class,'dashboard'])->name('superadmin');
 Route::get('/supercommande',[AdminController::class,'supercommande'])->name('supercommande');
@@ -75,5 +75,8 @@ Route::get('/publicite',[AdminController::class,'publicite'])->name('publicite')
 Route::get('/commentaire',[AdminController::class,'commentaire'])->name('commentaire');
 Route::get('/banniere',[AdminController::class,'banniere'])->name('banniere');
 Route::get('/superajout_produit',[AdminController::class,'superajout_produit'])->name('superajout_produit');
-
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');
+Route::get('/client/create', [ClientController::class, 'create']);
+Route::post('/post', [ClientController::class, 'store']);
 require __DIR__.'/auth.php';

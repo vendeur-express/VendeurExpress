@@ -15,8 +15,12 @@ class ProduitsController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         //
         
+=======
+     return view('admin.produits');
+>>>>>>> Stashed changes
     }
 
     /**
@@ -46,7 +50,7 @@ class ProduitsController extends Controller
      * @param  \App\Models\Produits  $produits
      * @return \Illuminate\Http\Response
      */
-    public function show(Produits $produits)
+    public function show( $produits)
     {
         //
     }
@@ -57,7 +61,7 @@ class ProduitsController extends Controller
      * @param  \App\Models\Produits  $produits
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produits $produits)
+    public function edit( $produits)
     {
         //
     }
@@ -69,7 +73,7 @@ class ProduitsController extends Controller
      * @param  \App\Models\Produits  $produits
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProduitsRequest $request, Produits $produits)
+    public function update(UpdateProduitsRequest $request,  $produits)
     {
         //
     }
@@ -80,7 +84,7 @@ class ProduitsController extends Controller
      * @param  \App\Models\Produits  $produits
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produits $produits)
+    public function destroy( $produits)
     {
         //
     }

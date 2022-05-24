@@ -9,7 +9,8 @@
     <div class="content-wrapper main d-flex justify-content-center bg-white">
     
     <div class="col-lg-6 margin-1">
-        <form action="#" class="contact-form mb-3">
+        <form action="{{route('posts.store')}}" class="contact-form mb-3">
+            @csrf
             <div class="row">
                 <div class="col-sm-12">
                     <label for="tpost" class="sr-only">Titre du post</label>
@@ -82,7 +83,6 @@
               </a>
               </td>
           </tr>
-          
           </tbody>
           <tfoot>
               <tr>
