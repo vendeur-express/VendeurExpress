@@ -244,6 +244,7 @@
         }
         else if(compte_type.value == 0){
             demarcheur()
+            
         }
         else if (compte_type.value == 1){
             fournisseur()
