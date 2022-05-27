@@ -42,13 +42,19 @@ class CategorieController extends Controller
 
     /**
      * Display the specified resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
     public function show(Categorie $categorie)
     {
         //
+        // $this->validate($request,[
+        //     'label_cat'=>'required|unique:categories',
+        //     'type_cat'=>'required',
+        //      'dsc_cat'=>'nullable',
+        //     'image_cat'=>'image|nullable|max:1999'
+        // ]);
         
     }
 
@@ -77,7 +83,7 @@ class CategorieController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
+     * 
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
@@ -86,6 +92,7 @@ class CategorieController extends Controller
         //
     }
     public function sauvercategorie(Request $request){
+
         // $this->validate($request,[
         //     'label_cat'=>'required|unique:categories',
         //     'type_cat'=>'required',

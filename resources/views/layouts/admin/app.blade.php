@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('titre')</title>
+  @yield('style')
   <link rel="stylesheet" href="admin/dist/css/image-uploader.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -31,7 +32,6 @@
    <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
    
    <script src="admin/dist/js/image-uploader.min.js"></script>
-   <script src="admin/dist/js/BsMultiSelect.bs4.min.js"></script>
    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -288,7 +288,12 @@
     <!-- /.sidebar -->
   </aside>
   {{-- start content--}}
-  @yield('contenu')
+  <br/>
+  <div class="content-wrapper">
+    <section class="content">
+      @yield('contenu')
+    </section>
+  </div>
   {{-- end content--}}
 
   <!-- Control Sidebar -->
@@ -333,5 +338,6 @@
         {{-- <script src="admin/dist/js/pages/dashboard.js"></script> --}}
         <!-- AdminLTE for demo purposes -->
         <script src="admin/dist/js/demo.js"></script>
+        @yield('script')
     </body>
 </html>

@@ -3,23 +3,19 @@
     AJOUT PRODUIT | VENDEUR EXPRESS
 @endsection
 @section('contenu')
-
-<br/>
-<div class="content-wrapper">
-    <section class="content">
-      <div class="container-fluid">
-        <div class="card card-secondary">
-            {{-- card header --}}
-            <div class="card-header text-center">
-              <h3 class="card-title">Ajouter un produit</h3>
-            </div>
-            {{-- End Card header --}}
-            {{-- card body --}}
-            <div class="card-body"> 
-              <Form class="container" enctype="multipart/form-data" name="form-produit">
-                  {{-- row  1--}}
-                <div class="row">
-                  <div class="col-md-8">
+  <div class="container-fluid">
+    <div class="card card-secondary">
+      {{-- card header --}}
+      <div class="card-header text-center">
+        <h3 class="card-title">Ajouter un produit</h3>
+      </div>
+      {{-- End Card header --}}
+      {{-- card body --}}
+      <div class="card-body"> 
+        <Form class="container" enctype="multipart/form-data" name="form-produit">
+          {{-- row  1--}}
+          <div class="row">
+            <div class="col-md-8">
                     <div class="form-group">
                       <label for="inputName">Nom produit</label>
                       <input type="text" id="inputName" class="form-control">
@@ -35,8 +31,19 @@
                     <div class="form-group">
                       <label for="selectcategorie"> Catérogies produit</label>
                       <div class="row">
-                        <div id="categorie"></div>
-                      </div>
+                        <select class="select" multiple data-mdb-filter="true">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                        <option value="7">Seven</option>
+                        <option value="8">Eight</option>
+                        <option value="9">Nine</option>
+                        <option value="10">Ten</option>
+                      </select>
+                    </div>
                     </div>
                     <div class="form-group">
                      <label for="inputStatus">Pays</label>
@@ -50,78 +57,104 @@
                   </div>
                   {{-- end col 1 --}}
                   {{-- col 2 --}}
-                <div class="col-md-4">
-                  <div class="panel-heading">
-                    <label>Images produit</label>
-                  </div>
-
-                  <div class="panel-body">
-                    <form action="url" enctype="multipart/form-data">
-                      <div class="input-images"></div>
-                    </form>
-                      <div>
-                        <button class="btn btn-info" id="submit-all">Téléchargez</button>
-                      </div>
+                  <div class="col-md-4">
+                    <div class="panel-heading">
+                      <label>Images produit</label>
                     </div>
-                  
+                    <div class="panel-body">
+                      <form action="url" enctype="multipart/form-data">
+                        <div class="input-images"></div>
+                      </form>
+                        <div>
+                          <button class="btn btn-info" id="submit-all">Téléchargez</button>
+                        </div>
+                      </div>
+                    
+                    </div>
                   </div>
-                </div>
                 {{-- end col 2 --}}
               </div>
-              {{-- end row 1 --}}
-              
-              </Form>
-                
-              
-            </div>
-        </div>
+              {{-- end row 1 --}}  
+        </Form>
       </div>
+    </div>
+  </div>
+@endsection
+@section('script')
+  <script src="admin/dist/js/image-uploader.min.js"></script>
+  <script src="admin/dist/js/BsMultiSelect.bs4.min.js"></script>
+  <script>
+    // images telechargement
+    let preloaded = [
+    {id: 1, src: 'https://picsum.photos/500/500?random=1'},
+    {id: 2, src: 'https://picsum.photos/500/500?random=2'},
+    {id: 3, src: 'https://picsum.photos/500/500?random=3'},
+    {id: 4, src: 'https://picsum.photos/500/500?random=4'},
+    {id: 5, src: 'https://picsum.photos/500/500?random=5'},
+    {id: 6, src: 'https://picsum.photos/500/500?random=6'},
+    ];
+    $('.input-images').imageUploader({
+      preloaded:preloaded,
+      extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
+      mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
+      maxSize: undefined,
+      maxFiles: undefined,
+    });
+    var options = [
+    {text: "Arabic", selected: true,     disabled: false,  hidden: false},
+    {text: "Belarusian", selected: true,    disabled: true,   hidden: true},
+    {text: "Chinese",  selected: true,     disabled: false,  hidden: false},
+    {text: "Dutch", selected: true, disabled: false,  hidden: false},
+    {text: "English",  selected: false, disabled: false,  hidden: false},
+    {text: "French", selected: false, disabled: false,  hidden: false},
+    {text: "Greek", selected: false, disabled: false,  hidden: false},
+    {text: "Hindi", selected: false, disabled: false,  hidden: false},
+    {text: "Italian", selected: false, disabled: false,  hidden: false}
+    ];
 
-    </section>
-</div>
-<script>
-  var options = [
-  {text: "Arabic", selected: true,     disabled: false,  hidden: false},
-  {text: "Belarusian", selected: true,    disabled: true,   hidden: true},
-  {text: "Chinese",  selected: true,     disabled: false,  hidden: false},
-  {text: "Dutch", selected: true, disabled: false,  hidden: false},
-  {text: "English",  selected: false, disabled: false,  hidden: false},
-  {text: "French", selected: false, disabled: false,  hidden: false},
-  {text: "Greek", selected: false, disabled: false,  hidden: false},
-  {text: "Hindi", selected: false, disabled: false,  hidden: false},
-  {text: "Italian", selected: false, disabled: false,  hidden: false}
+  var $multiSelects = $("#categorie");
+  $('.multiSelects').bsMultiSelect({
+    options:options, 
+        getDisabled: function(){return false },
+        getIsOptionDisabled: function(o){ return o.disabled },
+        getIsOptionHidden: function(o){ return o.hidden }
+  })
+
+  </script>
+  <script>
+    let preloaded = [
+    {id: 1, src: 'https://picsum.photos/500/500?random=1'},
+    {id: 2, src: 'https://picsum.photos/500/500?random=2'},
+    {id: 3, src: 'https://picsum.photos/500/500?random=3'},
+    {id: 4, src: 'https://picsum.photos/500/500?random=4'},
+    {id: 5, src: 'https://picsum.photos/500/500?random=5'},
+    {id: 6, src: 'https://picsum.photos/500/500?random=6'},
   ];
 
-var $multiSelects = $("#categorie");
-$('.multiSelects').bsMultiSelect({
-  options:options, 
-      getDisabled: function(){return false },
-      getIsOptionDisabled: function(o){ return o.disabled },
-      getIsOptionHidden: function(o){ return o.hidden }
-})
+  $('.input-images').imageUploader({
+    preloaded:preloaded,
+    extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
+    mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
+    maxSize: undefined,
+    maxFiles: undefined,
+  });
+  </script>
+  <script>
+    $('#multiselect1').multiselect({
+      selectAllValue: 'multiselect-all',
+      enableCaseInsensitiveFiltering: true,
+      enableFiltering: true,
+      maxHeight: '300',
+      buttonWidth: '235',
+      onChange: function(element, checked) {
+          var brands = $('#multiselect1 option:selected');
+          var selected = [];
+          $(brands).each(function(index, brand){
+              selected.push([$(this).val()]);
+          });
 
-</script>
-<script>
-  let preloaded = [
-  {id: 1, src: 'https://picsum.photos/500/500?random=1'},
-  {id: 2, src: 'https://picsum.photos/500/500?random=2'},
-  {id: 3, src: 'https://picsum.photos/500/500?random=3'},
-  {id: 4, src: 'https://picsum.photos/500/500?random=4'},
-  {id: 5, src: 'https://picsum.photos/500/500?random=5'},
-  {id: 6, src: 'https://picsum.photos/500/500?random=6'},
-];
-
-$('.input-images').imageUploader({
-  preloaded:preloaded,
-  extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
-  mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
-  maxSize: undefined,
-  maxFiles: undefined,
-});	
-   
-// $( document ).ready(function() {
-//   alert("Hello");
-// });
-</script>
-
+          console.log(selected);
+      }
+  }); 
+  </script>
 @endsection

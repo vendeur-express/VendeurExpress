@@ -16,14 +16,6 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="inputcategoritype">Type catégorie</label>
-                        <select id="inputStatus" name="type_cat" class="form-control custom-select">
-                        <option selected disabled>Sélectionnez-en un</option>
-                        <option>Produits</option>
-                        <option>Services</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label for="inputName">Nom catégorie</label>
                         <input type="text" id="label_cat" name='label_cat' class="form-control" required>
                     </div>
@@ -40,7 +32,6 @@
                             <button type="submit" class="btn btn-primary">Sauvegarder</button>
                         </div>
                     </div>
-                    
                 </form>
             </div>
             <div class="col-md-8">
