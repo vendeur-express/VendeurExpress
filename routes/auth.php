@@ -11,13 +11,8 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
-<<<<<<< Updated upstream
-    Route::get('register', [RegisteredUserController::class, 'create'])
-                ->name('register');
-=======
     Route::get('inscription', [RegisteredUserController::class, 'create'])
         ->name('register');
->>>>>>> Stashed changes
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
