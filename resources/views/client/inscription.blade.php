@@ -1,8 +1,8 @@
-
-<?php $__env->startSection('titre'); ?>
+@extends('layouts.client.app')
+@section('titre')
     INSCRIPTION | VENDEUR-EXPRESS
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('contenu'); ?>
+@endsection
+@section('contenu')
     <main class="main">
         <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17 "
             style="background-image: url('assets/images/backgrounds/login-bg.jpg')">
@@ -22,7 +22,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
                                 <form method="POST" action="">
-                                    <?php echo csrf_field(); ?>
+                                    @csrf
                                     <div class="form-group">
                                         <label for="singin-email-2">Nom d'utilisateur ou adresse e-mail *</label>
                                         <input type="text" class="form-control" id="singin-email-2" name="singin-email"
@@ -68,7 +68,7 @@
                             <div class="tab-pane fade show active" id="register-2" role="tabpanel"
                                 aria-labelledby="register-tab-2">
                                 <form method="POST" action="register">
-                                    <?php echo csrf_field(); ?>
+                                    @csrf
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <select name="Type_de_compte" class="form-control" id="compte">
@@ -190,7 +190,23 @@
                                         </div><!-- End .form-footer -->
                                     </div>
                                 </form>
-                                
+                                {{-- <div class="form-choice">
+                                    <p class="text-center">Ou s'enregistrer avec</p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <a href="#" class="btn btn-login btn-g">
+                                                <i class="icon-google"></i>
+                                                Google
+                                            </a>
+                                        </div><!-- End .col-6 -->
+                                        <div class="col-sm-6">
+                                            <a href="#" class="btn btn-login  btn-f">
+                                                <i class="icon-facebook-f"></i>
+                                                Facebook
+                                            </a>
+                                        </div><!-- End .col-6 -->
+                                    </div><!-- End .row -->
+                                </div><!-- End .form-choice --> --}}
                             </div><!-- .End .tab-pane -->
                         </div><!-- End .tab-content -->
                     </div><!-- End .form-tab -->
@@ -433,6 +449,4 @@
 
         }
     </script>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.client.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\VEX\vendeurexpress-app\resources\views/client/inscription.blade.php ENDPATH**/ ?>
+@endsection

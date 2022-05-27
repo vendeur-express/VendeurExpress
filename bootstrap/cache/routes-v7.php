@@ -24,7 +24,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::IZc4XjCqxFDg4D1p',
+=======
+            '_route' => 'generated::n5YNrBEeHfbe5ygG',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -63,7 +67,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::7QEBtuk2bPneYhbs',
+=======
+            '_route' => 'generated::2cr6PEP3Ut4JauVw',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -83,7 +91,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::zkhQm5sNfm5kxZ6D',
+=======
+            '_route' => 'generated::wia9YRdQEAjWyYwN',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -161,7 +173,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::GnsR6nlX2noS1Mhz',
+=======
+            '_route' => 'generated::nYo9wb4FLthtgWVB',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -920,6 +936,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'students.index',
           ),
           1 => NULL,
@@ -997,6 +1014,9 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'generated::MaFhalxoEx081hvU',
+=======
+            '_route' => 'generated::jzKtXjEOnJgLFcDE',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1032,7 +1052,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::6cMetnRWaSQnD5tk',
+=======
+            '_route' => 'generated::WjZSmHleYmBiPCpv',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1068,7 +1092,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::FgchynjKfXI5bNid',
+=======
+            '_route' => 'generated::v56nQVMfD7cqhRNb',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1198,7 +1226,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::z1Z549wLEEvGRhy0',
+=======
+            '_route' => 'generated::a0CF0jWA5T5fh6n9',
+>>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1288,7 +1320,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
+<<<<<<< Updated upstream
             '_route' => 'generated::lGB6ADpaF5WKcMUF',
+=======
+            '_route' => 'generated::0YzMHY8uDb5KLSmr',
+>>>>>>> Stashed changes
           ),
           1 => 
           array (
@@ -1500,7 +1536,11 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
+<<<<<<< Updated upstream
     'generated::IZc4XjCqxFDg4D1p' => 
+=======
+    'generated::n5YNrBEeHfbe5ygG' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -1521,7 +1561,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::IZc4XjCqxFDg4D1p',
+=======
+        'as' => 'generated::n5YNrBEeHfbe5ygG',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -1631,7 +1675,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::7QEBtuk2bPneYhbs' => 
+=======
+    'generated::2cr6PEP3Ut4JauVw' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -1643,7 +1691,11 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
+<<<<<<< Updated upstream
         'as' => 'generated::7QEBtuk2bPneYhbs',
+=======
+        'as' => 'generated::2cr6PEP3Ut4JauVw',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -1659,7 +1711,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::zkhQm5sNfm5kxZ6D' => 
+=======
+    'generated::wia9YRdQEAjWyYwN' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -1671,7 +1727,11 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
+<<<<<<< Updated upstream
         'as' => 'generated::zkhQm5sNfm5kxZ6D',
+=======
+        'as' => 'generated::wia9YRdQEAjWyYwN',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -1796,7 +1856,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::GnsR6nlX2noS1Mhz' => 
+=======
+    'generated::nYo9wb4FLthtgWVB' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -1813,13 +1877,21 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
+<<<<<<< Updated upstream
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000057ce1f4100000000266d1d59";}";s:4:"hash";s:44:"MKh58zTOPJLPCDNv4OdnvilYHjXSdv6ayUR7aRhduHM=";}}',
+=======
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005030000000000000000";}";s:4:"hash";s:44:"S7o3IGPyC1i0Be2vHfMJqnjdDrLf731FJtxY1XYc+rs=";}}',
+>>>>>>> Stashed changes
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::GnsR6nlX2noS1Mhz',
+=======
+        'as' => 'generated::nYo9wb4FLthtgWVB',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -2835,7 +2907,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::lGB6ADpaF5WKcMUF' => 
+=======
+    'generated::0YzMHY8uDb5KLSmr' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -2856,7 +2932,11 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::lGB6ADpaF5WKcMUF',
+=======
+        'as' => 'generated::0YzMHY8uDb5KLSmr',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -3573,6 +3653,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::zKigV9D6nWOLm851' => 
     array (
       'methods' => 
@@ -3611,6 +3692,9 @@ app('router')->setCompiledRoutes(
       'withTrashed' => false,
     ),
     'generated::MaFhalxoEx081hvU' => 
+=======
+    'generated::jzKtXjEOnJgLFcDE' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -3630,7 +3714,11 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::MaFhalxoEx081hvU',
+=======
+        'as' => 'generated::jzKtXjEOnJgLFcDE',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -3684,7 +3772,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::6cMetnRWaSQnD5tk' => 
+=======
+    'generated::WjZSmHleYmBiPCpv' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -3705,7 +3797,11 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::6cMetnRWaSQnD5tk',
+=======
+        'as' => 'generated::WjZSmHleYmBiPCpv',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -3759,7 +3855,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::FgchynjKfXI5bNid' => 
+=======
+    'generated::v56nQVMfD7cqhRNb' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -3780,7 +3880,11 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::FgchynjKfXI5bNid',
+=======
+        'as' => 'generated::v56nQVMfD7cqhRNb',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -4100,7 +4204,11 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+<<<<<<< Updated upstream
     'generated::z1Z549wLEEvGRhy0' => 
+=======
+    'generated::a0CF0jWA5T5fh6n9' => 
+>>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -4121,7 +4229,11 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+<<<<<<< Updated upstream
         'as' => 'generated::z1Z549wLEEvGRhy0',
+=======
+        'as' => 'generated::a0CF0jWA5T5fh6n9',
+>>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 

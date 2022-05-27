@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('client.inscription');
+        return "BIEN";
     }
 
     /**
@@ -34,6 +34,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         // dd($request);
+<<<<<<< Updated upstream
         $request->validate([
             'name_us' => ['required', 'string', 'max:255'],
             'email_us' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -49,6 +50,88 @@ class RegisteredUserController extends Controller
             'tel_us' => $request->tel_us,
             'password_us' => Hash::make($request->password_us),
         ]);
+=======
+        // $clientValid = [
+        //     'identifiant'  => ['required', 'string', 'max:255'],
+        //     'nom'  => ['required', 'string', 'max:255'],
+        //     'prenom'  => ['required', 'string', 'max:255'],
+        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
+        // ];
+
+        // $FourniValid = [
+        //     'identifiant'  => ['required', 'string', 'max:255'],
+        //     'nom'  => ['required', 'string', 'max:255'],
+        //     'prenom'  => ['required', 'string', 'max:255'],
+        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'boutique' => ['required', 'string', 'max:255'],
+        //     'cnib' => ['required', 'string', 'max:255'],
+        //     'telephone' => ['required', 'string', 'max:255'],
+        //     'country' => ['required', 'string', 'max:255'],
+        //     'ville' => ['required', 'string', 'max:255'],
+        //     'date_naissance' => ['required', 'string', 'max:255'],
+        //     'sexe' => ['required', 'string', 'max:255'],
+        //     'paiement' => ['required', 'string', 'max:255'],
+        //     'mobile' => ['required', 'string', 'max:255'],
+        //     'compte_bancaire' => ['required', 'string', 'max:255'],
+        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
+        // ];
+
+
+        // $demarcheurValid = [
+        //     'identifiant'  => ['required', 'string', 'max:255'],
+        //     'nom'  => ['required', 'string', 'max:255'],
+        //     'prenom'  => ['required', 'string', 'max:255'],
+        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'boutique' => ['required', 'string', 'max:255'],
+        //     'cnib' => ['required', 'string', 'max:255'],
+        //     'telephone' => ['required', 'string', 'max:255'],
+        //     'country' => ['required', 'string', 'max:255'],
+        //     'ville' => ['required', 'string', 'max:255'],
+        //     'date_naissance' => ['required', 'string', 'max:255'],
+        //     'sexe' => ['required', 'string', 'max:255'],
+        //     'paiement' => ['required', 'string', 'max:255'],
+        //     'mobile' => ['required', 'string', 'max:255'],
+        //     'compte_bancaire' => ['required', 'string', 'max:255'],
+        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
+        // ];
+        // $vendeurValid = [];
+
+dd($request->validate([
+            'Type_de_compte'  => ['required',],
+            'identifiant'  => ['required',],
+            'nom'  => ['required', 'string', 'max:255'],
+            'prenom'  => ['required', 'string', 'max:255'],
+            'email' =>  ['required','email', 'max:255'],
+            'boutique' => ['required',],
+            'cnib' => ['required',],
+            'telephone' => ['required'],
+            'country' => ['required'],
+            'ville' => ['required'],
+            'date_naissance' => ['required'],
+            'sexe' => ['required',],
+            'paiement' => ['required'],
+
+]));
+        
+
+
+        // $user = Demarcheur::create([
+        //     'code_dem' => 'Code',
+        //     'cnib_dem' => $request->cnib,
+        //     'pays_dem' => $request->country,
+        //     'ville_dem' => $request->ville,
+        //     'annee_naisse_dem' => $request->date_naissance,
+        //     'type_paiement' => $request->Type_de_compte,
+        //     'numero_compte_dem' => $request->mobile,
+        //     'sexe_dem' => $request->sexe,
+        // ]);
+
+
+        // 'tel_us' => $request->tel_us,
+        // 'password_us' => Hash::make($request->password_us),
+
+>>>>>>> Stashed changes
 
 
 
@@ -57,6 +140,11 @@ class RegisteredUserController extends Controller
 
         Auth::login($user); 
 
+<<<<<<< Updated upstream
         return redirect(RouteServiceProvider::HOME);
+=======
+        // return redirect(RouteServiceProvider::HOME);
+        return   "HELLO";
+>>>>>>> Stashed changes
     }
 }
