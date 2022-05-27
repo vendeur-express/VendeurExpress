@@ -67,11 +67,7 @@
                             </div><!-- .End .tab-pane -->
                             <div class="tab-pane fade show active" id="register-2" role="tabpanel"
                                 aria-labelledby="register-tab-2">
-<<<<<<< Updated upstream
-                                <form action="#">
-=======
                                 <form method="POST" action="/register">
->>>>>>> Stashed changes
                                     @csrf
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -88,15 +84,9 @@
                                                 placeholder="Identifiant" required>
                                         </div>
                                         <div class="col-sm-6" id="nom">
-<<<<<<< Updated upstream
-                                            <label for="cname" class="sr-only"> Nom *</label>
-                                            <input type="text" class="form-control icon-phone" id="nom" placeholder="Nom"
-                                                required>
-=======
                                             <label for="nom" class="sr-only"> Nom *</label>
                                             <input type="text" class="form-control icon-phone" id="nom" placeholder="Nom"
                                                 name="nom" required>
->>>>>>> Stashed changes
                                         </div>
 
                                         <div class="col-sm-6" id="prenom">
@@ -104,26 +94,15 @@
                                             <input type="text" class="form-control" name="prenom" placeholder="Prenom"
                                                 required>
                                         </div>
-<<<<<<< Updated upstream
-
                                         <div class="col-sm-6" id="email">
-                                            <label class="sr-only">Email</label>
-=======
-                                        <div class="col-sm-6" id="email">
->>>>>>> Stashed changes
                                             <input type="text" class="form-control" name="email"
                                                 placeholder="Adresse mail" required>
 
                                         </div>
                                         <div class="col-sm-6" id="boutique">
                                             <label class="sr-only">Nom du magasin*</label>
-<<<<<<< Updated upstream
-                                            <input type="text" emaclass="form-control" placeholder="Nom du magasin"
-                                                required>
-=======
                                             <input type="text" class="form-control" placeholder="Nom du magasin"
                                                 name="boutique" required>
->>>>>>> Stashed changes
                                         </div>
 
                                         <div class="col-sm-6" id="cnib">
@@ -145,13 +124,8 @@
                                             </select>
                                         </div>
                                         <div class="col-sm-6 " id="ville">
-<<<<<<< Updated upstream
-                                            <label class="sr-only">Ville</label>
-                                            <input type="text" class="form-control" placeholder="Ville" required>
-=======
                                             <input type="text" name="ville" class="form-control" placeholder="Ville"
                                                 required>
->>>>>>> Stashed changes
                                         </div>
                                         <div class="col-sm-12 " id="naissance">
                                             <label class="sr-only">date_naissance </label>
@@ -167,10 +141,6 @@
                                         <div class="col-sm-6" id="paiement-container">
                                             <select name="paiement" class="form-control pays" id="paiement">
                                                 <option value="">Type_de_paiement</option>
-<<<<<<< Updated upstream
-                                                <option>Type_de_paiement</option>
-=======
->>>>>>> Stashed changes
                                                 <option value="0">Virement bancaire</option>
                                                 <option value="1">paiement mobile</option>
                                             </select>
@@ -178,10 +148,6 @@
                                         <div class="col-sm-6" id="paiement-mobile-container">
                                             <select name="paiement" class="form-control pays" id="paiement_mobile">
                                                 <option value="">paiement mobile</option>
-<<<<<<< Updated upstream
-                                                <option>paiement mobile</option>
-=======
->>>>>>> Stashed changes
                                                 <option value="0">orange money</option>
                                                 <option value="1">moov money</option>
                                             </select>
@@ -196,25 +162,6 @@
                                             <label class="sr-only">numero du compte </label>
                                             <input type="number" name="compte_bancaire"
                                                 placeholder="N*: du compte-bancaire " id="bank" class="form-control">
-<<<<<<< Updated upstream
-
-                                        <div class="col-sm-6 " id="orange">
-                                            <label class="sr-only">numero orange </label>
-                                            <input type="phone" placeholder="Votre numero orange-money"
-                                                class="form-control">
-                                        </div>
-                                        <div class="col-sm-6 " id="moov">
-                                            <label class="sr-only">numero orange </label>
-                                            <input type="phone" placeholder="Votre numero moov-money"
-                                                class="form-control">
-                                        </div>
-                                        <div class="col-sm-6 " id="bank">
-                                            <label class="sr-only">numero du compte </label>
-                                            <input type="phone" placeholder="N*: du compte-bancaire "
-                                                class="form-control">
-
-=======
->>>>>>> Stashed changes
                                         </div>
 
                                         <div class="col-sm-6" id="pass1-container">
@@ -234,48 +181,8 @@
                                             <label class="custom-control-label" for="register-policy">je suis d'accord avec
                                                 la <a href="#">politique de confidentialité</a> *</label>
                                         </div><!-- End .custom-checkbox -->
-                                        <div class="form-footer">
-                                           <div class="col-sm-6" id="paiement-container">
-                                                 <select name="paiement" class="form-control pays" id="paiement">
-                                                    <option >Type_de_paiement</option>
-                                                       <option value="0  ">Virement bancaire</option>
-                                                          <option value="1">paiement mobile</option>
-                                                            </select>
-                                                              </div>
-                                                              <div class="col-sm-6" id="paiement-mobile-container">
-                                                                <select name="paiement" class="form-control pays" id="paiement_mobile">
-                                                                   <option >paiement mobile</option>
-                                                                      <option value="0">orange money</option>
-                                                                         <option value="1">moov money</option>
-                                                                           </select>
-                                                                             </div>
-                                                                             <div class="col-sm-6 " id="orange">
-                                                                                <label class="sr-only">numero orange </label>
-                                                                                <input type="phone" placeholder="Votre numero orange-money" class="form-control">
-                                                                            </div> 
-                                                                            <div class="col-sm-6 " id="moov">
-                                                                                <label class="sr-only">numero orange </label>
-                                                                                <input type="phone" placeholder="Votre numero moov-money" class="form-control">
-                                                                            </div> 
-                                                                            <div class="col-sm-6 " id="bank">
-                                                                                <label class="sr-only">numero du compte </label>
-                                                                                <input type="phone" placeholder="N*: du compte-bancaire " class="form-control">
-                                                                            </div> 
 
-                                                                <div class="col-sm-6" id="pass1-container">
-                                                                  <label class="sr-only icon icon-user">Mot de passe</label>
-                                                                    <input type="password" id="pass1" class="form-control" placeholder="Mot de Passe" required>
-                                                                     </div>
-                                                                    <div class="col-sm-6" id="pass2-container">
-                                                                        <label class="sr-only">Confirmation du mot de passe</label>
-                                                                        <input type="password" id="pass2" class="form-control" placeholder="Mot de Passe" required>
-                                                                    </div>
-                                              
-                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                        <label class="custom-control-label" for="register-policy">je suis d'accord avec la <a href="#">politique de confidentialité</a> *</label>
-                                     </div><!-- End .custom-checkbox -->   
-                                       <div class="form-footer">
+                                        <div class="form-footer">
                                             <button type="submit" class="btn btn-outline-primary-2">
                                                 <span>S'enregistrer</span>
                                                 <i class="icon-long-arrow-right"></i>
@@ -308,8 +215,6 @@
         </div><!-- End .login-page section-bg -->
     </main><!-- End .main -->
     <script>
-        
-
         var email = document.getElementById('email')
         var ville = document.getElementById('ville')
         var pays = document.getElementById('pays')
@@ -333,33 +238,6 @@
         var bank = document.getElementById("bank");
         var paiement_mobile_container = document.getElementById("paiement-mobile-container")
 
-<<<<<<< Updated upstream
-        // var email = document.getElementById('email')
-        // var ville = document.getElementById('ville')
-        // var pays = document.getElementById('pays')
-        // var pass = document.getElementById('pass')
-        // var prenom = document.getElementById('prenom')
-        // var nom = document.getElementById('nom')
-        // var boutique = document.getElementById('boutique')
-        // var identifiant = document.getElementById('identifiant')
-        // var telephone = document.getElementById('telephone')
-        // var cnib = document.getElementById('cnib')
-        // var naissance = document.getElementById('naissance')
-        // var sexe = document.getElementById('sexe')
-        // var paiement = document.getElementById('paiement')
-        // var compte_type = document.getElementById('compte');
-        // var pass1 = document.getElementById('pass1-container');
-        // var pass2 = document.getElementById('pass2-container');
-        // var paiement = document.getElementById('paiement-container');
-        // var pays_container = document.getElementById('pays-container');
-        // var orange = document.getElementById("orange")
-        // var moov = document.getElementById("moov")
-        // var bank = document.getElementById("bank")
-        // var paiement_mobile_container = document.getElementById("paiement-mobile-container")
-
-
-=======
->>>>>>> Stashed changes
         client()
 
         compte_type.addEventListener('change', function() {
@@ -409,22 +287,10 @@
             pass2.style.display = 'block'
             paiement.style.display = 'none'
             pays_container.style.display = 'none'
-<<<<<<< Updated upstream
-            orange.style.display = 'none'
-            moov.style.display = 'none'
-            bank.style.display = 'none'
-            paiement_mobile_container.style.display = 'none'
-            orange.style.display = 'none'
-            moov.style.display = 'none'
-            bank.style.display = 'none'
-
-
-=======
             bank.style.display = 'none'
             paiement_mobile_container.style.display = 'none'
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
->>>>>>> Stashed changes
         }
 
         function demarcheur() {
@@ -444,20 +310,10 @@
             pass1.style.display = 'block'
             pass2.style.display = 'block'
             pays_container.style.display = 'block'
-<<<<<<< Updated upstream
-            orange.style.display = 'none'
-            moov.style.display = 'none'
-            bank.style.display = 'none'
-            paiement_mobile_container.style.display = 'none'
-            orange.style.display = 'none'
-            moov.style.display = 'none'
-            bank.style.display = 'block'
-=======
             bank.style.display = 'none'
             paiement_mobile_container.style.display = 'none'
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
->>>>>>> Stashed changes
 
         }
 
@@ -477,8 +333,6 @@
             identifiant.style.display = 'block'
             pass1.style.display = 'block'
             pass2.style.display = 'block'
-<<<<<<< Updated upstream
-=======
             pays_container.style.display = 'none'
             bank_container.style.display = 'none'
             bank.style.display = 'none'
@@ -502,7 +356,6 @@
             identifiant.style.display = 'block'
             pass1.style.display = 'block'
             pass2.style.display = 'block'
->>>>>>> Stashed changes
             paiement.style.display = 'none'
             pays_container.style.display = 'none'
             orange_container.style.display = 'none'
@@ -511,10 +364,6 @@
             orange.style.display = 'none'
             bank.style.display = 'none'
             moov.style.display = 'none'
-<<<<<<< Updated upstream
-        }
-
-=======
 
         }
 
@@ -533,7 +382,6 @@
         }
 
 
->>>>>>> Stashed changes
         function vendeur() {
             email.style.display = 'block'
             ville.style.display = 'block'
@@ -580,26 +428,25 @@
 
         }
 
-    function vendeur() {
-    email.style.display = 'block'
-    ville.style.display = 'block'
-    pays.style.display = 'block'
-    telephone.style.display = 'block'
-    boutique.style.display = 'none'
-    nom.style.display = 'block'
-    prenom.style.display = 'block'
-    sexe.style.display = 'block'
-    ville.style.display = 'block'
-    naissance.style.display = 'block'
-    paiement.style.display = 'block'
-    cnib.style.display = 'block'
-    identifiant.style.display = 'block'
-    pass1.style.display = 'none'
-    pass2.style.display = 'none'
-    paiement.style.display = 'none'
-    pays_container.style.display = 'none'
+        function vendeur() {
+            email.style.display = 'block'
+            ville.style.display = 'block'
+            pays.style.display = 'block'
+            telephone.style.display = 'block'
+            boutique.style.display = 'none'
+            nom.style.display = 'block'
+            prenom.style.display = 'block'
+            sexe.style.display = 'block'
+            ville.style.display = 'block'
+            naissance.style.display = 'block'
+            paiement.style.display = 'block'
+            cnib.style.display = 'block'
+            identifiant.style.display = 'block'
+            pass1.style.display = 'none'
+            pass2.style.display = 'none'
+            paiement.style.display = 'none'
+            pays_container.style.display = 'none'
 
-    }
-
+        }
     </script>
 @endsection
