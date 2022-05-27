@@ -34,23 +34,6 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-<<<<<<< Updated upstream
-        $request->validate([
-            'name_us' => ['required', 'string', 'max:255'],
-            'email_us' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password_us' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
-        $user = User::create([
-            'name_us' => $request->name_us,
-            'email_us' => $request->email_us,
-            'userable_id' => $request->userable_id,
-            'images_id' => $request->image_id,
-            'userable_type' => $request->userable_type,
-            'tel_us' => $request->tel_us,
-            'password_us' => Hash::make($request->password_us),
-        ]);
-=======
         // $clientValid = [
         //     'identifiant'  => ['required', 'string', 'max:255'],
         //     'nom'  => ['required', 'string', 'max:255'],
@@ -131,20 +114,15 @@ dd($request->validate([
         // 'tel_us' => $request->tel_us,
         // 'password_us' => Hash::make($request->password_us),
 
->>>>>>> Stashed changes
 
 
 
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
-        Auth::login($user); 
+        // Auth::login($user); 
 
-<<<<<<< Updated upstream
-        return redirect(RouteServiceProvider::HOME);
-=======
         // return redirect(RouteServiceProvider::HOME);
         return   "HELLO";
->>>>>>> Stashed changes
     }
 }

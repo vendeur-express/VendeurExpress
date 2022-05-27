@@ -16568,3 +16568,16 @@ Did you mean one of these?
 #66 C:\\wamp64\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\esources\\server.php(16): require_once('C:\\\\wamp64\\\\www\\\\V...')
 #67 {main}
 "} 
+[2022-05-27 18:43:24] local.ERROR: syntax error, unexpected token "<<", expecting ")" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"<<\", expecting \")\" at C:\\laragon\\www\\VendeurExpress\\bootstrap\\cache\outes-v7.php:27)
+[stacktrace]
+#0 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(971): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->Illuminate\\Foundation\\Support\\Providers\\{closure}(Object(Illuminate\\Foundation\\Application))
+#1 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Foundation\\Application->fireAppCallbacks(Array)
+#2 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#3 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#4 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#5 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\VendeurExpress\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#8 C:\\laragon\\www\\VendeurExpress\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\esources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#9 {main}
+"} 
