@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Events\Registered;
+use Nette\Schema\Message;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Validator;
 
 class RegisteredUserController extends Controller
 {
@@ -80,24 +82,44 @@ class RegisteredUserController extends Controller
         // ];
         // $vendeurValid = [];
 
-dd($request->validate([
-            'Type_de_compte'  => ['required',],
-            'identifiant'  => ['required',],
-            'nom'  => ['required', 'string', 'max:255'],
-            'prenom'  => ['required', 'string', 'max:255'],
-            'email' =>  ['required','email', 'max:255'],
-            'boutique' => ['required',],
-            'cnib' => ['required',],
-            'telephone' => ['required'],
-            'country' => ['required'],
-            'ville' => ['required'],
-            'date_naissance' => ['required'],
-            'sexe' => ['required',],
-            'paiement' => ['required'],
+// $request->validate([
+//             'type_de_compte'  => ['required'],
+//             'identifiant'  => ['required'],
+//             'nom'  => ['required'],
 
-]));
-        
+// ]);
+        $validator = Validator::make($request->all(),[
+            'Type_de_compte'  =>'required',
+        ]);
+        if ($validator->fails()) {
+            return redirect(url()->previous())
+                    ->withErrors($validator)
+                    ->withInput();
+        }else{
+            if( $validator->Type_de_compte=="0"){
+                var_dump("$validator->Type_de_compte");
+                die();
+            }else{
+                
+                die("Quitter");
+            }
+           
+        }
 
+        // $validator = Validator::make($request->all(),[
+        //     'identifiant'  =>'required',
+        //     'nom'  => 'required',
+        //     'prenom'  => 'required',
+        //     'email' => 'required',
+        //     'boutique' => 'required',
+        //     'cnib' => 'required',
+        //     'telephone' => 'required',
+        //     'country' => 'required',
+        //     'ville' => 'required',
+        //     'date_naissance' => 'required',
+        //     'sexe' => 'required',
+        //     'paiement' => 'required',
+        // ]);
 
         // $user = Demarcheur::create([
         //     'code_dem' => 'Code',
@@ -123,6 +145,6 @@ dd($request->validate([
         // Auth::login($user); 
 
         // return redirect(RouteServiceProvider::HOME);
-        return   "HELLO";
+        return   $request;
     }
 }

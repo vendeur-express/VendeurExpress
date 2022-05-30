@@ -15,12 +15,8 @@ class ProduitsController extends Controller
      */
     public function index()
     {
-<<<<<<< Updated upstream
         //
         
-=======
-     return view('admin.produits');
->>>>>>> Stashed changes
     }
 
     /**
