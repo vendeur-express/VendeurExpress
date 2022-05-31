@@ -19,6 +19,8 @@
                                     role="tab" aria-controls="register-2" aria-selected="true">S'inscrire</a>
                             </li>
                         </ul>
+                        <!-- Validation Errors -->
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
                                 <form method="POST" action="">
@@ -81,33 +83,31 @@
 
                                         <div class="col-sm-12" id="identifiant">
                                             <input type="text" name="identifiant" class="form-control"
-                                                placeholder="Identifiant" required>
+                                                placeholder="Identifiant">
                                         </div>
                                         <div class="col-sm-6" id="nom">
                                             <label for="nom" class="sr-only"> Nom *</label>
                                             <input type="text" class="form-control icon-phone" id="nom" placeholder="Nom"
-                                                name="nom" >
+                                                name="nom">
                                         </div>
 
                                         <div class="col-sm-6" id="prenom">
                                             <label class="sr-only">Prenom *</label>
-                                            <input type="text" class="form-control" name="prenom" placeholder="Prenom"
-                                                required>
+                                            <input type="text" class="form-control" name="prenom" placeholder="Prenom">
                                         </div>
                                         <div class="col-sm-6" id="email">
                                             <input type="email" class="form-control" name="email"
-                                                placeholder="Adresse mail" required>
+                                                placeholder="Adresse mail">
 
                                         </div>
                                         <div class="col-sm-6" id="boutique">
                                             <label class="sr-only">Nom du magasin*</label>
                                             <input type="text" class="form-control" placeholder="Nom du magasin"
-                                                name="boutique" required>
+                                                name="boutique">
                                         </div>
 
                                         <div class="col-sm-6" id="cnib">
-                                            <input type="text" class="form-control" placeholder="N* CNIB" name="cnib"
-                                                required>
+                                            <input type="text" class="form-control" placeholder="N* CNIB" name="cnib">
                                         </div>
                                         <div class="col-sm-6 " id="telephone">
                                             <input type="phone" name="telephone" placeholder="Telephone"
@@ -116,16 +116,15 @@
 
                                         <div class="col-sm-6" id="pays-container">
                                             <select name="country" class="form-control pays" id="pays">
-                                                <option>Burkina Faso</option>
-                                                <option>Côte d'Ivoire</option>
-                                                <option>Benin</option>
-                                                <option>Mali</option>
-                                                <option>Togo</option>
+                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Togo">Togo</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-6 " id="ville">
-                                            <input type="text" name="ville" class="form-control" placeholder="Ville"
-                                                required>
+                                            <input type="text" name="ville" class="form-control" placeholder="Ville">
                                         </div>
                                         <div class="col-sm-12 " id="naissance">
                                             <label class="sr-only">date_naissance </label>
@@ -133,9 +132,9 @@
                                         </div>
                                         <div class="col-sm-6" id="sexe">
                                             <select name="sexe" class="form-control pays">
-                                                <option>Sexe</option>
-                                                <option>Masculin</option>
-                                                <option>Feminin</option>
+                                                <option value="">Sexe</option>
+                                                <option value="Masculin">Masculin</option>
+                                                <option value="Feminin">Feminin</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-6" id="paiement-container">
@@ -146,10 +145,10 @@
                                             </select>
                                         </div>
                                         <div class="col-sm-6" id="paiement-mobile-container">
-                                            <select name="paiement" class="form-control pays" id="paiement_mobile">
+                                            <select name="paiement_mobile" class="form-control pays" id="paiement_mobile">
                                                 <option value="">paiement mobile</option>
-                                                <option value="0">orange money</option>
-                                                <option value="1">moov money</option>
+                                                <option value="orange money">orange money</option>
+                                                <option value="moov money">moov money</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-6 " id="mobile-container">
@@ -160,8 +159,8 @@
 
                                         <div class="col-sm-6 " id="bank-container">
                                             <label class="sr-only">numero du compte </label>
-                                            <input type="number" name="compte_bancaire"
-                                                placeholder="N*: du compte-bancaire " id="bank" class="form-control">
+                                            <input type="text" name="compte_bancaire" placeholder="N*: du compte-bancaire "
+                                                id="bank" class="form-control">
                                         </div>
 
                                         <div class="col-sm-6" id="pass1-container">
@@ -287,7 +286,6 @@
             pass2.style.display = 'block'
             paiement.style.display = 'none'
             pays_container.style.display = 'none'
-            bank.style.display = 'none'
             paiement_mobile_container.style.display = 'none'
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
@@ -310,7 +308,6 @@
             pass1.style.display = 'block'
             pass2.style.display = 'block'
             pays_container.style.display = 'block'
-            bank.style.display = 'none'
             paiement_mobile_container.style.display = 'none'
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
@@ -335,7 +332,6 @@
             pass2.style.display = 'block'
             pays_container.style.display = 'none'
             bank_container.style.display = 'none'
-            bank.style.display = 'none'
             paiement_mobile_container.style.display = 'none';
             mobile_container.style.display = 'none';
         }
@@ -361,14 +357,10 @@
             orange_container.style.display = 'none'
             moov_container.style.display = 'none'
             bank_container.style.display = 'none'
-            orange.style.display = 'none'
-            bank.style.display = 'none'
-            moov.style.display = 'none'
 
         }
 
         function banks() {
-            alert("Call")
             paiement_mobile_container.style.display = 'none'
             mobile_container.style.display = 'none'
             bank_container.style.display = 'block'
@@ -403,28 +395,6 @@
             orange_container.style.display = 'none'
             moov_container.style.display = 'none'
             bank_container.style.display = 'none'
-            orange.style.display = 'none'
-            bank.style.display = 'none'
-            moov.style.display = 'none'
-
-        }
-
-        function bank() {
-            orange_container.style.display = 'none'
-            moov_container.style.display = 'none'
-            bank_container.style.display = 'block'
-            orange.style.display = 'none'
-            bank.style.display = 'block'
-            moov.style.display = 'none'
-        }
-
-        function mobile() {
-            orange_container.style.display = 'none'
-            moov_container.style.display = 'none'
-            bank_container.style.display = 'none'
-            orange.style.display = 'block'
-            bank.style.display = 'none'
-            moov.style.display = 'block'
 
         }
 

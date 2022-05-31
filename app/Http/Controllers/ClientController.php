@@ -36,14 +36,14 @@ class ClientController extends Controller
      */
     public function store(StoreClientRequest $request)
     {
-         $request -> validate([
-            'identifiant' =>['required', 'max:255'],
-            'nom' =>['required', 'max:255'],
-            'prenom' =>['required', 'max:255'],
-            'email' =>['required', 'max:255'],
-            'password_confirm' =>'required',
-            'password_c' =>'required',
-         ]);
+        $request->validate([
+            'identifiant' => ['required', 'max:255'],
+            'nom' => ['required', 'max:255'],
+            'prenom' => ['required', 'max:255'],
+            'email' => ['required', 'max:255'],
+            'password_confirm' => 'required',
+            'password_c' => 'required',
+        ]);
     }
 
     /**
@@ -91,36 +91,44 @@ class ClientController extends Controller
         //
     }
 
-    public function home(){
+    public function home()
+    {
         return view('client.client');
     }
-    public function vexshop(){
+    public function vexshop()
+    {
         return view('client.vexshop');
     }
-    public function apropos(){
+    public function apropos()
+    {
         return view('client.apropos');
     }
-    public function blog(){
+    public function blog()
+    {
         return view('client.blog');
     }
-    public function inscription(){
+    public function inscription()
+    {
         return view('client.inscription');
     }
-    public function panier(){
+    public function panier()
+    {
         return view('client.panier');
     }
-    public function produit(){
+    public function produit()
+    {
         return view('client.produit');
     }
-    public function paiement(){
+    public function paiement()
+    {
         return view('client.paiement');
     }
-    public function favorie(){
+    public function favorie()
+    {
         return view('client.favorie');
     }
-    public function contact(){
+    public function contact()
+    {
         return view('client.contact');
     }
-
-
 }

@@ -27,6 +27,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'firstname_us',
+        'lastname_us',
+        'identifiant_us',
+        'cnib_us',
         'name_us',
         'email_us',
         'images_id',
@@ -63,7 +67,7 @@ class User extends Authenticatable
     // recuperer tous les coupons d'un utilisateur
     public function coupons()
     {
-      return $this->hasMany(Coupon::class);
+        return $this->hasMany(Coupon::class);
     }
     // recuperer tous les commandes d'un utilisateur
     public function commandes()
@@ -91,26 +95,25 @@ class User extends Authenticatable
         return $this->hasMany(Commentaire::class);
     }
 
-     // Recuperer toutes les post de cet user
-     public function posts()
-     {
-         return $this->belongsToMany(Post::class);
-     }
+    // Recuperer toutes les post de cet user
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 
-     // Recuperer toutes les notation de cet user
-     public function notations()
-     {
-         return $this->hasMany(Notation::class);
-     }
+    // Recuperer toutes les notation de cet user
+    public function notations()
+    {
+        return $this->hasMany(Notation::class);
+    }
 
-     // Recuperer toutes les favories de cet user
-     public function favorites()
-     {
-         return $this->hasMany(Favorite::class);
-     }
-     public function droits()
+    // Recuperer toutes les favories de cet user
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+    public function droits()
     {
         return $this->belongsToMany(Droit::class);
     }
-
 }

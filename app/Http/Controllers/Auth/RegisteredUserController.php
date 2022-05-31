@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use Nette\Schema\Message;
+use App\Models\Demarcheur;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
@@ -22,12 +24,12 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return "BIEN";
+        return view("client.inscription");
     }
 
     /**
      * Handle an incoming registration request.
-     * 
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      *
@@ -82,69 +84,80 @@ class RegisteredUserController extends Controller
         // ];
         // $vendeurValid = [];
 
-// $request->validate([
-//             'type_de_compte'  => ['required'],
-//             'identifiant'  => ['required'],
-//             'nom'  => ['required'],
+        // $request->validate([
+        //             'type_de_compte'  => ['required'],
+        //             'identifiant'  => ['required'],
+        //             'nom'  => ['required'],
 
-// ]);
-        $validator = Validator::make($request->all(),[
-            'Type_de_compte'  =>'required',
+        // ]);
+        $userType = "";
+        $validator = Validator::make($request->all(), [
+            'Type_de_compte'  => 'required',
         ]);
         if ($validator->fails()) {
             return redirect(url()->previous())
-                    ->withErrors($validator)
-                    ->withInput();
-        }else{
-            if( $validator->Type_de_compte=="0"){
-                var_dump("$validator->Type_de_compte");
-                die();
-            }else{
-                
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            if ($request->Type_de_compte == "0") {
+                $userType = 'Demarcheur';
+                $validatorDemarcheur = Validator::make($request->all(), [
+                    'identifiant'  => 'required',
+                    'nom'  => 'required',
+                    'prenom'  => 'required',
+                    'email' => 'required',
+                    'boutique' => 'required',
+                    'cnib' => 'required',
+                    'telephone' => 'required',
+                    'country' => 'required',
+                    'ville' => 'required',
+                    'date_naissance' => 'required',
+                    'sexe' => 'required',
+                    'paiement' => 'required',
+                    'mot_de_passe' => 'required|min:6',
+                    $request->paiement == '0' ? 'compte_bancaire' : 'mobile' => 'required',
+                ]);
+
+                if ($validatorDemarcheur->fails()) {
+                    return redirect(url()->previous())
+                        ->withErrors($validatorDemarcheur)
+                        ->withInput();
+                } else {
+
+                    $demarcheur = Demarcheur::create([
+                        'cnib_dem' => $request->cnib,
+                        'pays_dem' => $request->country,
+                        'ville_dem' => $request->ville,
+                        'annee_naisse_dem' => $request->date_naissance,
+                        'type_paiement' => $request->Type_de_compte == '0' ? 'Virement bancaire' : 'paiement mobile',
+                        'numero_compte_dem' => $request->paiement == '0' ? $request->compte_bancaire : $request->mobile,
+                        'sexe_dem' => $request->sexe,
+                    ]);
+                }
+            } else {
+
                 die("Quitter");
             }
-           
         }
 
-        // $validator = Validator::make($request->all(),[
-        //     'identifiant'  =>'required',
-        //     'nom'  => 'required',
-        //     'prenom'  => 'required',
-        //     'email' => 'required',
-        //     'boutique' => 'required',
-        //     'cnib' => 'required',
-        //     'telephone' => 'required',
-        //     'country' => 'required',
-        //     'ville' => 'required',
-        //     'date_naissance' => 'required',
-        //     'sexe' => 'required',
-        //     'paiement' => 'required',
-        // ]);
 
-        // $user = Demarcheur::create([
-        //     'code_dem' => 'Code',
-        //     'cnib_dem' => $request->cnib,
-        //     'pays_dem' => $request->country,
-        //     'ville_dem' => $request->ville,
-        //     'annee_naisse_dem' => $request->date_naissance,
-        //     'type_paiement' => $request->Type_de_compte,
-        //     'numero_compte_dem' => $request->mobile,
-        //     'sexe_dem' => $request->sexe,
-        // ]);
+        $user = User::create([
+            'firstname_us' => $request->nom,
+            'lastname_us' => $request->prenom,
+            'identifiant_us' => $request->country,
+            'cnib_us' => $request->cnib,
+            'email_us' => $request->email,
+            'tel_us' => $request->telephone,
+            'password_us' => Hash::make($request->password_us),
+            'images_id' => Image::where([['type_img', "Avata"]])->get()[0]->id,
+            'userable_id' => $demarcheur->id,
+            'userable_type' => "App\\Models\\" . $userType,
+        ]);
 
+        event(new Registered($user));
 
-        // 'tel_us' => $request->tel_us,
-        // 'password_us' => Hash::make($request->password_us),
+        Auth::login($user);
 
-
-
-
-
-        // event(new Registered($user));
-
-        // Auth::login($user); 
-
-        // return redirect(RouteServiceProvider::HOME);
-        return   $request;
+        return redirect(RouteServiceProvider::HOME);
     }
 }
