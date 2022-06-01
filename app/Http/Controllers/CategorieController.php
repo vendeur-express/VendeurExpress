@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Categorie;
 use App\Http\Requests\StoreCategorieRequest;
 use App\Http\Requests\UpdateCategorieRequest;
+use App\Models\Produit;
 use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategorieController extends Controller
 {
@@ -17,6 +19,8 @@ class CategorieController extends Controller
     public function index()
     {
         //
+        $categorie=Categorie::all();
+        return view('superadmin.categorie')->with("categorie",$categorie);
     }
 
     /**
@@ -38,6 +42,34 @@ class CategorieController extends Controller
     public function store(StoreCategorieRequest $request)
     {
         //
+        $request->validate([
+            'label_cat'=>'required',
+            'dsc_cat'=>'required',
+            'image_cat'=>'image|required|max:1999'
+        ]);
+        if ($request->hasFile('image_cat')){
+            // recuperation du nom du fichier avec son path
+            $fileNameWithExt = $request->file('image_cat')->getClientOriginalName();
+             //recuperation du nom du fichier seulement
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            //recuperation de l'extension
+            $extension = $request->file('image_cat')->getClientOriginalExtension();
+            // rechercher de noms aleatoire
+            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+            // upload image
+            $path = $request->file('image_cat')->storeAs('public/images_categories', $fileNameToStore);
+            //dd($path);
+        } else {
+            $fileNameToStore = 'sansimage.png';
+        }
+        $categorie=new Categorie();
+        $categorie->label_cat=$request->input('label_cat');
+        $categorie->dsc_cat=$request->input('dsc_cat');
+        $categorie->image_cat=$fileNameToStore;
+        $categorie->save();
+        //return back()->with('status', 'la catégorie a été enregistrée avec succès');
+        // Categorie::create($request->all());
+        return back()->with('status','Catégorie creer avec success');
     }
 
     /**
@@ -48,13 +80,7 @@ class CategorieController extends Controller
      */
     public function show(Categorie $categorie)
     {
-        //
-        // $this->validate($request,[
-        //     'label_cat'=>'required|unique:categories',
-        //     'type_cat'=>'required',
-        //      'dsc_cat'=>'nullable',
-        //     'image_cat'=>'image|nullable|max:1999'
-        // ]);
+        
         
     }
 
@@ -64,9 +90,11 @@ class CategorieController extends Controller
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categorie $categorie)
+    public function edit($id)
     {
         //
+        $categorie=Categorie::find($id);
+        return view('superadmin.categorie')->with('categories',$categorie);
     }
 
     /**
@@ -79,6 +107,32 @@ class CategorieController extends Controller
     public function update(UpdateCategorieRequest $request, Categorie $categorie)
     {
         //
+        $request->validate([
+            'label_cat'=>'required',
+            'dsc_cat'=>'required',
+            'image_cat'=>'image|required|max:1999'
+        ]);
+        
+        $categorie=Categorie::find($request->input('id'));
+        $categorie->label_cat=$request->input('label_cat');
+        $categorie->dsc_cat=$request->input('dsc_cat');
+        if ($request->hasFile('image_cat')){
+            // recuperation du nom du fichier avec son path
+            $fileNameWithExt = $request->file('image_cat')->getClientOriginalName();
+             //recuperation du nom du fichier seulement
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            //recuperation de l'extension
+            $extension = $request->file('image_cat')->getClientOriginalExtension();
+            // rechercher de noms aleatoire
+            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+            // upload image
+            $path = $request->file('image_cat')->storeAs('public/images_categories', $fileNameToStore);
+            //dd($path);
+        } else {
+            $fileNameToStore = 'sansimage.png';
+        }
+        $categorie->update();
+        return redirect('/categorie')->with('status', 'La catégorie a été modifée avec succès');
     }
 
     /**
@@ -87,9 +141,17 @@ class CategorieController extends Controller
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categorie $categorie)
+    public function destroy($id)
     {
         //
+        $categorie=Categorie::find($id);
+        if($categorie->image_cat !='sansimage.jpg'){
+            Storage::delete('public/images_categories/'.$categorie->image_cat);
+        }
+
+        $categorie->delete();
+
+        return back()->with('status','Catégorie Supprimer avec success');
     }
     public function sauvercategorie(Request $request){
 

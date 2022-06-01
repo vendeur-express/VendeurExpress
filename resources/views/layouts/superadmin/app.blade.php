@@ -206,7 +206,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="{{route('categorie')}}" class="nav-link">
+            <a href="{{route('categorie.index')}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Categories

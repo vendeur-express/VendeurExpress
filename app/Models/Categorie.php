@@ -11,7 +11,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Categorie extends Model
 {
     use HasFactory;
-
+    protected $fillable=[
+        'label_cat',
+        'dsc_cat',
+        'image_cat'
+    ];
     // recuperer tous les services ayant cette categorie
     public function services()
     {
@@ -27,6 +31,7 @@ class Categorie extends Model
     {
         return $this->belongsToMany(Produit::class);
     }
+
 
 
 }
