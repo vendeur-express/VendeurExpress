@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label_cat');
             $table->string('dsc_cat');
-            $table->string('image_cat');
+            $table->string('image_cat',300);
             $table->timestamps();
         });
     }

@@ -64,8 +64,9 @@ Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->nam
 Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
 
 // route sur categorie
-Route::resource('/categorie',CategorieController::class);
-
+Route::resource('categorie',CategorieController::class);
+Route::get('/sup/{id}',[CategorieController::class,'sup']);
+// Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
 Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');

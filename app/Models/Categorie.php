@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Categorie extends Model
 {
     use HasFactory;
+    protected $table='categories';
     protected $fillable=[
         'label_cat',
         'dsc_cat',

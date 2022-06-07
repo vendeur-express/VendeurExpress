@@ -11,34 +11,36 @@ use Illuminate\Support\Facades\Storage;
 
 class CategorieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Display a listing of the resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    public $search = '';
     public function index()
     {
         //
-        $categorie=Categorie::all();
+        //return view('categorie');
+        $categorie=Categorie::where('label_cat','like','%'.$this->search.'%')->orderBy('id','DESC')->paginate(50);
         return view('superadmin.categorie')->with("categorie",$categorie);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Show the form for creating a new resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreCategorieRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Store a newly created resource in storage.
+    //  *
+    //  * @param  \App\Http\Requests\StoreCategorieRequest  $request
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function store(StoreCategorieRequest $request)
     {
         //
@@ -58,7 +60,7 @@ class CategorieController extends Controller
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
             // upload image
             $path = $request->file('image_cat')->storeAs('public/images_categories', $fileNameToStore);
-            //dd($path);
+            // dd($path);
         } else {
             $fileNameToStore = 'sansimage.png';
         }
@@ -68,28 +70,28 @@ class CategorieController extends Controller
         $categorie->image_cat=$fileNameToStore;
         $categorie->save();
         //return back()->with('status', 'la catégorie a été enregistrée avec succès');
-        // Categorie::create($request->all());
-        return back()->with('status','Catégorie creer avec success');
+        // Categorie::create($categorie->all());
+        return redirect('categorie')/* ->with('status','Catégorie creer avec success')->with('categorie',$categorie) */;
     }
 
-    /**
-     * Display the specified resource.
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Display the specified resource.
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  \App\Models\Categorie  $categorie
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function show(Categorie $categorie)
     {
         
         
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  *
+    //  * @param  \App\Models\Categorie  $categorie
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function edit($id)
     {
         //
@@ -97,13 +99,13 @@ class CategorieController extends Controller
         return view('superadmin.categorie')->with('categories',$categorie);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateCategorieRequest  $request
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \App\Http\Requests\UpdateCategorieRequest  $request
+    //  * @param  \App\Models\Categorie  $categorie
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function update(UpdateCategorieRequest $request, Categorie $categorie)
     {
         //
@@ -126,21 +128,21 @@ class CategorieController extends Controller
             // rechercher de noms aleatoire
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
             // upload image
-            $path = $request->file('image_cat')->storeAs('public/images_categories', $fileNameToStore);
+            $path = $request->file('image_cat')->storeAs('public\images_categories', $fileNameToStore);
             //dd($path);
         } else {
             $fileNameToStore = 'sansimage.png';
         }
         $categorie->update();
-        return redirect('/categorie')->with('status', 'La catégorie a été modifée avec succès');
+        return redirect()->route('superadmin.categorie')->with('status', 'La catégorie a été modifée avec succès');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     * 
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+    // /**
+    //  * Remove the specified resource from storage.
+    //  * 
+    //  * @param  \App\Models\Categorie  $categorie
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function destroy($id)
     {
         //
@@ -148,11 +150,20 @@ class CategorieController extends Controller
         if($categorie->image_cat !='sansimage.jpg'){
             Storage::delete('public/images_categories/'.$categorie->image_cat);
         }
-
+        dd($categorie);
         $categorie->delete();
-
         return back()->with('status','Catégorie Supprimer avec success');
     }
+// supprimer ctegorie
+    public function sup($id){
+        $categorie=Categorie::find($id);
+        if($categorie->image_cat !='sansimage.jpg'){
+            Storage::delete('public/images_categories/'.$categorie->image_cat);
+        }
+        $categorie->delete();
+        return back();
+    }
+
     public function sauvercategorie(Request $request){
 
         // $this->validate($request,[

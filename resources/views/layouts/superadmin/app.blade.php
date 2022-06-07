@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('titre')</title>
-
+  @yield('style')
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -206,7 +207,7 @@
             </a>
           </li>
           <li class="has-treeview">
-            <a href="{{route('categorie.index')}}" class="nav-link">
+            <a href="{{-- {{route('categorie')}} --}}" class="nav-link">
               <i class="far fa-sun nav-icon"></i>
               <p>
                 Categories
@@ -288,11 +289,13 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+        
         <!-- jQuery -->
         <script src="admin/plugins/jquery/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
         <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+        @livewireScripts
+        @yield('script')
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <!-- <script>
         $.widget.bridge('uibutton', $.ui.button)
@@ -320,7 +323,7 @@
         <!-- AdminLTE App -->
         <script src="admin/dist/js/adminlte.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="admin/dist/js/pages/dashboard.js"></script>
+        {{-- <script src="admin/dist/js/pages/dashboard.js"></script> --}}
         <!-- AdminLTE for demo purposes -->
         <script src="admin/dist/js/demo.js"></script>
     </body>
