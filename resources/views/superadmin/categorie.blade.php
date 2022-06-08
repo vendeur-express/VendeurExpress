@@ -45,6 +45,14 @@
                         <label for="inputName">Nom catégorie</label>
                         <input type="text" id="label_cat" name='label_cat' class="form-control" required>
                     </div>
+                    <div class="form-group">
+                        <label for="inputcategoritype">Type catégorie</label>
+                        <select id="inputStatus" class="form-control custom-select">
+                        <option selected disabled>Sélectionnez-en un</option>
+                        <option>Produits</option>
+                        <option>Services</option>
+                        </select>
+                    </div>
                     <div class="from-group">
                         <label for="inputDescription">Description</label>
                         <textarea id="dsc_cat" name='dsc_cat' class="form-control" rows="4"></textarea>
@@ -80,30 +88,31 @@
                             </thead>
                             <tbody>  
                                 @forelse ($categorie as $ind=>$category)
-                                <tr>
-                                    <td>{{$ind+1}}</td>
-                                    <td>{{$category->label_cat}}</td>
-                                    <td>{{$category->dsc_cat}}</td>
-                                    {{-- {{ dd(Storage_path("app\\public\\images_categorie\\".$category->image_cat ))}} --}}
-                                    <td>
-                                        {{-- <img src={{$output = str_replace('\\', '/', Storage_path("public\\images_categories\\".$category->image_cat )) }}
-                                        style="height:50px;width:100px"
-                                        class="elevation-2"> --}}
-                                        {{-- {{ dd(asset($category->image_cat)) }} --}}
-                                        <img src="{{ asset("storage/images_categories/".$category->image_cat) }}"
-                                        style="height:50px; width:100px"
-                                        class="{{-- elevation-1 --}} img-responsive">
-                                    </td>
-                                    <td>
-                                        <a href="{{ route('categorie.update',$category->id) }}"
-                                            class="btn btn-primary" data-toggle="modal" data-target="#editcategorie">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                        <a href="{{ url('sup',$category->id) }}" data-toggle="modal" id="delete" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>{{$ind+1}}</td>
+                                        <td>{{$category->label_cat}}</td>
+                                        <td>{{$category->dsc_cat}}</td>
+                                        {{-- {{ dd(Storage_path("app\\public\\images_categorie\\".$category->image_cat ))}} --}}
+                                        <td>
+                                            {{-- <img src={{$output = str_replace('\\', '/', Storage_path("public\\images_categories\\".$category->image_cat )) }}
+                                            style="height:50px;width:100px"
+                                            class="elevation-2"> --}}
+                                            {{-- {{ dd(asset($category->image_cat)) }} --}}
+
+                                            <img src="{{ asset("storage/images_categories/".$category->image_cat) }}"
+                                            style="height:50px; width:100px"
+                                            class="{{-- elevation-1 --}} img-responsive">
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('categorie.update',$category->id) }}"
+                                                class="btn btn-primary" data-toggle="modal" data-target="#editcategorie">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
+                                            <a href="{{ url('sup',$category->id) }}" data-toggle="modal" id="delete" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 @empty
                                     <tr>
                                        <td colspan="5">Aucune catégorie enregistrée </td> 
@@ -146,7 +155,7 @@
                 <div class="col">
                 <div class="form-group">
                     <label for="inputName">Nom catégorie</label>
-                    <input type="text" id="label_cat" placeholder="{{-- {{$category->label_cat}} --}}" name='label_cat' class="form-control">
+                    <input type="text" id="label_cat" placeholder="{{ $category->label_cat}}" name='label_cat' class="form-control">
                     @error('label_cat') <span class="text-danger">{{ $status }}</span> @enderror
                 </div>
                 <div class="from-group">

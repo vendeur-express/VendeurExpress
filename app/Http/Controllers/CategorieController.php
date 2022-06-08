@@ -22,7 +22,7 @@ class CategorieController extends Controller
         //
         //return view('categorie');
         $categorie=Categorie::where('label_cat','like','%'.$this->search.'%')->orderBy('id','DESC')->paginate(50);
-        return view('superadmin.categorie')->with("categorie",$categorie);
+        return view('superadmin.categorie')->with("categorie",$categorie)->with("status","cateorie");
     }
 
     // /**
@@ -33,6 +33,7 @@ class CategorieController extends Controller
     public function create()
     {
         //
+        
     }
 
     // /**
