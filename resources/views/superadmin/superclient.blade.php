@@ -49,15 +49,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>zongo</td>
-                      <td>celestin</td>
-                      <td >celeste@gmail.com</td>
-                      <td>12</td>
-                      <td>77-58-69-36</td>
-                      <td>Ouagadougou</td>
-                      <td>client</td>
-                    </tr>
+                  
+                      @foreach ($users as $user)
+                      <tr>
+                       
+                        <td>{{user -> identifiant_us}}</td>
+                        <td>{{user -> nom_us}}</td>
+                        <td >{{user -> prenom_us}}</td>
+                        <td>{{user -> email_us}}</td>
+                        <td>{{user -> tel_us}}</td>
+                        <td>{{user -> userable_type}}</td>
+                      </tr>
+                      @endforeach
+                   
 
                     <tr>
                         <td>zongo</td>
@@ -98,16 +102,6 @@
                         <td>vendeur</td>
                       </tr>
 
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>Fournisseur</td>
-                      </tr>
-                    
                     </tbody>
                     <tfoot>
                         <tr>

@@ -12,7 +12,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Client extends Model
 {
     use HasFactory, SoftDeletes;
-
+    protected $fillable = [
+        
+        
+    ];
 
     public function vendeur()
     {

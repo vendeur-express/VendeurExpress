@@ -12,7 +12,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Post extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'label_pos',
+        'dsc_pos',
+        'users_id',
+         ];
     // Recuperer toutes les images de cet post
     public function images()
     {

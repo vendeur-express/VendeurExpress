@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('fournisseurs', function (Blueprint $table) {
             $table->id();
-            $table->string('code_fou')->unique();
-            $table->foreignId('demarcheurs_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('ville_four');
+            $table->string('nom_boutique')->unique();
+            $table->foreignId('demarcheurs_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

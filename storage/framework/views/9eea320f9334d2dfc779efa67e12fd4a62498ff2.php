@@ -137,8 +137,7 @@
             </div><!-- End .col-lg-4 -->
         </div><!-- End .row -->
 </div>
-<!-- explorez les categories populaire -->
-    
+
     <div class="mb-4"></div><!-- End .mb-4 -->
 
     <div class="container new-arrivals">

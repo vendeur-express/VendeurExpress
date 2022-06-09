@@ -3,32 +3,33 @@
     ARTICLE | VENDEUR EXPRESS
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('contenu'); ?>
-<h1 class="text-center">ARTICLE</h1
+<h1 class="text-center">ARTICLE</h1>
 <div class="mb-3"></div>
 <div class="row">
     <div class="content-wrapper main d-flex justify-content-center bg-white">
     
     <div class="col-lg-6 margin-1">
-        <form action="#" class="contact-form mb-3">
+        <form action="<?php echo e(route('posts.store')); ?>" class="contact-form mb-3">
+            <?php echo csrf_field(); ?>
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="tpost" class="sr-only">Titre du post</label>
-                    <input type="text" class="form-control" id="tpost" placeholder="Titre du post*" required>
+                    <label for="post" class="sr-only">Titre du post</label>
+                    <input type="text" name="post" class="form-control" id="post" placeholder="Titre du post*" required>
                 </div><!-- End .col-sm-6 -->
             </div><!-- End .row -->
             <div class="mb-2"></div>
-            <textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="contenu du post *"></textarea>
+            <textarea class="form-control" name="message"  cols="30" rows="4" id="message" required placeholder="contenu du post *"></textarea>
             <div class="mb-2"></div>
             <div> 
-                <input class="form-control form-control-lg" id="formFileLg" type="file">
+                <input class="form-control form-control-lg" name="image" id="formFileLg" type="file">
               </div>
             <div class="mb-2"></div>
             <button type="submit" class="btn btn-outline-success btn-minwidth-sm">
                 <span>Envoyez</span>
                 <i class="icon-long-arrow-right"></i>
             </button>
-        </form><!-- End .contact-form -->
-    </div><!-- End .col-lg-6 -->
+        </form> <!-- End .contact-form -->
+    </div> <!-- End .col-lg-6 -->
     <div class="card-body col-sm-12">
         <table id="example1" class="table table-bordered table-striped">
           <thead>
@@ -82,7 +83,6 @@
               </a>
               </td>
           </tr>
-          
           </tbody>
           <tfoot>
               <tr>

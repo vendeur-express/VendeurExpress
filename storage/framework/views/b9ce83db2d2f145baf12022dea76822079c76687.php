@@ -169,6 +169,48 @@
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
+
+                        <div class="collapse navbar-collapse navbar-collapse-fade" id="navbar-main-collapse">
+                            <ul class="navbar-nav align-items-lg-center">
+                              <li class="nav-item d-lg-none">
+                                <a class="nav-link" href="../application/authentication/register.html">
+                                  Register
+                                </a>
+                              </li>
+                              <li class="nav-item d-lg-none">
+                                <a class="nav-link" href="../application/authentication/login.html">
+                                  Sign in
+                                </a>
+                              </li>
+                            </ul><!-- Right menu -->
+                            <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
+                              <li class="nav-item dropdown dropdown-animate show">
+                                <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <div class="media media-pill align-items-center">
+                                    <span class="avatar rounded-circle">
+                                      <img alt="Image placeholder" src="../assets/img/theme/light/team-4-800x800.jpg">
+                                    </span>
+                                    <div class="ml-2 d-none d-lg-block">
+                                      <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                    </div>
+                                  </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow show">
+                                  <h6 class="dropdown-header px-0">Hi, John!</h6>
+                                  <a href="#!" class="dropdown-item">
+                                    <i class="far fa-user"></i>
+                                    <span>My profile</span>
+                                  </a>
+                                  <div class="dropdown-divider"></div>
+                                  <a href="#!" class="dropdown-item">
+                                    <i class="far fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                  </a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->

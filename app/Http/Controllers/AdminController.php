@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
+use App\Models\User;
+
+use function GuzzleHttp\Promise\all;
 
 class AdminController extends Controller
 {
@@ -134,7 +137,9 @@ class AdminController extends Controller
         return view('superadmin.banniere');
     }
     public function superclient(){
-        return view('superadmin.superclient');
+        $users = User::all();
+        return view('superadmin.superclient')->with('users',$users);
+
     }
     public function commentaire(){
         return view('superadmin.commentaire');

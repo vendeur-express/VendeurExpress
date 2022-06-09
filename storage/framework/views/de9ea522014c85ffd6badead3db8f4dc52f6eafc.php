@@ -49,15 +49,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>zongo</td>
-                      <td>celestin</td>
-                      <td >celeste@gmail.com</td>
-                      <td>12</td>
-                      <td>77-58-69-36</td>
-                      <td>Ouagadougou</td>
-                      <td>client</td>
-                    </tr>
+                      dd($users)
+                      
+                   
 
                     <tr>
                         <td>zongo</td>
@@ -98,16 +92,6 @@
                         <td>vendeur</td>
                       </tr>
 
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>Fournisseur</td>
-                      </tr>
-                    
                     </tbody>
                     <tfoot>
                         <tr>

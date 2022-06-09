@@ -37,12 +37,7 @@ class ClientController extends Controller
     public function store(StoreClientRequest $request)
     {
         $request->validate([
-            'identifiant' => ['required', 'max:255'],
-            'nom' => ['required', 'max:255'],
-            'prenom' => ['required', 'max:255'],
-            'email' => ['required', 'max:255'],
-            'password_confirm' => 'required',
-            'password_c' => 'required',
+           
         ]);
     }
 

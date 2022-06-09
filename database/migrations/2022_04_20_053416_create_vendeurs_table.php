@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('vendeurs', function (Blueprint $table) {
             $table->id();
             $table->string('code_ven')->unique();
+            $table->string('cnib_ven');
+            $table->string('ville_ven');
+            $table->string('annee_naisse_ven');
+            $table->string('sexe_ven');
             $table->timestamps();
         });
     }

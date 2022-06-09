@@ -5,15 +5,21 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use Nette\Schema\Message;
 use App\Models\Demarcheur;
+use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
+use App\Models\Fournisseur;
 use App\Models\Image;
+use App\Models\Vendeur;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Contracts\Service\Attribute\Required;
+
+use function PHPUnit\Framework\isNull;
 
 class RegisteredUserController extends Controller
 {
@@ -37,60 +43,8 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        // $clientValid = [
-        //     'identifiant'  => ['required', 'string', 'max:255'],
-        //     'nom'  => ['required', 'string', 'max:255'],
-        //     'prenom'  => ['required', 'string', 'max:255'],
-        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
-        // ];
-
-        // $FourniValid = [
-        //     'identifiant'  => ['required', 'string', 'max:255'],
-        //     'nom'  => ['required', 'string', 'max:255'],
-        //     'prenom'  => ['required', 'string', 'max:255'],
-        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'boutique' => ['required', 'string', 'max:255'],
-        //     'cnib' => ['required', 'string', 'max:255'],
-        //     'telephone' => ['required', 'string', 'max:255'],
-        //     'country' => ['required', 'string', 'max:255'],
-        //     'ville' => ['required', 'string', 'max:255'],
-        //     'date_naissance' => ['required', 'string', 'max:255'],
-        //     'sexe' => ['required', 'string', 'max:255'],
-        //     'paiement' => ['required', 'string', 'max:255'],
-        //     'mobile' => ['required', 'string', 'max:255'],
-        //     'compte_bancaire' => ['required', 'string', 'max:255'],
-        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
-        // ];
-
-
-        // $demarcheurValid = [
-        //     'identifiant'  => ['required', 'string', 'max:255'],
-        //     'nom'  => ['required', 'string', 'max:255'],
-        //     'prenom'  => ['required', 'string', 'max:255'],
-        //     'email' =>  ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'boutique' => ['required', 'string', 'max:255'],
-        //     'cnib' => ['required', 'string', 'max:255'],
-        //     'telephone' => ['required', 'string', 'max:255'],
-        //     'country' => ['required', 'string', 'max:255'],
-        //     'ville' => ['required', 'string', 'max:255'],
-        //     'date_naissance' => ['required', 'string', 'max:255'],
-        //     'sexe' => ['required', 'string', 'max:255'],
-        //     'paiement' => ['required', 'string', 'max:255'],
-        //     'mobile' => ['required', 'string', 'max:255'],
-        //     'compte_bancaire' => ['required', 'string', 'max:255'],
-        //     'mot_de_passe' => ['required', 'confirm_pass', Rules\Password::defaults()],
-        // ];
-        // $vendeurValid = [];
-
-        // $request->validate([
-        //             'type_de_compte'  => ['required'],
-        //             'identifiant'  => ['required'],
-        //             'nom'  => ['required'],
-
-        // ]);
         $userType = "";
+        $elements="";
         $validator = Validator::make($request->all(), [
             'Type_de_compte'  => 'required',
         ]);
@@ -99,7 +53,31 @@ class RegisteredUserController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         } else {
-            if ($request->Type_de_compte == "0") {
+            if($request->Type_de_compte == "0") {
+                $userType = 'Client';
+                $validatorClient = Validator::make($request->all(), [
+                    'identifiant'  => 'required',
+                    'nom'  => 'required',
+                    'prenom'  => 'required',
+                    'email' => 'required',
+                    'telephone' => 'required',
+                    'mot_de_passe' => 'required|min:6',
+            
+                ]);
+
+                if ($validatorClient->fails()) {
+                    return redirect(url()->previous())
+                        ->withErrors($validatorClient)
+                        ->withInput();
+                } else {
+
+                    $elements = Client::create([
+                        
+                    ]);
+                }
+                
+                 // mes modifications
+            }elseif ($request->Type_de_compte == "1") {
                 $userType = 'Demarcheur';
                 $validatorDemarcheur = Validator::make($request->all(), [
                     'identifiant'  => 'required',
@@ -124,7 +102,7 @@ class RegisteredUserController extends Controller
                         ->withInput();
                 } else {
 
-                    $demarcheur = Demarcheur::create([
+                    $elements = Demarcheur::create([
                         'cnib_dem' => $request->cnib,
                         'pays_dem' => $request->country,
                         'ville_dem' => $request->ville,
@@ -134,23 +112,90 @@ class RegisteredUserController extends Controller
                         'sexe_dem' => $request->sexe,
                     ]);
                 }
-            } else {
+            } 
+            elseif($request->Type_de_compte == "2"){
+                $userType = 'Fourniseur';
+                $validatorFournisseur = Validator::make($request->all(), [
+                    'identifiant'  => 'required',
+                    'nom'  => 'required',
+                    'prenom'  => 'required',
+                    'email' => 'required',
+                    'boutique' => 'required',
+                    'telephone' => 'required',
+                    'ville' => 'required',
+                    'mot_de_passe' => 'required|min:6',  
+                 ]);
+                 if ($validatorFournisseur->fails()) {
+                    return redirect(url()->previous())
+                        ->withErrors($validatorFournisseur)
+                        ->withInput();
+                 } else {
+                    if(isset($request->code_demarcheur) AND !empty($request->code_demarcheur)){
+                        $demarcheur = Demarcheur::where([['code_dem', $request->code_demarcheur]])->get();
+                        
+                        if(count($demarcheur)==0){
+                            return redirect(url()->previous())
+                            ->withErrors('code demarcheur incorrect')
+                            ->withInput();
+                        }
+                        else{
+                            $elements = Fournisseur::create([
+                                'ville_four' => $request->ville,
+                                'nom_boutique' => $request->boutique,
+                                'demarcheurs_id' => $demarcheur[0]->id
+                            ]);
+                        }
+                    }
+                     else{
+                        $elements = Fournisseur::create([
+                            'ville_four' => $request->ville,
+                            'nom_boutique' => $request->boutique,
+                            'demarcheurs_id' => "",
+                        ]);
+                     }
+                }
+                
+            }
+            else{
+                $userType = 'Vendeur';
+                $validatorVendeur = Validator::make($request->all(), [
+                    'identifiant' =>'required',
+                    'prenom'  => 'required',
+                    'nom'  => 'required',
+                    'email' => 'required',
+                    'cnib' => 'required',
+                    'telephone' => 'required',
+                    'ville' => 'required',
+                    'date_naissance' => 'required',
+                    'mot_de_passe' => 'required|min:6',
+                ]);
 
-                die("Quitter");
+                if ($validatorVendeur->fails()) {
+                    return redirect(url()->previous())
+                        ->withErrors($validatorVendeur)
+                        ->withInput();
+                } else {
+
+                    $elements = Vendeur::create([
+                      
+                        'cnib_ven' => $request->cnib,
+                        'ville_ven' => $request->ville,
+                        'annee_naisse_ven' => $request->date_naissance,
+                        'sexe_ven' => $request->sexe,
+                    ]);
+                }
+                
             }
         }
-
-
         $user = User::create([
-            'firstname_us' => $request->nom,
-            'lastname_us' => $request->prenom,
-            'identifiant_us' => $request->country,
-            'cnib_us' => $request->cnib,
+            'identifiant_us' =>$request->identifiant,
+            'nom_us' => $request->nom,
+            'prenom_us' => $request->prenom,
             'email_us' => $request->email,
             'tel_us' => $request->telephone,
             'password_us' => Hash::make($request->password_us),
-            'images_id' => Image::where([['type_img', "Avata"]])->get()[0]->id,
-            'userable_id' => $demarcheur->id,
+            'images_id' => Image::where([['type_img', "Avatar"]])->get()[0]->id,
+            'userable_id' => $elements->id,
             'userable_type' => "App\\Models\\" . $userType,
         ]);
 

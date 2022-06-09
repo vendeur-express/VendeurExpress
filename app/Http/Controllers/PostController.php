@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Validator;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -26,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        'label_pos';
+         'dsc_pos';
     }
 
     /**
@@ -37,8 +38,14 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+        $validatorpost = Validator::make($request->all(), [
+            'post'  => 'required',
+            'message'  => 'required',
+            'image'  => 'required',
+        ]);
+        dd($request);
     }
+    
 
     /**
      * Display the specified resource.
@@ -48,7 +55,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        
     }
 
     /**

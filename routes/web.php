@@ -62,12 +62,15 @@ Route::get('/superadmin', [AdminController::class, 'dashboard'])->name('superadm
 Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('supercommande');
 Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->name('ajout_categorie');
 Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
+<<<<<<< Updated upstream
 
 // route sur categorie
 Route::resource('categorie',CategorieController::class);
 Route::get('/sup/{id}',[CategorieController::class,'sup']);
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
+=======
+>>>>>>> Stashed changes
 Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');

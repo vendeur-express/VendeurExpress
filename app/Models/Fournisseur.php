@@ -10,7 +10,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Fournisseur extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'cnib_four',
+        'ville_four',
+        'nom_boutique',
+        'demarcheurs_id'
+        
+         ];
     public function users()
     {
         return $this->MorphMany(User::class,'userable');
