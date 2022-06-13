@@ -18,6 +18,15 @@ class ImageController extends Controller
         //
     }
 
+    public function save_avatar()
+    {
+        if (Image::create(['alt_img' => 'Avatar', 'url_img' => 'app/img', 'type_img' => 'Avatar'])) {
+            return "Avatar inserted";
+        } else {
+            return "Cannot insert avatar";
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +34,6 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

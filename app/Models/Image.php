@@ -13,7 +13,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'alt_img',
+        'url_img',
+        'type_img',
+    ];
     // recuperer tous les services commandes
     public function services()
     {
@@ -39,7 +43,4 @@ class Image extends Model
     {
         return $this->belongsToMany(Post::class);
     }
-    
-
 }
-

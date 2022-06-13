@@ -5,8 +5,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StudentsController;
+use App\Models\Image;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,15 +64,12 @@ Route::get('/superadmin', [AdminController::class, 'dashboard'])->name('superadm
 Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('supercommande');
 Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->name('ajout_categorie');
 Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
-<<<<<<< Updated upstream
 
 // route sur categorie
-Route::resource('categorie',CategorieController::class);
-Route::get('/sup/{id}',[CategorieController::class,'sup']);
+Route::resource('categorie', CategorieController::class);
+Route::get('/sup/{id}', [CategorieController::class, 'sup']);
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
-=======
->>>>>>> Stashed changes
 Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
@@ -90,4 +89,8 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');
 Route::get('/client/create', [ClientController::class, 'create']);
 Route::post('/post', [ClientController::class, 'store']);
+
+// Function to insert the avatar image
+Route::get('/save_img', [ImageController::class, 'save_avatar']);
+
 require __DIR__ . '/auth.php';

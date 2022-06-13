@@ -15,25 +15,14 @@ return new class extends Migration
     {
         Schema::create('demarcheurs', function (Blueprint $table) {
             $table->id();
-<<<<<<< Updated upstream
-            $table->string('code_dem')->unique();
-            $table->string('cnib_dem');
-            $table->string('pays_dem');
-            $table->string('ville_dem');
-            $table->string('sexe_dem');
-            $table->date('annee_naisse_dem');
-            $table->string('type_paiement');
-            $table->string('numero_compte_dem');
-=======
             $table->string('cnib_dem');
             $table->string('code_dem');
             $table->string('pays_dem');
             $table->string('ville_dem');
-            $table->string('annee_naisse_dem'); 
-            $table->string('type_paiement'); 
+            $table->string('annee_naisse_dem');
+            $table->string('type_paiement');
             $table->string('numero_compte_dem');
             $table->string('sexe_dem');
->>>>>>> Stashed changes
             $table->timestamps();
         });
     }

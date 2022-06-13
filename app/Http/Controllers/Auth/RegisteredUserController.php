@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $userType = "";
-        $elements="";
+        $elements = "";
         $validator = Validator::make($request->all(), [
             'Type_de_compte'  => 'required',
         ]);
@@ -53,7 +53,7 @@ class RegisteredUserController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         } else {
-            if($request->Type_de_compte == "0") {
+            if ($request->Type_de_compte == "0") {
                 $userType = 'Client';
                 $validatorClient = Validator::make($request->all(), [
                     'identifiant'  => 'required',
@@ -62,7 +62,7 @@ class RegisteredUserController extends Controller
                     'email' => 'required',
                     'telephone' => 'required',
                     'mot_de_passe' => 'required|min:6',
-            
+
                 ]);
 
                 if ($validatorClient->fails()) {
@@ -71,13 +71,11 @@ class RegisteredUserController extends Controller
                         ->withInput();
                 } else {
 
-                    $elements = Client::create([
-                        
-                    ]);
+                    $elements = Client::create([]);
                 }
-                
-                 // mes modifications
-            }elseif ($request->Type_de_compte == "1") {
+
+                // mes modifications
+            } elseif ($request->Type_de_compte == "1") {
                 $userType = 'Demarcheur';
                 $validatorDemarcheur = Validator::make($request->all(), [
                     'identifiant'  => 'required',
@@ -92,7 +90,7 @@ class RegisteredUserController extends Controller
                     'date_naissance' => 'required',
                     'sexe' => 'required',
                     'paiement' => 'required',
-                    'mot_de_passe' => 'required|min:6',
+                    'password' => 'required|confirmed|min:6',
                     $request->paiement == '0' ? 'compte_bancaire' : 'mobile' => 'required',
                 ]);
 
@@ -112,8 +110,7 @@ class RegisteredUserController extends Controller
                         'sexe_dem' => $request->sexe,
                     ]);
                 }
-            } 
-            elseif($request->Type_de_compte == "2"){
+            } elseif ($request->Type_de_compte == "2") {
                 $userType = 'Fourniseur';
                 $validatorFournisseur = Validator::make($request->all(), [
                     'identifiant'  => 'required',
@@ -123,43 +120,39 @@ class RegisteredUserController extends Controller
                     'boutique' => 'required',
                     'telephone' => 'required',
                     'ville' => 'required',
-                    'mot_de_passe' => 'required|min:6',  
-                 ]);
-                 if ($validatorFournisseur->fails()) {
+                    'password' => 'required|confirmed|min:6',
+                ]);
+                if ($validatorFournisseur->fails()) {
                     return redirect(url()->previous())
                         ->withErrors($validatorFournisseur)
                         ->withInput();
-                 } else {
-                    if(isset($request->code_demarcheur) AND !empty($request->code_demarcheur)){
+                } else {
+                    if (isset($request->code_demarcheur) and !empty($request->code_demarcheur)) {
                         $demarcheur = Demarcheur::where([['code_dem', $request->code_demarcheur]])->get();
-                        
-                        if(count($demarcheur)==0){
+
+                        if (count($demarcheur) == 0) {
                             return redirect(url()->previous())
-                            ->withErrors('code demarcheur incorrect')
-                            ->withInput();
-                        }
-                        else{
+                                ->withErrors('code demarcheur incorrect')
+                                ->withInput();
+                        } else {
                             $elements = Fournisseur::create([
                                 'ville_four' => $request->ville,
                                 'nom_boutique' => $request->boutique,
                                 'demarcheurs_id' => $demarcheur[0]->id
                             ]);
                         }
-                    }
-                     else{
+                    } else {
                         $elements = Fournisseur::create([
                             'ville_four' => $request->ville,
                             'nom_boutique' => $request->boutique,
                             'demarcheurs_id' => "",
                         ]);
-                     }
+                    }
                 }
-                
-            }
-            else{
+            } else {
                 $userType = 'Vendeur';
                 $validatorVendeur = Validator::make($request->all(), [
-                    'identifiant' =>'required',
+                    'identifiant' => 'required',
                     'prenom'  => 'required',
                     'nom'  => 'required',
                     'email' => 'required',
@@ -167,7 +160,7 @@ class RegisteredUserController extends Controller
                     'telephone' => 'required',
                     'ville' => 'required',
                     'date_naissance' => 'required',
-                    'mot_de_passe' => 'required|min:6',
+                    'password' => 'required|confirmed|min:6',
                 ]);
 
                 if ($validatorVendeur->fails()) {
@@ -177,23 +170,22 @@ class RegisteredUserController extends Controller
                 } else {
 
                     $elements = Vendeur::create([
-                      
+
                         'cnib_ven' => $request->cnib,
                         'ville_ven' => $request->ville,
                         'annee_naisse_ven' => $request->date_naissance,
                         'sexe_ven' => $request->sexe,
                     ]);
                 }
-                
             }
         }
         $user = User::create([
-            'identifiant_us' =>$request->identifiant,
+            'identifiant_us' => $request->identifiant,
             'nom_us' => $request->nom,
             'prenom_us' => $request->prenom,
             'email_us' => $request->email,
             'tel_us' => $request->telephone,
-            'password_us' => Hash::make($request->password_us),
+            'password_us' => Hash::make($request->password),
             'images_id' => Image::where([['type_img', "Avatar"]])->get()[0]->id,
             'userable_id' => $elements->id,
             'userable_type' => "App\\Models\\" . $userType,
