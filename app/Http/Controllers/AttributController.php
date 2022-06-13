@@ -26,6 +26,7 @@ class AttributController extends Controller
     public function create()
     {
         //
+        return view('admin.attribut');
     }
 
     /**

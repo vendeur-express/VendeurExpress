@@ -332,6 +332,7 @@
     </div>  
   </div>
 </div>
+
 <div class="modal fade" id="createproduit">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
@@ -348,11 +349,11 @@
           <div class="col">
             <div class="form-group">
               <label for="inputName">Nom produit</label>
-              <input type="text" name="nomproduit" id="inputName" class="form-control">
+              <input type="text" name="label_pro" id="inputName" class="form-control">
             </div>
             <div class="form-group">
              <label for="prix">Prix (F CFA)</label>
-             <input id="prix" type="number"class="form-control" rows="4"/>
+             <input id="prix" type="number"class="form-control" name="prix_pro" rows="4"/>
            </div>
             <div class="form-group">
               <label for="inputDescription">Description</label>
@@ -379,6 +380,7 @@
                <option>Burkina Faso</option>
                <option>Mali</option>
                <option>Benin</option>
+               <option>Côte d'Ivoire</option>
              </select>
            </div>
           </div>
@@ -447,7 +449,7 @@
     {id: 6, src: 'https://picsum.photos/500/500?random=6'},
     ];
     $('.input-images').imageUploader({
-      preloaded:preloaded,
+      //preloaded:preloaded,
       extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
       mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
       maxSize: undefined,

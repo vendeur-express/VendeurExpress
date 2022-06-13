@@ -185,6 +185,14 @@
             </a>
           </li>
           <li class="has-treeview">
+            <a href="{{route('attribut')}}" class="nav-link">
+              <i class="fas fa-dice-d6 nav-icon"></i>
+              <p>
+                Attributs
+              </p>
+            </a>
+          </li>
+          <li class="has-treeview">
             <a href="{{route('commande')}}" class="nav-link">
               <i class="fas fa-shopping-cart nav-icon"></i>
               <p>
