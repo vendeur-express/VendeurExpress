@@ -6,6 +6,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('titre')</title>
   @yield('style')
+  <link rel="stylesheet" href="admin/dist/css/image-uploader.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -26,6 +27,12 @@
   <link rel="stylesheet" href="admin/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.min.css">
+  <script src="admin/plugins/jquery/jquery.min.js"></script>
+   <!-- jQuery UI 1.11.4 -->
+   <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+   
+   <script src="admin/dist/js/image-uploader.min.js"></script>
+   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -294,8 +301,8 @@
         <script src="admin/plugins/jquery/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
         <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
-        @livewireScripts
-        @yield('script')
+    
+        
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <!-- <script>
         $.widget.bridge('uibutton', $.ui.button)
@@ -304,9 +311,6 @@
         <script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- ChartJS -->
         <script src="admin/plugins/chart.js/Chart.min.js"></script>
-        <!-- Sparkline -->
-        {{-- <script src="admin/plugins/sparklines/sparkline.js"></script> --}}
-        <!-- JQVMap -->
         <script src="admin/plugins/jqvmap/jquery.vmap.min.js"></script>
         <script src="admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
         <!-- jQuery Knob Chart -->
@@ -326,5 +330,6 @@
         {{-- <script src="admin/dist/js/pages/dashboard.js"></script> --}}
         <!-- AdminLTE for demo purposes -->
         <script src="admin/dist/js/demo.js"></script>
+        @yield('script')
     </body>
 </html>

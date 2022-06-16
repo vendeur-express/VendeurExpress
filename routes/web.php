@@ -47,7 +47,7 @@ Route::get('/paiement', [ClientController::class, 'paiement'])->name('paiement')
 Route::get('/favorie', [ClientController::class, 'favorie'])->name('favorie');
 Route::get('/produit', [ClientController::class, 'produit'])->name('produit');
 Route::get('/inscription', [ClientController::class, 'inscription'])->name('inscription');
-// route admin fournisseur
+// route admin fournisseurphp
 Route::get('/admin1', [AdminController::class, 'index'])->name('admin');
 Route::get('/coupon', [AdminController::class, 'coupon'])->name('coupon');
 Route::get('/commande', [AdminController::class, 'commande'])->name('commande');
@@ -76,7 +76,7 @@ Route::get('/editer_cat/{id}',[CategorieController::class,'editer_cat'])->name('
 //Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
-//Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
+Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
 Route::get('/compte', [AdminController::class, 'compte'])->name('compte');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 Route::get('/superproduit', [AdminController::class, 'superproduit'])->name('superproduit');
@@ -86,7 +86,7 @@ Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
-Route::resource('/students', StudentsController::class);
+// Route::resource('/students', StudentsController::class);
 
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');

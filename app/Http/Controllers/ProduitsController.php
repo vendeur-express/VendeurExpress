@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produits;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreProduitsRequest;
 use App\Http\Requests\UpdateProduitsRequest;
+use App\Models\Produit;
 
 class ProduitsController extends Controller
 {
@@ -26,7 +29,8 @@ class ProduitsController extends Controller
      */
     public function create()
     {
-        //
+        
+
     }
 
     /**
@@ -37,7 +41,28 @@ class ProduitsController extends Controller
      */
     public function store(StoreProduitsRequest $request)
     {
-        //
+        $validatorimage = Validator::make($request->all(), [
+           'nomproduit' => 'required',
+            'description'  => 'required',
+             'prix'  => 'required',
+         ]); 
+         
+        
+         if ($validatorimage->fails()) {
+            return redirect(url()->previous())
+                ->withErrors($validatorimage)
+                ->withInput();
+        } else {
+
+            
+             back()->with('produit a ete ajouter avec success');
+    
+        }
+        $produits = produit:: create([
+            'label_pro' => $request->nomproduit,
+            'dsc_pro' => $request ->description,
+            'prix_pro'=> $request ->prix,
+        ]);
     }
 
     /**

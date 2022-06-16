@@ -38,14 +38,12 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                      <th>NOM</th>
-                      <th>Prenom</th>
-                      <th>Email</th>
-                      <th>Commande</th>
-                      <th>Contact</th>
-                      <th>Address</th>
-                      <th>Droit</th>
-
+                      <th>Idendtifiant</th>
+                       <th>Nom</th>
+                       <th>Prenom</th>
+                       <th>Email</th>
+                       <th>Contact</th>
+                       <th>Droit</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -53,64 +51,24 @@
                       @foreach ($users as $user)
                       <tr>
                        
-                        <td>{{user -> identifiant_us}}</td>
-                        <td>{{user -> nom_us}}</td>
-                        <td >{{user -> prenom_us}}</td>
-                        <td>{{user -> email_us}}</td>
-                        <td>{{user -> tel_us}}</td>
-                        <td>{{user -> userable_type}}</td>
+                        <td>{{ucfirst($user -> identifiant_us)}}</td>
+                        <td>{{ucfirst($user -> nom_us)}}</td>
+                        <td >{{ucfirst($user -> prenom_us)}}</td>
+                        <td>{{$user -> email_us}}</td>
+                        <td>{{$user -> tel_us}}</td>
+                        <td>{{explode('\\',$user -> userable_type)[2] }}</td>
                       </tr>
                       @endforeach
                    
 
-                    <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>client</td>
-                      </tr>
-
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>demarcheur</td>
-                      </tr>
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>admin</td>
-                      </tr>
-
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>vendeur</td>
-                      </tr>
-
                     </tbody>
                     <tfoot>
                         <tr>
+                          <th>Idendtifiant</th>
                             <th>Nom</th>
                             <th>Prenom</th>
                             <th>Email</th>
-                            <th>Commande</th>
                             <th>Contact</th>
-                            <th>Address</th>
                             <th>Droit</th>
                         </tr>
                     </tfoot>

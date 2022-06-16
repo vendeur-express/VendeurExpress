@@ -38,7 +38,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $validatorpost = Validator::make($request->all(), [
+        $ValidatorPost = Validator::make($request->all(), [
             'post'  => 'required',
             'message'  => 'required',
             'image'  => 'required',

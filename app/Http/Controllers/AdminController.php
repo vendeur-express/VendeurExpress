@@ -120,6 +120,7 @@ class AdminController extends Controller
     // supper admin
     public function dashboard(){
         return view('superadmin.dashboard');
+       
     }
     public function supercommande(){
         return view('superadmin.supercommande');

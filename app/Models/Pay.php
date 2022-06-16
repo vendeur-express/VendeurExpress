@@ -10,7 +10,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Pay extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'nome_pay',
+        'code_zip_pay',
+    ];
     // Recuperer toutes les produits appartenant a ce pays
     public function produits()
     {

@@ -184,12 +184,12 @@
 
                                         <div class="col-sm-6" id="pass1-container">
                                             <label class="sr-only icon icon-user">Mot de passe</label>
-                                            <input type="password" name="mot_de_passe" id="pass1" class="form-control"
+                                            <input type="password" name="password" id="pass1" class="form-control"
                                                 placeholder="Mot de Passe" required>
                                         </div>
                                         <div class="col-sm-6" id="pass2-container">
-                                            <input type="password" id="pass2" name="confirm_pass" class="form-control"
-                                                placeholder="confirme mot de passe" required>
+                                            <input type="password" id="pass2" name="password_confirmation"
+                                                class="form-control" placeholder="confirme mot de passe" required>
                                         </div>
 
                                         <div class="custom-control custom-checkbox">
@@ -253,7 +253,7 @@
             } else {
                 vendeur();
             }
-            
+
         });
 
         paiement.addEventListener('change', function() {
@@ -285,8 +285,8 @@
             paiement_mobile_container.style.display = 'none'
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
-            paiement_container.style.display ='none'
-            code.style.display ='none'
+            paiement_container.style.display = 'none'
+            code.style.display = 'none'
         }
 
         function demarcheur() {
@@ -311,7 +311,7 @@
             bank_container.style.display = 'none'
             mobile_container.style.display = 'none'
             code.style.display = 'none'
-            
+
         }
 
         function fournisseur() {
@@ -326,8 +326,8 @@
             sexe.style.display = 'none'
             ville.style.display = 'block'
             naissance.style.display = 'none'
-            paiement_container.style.display ='none'
-            paiement_container.style.display ='none'
+            paiement_container.style.display = 'none'
+            paiement_container.style.display = 'none'
             cnib.style.display = 'none'
             identifiant.style.display = 'block'
             pass1.style.display = 'block'
@@ -336,13 +336,13 @@
             bank_container.style.display = 'none'
             paiement_mobile_container.style.display = 'none';
             mobile_container.style.display = 'none';
-            
-            
+
+
         }
 
         function vendeur() {
             email.style.display = 'block'
-            code.style.display ='none'
+            code.style.display = 'none'
             ville.style.display = 'block'
             pays.style.display = 'block'
             telephone.style.display = 'block'
@@ -360,8 +360,8 @@
             paiement.style.display = 'none'
             pays_container.style.display = 'none'
             bank_container.style.display = 'none'
-           
-            
+
+
 
         }
 

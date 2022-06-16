@@ -70,7 +70,7 @@ class EtiquetteProduitController extends Controller
      */
     public function update(UpdateEtiquetteProduitRequest $request, EtiquetteProduit $etiquetteProduit)
     {
-        //
+        //wqw
     }
 
     /**

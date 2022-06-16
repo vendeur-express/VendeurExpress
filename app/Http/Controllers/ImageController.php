@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreImageRequest;
 use App\Http\Requests\UpdateImageRequest;
 
@@ -44,7 +45,27 @@ class ImageController extends Controller
      */
     public function store(StoreImageRequest $request)
     {
-        //
+        $validatorimage =Validator::make($request->all(),[
+            'alt_img' => 'require',
+            'url_img' =>'require', 
+            'type_img' =>'require',
+        ]);
+
+        if ($validatorimage->fails()) {
+            return redirect(url()->previous())
+                ->withErrors($validatorimage)
+                ->withInput();
+        } else {
+
+            $elements = Image::create([
+
+                'alt_img' => $request->cnib,
+                'url_img' => $request->ville,
+                'type_img' => $request->date_naissance,
+                
+            ]);
+        }
+        
     }
 
     /**

@@ -38,59 +38,29 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                      <th>NOM</th>
+                      <th>Nom</th>
                       <th>Prenom</th>
                       <th>Email</th>
                       <th>Commande</th>
                       <th>Contact</th>
-                      <th>Address</th>
                       <th>Droit</th>
 
                     </tr>
                     </thead>
                     <tbody>
-                      dd($users)
-                      
+                  
+                      <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                      <tr>
+                       
+                        <td><?php echo e(ucfirst($user -> identifiant_us)); ?></td>
+                        <td><?php echo e(ucfirst($user -> nom_us)); ?></td>
+                        <td ><?php echo e(ucfirst($user -> prenom_us)); ?></td>
+                        <td><?php echo e($user -> email_us); ?></td>
+                        <td><?php echo e($user -> tel_us); ?></td>
+                        <td><?php echo e(explode('\\',$user -> userable_type)[2]); ?></td>
+                      </tr>
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                    
-
-                    <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>client</td>
-                      </tr>
-
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>demarcheur</td>
-                      </tr>
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>admin</td>
-                      </tr>
-
-                      <tr>
-                        <td>zongo</td>
-                        <td>celestin</td>
-                        <td >celeste@gmail.com</td>
-                        <td>12</td>
-                        <td>77-58-69-36</td>
-                        <td>Ouagadougou</td>
-                        <td>vendeur</td>
-                      </tr>
 
                     </tbody>
                     <tfoot>
@@ -100,7 +70,6 @@
                             <th>Email</th>
                             <th>Commande</th>
                             <th>Contact</th>
-                            <th>Address</th>
                             <th>Droit</th>
                         </tr>
                     </tfoot>

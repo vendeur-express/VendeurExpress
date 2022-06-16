@@ -36,7 +36,7 @@ class FournisseurController extends Controller
      */
     public function store(StoreFournisseurRequest $request)
     {
-        //
+        
     }
 
     /**
@@ -47,7 +47,7 @@ class FournisseurController extends Controller
      */
     public function show(Fournisseur $fournisseur)
     {
-        //
+        
     }
 
     /**

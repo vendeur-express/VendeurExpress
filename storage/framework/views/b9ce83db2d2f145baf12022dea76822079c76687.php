@@ -170,7 +170,7 @@
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
 
-                        <div class="collapse navbar-collapse navbar-collapse-fade" id="navbar-main-collapse">
+                        <div class="collapse" id="navbar-main-collapse">
                             <ul class="navbar-nav align-items-lg-center">
                               <li class="nav-item d-lg-none">
                                 <a class="nav-link" href="../application/authentication/register.html">

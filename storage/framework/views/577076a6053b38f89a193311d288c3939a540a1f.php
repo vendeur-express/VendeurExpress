@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="<?php echo e(csrf_token()); ?>">
   <title><?php echo $__env->yieldContent('titre'); ?></title>
-
+  <?php echo $__env->yieldContent('style'); ?>
+  <link rel="stylesheet" href="admin/dist/css/image-uploader.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -25,6 +26,13 @@
   <link rel="stylesheet" href="admin/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="admin/plugins/summernote/summernote-bs4.min.css">
+   <!-- jQuery -->
+   <script src="admin/plugins/jquery/jquery.min.js"></script>
+   <!-- jQuery UI 1.11.4 -->
+   <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+   
+   <script src="admin/dist/js/image-uploader.min.js"></script>
+   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -177,6 +185,14 @@
             </a>
           </li>
           <li class="has-treeview">
+            <a href="<?php echo e(route('attribut')); ?>" class="nav-link">
+              <i class="fas fa-dice-d6 nav-icon"></i>
+              <p>
+                Attributs
+              </p>
+            </a>
+          </li>
+          <li class="has-treeview">
             <a href="<?php echo e(route('commande')); ?>" class="nav-link">
               <i class="fas fa-shopping-cart nav-icon"></i>
               <p>
@@ -257,6 +273,22 @@
               </p>
             </a>
           </li>
+          <li class="has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-folder"></i>
+              <p>
+                Catégories
+              </p>
+            </a>
+          </li>
+          <li class="has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-folder-plus"></i>
+              <p>
+                Ajouter catégories
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -264,7 +296,12 @@
     <!-- /.sidebar -->
   </aside>
   
-  <?php echo $__env->yieldContent('contenu'); ?>
+  <br/>
+  <div class="content-wrapper">
+    <section class="content">
+      <?php echo $__env->yieldContent('contenu'); ?>
+    </section>
+  </div>
   
 
   <!-- Control Sidebar -->
@@ -274,7 +311,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+        
         <!-- jQuery -->
         <script src="admin/plugins/jquery/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
@@ -288,7 +325,7 @@
         <!-- ChartJS -->
         <script src="admin/plugins/chart.js/Chart.min.js"></script>
         <!-- Sparkline -->
-        <script src="admin/plugins/sparklines/sparkline.js"></script>
+        
         <!-- JQVMap -->
         <script src="admin/plugins/jqvmap/jquery.vmap.min.js"></script>
         <script src="admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
@@ -306,8 +343,9 @@
         <!-- AdminLTE App -->
         <script src="admin/dist/js/adminlte.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="admin/dist/js/pages/dashboard.js"></script>
+        
         <!-- AdminLTE for demo purposes -->
         <script src="admin/dist/js/demo.js"></script>
+        <?php echo $__env->yieldContent('script'); ?>
     </body>
 </html><?php /**PATH C:\Users\VEX\vendeurexpress-app\resources\views/layouts/admin/app.blade.php ENDPATH**/ ?>
