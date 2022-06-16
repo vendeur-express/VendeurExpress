@@ -59,8 +59,6 @@
                         <td>{{explode('\\',$user -> userable_type)[2] }}</td>
                       </tr>
                       @endforeach
-                   
-
                     </tbody>
                     <tfoot>
                         <tr>

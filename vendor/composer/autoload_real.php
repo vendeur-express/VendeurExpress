@@ -22,32 +22,16 @@ class ComposerAutoloaderInitd9ed93ed76109e4769120d51a59b6e73
             return self::$loader;
         }
 
-        require __DIR__ . '/platform_check.php';
-
         spl_autoload_register(array('ComposerAutoloaderInitd9ed93ed76109e4769120d51a59b6e73', 'loadClassLoader'), true, true);
-        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(\dirname(__FILE__)));
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInitd9ed93ed76109e4769120d51a59b6e73', 'loadClassLoader'));
 
-        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || !zend_loader_file_encoded());
-        if ($useStaticLoader) {
-            require __DIR__ . '/autoload_static.php';
+        require __DIR__ . '/autoload_static.php';
+        call_user_func(\Composer\Autoload\ComposerStaticInitd9ed93ed76109e4769120d51a59b6e73::getInitializer($loader));
 
-            call_user_func(\Composer\Autoload\ComposerStaticInitd9ed93ed76109e4769120d51a59b6e73::getInitializer($loader));
-        } else {
-            $classMap = require __DIR__ . '/autoload_classmap.php';
-            if ($classMap) {
-                $loader->addClassMap($classMap);
-            }
-        }
-
-        $loader->setClassMapAuthoritative(true);
         $loader->register(true);
 
-        if ($useStaticLoader) {
-            $includeFiles = Composer\Autoload\ComposerStaticInitd9ed93ed76109e4769120d51a59b6e73::$files;
-        } else {
-            $includeFiles = require __DIR__ . '/autoload_files.php';
-        }
+        $includeFiles = \Composer\Autoload\ComposerStaticInitd9ed93ed76109e4769120d51a59b6e73::$files;
         foreach ($includeFiles as $fileIdentifier => $file) {
             composerRequired9ed93ed76109e4769120d51a59b6e73($fileIdentifier, $file);
         }

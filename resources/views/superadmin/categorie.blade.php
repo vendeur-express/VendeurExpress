@@ -13,7 +13,6 @@
     max-height: 1000px;
   }
   </style>
-  
 @endsection
 @section('contenu')
 
@@ -34,6 +33,9 @@
                 @endif
                 @if (session()->has('status'))
                     <h5 class="alert alert-success">{{ session('status') }}</h5>
+                @endif
+                @if (session()->has('probleme'))
+                    <h5 class="alert alert-danger">{{ session('probleme') }}</h5>
                 @endif
             </div>
         </div>
@@ -90,8 +92,8 @@
                                             style="height:50px;width:100px"
                                             class="elevation-2"> --}}
                                             {{-- {{ dd(asset($category->image_cat)) }} --}}
-
-                                            <img src="{{ asset("storage/images_categories/".$category->image_cat) }}"
+                                           
+                                            <img src="{{ asset('storage/images_categorie/'.$category->image_cat ) }}"
                                             style="height:50px; width:100px"
                                             class="{{-- elevation-1 --}} img-responsive">
                                         </td>
@@ -152,7 +154,7 @@
                 </div>
                 <div class="from-group">
                     <label for="inputDescription">Description</label>
-                    <textarea id="dsc_cat" name='dsc_cat' class="form-control" rows="4"></textarea>
+                    <textarea id="dsc_cat"  placeholder="{{isset($category->dsc_cat)?$category->dsc_cat:" " }}" name='dsc_cat' class="form-control" rows="4"></textarea>
                     @error('dsc_cat') <span class="text-danger">{{ $status }}</span> @enderror
                 </div>
                 <div class="form-group">

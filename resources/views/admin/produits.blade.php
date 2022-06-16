@@ -268,6 +268,10 @@
         <div class="row">
           <div class="col">
             <div class="form-group">
+              <label for="inputName">Type de produit</label>
+              <input type="text" name="nomproduit" id="inputName" class="form-control">
+            </div>
+            <div class="form-group">
               <label for="inputName">Nom produit</label>
               <input type="text" name="nomproduit" id="inputName" class="form-control">
             </div>
@@ -283,24 +287,27 @@
               <label>Catégories</label>
               <div class="select2-purple">
                 <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
-                  <option>Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
+                  <option>Appareils electro-menagers</option>
+                  <option>Appareils electroniques</option>
+                  <option>Produits d'élevage</option>
+                  <option>Produits alimentaire</option>
+                  <option>Produits cosmétique</option>
                   <option>Texas</option>
                   <option>Washington</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-             <label for="inputStatus">Pays</label>
-             <select id="inputStatus" class="form-control custom-select">
-               <option selected disabled>Sélectionnez un pays</option>
-               <option>Burkina Faso</option>
-               <option>Mali</option>
-               <option>Benin</option>
-             </select>
+              <label for="inputStatus">Pays</label>
+              <div class="select2-purple">
+                <select class="js-example-basic-multiple" multiple="multiple" data-dropdown-css-class="select2-purple">
+                  <option selected disabled>Sélectionnez un pays</option>
+                  <option>Burkina Faso</option>
+                  <option>Mali</option>
+                  <option>Benin</option>
+                </select>
+              </div>
+
            </div>
           </div>
           {{-- end col 1 --}}
