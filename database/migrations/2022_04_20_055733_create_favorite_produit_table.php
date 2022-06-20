@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('favorite_produit', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('favorites_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('produits_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('favorite_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('produit_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

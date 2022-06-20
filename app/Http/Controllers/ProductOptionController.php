@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AttributProduit;
-use App\Http\Requests\StoreAttributProduitRequest;
-use App\Http\Requests\UpdateAttributProduitRequest;
+use App\Models\ProductOption;
+use App\Http\Requests\StoreProductOptionRequest;
+use App\Http\Requests\UpdateProductOptionRequest;
 
-class AttributProduitController extends Controller
+class ProductOptionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class AttributProduitController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAttributProduitRequest  $request
+     * @param  \App\Http\Requests\StoreProductOptionRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAttributProduitRequest $request)
+    public function store(StoreProductOptionRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class AttributProduitController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AttributProduit  $attributProduit
+     * @param  \App\Models\ProductOption  $productOption
      * @return \Illuminate\Http\Response
      */
-    public function show(AttributProduit $attributProduit)
+    public function show(ProductOption $productOption)
     {
         //
     }
@@ -53,10 +53,10 @@ class AttributProduitController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AttributProduit  $attributProduit
+     * @param  \App\Models\ProductOption  $productOption
      * @return \Illuminate\Http\Response
      */
-    public function edit(AttributProduit $attributProduit)
+    public function edit(ProductOption $productOption)
     {
         //
     }
@@ -64,11 +64,11 @@ class AttributProduitController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAttributProduitRequest  $request
-     * @param  \App\Models\AttributProduit  $attributProduit
+     * @param  \App\Http\Requests\UpdateProductOptionRequest  $request
+     * @param  \App\Models\ProductOption  $productOption
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAttributProduitRequest $request, AttributProduit $attributProduit)
+    public function update(UpdateProductOptionRequest $request, ProductOption $productOption)
     {
         //
     }
@@ -76,10 +76,10 @@ class AttributProduitController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AttributProduit  $attributProduit
+     * @param  \App\Models\ProductOption  $productOption
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AttributProduit $attributProduit)
+    public function destroy(ProductOption $productOption)
     {
         //
     }

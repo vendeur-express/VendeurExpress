@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('code_li')->unique();
             $table->string('altitude');
             $table->string('logitude');
-            $table->foreignId('villes_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('ville_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

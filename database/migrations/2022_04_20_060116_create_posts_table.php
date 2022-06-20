@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label_pos');
             $table->mediumText('dsc_pos')->nullable();
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

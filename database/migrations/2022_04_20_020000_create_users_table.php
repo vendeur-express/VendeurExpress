@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('password_us');
             $table->string('userable_id');
             $table->string('userable_type');
-            $table->foreignId('images_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->softDeletes(); 
+            $table->foreignId('image_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });

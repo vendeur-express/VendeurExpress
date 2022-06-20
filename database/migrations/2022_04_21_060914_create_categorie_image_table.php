@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('categorie_image', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('categories_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('images_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('categorie_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('image_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

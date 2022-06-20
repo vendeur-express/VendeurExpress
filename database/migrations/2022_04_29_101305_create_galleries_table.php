@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('galleries', function (Blueprint $table) {
+        Schema::create('gallerie', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

@@ -3,12 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AttributController;
+use App\Http\Controllers\AttributeValueController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StudentsController;
+use App\Models\AttributeValue;
 use App\Models\Image;
 
 /*
@@ -56,7 +58,14 @@ Route::get('/rembourser', [AdminController::class, 'rembourser'])->name('rembour
 Route::get('/reglage', [AdminController::class, 'reglage'])->name('reglage');
 Route::get('/retrait', [AdminController::class, 'retrait'])->name('retrait');
 Route::get('/produits', [AdminController::class, 'produits'])->name('produits');
-Route::get('/attribut', [AttributController::class, 'create'])->name('attribut');
+// route des attributs
+Route::get('/attribut', [AttributController::class, 'index'])->name('attribut');
+Route::post('/add-attribut', [AttributController::class, 'add_att'])->name('add.attr');
+Route::post('/delete-attribut', [AttributController::class, 'del_att'])->name('del.attr');
+// routes des valeurs des attributs
+Route::post('/add-attr-values', [AttributeValueController::class, 'create'])->name('add.attr.val');
+Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name('del.attr.val');
+
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');
 Route::get('/avis', [AdminController::class, 'avis'])->name('avis');
 Route::get('/rapport', [AdminController::class, 'rapport'])->name('rapport');
@@ -68,9 +77,9 @@ Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('s
 //Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
 
 // route sur categorie
-Route::resource('categorie',CategorieController::class);
-Route::get('/suprimer_cat/{id}',[CategorieController::class,'suprimer_cat']);
-Route::get('/editer_cat/{id}',[CategorieController::class,'editer_cat'])->name('editer_cat');
+Route::resource('categorie', CategorieController::class);
+Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
+Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
 //Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);

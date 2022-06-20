@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('ville_four');
             $table->string('nom_boutique')->unique();
-            $table->foreignId('demarcheurs_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('demarcheur_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

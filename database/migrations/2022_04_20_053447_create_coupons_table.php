@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('code_cou')->unique();
             $table->double('reduction_cou');
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

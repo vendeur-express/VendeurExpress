@@ -10,8 +10,15 @@ class Attribut extends Model
 {
     use HasFactory;
     // Recuperer la liste des produits ayant cet attribut
-    public function produits()
+
+    protected $fillable = [
+        'label_at',
+        'dsc_at',
+    ];
+    protected $with = ['attributeValues'];
+
+    public function attributeValues()
     {
-        return $this->belongsToMany(Produit::class);
+        return $this->hasMany(AttributeValue::class);
     }
 }

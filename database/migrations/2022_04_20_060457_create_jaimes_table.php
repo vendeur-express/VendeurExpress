@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('jaimes', function (Blueprint $table) {
             $table->id();
             $table->mediumText('dsc_ja')->nullable();
-            $table->foreignId('commentaires_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('commentaire_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });

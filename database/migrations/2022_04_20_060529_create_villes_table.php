@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('villes', function (Blueprint $table) {
             $table->id();
             $table->string('nom_vi');
-            $table->foreignId('pays_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('pay_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->mediumText('dsc_pro')->nullable();
             $table->double('prix_pro');
             $table->string('code_pro')->unique();
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

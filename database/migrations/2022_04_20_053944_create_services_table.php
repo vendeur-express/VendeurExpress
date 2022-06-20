@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label_se');
             $table->string('desc_se');
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

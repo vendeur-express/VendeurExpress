@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('valeur_not');
             $table->mediumText('dsc_not')->nullable();
-            $table->foreignId('produits_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('users_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('produit_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

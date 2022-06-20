@@ -58,10 +58,9 @@ class Produit extends Model
     }
 
     // Recuperer tous les attributs de cet produit
-    public function attributs()
+    public function product_option()
     {
-        return $this->belongsToMany(Attribut::class);
-
+        return $this->belongsToMany(ProductOption::class);
     }
     // Recuperer toutes les pays ayant cet produit
     public function pays()
@@ -85,15 +84,14 @@ class Produit extends Model
         return $this->hasMany(Partage::class);
     }
 
-     // Recuperer tous les ettiquettes de cet produit
-     public function ettiquettes()
-     {
-         return $this->belongsToMany(Etiquette::class);
-     }
-      // Recuperer tous les marques de cet produit
+    // Recuperer tous les ettiquettes de cet produit
+    public function ettiquettes()
+    {
+        return $this->belongsToMany(Etiquette::class);
+    }
+    // Recuperer tous les marques de cet produit
     public function marques()
     {
         return $this->belongsToMany(Marque::class);
     }
-
 }
