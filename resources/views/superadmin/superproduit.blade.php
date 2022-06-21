@@ -219,6 +219,11 @@
                 <input type="text" name="nomproduit" id="inputName" class="form-control">
               </div>
               <div class="form-group">
+                <label for="prix">Etiquettes</label>
+                <input id="Etiquette" type="text"class="form-control" rows="4"/>
+              </div>
+
+              <div class="form-group">
                <label for="prix">Prix (F CFA)</label>
                <input id="prix" type="number"class="form-control" rows="4"/>
              </div>
@@ -263,43 +268,31 @@
               <form action="url" enctype="multipart/form-data">
                 <div class="input-images"></div>
               </form>
-                <div>
-                  <button class="btn btn-info" id="submit-all">Téléchargez</button>
-                </div>
               </div>
               <br>
-             <div class="mb6"></div>
-              <div class="form-group" id="couleurContainer" >
-                <label>COULEURS</label>
-                <div class="select2-purple" >
-                  <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;" name="coleur" id="couleurId">
-                    <option>Jaune</option>
-                    <option>Vers</option>
-                    <option>Rouge</option>
-                    <option>Rose</option>
-                    <option>Blanc</option>
-                    <option>Noir</option>
-                  </select>
+
+              {{-- <div class="col-12 input-group py-3" id="couleurContainer">
+
+                <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;" name="coleur" id="couleurId">
+                  <option>Couleurs</option>
+                  <option>Tailles</option>
+                </select>
+
+                <div class="input-group-append ">
+                    <button class="input-group-text text-white bg-success" type="button"
+                        onclick="" >Ajouter</button>
                 </div>
+             </div> --}}
+
+             <div class="input-group mb-3 " >
+              <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 90%;" name="coleur" id="couleurId">
+                <option>Couleurs</option>
+                <option>Tailles</option>
+              </select>
+              <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02">Ok</label>
               </div>
-              <div class="mb4"></div>
-              <div class="form-group" id="attributContainer">
-                <label>ATTRIBUTS</label>
-                <div class="select2-purple">
-                  <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez la taille" data-dropdown-css-class="select2-purple" style="width: 100%;" name="attributName" id="attribut">
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group" id="etiquetteContainer">
-                <label for="inputName">Etiquette</label>
-                <input type="text" name=" EtiquetteName" id="Etiquette" class="form-control">
-              </div>
+            </div>
             </div>
 
           </div>
@@ -392,15 +385,15 @@
         });
         
         function variable() {
-          attribut.style.display = 'block'
+          // attribut.style.display = 'block'
           couleur.style.display = 'block'
-          Etiquette.style.display = 'block'
+          // Etiquette.style.display = 'block'
         }
         
         function simple() {
-          attribut.style.display = 'none'
+          // attribut.style.display = 'none'
           couleur.style.display = 'none'
-          Etiquette.style.display = 'none'
+          // Etiquette.style.display = 'none'
         }
       
 

@@ -23,7 +23,7 @@
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
-                                <form method="POST" action="">
+                                <form method="GET" action="">
                                     @csrf
                                     <div class="form-group">
                                         <label for="singin-email-2">Nom d'utilisateur ou adresse e-mail *</label>
@@ -74,7 +74,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <select name="Type_de_compte" class="form-control" id="compte">
-                                                <option value=" 0">Client</option>
+                                                <option value="0">Client</option>
                                                 <option value="1">Demarcheur</option>
                                                 <option value="2">Fournisseur</option>
                                                 <option value="3">Vendeur</option>

@@ -32,7 +32,7 @@ class Produit extends Model
                 while ($test == true) {
                     $uuid = Str::uuid();
                     $key = explode('-', $uuid)[count(explode('-', $uuid)) - 1];
-                    if (Demarcheur::where('code_pro', $key)) {
+                    if (Produit::where('code_pro', $key)) {
                         $test = false;
                     }
                 }
