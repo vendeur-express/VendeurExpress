@@ -77,7 +77,7 @@ class CategorieController extends Controller
             $categorie->image_cat=$fileNameToStore;
             if($categorie->save()){
                 $imagecat=CategorieImage::create(["categories_id"=>$categorie->id,
-            "images_id"=>$image->id]);
+            "image_id"=>$image->id]);
             }else{
             dd("categorie non enrégistrée");
             }

@@ -190,7 +190,7 @@
       </div>  
     </div>
   </div>
-  <div class="modal fade" id="createproduit">
+  <div class="modal fade 47 " id="createproduit">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -284,18 +284,52 @@
                 </div>
              </div> --}}
 
-             <div class="input-group mb-3 " >
-              <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 90%;" name="coleur" id="couleurId">
-                <option>Couleurs</option>
-                <option>Tailles</option>
+             <div class="input-group mb-3 " id="attribut">
+              <label>ATTRIBUTS</label>
+              <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 85%;" name="coleur" id="couleurId">
+                <option value="1">Couleurs</option>
+                <option value="2">Tailles</option>
               </select>
               <div class="input-group-append">
-                <label class="input-group-text" for="inputGroupSelect02">Ok</label>
+                <label class="input-group-text" for="inputGroupSelect02" onclick>Ok</label>
+              </div>
+             </div>
+             <div class="row">
+             <div class="form-group col-sm-6" id="couleur">
+              <label>COULEURS</label>
+              <div class="select2-purple">
+                <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                  <option>Rouge</option>
+                  <option>Jaune</option>
+                  <option>rose</option>
+                  <option>vert</option>
+                </select>
+              </div>
+             </div>
+             <div class="form-group col-sm-6" id="tailles" >
+              <label>TAILLES</label>
+              <div class="select2-purple">
+                <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                  <option>XL</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XXL</option>
+                </select>
               </div>
             </div>
-            </div>
-
           </div>
+          <div id="prixattribut"> 
+            <label>Prix</label>
+            <input class="form-control form-control-lg" name="prix"  type="number">
+          </div>
+          <div class="mb4"></div>
+          <div id="imageattribut" > 
+            <label>Image </label>
+            <input class="form-control form-control-lg" name="imageAttribut"  type="file">
+          </div>
+            </div>
+          </div>
+          
           {{-- end col 2 --}}
           {{-- end row 1 --}}
         </Form>
@@ -333,6 +367,7 @@
               };
           });
       });
+
       // images telechargement
       let preloaded = [
       {id: 1, src: 'https://picsum.photos/500/500?random=1'},
@@ -349,6 +384,7 @@
         maxSize: undefined,
         maxFiles: undefined,
       });
+      
     </script>
     <script>
 
@@ -363,40 +399,89 @@
         form.addEventListener('submit', (event) => {
         event.preventDefault();
         event.stopPropagation();
-  
         form.classList.add('was-validated');
         },false);
         });
       })();
     </script>
     <script>
-       var type_produit = document.getElementById('type_produit');
-       var attribut = document.getElementById('attributContainer');
-       var couleur = document.getElementById('couleurContainer');
-       var Etiquette = document.getElementById('etiquetteContainer');
 
+       var type_produit = document.getElementById('type_produit');
+       var type_attribut = document.getElementById('couleurId');
+       var prixattribut = document.getElementById('prixattribut');
+       var couleur = document.getElementById('couleur');
+       var image_attribut = document.getElementById('imageattribut');
+       var tailles_attribut = document.getElementById('tailles');
+       var attribut = document.getElementById('attribut');
+       simple();
        type_produit.addEventListener('change', function() {
             if (type_produit.value == 1) {
               simple()
             } else{
               variable() 
-            }
+            //   if (type_attribut.value == 1) {
+            //   couleur()
+            // } else if{
+            //   variable() 
+            // }
+            // else{
+            //   allattribut()
+            // }
 
+            }
         });
         
+        // type_attribut.addEventListener('change', function() {
+        //   if (type_attribut.value == 1) {
+        //       couleur()
+        //     } else if{
+        //       variable() 
+        //     }
+        //     else{
+        //       allattribut()
+        //     }
+        // }):
         function variable() {
-          // attribut.style.display = 'block'
-          couleur.style.display = 'block'
-          // Etiquette.style.display = 'block'
+          prixattribut.style.display = 'none'
+          couleur.style.display = 'none'
+          image_attribut.style.display = 'none'
+          tailles_attribut.style.display = 'none'
+          attribut.style.display = 'block'
+
         }
         
         function simple() {
-          // attribut.style.display = 'none'
+          attribut.style.display = 'none'
+          prixattribut.style.display = 'none'
           couleur.style.display = 'none'
-          // Etiquette.style.display = 'none'
+          image_attribut.style.display = 'none'
+          tailles_attribut.style.display = 'none'
         }
-      
+        // function couleur() {
+        //   prixattribut.style.display = 'block'
+        //   couleur.style.display = 'block'
+        //   image_attribut.style.display = 'block'
+        //   tailles_attribut.style.display = 'none'
+        // }
+        // function taille() {
+        //   prixattribut.style.display = 'none'
+        //   couleur.style.display = 'none'
+        //   image_attribut.style.display = 'none'
+        //   tailles_attribut.style.display = 'block'
+        // }
+        // function allattribut() {
+        //   prixattribut.style.display = 'block'
+        //   couleur.style.display = 'block'
+        //   image_attribut.style.display = 'block'
+        //   tailles_attribut.style.display = 'block'
+        // }
+        // var options = document.getElementById('attribut').options,
+        //  count = 0;
+        // for (var i=0; i < options.length; i++) {
+        //    if (options[i].selected) count++;
+          //  alert("le nombre de selection")
 
+    
     </script>
     <script src="admin/plugins/jszip/jszip.min.js"></script>
     <script src="admin/plugins/pdfmake/pdfmake.min.js"></script>

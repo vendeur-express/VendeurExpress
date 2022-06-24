@@ -5,7 +5,7 @@
 @section('contenu')
 <div class="mb-1"></div>
 <main class="main">
-     <div class="intro-slider-container">
+     <div class="intro-slider-container ">
          <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
             data-owl-options='{
                 "dots": true,
@@ -13,11 +13,12 @@
                 "responsive": {
                     "1200": {
                         "nav": true,
-                        "dots": false
+                        "dots": true
                     }
                 }
             }'>
-            <div class="intro-slide"style="background-image: url(assets/images/demos/demo-4/slider/bannier1.png);height : 650px">
+            <div class="intro-slide">
+                <img class="d-block w-100 " src="assets/images/demos/demo-4/slider/bannier1.png" alt="vendre et achetez e ligne">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color: white">
                     <h1 > Vendre et Acheter en ligne</h1>
@@ -26,7 +27,8 @@
 
             </div><!-- End .intro-slide -->
 
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere2.jpg);height : 625px">
+            <div class="intro-slide" >
+                <img src="assets/images/demos/demo-4/slider/banniere2.jpg">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color:black">
                     <h1 > Vendre et Acheter en ligne</h1>
@@ -34,34 +36,29 @@
                 </div>
             </div><!-- End .intro-slide -->
 
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere3.jpg); height : 600px">
+            <div class="intro-slide" >
+                <img src="assets/images/demos/demo-4/slider/banniere3.jpg">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color:black">
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
             </div><!-- End .intro-slide -->
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere4.jpg); height : 600px">
+            <div class="intro-slide" style="height : 600px">
+                <img class="d-block w-100 " src="assets/images/demos/demo-4/slider/banniere4.jpg">
                 <div class="container intro-content">
                 <div class="row justify-content-center "style="text-align: center; color:black">
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
             </div><!-- End .intro-slide -->
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere5.png); height : 600px">
+            <div class="intro-slide ">
+                <img  src="assets/images/demos/demo-4/slider/banniere5.png">
                 <div class="container intro-content">
                 <div class="row justify-content-center"style="text-align: center; color:black">
                     <h1 > Vendre et Acheter en ligne</h1>
                 </div><!-- End .row -->
                 </div>
-            </div><!-- End .intro-slide -->
-
-            <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/banniere6.png); height : 600px">
-                <div class="container intro-content">
-                <div class="row justify-content-center "style="text-align: center; color: white">
-                    <h1 > Vendre et Acheter en ligne</h1>
-                </div><!-- End .row -->
-            </div>
             </div><!-- End .intro-slide -->
 
         </div><!-- End .intro-slider owl-carousel owl-simple -->
@@ -143,7 +140,7 @@
     <div class="container new-arrivals">
         <div class="heading heading-flex mb-3">
             <div class="heading-left">
-                <h2 class="title">Les Nouveau Produits</h2><!-- End .title -->
+                <h2 class="title">Les Nouveaux Produits</h2><!-- End .title -->
             </div><!-- End .heading-left -->
 
            <div class="heading-right">

@@ -61,7 +61,7 @@ class RegisteredUserController extends Controller
                     'prenom'  => 'required',
                     'email' => 'required',
                     'telephone' => 'required',
-                    'mot_de_passe' => 'required|min:6',
+                    'password' => 'required|min:6',
 
                 ]);
 
@@ -186,13 +186,12 @@ class RegisteredUserController extends Controller
             'email_us' => $request->email,
             'tel_us' => $request->telephone,
             'password_us' => Hash::make($request->password),
-            'images_id' => Image::where([['type_img', "Avatar"]])->get()[0]->id,
+            'image_id' => Image::where([['type_img', "Avatar"]])->get()[0]->id,
             'userable_id' => $elements->id,
             'userable_type' => "App\\Models\\" . $userType,
         ]);
 
         event(new Registered($user));
-
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
     }

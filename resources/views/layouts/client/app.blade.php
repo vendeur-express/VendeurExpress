@@ -104,6 +104,30 @@
                                 <p>Favorite</p>
                             </a>
                         </div><!-- End .compare-dropdown -->
+                        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                            <!-- Left Side Of Navbar -->
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                            </ul>
+                            <!-- Right Side Of Navbar -->
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- Authentication Links -->
+                                @if (Auth::guest())
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#" id="register">Register</a></li>
+                                @else
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                        </ul>
+                                    </li>
+                                @endif
+                            </ul>
+                        </div>
+
         
                         <div class="dropdown cart-dropdown">
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -170,7 +194,7 @@
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
 
-                        <div class="collapse" id="navbar-main-collapse">
+                        {{-- <div class="collapse" id="navbar-main-collapse">
                             <ul class="navbar-nav align-items-lg-center">
                               <li class="nav-item d-lg-none">
                                 <a class="nav-link" href="../application/authentication/register.html">
@@ -209,8 +233,8 @@
                                 </div>
                               </li>
                             </ul>
-                          </div>
-
+                          </div> --}}
+                          
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
@@ -273,19 +297,11 @@
                             aria-expanded="false" data-display="static" title="Browse Categories">
                                 Categories Services <i class="icon-angle-down"></i>
                             </a>
-        
                             <div class="dropdown-menu ">
                                 <nav class="side-nav " >
                                     <ul class="menu-vertical sf-arrows " >
                                         <li ><a href="#">Appareils Electronique</a></li>
-                                        <li><a href="#">Appareils Menager</a></li>
-                                        <li><a href="#">ordinateurs</a></li>
-                                        <li><a href="#">Storage</a></li>
-                                        <li><a href="#">Armchairs & Chaises</a></li>
-                                        <li><a href="#">Decoration </a></li>
-                                        <li><a href="#">Kitchen Cabinets</a></li>
-                                        <li><a href="#">Coffee & Tables</a></li>
-                                        <li><a href="#">Outdoor Furniture </a></li>
+                                       
                                     </ul><!-- End .menu-vertical -->
                                 </nav><!-- End .side-nav -->
                             </div><!-- End .dropdown-menu -->

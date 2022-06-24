@@ -42,7 +42,7 @@ class ImageProduitController extends Controller
 
         ]);
 
-        $elements = ImageProduit::create([]);
+        // $elements = ImageProduit::create([]);
     }
 
     /**
