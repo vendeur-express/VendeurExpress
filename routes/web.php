@@ -11,6 +11,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StudentsController;
 use App\Models\AttributeValue;
+use App\Models\Categorie;
 use App\Models\Image;
 
 /*
@@ -58,9 +59,22 @@ Route::get('/rembourser', [AdminController::class, 'rembourser'])->name('rembour
 Route::get('/reglage', [AdminController::class, 'reglage'])->name('reglage');
 Route::get('/retrait', [AdminController::class, 'retrait'])->name('retrait');
 Route::get('/produits', [AdminController::class, 'produits'])->name('produits');
+// Routes des categories
+//Route::get('/categorie', [CategorieController::class,'index'])->name('categorie');
+/* Route::resource('categorie','CategorieController',[
+    'names'=>[
+        'index'=>'categorie',
+        'store'=>'categorie.store',
+        'suprimer_cat'=>'categorie.suprimer_cat'
+] 
+);*/
+// Route::post('/add-categorie',[CategorieController::class,'add_cat'])->name('add.cat');
+// Route::post('/delete-cat',[CategorieController::class,'del_cat'])->name('delete.cat');
+//Route::resource('categorie', CategorieController::class);
+
 // route des attributs
 Route::get('/attribut', [AttributController::class, 'index'])->name('attribut');
-Route::post('/add-attribut', [AttributController::class, 'add_att'])->name('add.attr');
+Route::post('admin/add-attribut', [AttributController::class, 'add_att'])->name('add.attr');
 Route::post('/delete-attribut', [AttributController::class, 'del_att'])->name('del.attr');
 // routes des valeurs des attributs
 Route::post('/add-attr-values', [AttributeValueController::class, 'create'])->name('add.attr.val');
@@ -77,7 +91,9 @@ Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('s
 //Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
 
 // route sur categorie
-Route::resource('categorie', CategorieController::class);
+//Route::resource('categorie', CategorieController::class);
+Route::get('/categorie',[CategorieController::class,'index'])->name('categorie');
+Route::post('/admin/categorie.store',[CategorieController::class,'store'])->name('categorie.store');
 Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
 // Route::resource('categorie',[CategorieController::class,'index','']);
@@ -85,7 +101,7 @@ Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name
 //Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
-Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
+//Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
 Route::get('/compte', [AdminController::class, 'compte'])->name('compte');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 Route::get('/superproduit', [AdminController::class, 'superproduit'])->name('superproduit');
