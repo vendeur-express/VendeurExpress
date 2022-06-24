@@ -200,14 +200,6 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('attribut') }}" class="nav-link">
-                                <i class="fas fa-dice-d6 nav-icon"></i>
-                                <p>
-                                    Attributs
-                                </p>
-                            </a>
-                        </li>
-                        <li class="has-treeview">
                             <a href="{{ route('commande') }}" class="nav-link">
                                 <i class="fas fa-shopping-cart nav-icon"></i>
                                 <p>
@@ -289,18 +281,10 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('categorie') }}" class="nav-link">
                                 <i class="fas fa-folder"></i>
                                 <p>
                                     Catégories
-                                </p>
-                            </a>
-                        </li>
-                        <li class="has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-folder-plus"></i>
-                                <p>
-                                    Ajouter catégories
                                 </p>
                             </a>
                         </li>
@@ -313,9 +297,7 @@
         {{-- start content --}}
         <br />
         <div class="content-wrapper">
-            <section class="content">
-                @yield('contenu')
-            </section>
+            @yield('contenu')
         </div>
         {{-- end content --}}
 

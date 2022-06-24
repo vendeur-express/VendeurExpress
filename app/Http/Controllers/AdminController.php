@@ -162,5 +162,5 @@ class AdminController extends Controller
     }
     public function supercoupon(){
         return view('superadmin.supercoupon');
-    }
+    }  
 }

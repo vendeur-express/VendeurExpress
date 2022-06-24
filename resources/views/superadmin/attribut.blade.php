@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.superadmin.app')
 @section('titre')
     PRODUITS | VENDEUR EXPRESS
 @endsection
@@ -211,11 +211,7 @@
             // close modal
             function closeModal(modal_id) {
                 $('#' + modal_id).modal('hide');
-
-
             }
-
-
             // reload page
             function reload_page() {
                 location.reload();
@@ -249,13 +245,13 @@
             }
             // Ajouter un attribut
             function addAttribute() {
-                $.blockUI({
-                    css: {
-                        backgroundColor: 'none',
-                        border: 'none',
-                    },
-                    message: '<div class="spinner-grow text-light " style="width: 5rem; height: 5rem;" role="status "> <span class = "sr-only" > Loading... < /span> </div><div class="text-white h5">Chargement...<div/>',
-                });
+                // $.blockUI({
+                //     css: {
+                //         backgroundColor: 'none',
+                //         border: 'none',
+                //     },
+                //     message: '<div class="spinner-grow text-light " style="width: 5rem; height: 5rem;" role="status "> <span class = "sr-only" > Loading... < /span> </div><div class="text-white h5">Chargement...<div/>',
+                // });
 
                 if ($("#attr_val").val() == "") {
                     $("#attr_val").addClass('is-invalid');
@@ -305,7 +301,7 @@
                             }
 
                         });
-                    $.unblockUI();
+                    // $.unblockUI();
 
                 }
 
@@ -420,7 +416,7 @@
                         if (donnees['status'] == 200) {
                             reset_modifcation_attr_val()
                             closeModal('del_attr_val_modal');
-                            show_toast('Elément supprimé avec succès', 'success');
+                            show_toast('Elément supprimé avec succès', 'warning');
                             $("#attr_val_table tbody").html(donnees['data']);
                         } else if (donnees['status'] == 422) {
                             show_toast('Impossible ajouter cet attribut', 'error')

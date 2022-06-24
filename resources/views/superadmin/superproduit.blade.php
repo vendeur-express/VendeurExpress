@@ -38,63 +38,62 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-               
-                
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                    <tr>
-                      <th>NOM</th>
-                      <th>UGS</th>
-                      <th>STATUTS</th>
-                      <th>STOCK</th>
-                      <th>PRIX</th>
-                      <th>ACTIONS</th>
-                    </tr>
+                      <tr>
+                        <th>NOM</th>
+                        <th>UGS</th>
+                        <th>STATUTS</th>
+                        <th>STOCK</th>
+                        <th>PRIX</th>
+                        <th>ACTIONS</th>
+                      </tr>
                     </thead>
                     <tbody>               
-                    <tr>
-                      <td>KHTML</td>
-                      <td>Konqureror 3.5</td>
-                      <td class="project-state">
-                        <span class="badge badge-success">Reussi</span>
-                      </td>
-                      <td>3.5</td>
-                      <td>fsdg</td>
-                      <td>
-                        
-                        <a class="btn btn-info btn-sm" href="#">
-                            <i class="fas fa-pencil-alt">
-                            </i>
-                            Editer
-                        </a>
-                        <a class="btn btn-danger btn-sm" href="#">
-                            <i class="fas fa-trash">
-                            </i>
-                            supprimer
-                        </a>
+                      <tr>
+                        <td>KHTML</td>
+                        <td>Konqureror 3.5</td>
+                        <td class="project-state">
+                          <span class="badge badge-success">Reussi</span>
                         </td>
-                    </tr>
+                        <td>3.5</td>
+                        <td>fsdg</td>
+                        <td>
+                          
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Editer
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              supprimer
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                     <tfoot>
                       <tr>
-                          <th>NOM</th>
-                          <th>UGS</th>
-                          <th>STATUTS</th>
-                          <th>STOCK</th>
-                          <th>PRIX</th>
-                          <th>ACTIONS</th>
+                        <th>NOM</th>
+                        <th>UGS</th>
+                        <th>STATUTS</th>
+                        <th>STOCK</th>
+                        <th>PRIX</th>
+                        <th>ACTIONS</th>
                       </tr>
-                  </tfoot>
-                </table>
+                    </tfoot>
+                  </table>
+                </div>
+                <!-- /.card-body -->
               </div>
-    <!-- /.card-body -->
-  </div>
-  <!-- /.card -->
-</div>
-<!-- /.col -->
-</div>
+              <!-- /.card -->
+            </div>
+          <!-- /.col -->
+          </div>
+        </div>
 <!-- /.row -->
   <div class="modal fade" id="editproduit">
     <div class="modal-dialog modal-xl">

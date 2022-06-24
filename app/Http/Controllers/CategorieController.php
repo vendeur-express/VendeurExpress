@@ -19,19 +19,99 @@ class CategorieController extends Controller
     //  *
     //  * @return \Illuminate\Http\Response
     //  */
-    public $search = '';
+    // public $search = '';
     public function index()
     {
-        //
-        //return view('categorie');
-        $image=Image::all();
-        $categorie=Categorie::where('label_cat','like','%'.$this->search.'%')->orderBy('id','DESC')
-        ->paginate(50);
-        return view('superadmin.categorie')
-        ->with("categorie",$categorie)
-        ->with("image",$image);
+        // $categorie=Categorie::where('label_cat','like','%'.$this->search.'%')->orderBy('id','DESC')
+        // ->paginate(50);
+        return view('superadmin.categorie',['categorie' => Categorie::orderBy('id', 'DESC')->get()]);
+        // ->with("categorie",$categorie);
     }
 
+
+    // public function del_cat(Request $req)
+    // {
+    //     // suppression de la categorie
+    //     if (Categorie::where('id', $req->del_cat_id)->delete()) {
+    //         $tbody  = '';
+    //         foreach (Categorie::orderBy('id', 'DESC')->get() as $key => $value){
+    //             $tbody .= '<tr> 
+    //             <td class = "col-7" >' . $value['label_cat'] . ' </td>
+    //             <td class = "col-7" >' .$value['dsc_cat'].'</td>
+    //             </tr>';
+    //         }
+    //         return response()->json(['status' => '200 ', 'data' => $tbody]);
+    //     } else {
+
+    //         return response()->json(['status' => '422']);
+    //     }
+    // }
+
+    //  ajouter categorie
+    // public function add_cat(Request $req){
+    //     if(Request::hasFile('image_cat'))
+    //     {
+    //         // recuperation du nom du fichier avec son path
+    //         $fileNameWithExt = Request::file('image_cat');
+    //         $filename=$file->getClientOriginalName();
+    //         $path=public_path().'/uploads/';
+    //         //recuperation du nom du fichier seulement
+    //     }
+    //     if (intval($req->categorie_id) == 0){
+    //         if (Categorie::where('label_cat', $req->cat_val)->first()) {
+    //             return response()->json(['status' => '409 ', 'data' => '[]']);
+    //         }else{
+    //             $save_cat=Categorie::create(['label_cat' => $req->cat_val, 'dsc_cat' => $req->cat_dsc]) ;
+    //             if ($save_cat){
+    //                 $tbody  = '';
+
+    //                 foreach (Categorie::orderBy('id', 'DESC')->get() as $key => $value){
+    //                     $tbody .= 
+    //                     '<tr> 
+    //                         <td class = "col-7" >' . $value['label_cat'] . '</td>
+    //                         <td class="col-7>'.$value['dsc_cat'].'</td>
+    //                         <td>
+    //                         </td>
+    //                         <td class = " d-flex justify-content-center">
+    //                             <button class = "btn btn-info btn-sm mx-2"type = "button" onclick ="edit_cat(' .
+    //                         htmlspecialchars($value) .')" > 
+    //                             <i class = "fas fa-pencil-alt" ></i>Editer 
+    //                             </button> 
+    //                             <button class = "btn btn-danger btn-sm mx-2"type = "button" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#del_cat" id = "delete" onclick = "del_modal(' .
+    //                             $value['id']  .
+    //                             ')"><i class= "fas fa-trash" ></i>Supprimer </button>
+    //                         </td>
+    //                     </tr>';
+    //                 };
+    //                 return response()->json(['status' => '200', 'data' => $tbody]);
+    //             }else {
+    //                 return response()->json(['status' => '422', 'data' => '[]']);
+    //             }
+    //         }    
+        
+    //     }else {
+    //         $upd_attr = Categorie::where('id', $req->attr_id)->update(['label_at' => $req->attr_val, 'dsc_at' => $req->attr_dsc]);
+    //         if ($upd_attr) {
+    //             $tbody  = '';
+    //             foreach (Categorie::orderBy('id', 'DESC')->get() as $key => $value) {
+
+    //                 $tbody .= '<tr> <td class = "col-7" >' . $value['label_at'] . '</td> <td class = " d-flex justify-content-center" ><button class = "btn btn-info btn-sm mx-2"type = "button" onclick = "edit_attr(' .
+    //                     htmlspecialchars($value)  .
+    //                     ')"  > <i class = "fas fa-pencil-alt" ></i>Editer </button> <button class = "btn btn-danger btn-sm mx-2"type = "button" data-toggle="modal" data-target="#del_categorie"data-backdrop="static" data-keyboard="false"id = "delete"onclick = "del_modal(' .
+    //                     $value['id']  .
+    //                     ')"><i class = "fas fa-trash" ></i>Supprimer </button> <button class = "btn btn-secondary btn-sm  mx-2"data-toggle = "modal"data-backdrop="static" data-keyboard="false"data-target = "#attribute_values"onclick = "attr_values(' .
+    //                     htmlspecialchars($value) .
+    //                     ')" ><i class = "fas fa-list" > </i>Valeurs </button> </td>';
+    //             };
+    //             return response()->json(['status' => '200', 'data' =>  $tbody]);
+    //         } else {
+    //             return response()->json(['status' => '422', 'data' => '[]']);
+    //         }
+    //     }
+
+
+
+    // }
 
     // supprimer ctegorie
     public function suprimer_cat($id){
@@ -76,7 +156,7 @@ class CategorieController extends Controller
             $categorie->dsc_cat=$request->input('dsc_cat');
             $categorie->image_cat=$fileNameToStore;
             if($categorie->save()){
-                $imagecat=CategorieImage::create(["categories_id"=>$categorie->id,
+                $imagecat=CategorieImage::create(["categorie_id"=>$categorie->id,
             "image_id"=>$image->id]);
             }else{
             dd("categorie non enrégistrée");

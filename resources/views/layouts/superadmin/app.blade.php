@@ -194,32 +194,39 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('article') }}" class="nav-link">
-                                <i class="fa fa-pencil nav-icon"></i>
+                            <a href="{{ route('attribut') }}" class="nav-link {{ request()->is('attribut') ? 'active' : '' }}">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                <p>
+                                    Attributs
+                                </p>
+                            </a>
+                        </li>
+                        <li class="has-treeview">
+                            <a href="{{ route('superclient') }}" class="nav-link {{ request()->is('superclient') ? 'active' : '' }}">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <p>
+                                    clients
+                                </p>
+                            </a>
+                        </li>
+                        <li class="has-treeview">
+                            <a href="{{ route('article') }}" class="nav-link {{ request()->is('article') ? 'active' : '' }}">
+                                <i class="fa fa-podcast" aria-hidden="true"></i>
                                 <p>
                                     articles
                                 </p>
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('supercommande') }}" class="nav-link">
+                            <a href="{{ route('supercommande') }}" class="nav-link {{ request()->is('supercommande') ? 'active' : '' }}">
                                 <i class="fas fa-shopping-cart nav-icon"></i>
                                 <p>
                                     Commandes
                                 </p>
                             </a>
                         </li>
-
                         <li class="has-treeview">
-                            <a href="{{ route('superclient') }}" class="nav-link">
-                                <i class="fas fa-search-dollar nav-icon"></i>
-                                <p>
-                                    Clients
-                                </p>
-                            </a>
-                        </li>
-                        <li class="has-treeview">
-                            <a href="{{ route('superproduit') }}" class="nav-link">
+                            <a href="{{ route('superproduit') }}" class="nav-link {{ request()->is('superproduit') ? 'active' : '' }}">
                                 <i class="fa fa-bomb nav-icon"></i>
                                 <p>
                                     Produits
@@ -227,23 +234,15 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{-- {{route('categorie')}} --}}" class="nav-link">
-                                <i class="far fa-sun nav-icon"></i>
+                            <a href="{{route('categorie')}}" class="nav-link {{ request()->is('categorie') ? 'active' : '' }}">
+                                <i class="fa fa-folder-open" aria-hidden="true"></i>
                                 <p>
                                     Categories
                                 </p>
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('supercoupon') }}" class="nav-link">
-                                <i class="fa fa-user-circle-o nav-icon"></i>
-                                <p>
-                                    Coupons
-                                </p>
-                            </a>
-                        </li>
-                        <li class="has-treeview">
-                            <a href="{{ route('publicite') }}" class="nav-link">
+                            <a href="{{ route('publicite') }}" class="nav-link {{ request()->is('publicite') ? 'active' : '' }}">
                                 <i class="fas fa-store-alt nav-icon"></i>
                                 <p>
                                     Publicités
@@ -252,16 +251,16 @@
                         </li>
 
                         <li class="has-treeview">
-                            <a href="{{ route('banniere') }}" class="nav-link">
+                            <a href="{{ route('banniere') }}" class="nav-link {{ request()->is('banniere') ? 'active' : '' }} ">
                                 <i class="far fa-credit-card nav-icon"></i>
                                 <p>
-                                    Ajouter_banniere
+                                   Banniere
                                 </p>
                             </a>
                         </li>
 
                         <li class="has-treeview">
-                            <a href="{{ route('compte') }}" class="nav-link">
+                            <a href="{{ route('compte') }}" class="nav-link {{ request()->is('compte') ? 'active' : '' }}">
                                 <i class="fa fa-user nav-icon"></i>
                                 <p>
                                     Comptes
@@ -269,7 +268,7 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('commentaire') }}" class="nav-link">
+                            <a href="{{ route('commentaire') }}" class="nav-link {{ request()->is('commentaire') ? 'active' : '' }}">
                                 <i class=" 	fas fa-comment nav-icon"></i>
                                 <p>
                                     Commentaires
@@ -277,7 +276,7 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('parametre') }}" class="nav-link">
+                            <a href="{{ route('parametre') }}" class="nav-link {{ request()->is('parametre') ? 'active' : '' }}">
                                 <i class="far fa-sun nav-icon"></i>
                                 <p>
                                     Réglages
@@ -301,12 +300,6 @@
         {{-- start content --}}
         @yield('contenu')
         {{-- end content --}}
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
 

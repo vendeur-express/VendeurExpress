@@ -18,7 +18,7 @@ class AttributController extends Controller
      */
     public function index()
     {
-        return view('admin.attribut', ['attributes' => Attribut::orderBy('id', 'DESC')->get()]);
+        return view('superadmin.attribut', ['attributes' => Attribut::orderBy('id', 'DESC')->get()]);
     }
     //
 
