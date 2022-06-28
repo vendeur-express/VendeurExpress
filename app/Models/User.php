@@ -34,7 +34,7 @@ class User extends Authenticatable
         'tel_us',
         'email_verified_at_us',
         'password_us', 
-        'images_id',
+        'image_id',
         'userable_type',
         'userable_id',
         

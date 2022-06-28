@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
+use App\Models\Slider;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 use function GuzzleHttp\Promise\all;
 
@@ -134,9 +136,7 @@ class AdminController extends Controller
     public function article(){
         return view('superadmin.article');
     }
-    public function banniere(){
-        return view('superadmin.banniere');
-    }
+    
     public function superclient(){
         $users = User::all();
         return view('superadmin.superclient')->with('users',$users);
@@ -162,5 +162,48 @@ class AdminController extends Controller
     }
     public function supercoupon(){
         return view('superadmin.supercoupon');
-    }  
+    }
+    
+    
+    // banniere ou pubs d'acceuil
+    public function banniere(){
+        $sliders=Slider::all()->limit(4);
+        return view('superadmin.banniere');
+    }
+    public function add_bann(Request $request){
+        $request->validate([
+            'titre_slid'=>'required',
+            'dsc_slid'=>'required',
+            'url_slid'=>'required',
+            'image_slid'=>'image|required|max:1999'
+        ]);
+        if($request->hasFile('image_slid')){
+            // recuperation du nom du fichier avec son path
+            $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
+             //recuperation du nom du fichier seulement
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            //recuperation de l'extension
+            $extension = $request->file('image_slid')->getClientOriginalExtension();
+            // rechercher de noms aleatoire
+            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+            // upload image
+            $path = $request->file('image_cat')->storeAs('images_categories', $fileNameToStore);
+
+        }
+        $sliders=new Slider();
+        $sliders->titre_slid=$request->input('titre_slid');
+        $sliders->dsc_slid=$request->input('dsc_slid');
+        $sliders->image_slid=$request->$fileNameToStore;
+        $sliders->url_slid=$request->input('url_slid');
+        $sliders->status=1;
+    }
+    public function del_bann($id){
+        $categorie=Slider::find($id);
+        if($categorie->image_cat !='sansimage.jpg'){
+            Storage::delete('public/images_categories/'.$categorie->image_cat);
+        }
+        dd($categorie);
+        $categorie->delete();
+        return back()->with('status','Catégorie Supprimer avec success');
+    } 
 }

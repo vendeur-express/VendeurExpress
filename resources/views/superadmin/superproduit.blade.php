@@ -94,6 +94,8 @@
           <!-- /.col -->
           </div>
         </div>
+    </section>
+  </div>
 <!-- /.row -->
   <div class="modal fade" id="editproduit">
     <div class="modal-dialog modal-xl">

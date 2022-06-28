@@ -10,95 +10,96 @@
     <link rel="stylesheet" href="admin/plugins/select2/css/select2.min.css">
 @endsection
 @section('contenu')
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="card col-12 mt-3 ">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-4">
-                            <Form class="container" method="POST" id="attribut_form">
-                                <div class="row">
-                                    <div class="col-12 text-primary my-2 d-none" id="attr_upd_signal">Modification en
-                                        cours...
-                                        <button type="button" class="p-0 btn btn-danger"
-                                            onclick=" reset_modifcation_attr()">
-                                            Annuler </button>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" name="" id="upd_attr_id" value="0" hidden>
-                                        <div class="form-group">
-                                            <input type="text" id="attr_val" class="form-control "
-                                                placeholder="Nom Attribut">
-                                            <div class="invalid-feedback d-none" id="attr_val_smg">
-                                                Veuillez saisir le nom de l'attribut
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card col-12 mt-3 ">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-4">
+                                <Form class="container" method="POST" id="attribut_form">
+                                    <div class="row">
+                                        <div class="col-12 text-primary my-2 d-none" id="attr_upd_signal">Modification en
+                                            cours...
+                                            <button type="button" class="p-0 btn btn-danger"
+                                                onclick=" reset_modifcation_attr()">
+                                                Annuler </button>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="text" name="" id="upd_attr_id" value="0" hidden>
+                                            <div class="form-group">
+                                                <input type="text" id="attr_val" class="form-control "
+                                                    placeholder="Nom Attribut">
+                                                <div class="invalid-feedback d-none" id="attr_val_smg">
+                                                    Veuillez saisir le nom de l'attribut
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea id="attr_dsc" class="form-control" rows="4" placeholder="Description"></textarea>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <textarea id="attr_dsc" class="form-control" rows="4" placeholder="Description"></textarea>
+                                        <div class="modal-footer col-12 d-flex justify-content-end">
+                                            <button type="button" id="save_attr" class="btn btn-success float-right"
+                                                onclick="addAttribute()">Ajouter</button>
                                         </div>
                                     </div>
-                                    <div class="modal-footer col-12 d-flex justify-content-end">
-                                        <button type="button" id="save_attr" class="btn btn-success float-right"
-                                            onclick="addAttribute()">Ajouter</button>
-                                    </div>
-                                </div>
-                            </Form>
-                        </div>
-                        <div class="col-md-12 col-lg-8">
-                            <table id="attr_table" class="table table-bordered table-striped table-responsive-lg">
-                                <thead class="">
-                                    <tr>
-                                        <th>NOM</th>
-                                        <th>ACTIONS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($attributes as $attr)
+                                </Form>
+                            </div>
+                            <div class="col-md-12 col-lg-8">
+                                <table id="attr_table" class="table table-bordered table-striped table-responsive-lg">
+                                    <thead class="">
                                         <tr>
-                                            <td class="col-7">{{ $attr->label_at }}
-                                            <td class=" d-flex justify-content-center">
-
-                                                <button class="btn btn-info btn-sm mx-2" type="button"
-                                                    onclick="edit_attr( {{ $attr }})">
-                                                    <i class="fas fa-pencil-alt">
-                                                    </i>
-                                                    Editer
-                                                    </a>
-                                                    <button class="btn btn-danger btn-sm mx-2" type="button" id="delete"
-                                                        data-toggle="modal" data-target="#del_attribut"
-                                                        data-backdrop="static" data-keyboard="false"
-                                                        onclick="del_modal({{ $attr->id }})">
-                                                        <i class="fas fa-trash">
-                                                        </i>
-                                                        Supprimer
-                                                    </button>
-                                                    <button class="btn btn-secondary btn-sm  mx-2" data-toggle="modal"
-                                                        data-target="#attribute_values" data-backdrop="static"
-                                                        data-keyboard="false" onclick="attr_values({{ $attr }})">
-                                                        <i class="fas fa-list"></i>
-                                                        Valeurs
-                                                    </button>
-                                            </td>
+                                            <th>NOM</th>
+                                            <th>ACTIONS</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>NOM</th>
-                                        <th>ACTIONS</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($attributes as $attr)
+                                            <tr>
+                                                <td class="col-7">{{ $attr->label_at }}
+                                                <td class=" d-flex justify-content-center">
+    
+                                                    <button class="btn btn-info btn-sm mx-2" type="button"
+                                                        onclick="edit_attr( {{ $attr }})">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Editer
+                                                        </a>
+                                                        <button class="btn btn-danger btn-sm mx-2" type="button" id="delete"
+                                                            data-toggle="modal" data-target="#del_attribut"
+                                                            data-backdrop="static" data-keyboard="false"
+                                                            onclick="del_modal({{ $attr->id }})">
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Supprimer
+                                                        </button>
+                                                        <button class="btn btn-secondary btn-sm  mx-2" data-toggle="modal"
+                                                            data-target="#attribute_values" data-backdrop="static"
+                                                            data-keyboard="false" onclick="attr_values({{ $attr }})">
+                                                            <i class="fas fa-list"></i>
+                                                            Valeurs
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>NOM</th>
+                                            <th>ACTIONS</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <!-- /.card-body -->
                 </div>
-                <!-- /.card-body -->
+                <!-- /.col -->
             </div>
-            <!-- /.col -->
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-
+    </div>
         <div class="modal fade" id="del_attribut">
             <div class="modal-dialog modal-md">
                 <div class="modal-content bg-light">
