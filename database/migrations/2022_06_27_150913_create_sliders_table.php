@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->string('titre_slid');
-            $table->string('desc_slid');
+            $table->string('dsc_slid');
             $table->string('image_slid');
             $table->string('url_slid');
             $table->timestamps();

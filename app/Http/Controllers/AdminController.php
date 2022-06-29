@@ -167,43 +167,72 @@ class AdminController extends Controller
     
     // banniere ou pubs d'acceuil
     public function banniere(){
-        $sliders=Slider::all()->limit(4);
-        return view('superadmin.banniere');
+        $sliders=Slider::all();
+        return view('superadmin.banniere',['sliders' => Slider::orderBy('id', 'DESC')->get()]);
     }
-    public function add_bann(Request $request){
-        $request->validate([
-            'titre_slid'=>'required',
-            'dsc_slid'=>'required',
-            'url_slid'=>'required',
-            'image_slid'=>'image|required|max:1999'
-        ]);
-        if($request->hasFile('image_slid')){
-            // recuperation du nom du fichier avec son path
-            $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
-             //recuperation du nom du fichier seulement
-            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-            //recuperation de l'extension
-            $extension = $request->file('image_slid')->getClientOriginalExtension();
-            // rechercher de noms aleatoire
-            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            // upload image
-            $path = $request->file('image_cat')->storeAs('images_categories', $fileNameToStore);
+    public function add_slid(Request $request){
+        if (intval($request->slid_id) == 0){
 
+            if(Slider::where('titre_slid', $request->titre_slid)->first()){
+                return response()->json(['status' => '409 ', 'data' => '[]']);
+            }
+            else {
+                $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
+                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                $extension = $request->file('image_slid')->getClientOriginalExtension();
+                $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+                $save_slid = Slider::create([
+                    'titre_slid' => $request->titre_slid,
+                    'url_slid' => $request->url_slid,
+                    'dsc_slid'=>$request->dsc_slid,
+                    'image_slid'=>$request->$fileNameToStore
+                ]);
+                if ($save_slid) {
+                    $tbody  = '';
+                    foreach (Slider::orderBy('id', 'DESC')->get() as $key => $value){
+                        $tbody .= '<tr> <td class = "col-7" >' . $value['titre_slid'] . '</td>
+                        <td>'.$value ['dsc_slid'].'</td>
+                        <td class = " d-flex justify-content-center" ><button class = "btn btn-info btn-sm mx-2"type = "button" onclick = "edit_slid(' .  htmlspecialchars($value) . ')" > <i class = "fas fa-pencil-alt" ></i>Editer </button>  </td>'; 
+                    };
+                    return response()->json(['status' => '200', 'data' => $tbody]);
+                }else {
+                    return response()->json(['status' => '422', 'data' => '[]']);
+                }    
+            }
         }
-        $sliders=new Slider();
-        $sliders->titre_slid=$request->input('titre_slid');
-        $sliders->dsc_slid=$request->input('dsc_slid');
-        $sliders->image_slid=$request->$fileNameToStore;
-        $sliders->url_slid=$request->input('url_slid');
-        $sliders->status=1;
+        else {
+            $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image_slid')->getClientOriginalExtension();
+            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+            $upd_slid = Slider::where('id', $request->slid_id)->update(
+                [
+                    'titre_slid' => $request->titre_slid,
+                    'url_slid' => $request->url_slid,
+                    'dsc_slid'=>$request->dsc_slid,
+                    'image_slid'=>$request->$fileNameToStore
+                ]);
+            if ($upd_slid) {
+                $tbody  = '';
+                foreach (Slider::orderBy('id', 'DESC')->get() as $key => $value) {
+
+                    $tbody .='<tr> <td class = "col-7" >' . $value['titre_slid'] . '</td>
+                    <td>'.$value ['dsc_slid'].'</td>
+                    <td class = " d-flex justify-content-center" ><button class = "btn btn-info btn-sm mx-2"type = "button" onclick = "edit_slid(' .  htmlspecialchars($value) . ')" > <i class = "fas fa-pencil-alt" ></i>Editer </button>  </td>';
+                };
+                return response()->json(['status' => '200', 'data' =>  $tbody]);
+            } else {
+                return response()->json(['status' => '422', 'data' => '[]']);
+            }
+        }
     }
     public function del_bann($id){
         $categorie=Slider::find($id);
         if($categorie->image_cat !='sansimage.jpg'){
-            Storage::delete('public/images_categories/'.$categorie->image_cat);
+            Storage::delete('public/images_sliders/'.$categorie->image_cat);
         }
         dd($categorie);
         $categorie->delete();
-        return back()->with('status','Catégorie Supprimer avec success');
+        return back()->with('status','Presentation Supprimée avec success');
     } 
 }

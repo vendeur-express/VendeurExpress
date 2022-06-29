@@ -48,7 +48,8 @@ class AttributController extends Controller
                     return response()->json(['status' => '422', 'data' => '[]']);
                 }
             }
-        } else {
+        } 
+        else {
             $upd_attr = Attribut::where('id', $req->attr_id)->update(['label_at' => $req->attr_val, 'dsc_at' => $req->attr_dsc]);
             if ($upd_attr) {
                 $tbody  = '';

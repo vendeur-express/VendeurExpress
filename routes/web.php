@@ -80,6 +80,10 @@ Route::post('/delete-attribut', [AttributController::class, 'del_att'])->name('d
 Route::post('/add-attr-values', [AttributeValueController::class, 'create'])->name('add.attr.val');
 Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name('del.attr.val');
 
+Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
+Route::post('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
+
+
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');
 Route::get('/avis', [AdminController::class, 'avis'])->name('avis');
 Route::get('/rapport', [AdminController::class, 'rapport'])->name('rapport');
@@ -109,7 +113,7 @@ Route::get('/supercoupon', [AdminController::class, 'supercoupon'])->name('super
 Route::get('/parametre', [AdminController::class, 'parametre'])->name('parametre');
 Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite');
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
-Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
+
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
 
