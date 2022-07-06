@@ -47,7 +47,7 @@
 
                                 <label>Adresse Complet *</label>
                                 <input type="text" class="form-control" placeholder="House number and Street name" required>
-                                <input type="text" class="form-control" placeholder="Appartments, suite, unit etc ..." required>
+                                {{-- <input type="text" class="form-control" placeholder="Appartments, suite, unit etc ..." required> --}}
 
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -62,20 +62,19 @@
                                 </div><!-- End .row -->
 
                                 <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>Point Livraison VEX</label>
+                                    <div class="row-sm-6">
+                                        <label>Code Vendeur</label>
                                         <input type="text" class="form-control">
-                                    </div><!-- End .col-sm-6 -->
-
+                                    </div>
+                                   
                                     <div class="col-sm-6">
                                         <label>Telephone *</label>
                                         <input type="tel" class="form-control" required>
                                     </div><!-- End .col-sm-6 -->
                                 </div><!-- End .row -->
-                                <div class="row-sm-12">
-                                    <label>Code Vendeur</label>
-                                    <input type="text" class="form-control">
-                                </div>
+                        <div class="col-sm-6">
+                            <a href="{{route('geoloc')}}">choisisez votre point de livraison</a>
+                        </div>
                         </div><!-- End .col-lg-9 -->
                         <aside class="col-lg-3">
                             <div class="summary">

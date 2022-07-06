@@ -9,6 +9,7 @@ use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProduitsController;
 use App\Http\Controllers\StudentsController;
 use App\Models\AttributeValue;
 use App\Models\Categorie;
@@ -50,6 +51,7 @@ Route::get('/paiement', [ClientController::class, 'paiement'])->name('paiement')
 Route::get('/favorie', [ClientController::class, 'favorie'])->name('favorie');
 Route::get('/produit', [ClientController::class, 'produit'])->name('produit');
 Route::get('/inscription', [ClientController::class, 'inscription'])->name('inscription');
+Route::get('/geoloc', [ClientController::class, 'geoloc'])->name('geoloc');
 // route admin fournisseurphp
 Route::get('/admin1', [AdminController::class, 'index'])->name('admin');
 Route::get('/coupon', [AdminController::class, 'coupon'])->name('coupon');
@@ -91,13 +93,14 @@ Route::get('/rapport', [AdminController::class, 'rapport'])->name('rapport');
 // route pour superadmin
 Route::get('/superadmin', [AdminController::class, 'dashboard'])->name('superadmin');
 Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('supercommande');
-//Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->name('ajout_categorie');
+Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->name('ajout_categorie');
 //Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
 
 // route sur categorie
 //Route::resource('categorie', CategorieController::class);
 Route::get('/categorie',[CategorieController::class,'index'])->name('categorie');
 Route::post('/admin/categorie.store',[CategorieController::class,'store'])->name('categorie.store');
+Route::post('/superadmin/produit',[ProduitsController::class, 'store'])->name('produits.store');
 Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
 // Route::resource('categorie',[CategorieController::class,'index','']);
@@ -116,7 +119,6 @@ Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('comme
 
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
-
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');
 Route::get('/client/create', [ClientController::class, 'create']);

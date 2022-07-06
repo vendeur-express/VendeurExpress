@@ -86,7 +86,7 @@ class User extends Authenticatable
     }
     // Recupererles la liste des j'aime du user
     public function jaimes()
-    {
+    { 
         return $this->hasMany(Jaime::class);
     }
     // Recuperer les commentaire de cet user

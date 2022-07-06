@@ -15463,7 +15463,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @static
      * @memberOf _
      * @since 0.1.0
-     * @category Function
+     * @category Function  
      * @param {Function} func The function to debounce.
      * @param {number} [wait=0] The number of milliseconds to delay.
      * @param {Object} [options={}] The options object.

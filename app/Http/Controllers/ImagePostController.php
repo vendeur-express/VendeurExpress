@@ -25,7 +25,10 @@ class ImagePostController extends Controller
      */
     public function create()
     {
-        //
+        // $imagepost =imagepost::create([
+        //     'post_id' =>$elements->id,
+        // ]);
+       
     }
 
     /**
@@ -36,9 +39,11 @@ class ImagePostController extends Controller
      */
     public function store(StoreImagePostRequest $request)
     {
-        //
-    }
-
+        $request->validate([
+           
+        ]);
+    
+        }
     /**
      * Display the specified resource.
      *

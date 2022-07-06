@@ -67,7 +67,7 @@
      </div><!-- End .intro-slider-container -->
      <div class="mb-0"></div>
     </div>
-    <!-- **********************************************End of slide *****************************************************-->
+        <!-- *****************************************End of slide ****************************************-->
     <div class="container" style="width: 2000px" >
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">

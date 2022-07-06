@@ -9,7 +9,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('posts.store')}}" class="contact-form mb-3">
+                        <form action="{{route('posts.store')}}" class="contact-form mb-3" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">
@@ -21,7 +21,7 @@
                             <textarea class="form-control" name="message"  cols="30" rows="4" id="message" required placeholder="contenu du post *"></textarea>
                             <div class="mb-2"></div>
                             <div> 
-                                <input class="form-control form-control-lg" name="image" id="formFileLg" type="file">
+                                <input class="form-control form-control-lg" name="imagepost" id="formFileLg" type="file">
                               </div>
                             <div class="mb-2"></div>
                             <button type="submit" class="btn btn-outline-success btn-minwidth-sm">
@@ -41,16 +41,21 @@
                     <th>Contenu</th>
                     <th>Media</th>
                     <th>Date</th>
+                    <th>UserName</th>
                     <th>Actions</th>
+                
                   </tr>
                   </thead>
                   <tbody>
+                    @forelse ($posts as $item)
                   <tr>
-                    <td>1</td>
-                    <td>Opera </td>
-                    <th>Votre satisfaction, notre source de motivation.</th>
-                    <th>image</th>
-                    <th>22/04/2022</th>
+                    
+                    <td>{{$item->id}}</td>
+                    <td>{{$item->label_pos}} </td>
+                    <th>{{$item->dsc_pos}}</th>
+                    <th>{{$item->image_id}}</th>
+                    <th>{{$item->created_at}}</th>
+                    <th>{{$item->user_id}}</th>
                     <td>
                       
                       <a class="btn btn-info btn-sm" href="#">
@@ -65,35 +70,23 @@
                       </a>
                       </td>
                   </tr>
+                  @empty
                   <tr>
-                    <td>2</td>
-                    <td>promo</td>
-                    <th>Votre satisfaction, notre source de motivation.</th>
-                    <td>promo</td>
-                    <th>22/04/2022</th>
-                    <td>
-                      
-                      <a class="btn btn-info btn-sm" href="#">
-                          <i class="fas fa-pencil-alt">
-                          </i>
-                          Modifier
-                      </a>
-                      <a class="btn btn-danger btn-sm" href="#">
-                          <i class="fas fa-trash">
-                          </i>
-                          Supprimer
-                      </a>
-                      </td>
+                    <td colspan="7"> pas de post disponible </td>
                   </tr>
+              
+                  @endforelse
                   </tbody>
                   <tfoot>
                       <tr>
-                          <th>Id</th>
-                          <th>Titre</th>
-                          <th>Contenu</th>
-                          <th>Media</th>
-                          <th>Date</th>
-                          <th>Actions</th>
+                        <th>Id</th>
+                        <th>Titre</th>
+                        <th>Contenu</th>
+                        <th>Media</th>
+                        <th>Date</th>
+                        <th>UserName</th>
+                        <th>Actions</th>
+                       
                         </tr>
                   </tfoot>
                 </table>

@@ -100,7 +100,7 @@
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        OUEDRAOGO Adama
+                                      celestin zongo 
                                         <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                                     </h3>
                                     <p class="text-sm">j'ai besion d'un sac de riz de 25kg darly mather</p>

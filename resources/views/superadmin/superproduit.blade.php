@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
 <link rel="stylesheet" href="admin/plugins/select2/css/select2.min.css">
-<link rel="stylesheet" href="admin/dist/css/adminlte.min.css"
+<link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
 @extends('layouts.superadmin.app')
 @section('titre')
     PRODUITS | VENDEUR EXPRESS
@@ -27,13 +27,11 @@
                  <div class="card-header">
                   <ul class="ml-auto">
                     <h2>Listes des produits</h2>
-                    <li class="btn btn-secondary  float-right"> <a class="text-white" data-toggle="modal" data-target="#createproduit" {{-- data-target=""href="{{route('ajout_produit')}}" --}}>Ajouter Produit</a> </li>
+                    
+                    <li class="btn btn-secondary  float-right"> <a  href="{{route('superajout_produit')}}" class="text-white" >    Ajouter produit</a> </li>
                   </ul>
-                </div>
-                
-            </div>
-            
-        </div>
+                </div> 
+                  </div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
@@ -65,7 +63,7 @@
                           <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Editer
+                              Editer  
                           </a>
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
@@ -107,7 +105,7 @@
           </button>
         </div>         
         <div class="modal-body">
-          <Form  method="POST" action="produits" class="container" enctype="multipart/form-data" name="form-produit">
+          <Form  method="POST" action="{{route('produits.store')}}" class="container" enctype="multipart/form-data" name="form-produit">
             @csrf
             {{-- row  1--}}
           <div class="row">
@@ -116,15 +114,15 @@
              
               <div class="form-group">
                 <label for="inputName">Nom produit</label>
-                <input type="text" name="nomproduit" id="inputName" class="form-control">
+                <input type="text" name="nomproduit" id="inputName" class="form-control" required>
               </div>
               <div class="form-group">
                <label for="prix">Prix (F CFA)</label>
-               <input id="prix" name="prix" type="number"class="form-control" rows="4"/>
+               <input id="prix" name="prix" type="number"class="form-control" rows="4" required />
              </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
-                <textarea id="inputDescription" name="description" class="form-control" rows="4"></textarea>
+                <textarea id="inputDescription" name="description" class="form-control" rows="4"> </textarea>
               </div>
               <div class="form-group">
                 <label>Catégories</label>
@@ -142,7 +140,7 @@
               </div>
               <div class="form-group">
                <label for="inputStatus">Pays</label>
-               <select id="inputStatus" class="form-control custom-select" name="pays">
+               <select id="inputStatus" class="form-control custom-select" name="pays" required>
                  <option selected disabled>Sélectionnez un pays</option>
                  <option>Burkina Faso</option>
                  <option>Mali</option>
@@ -154,17 +152,22 @@
             {{-- col 2 --}}
           <div class="col">
             <div class="panel-heading">
-              <label>Images produit</label>
+              <label>Images
+                s produit</label>
             </div>
-  
-            <div class="panel-body">
+            <div class="form-group">
+              {{-- <label for="inputDescription">Image</label> --}}
+              <input entype="multipart/form-data" id="image_cat" name='image_cat' class="form-control">
+              <div class="input-images"></div>
+          </div>
+            {{-- <div class="panel-body">
               <form action="url" enctype="multipart/form-data">
                 <div class="input-images"></div>
               </form>
                 <div>
                   <button class="btn btn-info" id="submit-all">Téléchargez</button>
                 </div>
-              </div>
+              </div> --}}
             </div>
             <div class="form-group">
               <label>Couleurs</label>
@@ -208,7 +211,7 @@
 
               <div class="form-group">
                 <label for="inputStatus">Type produits </label>
-                <select id="type_produit" class="form-control custom-select" name="type_produits">
+                <select id="type_produit" class="form-control custom-select" name="type_produits" required>
                   <option selected disabled>Type de produits</option>
                   <option value="1">Produits simple</option>
                   <option value="2">Produits Variable</option>
@@ -226,7 +229,7 @@
 
               <div class="form-group">
                <label for="prix">Prix (F CFA)</label>
-               <input id="prix" type="number"class="form-control" rows="4"/>
+               <input id="prix" type="number"class="form-control" rows="4" />
              </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
@@ -238,9 +241,6 @@
                   <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
                     <option>Alabama</option>
                     <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
                     <option>Texas</option>
                     <option>Washington</option>
                   </select>
@@ -266,9 +266,9 @@
             </div>
   
             <div class="panel-body">
-              <form action="url" enctype="multipart/form-data">
+              <div class="form-group" action="url" enctype="multipart/form-data">
                 <div class="input-images"></div>
-              </form>
+              </div>
               </div>
               <br>
 
@@ -355,38 +355,7 @@
     <script src="admin/dist/js/image-uploader.min.js"></script>
     <script src="admin/plugins/select2/js/select2.full.min.js"></script>
     {{-- script pour suppression --}}
-    <script>
-      $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-      });
-      $(document).on("click","#delete",function(e){
-          e.preventDefault();
-          var link=$(this).attr("href");
-          bootbox.confirm("Voulez vraiment supprimer cet élement ?", function(confirmed){
-              if(confirmed){
-                  window.location.href=link;
-              };
-          });
-      });
-
-      // images telechargement
-      let preloaded = [
-      {id: 1, src: 'https://picsum.photos/500/500?random=1'},
-      {id: 2, src: 'https://picsum.photos/500/500?random=2'},
-      {id: 3, src: 'https://picsum.photos/500/500?random=3'},
-      {id: 4, src: 'https://picsum.photos/500/500?random=4'},
-      {id: 5, src: 'https://picsum.photos/500/500?random=5'},
-      {id: 6, src: 'https://picsum.photos/500/500?random=6'},
-      ];
-      $('.input-images').imageUploader({
-        //preloaded:preloaded,
-        extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
-        mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
-        maxSize: undefined,
-        maxFiles: undefined,
-      });
-      
-    </script>
+                                                                                                                                                                                                                                                                                                                                    
     <script>
 
       (() => {
@@ -443,10 +412,10 @@
         //     }
         // }):
         function variable() {
-          prixattribut.style.display = 'none'
-          couleur.style.display = 'none'
-          image_attribut.style.display = 'none'
-          tailles_attribut.style.display = 'none'
+          prixattribut.style.display = 'block'
+          couleur.style.display = 'block'
+          image_attribut.style.display = 'block'
+          tailles_attribut.style.display = 'block'
           attribut.style.display = 'block'
 
         }

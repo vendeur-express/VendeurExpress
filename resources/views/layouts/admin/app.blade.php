@@ -232,7 +232,6 @@
                                 <i class="fas fa-gift nav-icon"></i>
                                 <p>
                                     Coupons
-
                                 </p>
                             </a>
                         </li>
@@ -241,7 +240,6 @@
                                 <i class="fas fa-store-alt nav-icon"></i>
                                 <p>
                                     Magasin Vendeurs
-
                                 </p>
                             </a>
                         </li>
@@ -259,7 +257,6 @@
                                 <i class="fas fa-chart-pie nav-icon"></i>
                                 <p>
                                     Rapports
-
                                 </p>
                             </a>
                         </li>
@@ -268,7 +265,6 @@
                                 <i class=" 	fas fa-comment nav-icon"></i>
                                 <p>
                                     Avis
-
                                 </p>
                             </a>
                         </li>

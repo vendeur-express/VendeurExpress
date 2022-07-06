@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Admin;
+use App\Models\Slider;
+use Illuminate\Http\Request;
+use function GuzzleHttp\Promise\all;
+use Illuminate\Support\Facades\Storage;
+
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
-use App\Models\Slider;
-use App\Models\User;
-use Illuminate\Http\Request;
-
-use function GuzzleHttp\Promise\all;
+use App\Models\Post;
 
 class AdminController extends Controller
 {
@@ -134,7 +136,8 @@ class AdminController extends Controller
         return view('superadmin.categorie');
     }
     public function article(){
-        return view('superadmin.article');
+        $posts =Post::all();
+        return view('superadmin.article')->with('posts',$posts);
     }
     
     public function superclient(){
@@ -152,7 +155,7 @@ class AdminController extends Controller
         return view('superadmin.parametre');
     }
     public function superajout_produit(){
-        return view('superadmin.commentaire');
+        return view('superadmin.superajout_produit');
     }
     public function superproduit(){
         return view('superadmin.superproduit');

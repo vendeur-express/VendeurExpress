@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
 <link rel="stylesheet" href="admin/plugins/select2/css/select2.min.css">
-<link rel="stylesheet" href="admin/dist/css/adminlte.min.css"
+<link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
 
 <?php $__env->startSection('titre'); ?>
     PRODUITS | VENDEUR EXPRESS
@@ -27,74 +27,73 @@
                  <div class="card-header">
                   <ul class="ml-auto">
                     <h2>Listes des produits</h2>
-                    <li class="btn btn-secondary  float-right"> <a class="text-white" data-toggle="modal" data-target="#createproduit" >Ajouter Produit</a> </li>
+                    
+                    <li class="btn btn-secondary  float-right"> <a  href="<?php echo e(route('superajout_produit')); ?>" class="text-white" >    Ajouter produit</a> </li>
                   </ul>
-                </div>
-                
-            </div>
-            
-        </div>
+                </div> 
+                  </div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
               <div class="card">
-               
-                
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                    <tr>
-                      <th>NOM</th>
-                      <th>UGS</th>
-                      <th>STATUTS</th>
-                      <th>STOCK</th>
-                      <th>PRIX</th>
-                      <th>ACTIONS</th>
-                    </tr>
+                      <tr>
+                        <th>NOM</th>
+                        <th>UGS</th>
+                        <th>STATUTS</th>
+                        <th>STOCK</th>
+                        <th>PRIX</th>
+                        <th>ACTIONS</th>
+                      </tr>
                     </thead>
                     <tbody>               
-                    <tr>
-                      <td>KHTML</td>
-                      <td>Konqureror 3.5</td>
-                      <td class="project-state">
-                        <span class="badge badge-success">Reussi</span>
-                      </td>
-                      <td>3.5</td>
-                      <td>fsdg</td>
-                      <td>
-                        
-                        <a class="btn btn-info btn-sm" href="#">
-                            <i class="fas fa-pencil-alt">
-                            </i>
-                            Editer
-                        </a>
-                        <a class="btn btn-danger btn-sm" href="#">
-                            <i class="fas fa-trash">
-                            </i>
-                            supprimer
-                        </a>
+                      <tr>
+                        <td>KHTML</td>
+                        <td>Konqureror 3.5</td>
+                        <td class="project-state">
+                          <span class="badge badge-success">Reussi</span>
                         </td>
-                    </tr>
+                        <td>3.5</td>
+                        <td>fsdg</td>
+                        <td>
+                          
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Editer  
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              supprimer
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                     <tfoot>
                       <tr>
-                          <th>NOM</th>
-                          <th>UGS</th>
-                          <th>STATUTS</th>
-                          <th>STOCK</th>
-                          <th>PRIX</th>
-                          <th>ACTIONS</th>
+                        <th>NOM</th>
+                        <th>UGS</th>
+                        <th>STATUTS</th>
+                        <th>STOCK</th>
+                        <th>PRIX</th>
+                        <th>ACTIONS</th>
                       </tr>
-                  </tfoot>
-                </table>
+                    </tfoot>
+                  </table>
+                </div>
+                <!-- /.card-body -->
               </div>
-    <!-- /.card-body -->
+              <!-- /.card -->
+            </div>
+          <!-- /.col -->
+          </div>
+        </div>
+    </section>
   </div>
-  <!-- /.card -->
-</div>
-<!-- /.col -->
-</div>
 <!-- /.row -->
   <div class="modal fade" id="editproduit">
     <div class="modal-dialog modal-xl">
@@ -106,7 +105,7 @@
           </button>
         </div>         
         <div class="modal-body">
-          <Form  method="POST" action="produits" class="container" enctype="multipart/form-data" name="form-produit">
+          <Form  method="POST" action="<?php echo e(route('produits.store')); ?>" class="container" enctype="multipart/form-data" name="form-produit">
             <?php echo csrf_field(); ?>
             
           <div class="row">
@@ -115,15 +114,15 @@
              
               <div class="form-group">
                 <label for="inputName">Nom produit</label>
-                <input type="text" name="nomproduit" id="inputName" class="form-control">
+                <input type="text" name="nomproduit" id="inputName" class="form-control" required>
               </div>
               <div class="form-group">
                <label for="prix">Prix (F CFA)</label>
-               <input id="prix" name="prix" type="number"class="form-control" rows="4"/>
+               <input id="prix" name="prix" type="number"class="form-control" rows="4" required />
              </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
-                <textarea id="inputDescription" name="description" class="form-control" rows="4"></textarea>
+                <textarea id="inputDescription" name="description" class="form-control" rows="4"> </textarea>
               </div>
               <div class="form-group">
                 <label>Catégories</label>
@@ -141,7 +140,7 @@
               </div>
               <div class="form-group">
                <label for="inputStatus">Pays</label>
-               <select id="inputStatus" class="form-control custom-select" name="pays">
+               <select id="inputStatus" class="form-control custom-select" name="pays" required>
                  <option selected disabled>Sélectionnez un pays</option>
                  <option>Burkina Faso</option>
                  <option>Mali</option>
@@ -153,17 +152,15 @@
             
           <div class="col">
             <div class="panel-heading">
-              <label>Images produit</label>
+              <label>Images
+                s produit</label>
             </div>
-  
-            <div class="panel-body">
-              <form action="url" enctype="multipart/form-data">
-                <div class="input-images"></div>
-              </form>
-                <div>
-                  <button class="btn btn-info" id="submit-all">Téléchargez</button>
-                </div>
-              </div>
+            <div class="form-group">
+              
+              <input entype="multipart/form-data" id="image_cat" name='image_cat' class="form-control">
+              <div class="input-images"></div>
+          </div>
+            
             </div>
             <div class="form-group">
               <label>Couleurs</label>
@@ -190,7 +187,7 @@
       </div>  
     </div>
   </div>
-  <div class="modal fade" id="createproduit">
+  <div class="modal fade 47 " id="createproduit">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -207,7 +204,7 @@
 
               <div class="form-group">
                 <label for="inputStatus">Type produits </label>
-                <select id="type_produit" class="form-control custom-select" name="type_produits">
+                <select id="type_produit" class="form-control custom-select" name="type_produits" required>
                   <option selected disabled>Type de produits</option>
                   <option value="1">Produits simple</option>
                   <option value="2">Produits Variable</option>
@@ -219,8 +216,13 @@
                 <input type="text" name="nomproduit" id="inputName" class="form-control">
               </div>
               <div class="form-group">
+                <label for="prix">Etiquettes</label>
+                <input id="Etiquette" type="text"class="form-control" rows="4"/>
+              </div>
+
+              <div class="form-group">
                <label for="prix">Prix (F CFA)</label>
-               <input id="prix" type="number"class="form-control" rows="4"/>
+               <input id="prix" type="number"class="form-control" rows="4" />
              </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
@@ -232,9 +234,6 @@
                   <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
                     <option>Alabama</option>
                     <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
                     <option>Texas</option>
                     <option>Washington</option>
                   </select>
@@ -260,49 +259,60 @@
             </div>
   
             <div class="panel-body">
-              <form action="url" enctype="multipart/form-data">
+              <div class="form-group" action="url" enctype="multipart/form-data">
                 <div class="input-images"></div>
-              </form>
-                <div>
-                  <button class="btn btn-info" id="submit-all">Téléchargez</button>
-                </div>
+              </div>
               </div>
               <br>
-             <div class="mb6"></div>
-              <div class="form-group" id="couleurContainer" >
-                <label>COULEURS</label>
-                <div class="select2-purple" >
-                  <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;" name="coleur" id="couleurId">
-                    <option>Jaune</option>
-                    <option>Vers</option>
-                    <option>Rouge</option>
-                    <option>Rose</option>
-                    <option>Blanc</option>
-                    <option>Noir</option>
-                  </select>
-                </div>
+
+              
+
+             <div class="input-group mb-3 " id="attribut">
+              <label>ATTRIBUTS</label>
+              <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 85%;" name="coleur" id="couleurId">
+                <option value="1">Couleurs</option>
+                <option value="2">Tailles</option>
+              </select>
+              <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02" onclick>Ok</label>
               </div>
-              <div class="mb4"></div>
-              <div class="form-group" id="attributContainer">
-                <label>ATTRIBUTS</label>
-                <div class="select2-purple">
-                  <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez la taille" data-dropdown-css-class="select2-purple" style="width: 100%;" name="attributName" id="attribut">
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                  </select>
-                </div>
+             </div>
+             <div class="row">
+             <div class="form-group col-sm-6" id="couleur">
+              <label>COULEURS</label>
+              <div class="select2-purple">
+                <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                  <option>Rouge</option>
+                  <option>Jaune</option>
+                  <option>rose</option>
+                  <option>vert</option>
+                </select>
               </div>
-              <div class="form-group" id="etiquetteContainer">
-                <label for="inputName">Etiquette</label>
-                <input type="text" name=" EtiquetteName" id="Etiquette" class="form-control">
+             </div>
+             <div class="form-group col-sm-6" id="tailles" >
+              <label>TAILLES</label>
+              <div class="select2-purple">
+                <select class="js-example-basic-multiple" multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                  <option>XL</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XXL</option>
+                </select>
               </div>
             </div>
-
           </div>
+          <div id="prixattribut"> 
+            <label>Prix</label>
+            <input class="form-control form-control-lg" name="prix"  type="number">
+          </div>
+          <div class="mb4"></div>
+          <div id="imageattribut" > 
+            <label>Image </label>
+            <input class="form-control form-control-lg" name="imageAttribut"  type="file">
+          </div>
+            </div>
+          </div>
+          
           
           
         </Form>
@@ -327,36 +337,7 @@
     <script src="admin/dist/js/image-uploader.min.js"></script>
     <script src="admin/plugins/select2/js/select2.full.min.js"></script>
     
-    <script>
-      $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-      });
-      $(document).on("click","#delete",function(e){
-          e.preventDefault();
-          var link=$(this).attr("href");
-          bootbox.confirm("Voulez vraiment supprimer cet élement ?", function(confirmed){
-              if(confirmed){
-                  window.location.href=link;
-              };
-          });
-      });
-      // images telechargement
-      let preloaded = [
-      {id: 1, src: 'https://picsum.photos/500/500?random=1'},
-      {id: 2, src: 'https://picsum.photos/500/500?random=2'},
-      {id: 3, src: 'https://picsum.photos/500/500?random=3'},
-      {id: 4, src: 'https://picsum.photos/500/500?random=4'},
-      {id: 5, src: 'https://picsum.photos/500/500?random=5'},
-      {id: 6, src: 'https://picsum.photos/500/500?random=6'},
-      ];
-      $('.input-images').imageUploader({
-        //preloaded:preloaded,
-        extensions: ['.jpg', '.jpeg', '.png', '.gif', '.svg'],
-        mimes: ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'],
-        maxSize: undefined,
-        maxFiles: undefined,
-      });
-    </script>
+                                                                                                                                                                                                                                                                                                                                    
     <script>
 
       (() => {
@@ -370,40 +351,89 @@
         form.addEventListener('submit', (event) => {
         event.preventDefault();
         event.stopPropagation();
-  
         form.classList.add('was-validated');
         },false);
         });
       })();
     </script>
     <script>
-       var type_produit = document.getElementById('type_produit');
-       var attribut = document.getElementById('attributContainer');
-       var couleur = document.getElementById('couleurContainer');
-       var Etiquette = document.getElementById('etiquetteContainer');
 
+       var type_produit = document.getElementById('type_produit');
+       var type_attribut = document.getElementById('couleurId');
+       var prixattribut = document.getElementById('prixattribut');
+       var couleur = document.getElementById('couleur');
+       var image_attribut = document.getElementById('imageattribut');
+       var tailles_attribut = document.getElementById('tailles');
+       var attribut = document.getElementById('attribut');
+       simple();
        type_produit.addEventListener('change', function() {
             if (type_produit.value == 1) {
               simple()
             } else{
-              variable()
-            }
+              variable() 
+            //   if (type_attribut.value == 1) {
+            //   couleur()
+            // } else if{
+            //   variable() 
+            // }
+            // else{
+            //   allattribut()
+            // }
 
+            }
         });
         
+        // type_attribut.addEventListener('change', function() {
+        //   if (type_attribut.value == 1) {
+        //       couleur()
+        //     } else if{
+        //       variable() 
+        //     }
+        //     else{
+        //       allattribut()
+        //     }
+        // }):
         function variable() {
-          attribut.style.display = 'block'
+          prixattribut.style.display = 'block'
           couleur.style.display = 'block'
-          Etiquette.style.display = 'block'
+          image_attribut.style.display = 'block'
+          tailles_attribut.style.display = 'block'
+          attribut.style.display = 'block'
+
         }
         
         function simple() {
           attribut.style.display = 'none'
+          prixattribut.style.display = 'none'
           couleur.style.display = 'none'
-          Etiquette.style.display = 'none'
+          image_attribut.style.display = 'none'
+          tailles_attribut.style.display = 'none'
         }
-      
+        // function couleur() {
+        //   prixattribut.style.display = 'block'
+        //   couleur.style.display = 'block'
+        //   image_attribut.style.display = 'block'
+        //   tailles_attribut.style.display = 'none'
+        // }
+        // function taille() {
+        //   prixattribut.style.display = 'none'
+        //   couleur.style.display = 'none'
+        //   image_attribut.style.display = 'none'
+        //   tailles_attribut.style.display = 'block'
+        // }
+        // function allattribut() {
+        //   prixattribut.style.display = 'block'
+        //   couleur.style.display = 'block'
+        //   image_attribut.style.display = 'block'
+        //   tailles_attribut.style.display = 'block'
+        // }
+        // var options = document.getElementById('attribut').options,
+        //  count = 0;
+        // for (var i=0; i < options.length; i++) {
+        //    if (options[i].selected) count++;
+          //  alert("le nombre de selection")
 
+    
     </script>
     <script src="admin/plugins/jszip/jszip.min.js"></script>
     <script src="admin/plugins/pdfmake/pdfmake.min.js"></script>

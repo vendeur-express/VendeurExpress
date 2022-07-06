@@ -25,7 +25,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+     
     }
 
     /**
@@ -105,6 +105,10 @@ class ClientController extends Controller
     public function inscription()
     {
         return view('client.inscription');
+    }
+    public function geoloc()
+    {
+        return view('client.geoloc');
     }
     public function panier()
     {

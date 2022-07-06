@@ -38,12 +38,27 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $ValidatorPost = Validator::make($request->all(), [
+        $validatorPost = Validator::make($request->all(), [
             'post'  => 'required',
             'message'  => 'required',
-            'image'  => 'required',
+            'imagepost'  => 'image|required|max:1999',
         ]);
-        dd($request);
+        dd($validatorPost);
+        if ($request->hasFile('imagepost')){
+            // recuperation du nom du fichier avec son path
+            $fileNameWithExt = $request->file('imagepost')->getClientOriginalName();
+             //recuperation du nom du fichier seulement
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            //recuperation de l'extension
+            $extension = $request->file('imagepost')->getClientOriginalExtension();
+            // rechercher de noms aleatoire
+            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
+            // upload image
+            $path = $request->file('imagepost')->storeAs('public\images_categories', $fileNameToStore);
+            //dd($path);
+        } else {
+            $fileNameToStore = 'sansimage.png';
+        }
     }
     
 
