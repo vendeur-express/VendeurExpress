@@ -268,6 +268,14 @@
                             </a>
                         </li>
                         <li class="has-treeview">
+                            <a href="{{ route('livraison') }}" class="nav-link {{ request()->is('livraison') ? 'active' : '' }}">
+                                <i class="fa fa-user nav-icon"></i>
+                                <p>
+                                    Point De Livraison
+                                </p>
+                            </a>
+                        </li>
+                        <li class="has-treeview">
                             <a href="{{ route('commentaire') }}" class="nav-link {{ request()->is('commentaire') ? 'active' : '' }}">
                                 <i class=" 	fas fa-comment nav-icon"></i>
                                 <p>

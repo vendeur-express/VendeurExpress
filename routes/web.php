@@ -94,10 +94,10 @@ Route::get('/rapport', [AdminController::class, 'rapport'])->name('rapport');
 Route::get('/superadmin', [AdminController::class, 'dashboard'])->name('superadmin');
 Route::get('/supercommande', [AdminController::class, 'supercommande'])->name('supercommande');
 Route::get('/ajout_categorie', [AdminController::class, 'ajout_categorie'])->name('ajout_categorie');
-//Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
+Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])->name('sauvercategorie');
 
 // route sur categorie
-//Route::resource('categorie', CategorieController::class);
+// Route::resource('categorie', CategorieController::class);
 Route::get('/categorie',[CategorieController::class,'index'])->name('categorie');
 Route::post('/admin/categorie.store',[CategorieController::class,'store'])->name('categorie.store');
 Route::post('/superadmin/produit',[ProduitsController::class, 'store'])->name('produits.store');
@@ -105,10 +105,10 @@ Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
-//Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
+// Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
-//Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
+// Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
 Route::get('/compte', [AdminController::class, 'compte'])->name('compte');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 Route::get('/superproduit', [AdminController::class, 'superproduit'])->name('superproduit');
@@ -116,6 +116,7 @@ Route::get('/supercoupon', [AdminController::class, 'supercoupon'])->name('super
 Route::get('/parametre', [AdminController::class, 'parametre'])->name('parametre');
 Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite');
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
+Route::get('/livraison', [AdminController::class, 'livraison'])->name('livraison');
 
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);

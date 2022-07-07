@@ -160,6 +160,9 @@ class AdminController extends Controller
     public function superproduit(){
         return view('superadmin.superproduit');
     }
+    public function livraison(){
+        return view('superadmin.livraison');
+    }
     public function publicite(){
         return view('superadmin.publicite');
     }
