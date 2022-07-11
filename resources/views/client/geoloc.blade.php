@@ -17,13 +17,20 @@
 </html>
 <script type="text/javascript">
     function initialize() {
-        var map = L.map('map').setView([48.833, 2.333], 7); // LIGNE 18
+        var map = L.map('map').setView([12.0753083, -1.6880314], 7); // LIGNE 18
 
         var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { // LIGNE 20
             attribution: '© OpenStreetMap contributors',
             maxZoom: 19
         });
     
-        map.addLayer(osmLayer);
+        map.addLayer(osmLayer)
+        L.marker([12.0753083, -1.6880314]).addTo(map)
+    .bindPopup('Boutique N*1236958 A Cissin .<br> Easily customizable.')
+    .openPopup();
+
+    
+     
     }
+    
 </script>

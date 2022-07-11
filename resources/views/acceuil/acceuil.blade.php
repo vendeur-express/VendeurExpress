@@ -4,7 +4,7 @@
 @endsection
 @section('contenu')
 <div class="mb-1"></div>
-<main class="main">
+<section>
      <div class="intro-slider-container ">
          <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
             data-owl-options='{
@@ -2573,5 +2573,5 @@
             </div><!-- End .row -->
         </div><!-- End .container -->
     </div><!-- End .icon-boxes-container -->
-</main><!-- End .main -->
+</section><!-- End .main -->
 @endsection

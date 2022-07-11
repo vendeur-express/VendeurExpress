@@ -16,38 +16,40 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 col-lg-4">
-                                <Form class="container" method="POST" enctype="multipart/form-data" id="slider_form">
+                                <Form class="container" method="POST" action="{{route('livraisons')}}">
+                                  @csrf
                                     <div class="row">
 
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input type="text" id="titre_slid" class="form-control "
+                                                <input type="text" name="num_boutique" class="form-control "
                                                     placeholder="Numero de la boutique">
                                                
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="url_slid" class="form-control "
-                                                    placeholder="Ville ">
+                                                <input type="text" name="bout_desc" class="form-control "
+                                                    placeholder="description ">
                                             </div>
                                             <div class="form-group">
-                                                <input id="dsc_slid" class="form-control"  placeholder="Quartier">
+                                                <input name="latitude" class="form-control"  placeholder="Latitude">
                                             </div>
-                                           
-                                        </div>
-                                        <div class="modal-footer col-12 d-flex justify-content-end">
-                                            <button type="button" id="save_slid" class="btn btn-success float-right"
-                                                onclick="addSlider()">Ajouter</button>
-                                        </div>
+                                            <div class="form-group">
+                                                <input name="longitude" class="form-control"  placeholder="Longitude">
+                                            </div>
+                                        </div>                                      
                                     </div>
+                                    <button type="submit" class="btn btn-success float-right">Ajouter</button>
                                 </Form>
+            
                             </div>
                             <div class="col-md-12 col-lg-8">
                                 <table id="attr_table" class="table table-bordered table-striped table-responsive-lg">
                                     <thead class="">
                                         <tr>
                                             <th>N* Boutique </th>
-                                            <th>Ville </th>
-                                            <th>Quartier</th> 
+                                            <th>Description</th>
+                                            <th>Latitude</th> 
+                                            <th>Longitude</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -58,7 +60,7 @@
                                                 <td ></td>
                                                 <td></td>
                                                 <td></td> 
-                                                
+                                                <td></td> 
                                                 <td >
     
                                                     <button class="btn btn-info btn-sm mx-2" type="button"
@@ -83,8 +85,9 @@
                                     <tfoot>
                                         <tr>
                                             <th>N* Boutique </th>
-                                            <th>Ville </th>
-                                            <th>Quartier</th> 
+                                            <th>Description</th>
+                                            <th>Latitude</th> 
+                                            <th>Longitude</th>
                                             <th>Action</th>
                                            
                                         </tr>

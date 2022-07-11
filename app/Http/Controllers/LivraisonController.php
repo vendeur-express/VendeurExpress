@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Validator;
 use App\Models\Livraison;
 use App\Http\Requests\StoreLivraisonRequest;
 use App\Http\Requests\UpdateLivraisonRequest;
@@ -36,8 +36,31 @@ class LivraisonController extends Controller
      */
     public function store(StoreLivraisonRequest $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'num_boutique' => 'required',
+            'bout_desc'  => 'required',
+            'latitude'  => 'required',
+            'longitude' => 'required',
+   
+            
+        ]); 
+        if ($validator->fails()) {
+            return redirect(url()->previous())
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+
+            $livraison = Livraison::create([
+
+                'code_bout' => $request->num_boutique,
+                'desc' => $request->bout_desc,
+                'longitude' => $request->latitude,
+                'latitude' => $request->longitude,
+            ]);
+        }
     }
+
+    
 
     /**
      * Display the specified resource.

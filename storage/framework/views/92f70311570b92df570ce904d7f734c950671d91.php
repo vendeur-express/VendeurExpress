@@ -268,6 +268,14 @@
                             </a>
                         </li>
                         <li class="has-treeview">
+                            <a href="<?php echo e(route('livraison')); ?>" class="nav-link <?php echo e(request()->is('livraison') ? 'active' : ''); ?>">
+                                <i class="fa fa-user nav-icon"></i>
+                                <p>
+                                    Point De Livraison
+                                </p>
+                            </a>
+                        </li>
+                        <li class="has-treeview">
                             <a href="<?php echo e(route('commentaire')); ?>" class="nav-link <?php echo e(request()->is('commentaire') ? 'active' : ''); ?>">
                                 <i class=" 	fas fa-comment nav-icon"></i>
                                 <p>

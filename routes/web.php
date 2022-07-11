@@ -8,6 +8,7 @@ use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategorieProduitController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LivraisonController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProduitsController;
 use App\Http\Controllers\StudentsController;
@@ -84,6 +85,7 @@ Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name(
 
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
 Route::post('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
+Route::get('/livraison', [LivraisonController::class, 'livraison'])->name('livraisons');
 
 
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');

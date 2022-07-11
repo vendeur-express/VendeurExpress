@@ -4,7 +4,7 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('contenu'); ?>
 <div class="mb-1"></div>
-<main class="main">
+<section>
      <div class="intro-slider-container ">
          <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
             data-owl-options='{
@@ -2512,7 +2512,7 @@
             </div><!-- End .row -->
         </div><!-- End .container -->
     </div><!-- End .icon-boxes-container -->
-</main><!-- End .main -->
+</section><!-- End .main -->
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.client.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\VEX\vendeurexpress-app\resources\views/acceuil/acceuil.blade.php ENDPATH**/ ?>

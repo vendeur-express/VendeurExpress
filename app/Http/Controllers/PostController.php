@@ -43,7 +43,7 @@ class PostController extends Controller
             'message'  => 'required',
             'imagepost'  => 'image|required|max:1999',
         ]);
-        dd($validatorPost);
+
         if ($request->hasFile('imagepost')){
             // recuperation du nom du fichier avec son path
             $fileNameWithExt = $request->file('imagepost')->getClientOriginalName();

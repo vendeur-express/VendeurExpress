@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('point_livraisons', function (Blueprint $table) {
             $table->id();
             $table->string('code_bout');
-            $table->foreignId('pay_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('ville_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('desc');
             $table->string('longitude');
             $table->string('latitude');
             $table->timestamps();
