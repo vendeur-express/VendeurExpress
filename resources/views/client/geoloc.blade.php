@@ -23,10 +23,16 @@
             attribution: '© OpenStreetMap contributors',
             maxZoom: 19
         });
-    
+ 
         map.addLayer(osmLayer)
+        
         L.marker([12.0753083, -1.6880314]).addTo(map)
     .bindPopup('Boutique N*1236958 A Cissin .<br> Easily customizable.')
+    .openPopup();
+
+
+    L.marker([10.0753083, -1.6880314]).addTo(map)
+    .bindPopup('fhggj N*1236958 A Cissin .<br> Easily customizable.')
     .openPopup();
 
     

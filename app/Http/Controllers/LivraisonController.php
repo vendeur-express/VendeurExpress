@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Validator;
 use App\Models\Livraison;
+use Illuminate\Http\Request;
+use App\Models\PointLivraison;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreLivraisonRequest;
 use App\Http\Requests\UpdateLivraisonRequest;
 
@@ -28,21 +30,14 @@ class LivraisonController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreLivraisonRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreLivraisonRequest $request)
+    public function livraison(Request $request)
     {
+      
         $validator = Validator::make($request->all(), [
             'num_boutique' => 'required',
             'bout_desc'  => 'required',
             'latitude'  => 'required',
-            'longitude' => 'required',
-   
-            
+            'longitude' => 'required',      
         ]); 
         if ($validator->fails()) {
             return redirect(url()->previous())
@@ -50,7 +45,7 @@ class LivraisonController extends Controller
                 ->withInput();
         } else {
 
-            $livraison = Livraison::create([
+            $livraison = PointLivraison::create([
 
                 'code_bout' => $request->num_boutique,
                 'desc' => $request->bout_desc,

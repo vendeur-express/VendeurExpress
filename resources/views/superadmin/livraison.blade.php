@@ -16,15 +16,13 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 col-lg-4">
-                                <Form class="container" method="POST" action="{{route('livraisons')}}">
+                                <Form class="container" method="post" action="{{route('pointlivraison')}}">
                                   @csrf
                                     <div class="row">
-
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <input type="text" name="num_boutique" class="form-control "
-                                                    placeholder="Numero de la boutique">
-                                               
+                                                    placeholder="Numero de la boutique" required>                                               
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" name="bout_desc" class="form-control "
@@ -40,7 +38,6 @@
                                     </div>
                                     <button type="submit" class="btn btn-success float-right">Ajouter</button>
                                 </Form>
-            
                             </div>
                             <div class="col-md-12 col-lg-8">
                                 <table id="attr_table" class="table table-bordered table-striped table-responsive-lg">
@@ -55,14 +52,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       
                                             <tr>
                                                 <td ></td>
                                                 <td></td>
                                                 <td></td> 
                                                 <td></td> 
                                                 <td >
-    
                                                     <button class="btn btn-info btn-sm mx-2" type="button"
                                                         onclick="">
                                                         <i class="fas fa-pencil-alt">
@@ -77,10 +72,8 @@
                                                             </i>
                                                             Supprimer
                                                         </button>
-                                                </td>
-                                                
+                                                </td> 
                                             </tr>
-                           
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -89,7 +82,6 @@
                                             <th>Latitude</th> 
                                             <th>Longitude</th>
                                             <th>Action</th>
-                                           
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -101,5 +93,4 @@
             </div>
         </div>
     </div>
-
 @endsection

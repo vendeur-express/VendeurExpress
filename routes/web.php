@@ -84,8 +84,8 @@ Route::post('/add-attr-values', [AttributeValueController::class, 'create'])->na
 Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name('del.attr.val');
 
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
-Route::post('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
-Route::get('/livraison', [LivraisonController::class, 'livraison'])->name('livraisons');
+Route::get('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
+Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('pointlivraison');
 
 
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');
@@ -118,7 +118,7 @@ Route::get('/supercoupon', [AdminController::class, 'supercoupon'])->name('super
 Route::get('/parametre', [AdminController::class, 'parametre'])->name('parametre');
 Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite');
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
-Route::get('/livraison', [AdminController::class, 'livraison'])->name('livraison');
+Route::get('/livraison', [AdminController::class, 'indexlivraison'])->name('livraison');
 
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
