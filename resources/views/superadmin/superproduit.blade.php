@@ -271,20 +271,6 @@
               </div>
               </div>
               <br>
-
-              {{-- <div class="col-12 input-group py-3" id="couleurContainer">
-
-                <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 100%;" name="coleur" id="couleurId">
-                  <option>Couleurs</option>
-                  <option>Tailles</option>
-                </select>
-
-                <div class="input-group-append ">
-                    <button class="input-group-text text-white bg-success" type="button"
-                        onclick="" >Ajouter</button>
-                </div>
-             </div> --}}
-
              <div class="input-group mb-3 " id="attribut">
               <label>ATTRIBUTS</label>
               <select class="js-example-basic-multiple form-control "  multiple="multiple" data-placeholder="Selectionnez une catégories" data-dropdown-css-class="select2-purple" style="width: 85%;" name="coleur" id="couleurId">

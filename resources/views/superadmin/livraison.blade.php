@@ -48,16 +48,16 @@
                                             <th>Latitude</th> 
                                             <th>Longitude</th>
                                             <th>Action</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
+                                           @foreach($livraison as $items)
                                             <tr>
-                                                <td ></td>
-                                                <td></td>
-                                                <td></td> 
-                                                <td></td> 
-                                                <td >
+                                                <td >{{$items->code_bout}}</td>
+                                                <td>{{$items->desc}}</td>
+                                                <td>{{$items->longitude}}</td> 
+                                                <td>{{$items->latitude}}</td> 
+                                                <td>
                                                     <button class="btn btn-info btn-sm mx-2" type="button"
                                                         onclick="">
                                                         <i class="fas fa-pencil-alt">
@@ -74,6 +74,7 @@
                                                         </button>
                                                 </td> 
                                             </tr>
+                                            @endforeach 
                                     </tbody>
                                     <tfoot>
                                         <tr>

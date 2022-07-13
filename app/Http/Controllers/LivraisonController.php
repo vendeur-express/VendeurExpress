@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Attribut;
 use App\Models\Livraison;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Models\PointLivraison;
 use Illuminate\Support\Facades\Validator;
@@ -17,7 +19,8 @@ class LivraisonController extends Controller
      */
     public function index()
     {
-        //
+        return View('superadmin.Livraison');
+        // ['ajjou' => Attribut::orderBy('id', 'DESC')->get()]);
     }
 
     /**

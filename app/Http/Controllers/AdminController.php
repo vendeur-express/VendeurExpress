@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\livraison;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use function GuzzleHttp\Promise\all;
@@ -161,7 +162,8 @@ class AdminController extends Controller
         return view('superadmin.superproduit');
     }
     public function indexlivraison(){
-        return view('superadmin.livraison');
+        $livraison = Livraison::all();
+        return view('superadmin.livraison')->with('livraison', $livraison);
     }
     public function publicite(){
         return view('superadmin.publicite');

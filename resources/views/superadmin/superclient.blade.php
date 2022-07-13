@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 <!-- Theme style -->
-<link rel="stylesheet" href="admin/dist/css/adminlte.min.css"
+<link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
 @extends('layouts.superadmin.app')
 @section('titre')
     PRODUITS | VENDEUR EXPRESS
@@ -50,7 +50,6 @@
                   
                       @foreach ($users as $user)
                       <tr>
-                       
                         <td>{{ucfirst($user -> identifiant_us)}}</td>
                         <td>{{ucfirst($user -> nom_us)}}</td>
                         <td >{{ucfirst($user -> prenom_us)}}</td>
