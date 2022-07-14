@@ -48,16 +48,17 @@
                                             <th>Latitude</th> 
                                             <th>Longitude</th>
                                             <th>Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                           @foreach($livraison as $items)
+                                        @forelse ($livraisons as $items)
                                             <tr>
-                                                <td >{{$items->code_bout}}</td>
-                                                <td>{{$items->desc}}</td>
-                                                <td>{{$items->longitude}}</td> 
-                                                <td>{{$items->latitude}}</td> 
-                                                <td>
+                                                <td >{{ $items->code_bout }}</td>
+                                                <td>{{ $items->desc }}</td>
+                                                <td>{{ $items->longitude }}</td> 
+                                                <td>{{ $items->latitude }}</td> 
+                                                <td >
                                                     <button class="btn btn-info btn-sm mx-2" type="button"
                                                         onclick="">
                                                         <i class="fas fa-pencil-alt">
@@ -72,9 +73,15 @@
                                                             </i>
                                                             Supprimer
                                                         </button>
+
                                                 </td> 
                                             </tr>
-                                            @endforeach 
+                                            @empty
+                                            <tr>
+                                               <td colspan="5">Aucune catégorie enregistrée </td> 
+                                            </tr>
+                                        @endforelse
+                                            
                                     </tbody>
                                     <tfoot>
                                         <tr>

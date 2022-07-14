@@ -162,8 +162,8 @@ class AdminController extends Controller
         return view('superadmin.superproduit');
     }
     public function indexlivraison(){
-        $livraison = Livraison::all();
-        return view('superadmin.livraison')->with('livraison', $livraison);
+        $livraisons = Livraison::all();
+        return view('superadmin.livraison')->with('livraisons', $livraisons);
     }
     public function publicite(){
         return view('superadmin.publicite');

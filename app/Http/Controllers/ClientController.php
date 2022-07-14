@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\PointLivraison;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 
@@ -108,7 +109,8 @@ class ClientController extends Controller
     }
     public function geoloc()
     {
-        return view('client.geoloc');
+        $livraisons = PointLivraison::all()->toArray();
+        return view('client.geoloc',compact('livraisons'));
     }
     public function panier()
     {

@@ -56,6 +56,7 @@ class LivraisonController extends Controller
                 'latitude' => $request->longitude,
             ]);
         }
+        return view('superadmin.Livraison');
     }
 
     
