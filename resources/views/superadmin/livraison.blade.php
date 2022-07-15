@@ -11,6 +11,31 @@
 @section('contenu')
     <div class="content-wrapper">
         <div class="container-fluid">
+
+              <!-- Modal -->
+              <form action="/supprimer_livraison" method="POST">
+                @csrf
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Supprimer une livraison</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" name="livarison_delete_id" id="livraison_id">
+                        <H5 class="text-danger">voulez vous vraiment supprimer cette livraison</H5> 
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">annuller</button>
+                        <button type="submit " class="btn btn-danger">Oui supprimer</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
             <div class="row">
                 <div class="card col-12 mt-3 ">
                     <div class="card-body">
@@ -34,6 +59,12 @@
                                             <div class="form-group">
                                                 <input name="longitude" class="form-control"  placeholder="Longitude">
                                             </div>
+                                            <div class="form-group " id="villeid">
+                                                <select name="idville" class="form-control ">
+                                                    <option >choisissez la ville </option>
+                                                    <option ></option>
+                                                </select>
+                                            </div>
                                         </div>                                      
                                     </div>
                                     <button type="submit" class="btn btn-success float-right">Ajouter</button>
@@ -43,8 +74,8 @@
                                 <table id="attr_table" class="table table-bordered table-striped table-responsive-lg">
                                     <thead class="">
                                         <tr>
-                                            <th>N* Boutique </th>
-                                            <th>Description</th>
+                                            <th>N* Boutique</th>
+                                            <th>numero</th>
                                             <th>Latitude</th> 
                                             <th>Longitude</th>
                                             <th>Action</th>
@@ -53,32 +84,21 @@
                                     </thead>
                                     <tbody>
                                         @forelse ($livraisons as $items)
-                                            <tr>
-                                                <td >{{ $items->code_bout }}</td>
-                                                <td>{{ $items->desc }}</td>
-                                                <td>{{ $items->longitude }}</td> 
-                                                <td>{{ $items->latitude }}</td> 
+                                            <tr>      
+                                                <td >{{ $items->nom_li }}</td>
+                                                <td>{{ $items->code_li }}</td>
+                                                <td>{{ $items->altitude }}</td> 
+                                                <td>{{ $items->logitude }}</td> 
                                                 <td >
-                                                    <button class="btn btn-info btn-sm mx-2" type="button"
-                                                        onclick="">
-                                                        <i class="fas fa-pencil-alt">
-                                                        </i>
-                                                        Editer
-                                                        </a>
-                                                        <button class="btn btn-danger btn-sm mx-2" type="button" id="delete"
-                                                            data-toggle="modal" data-target="#del_slider"
-                                                            data-backdrop="static" data-keyboard="false"
-                                                            onclick="">
-                                                            <i class="fas fa-trash">
-                                                            </i>
-                                                            Supprimer
-                                                        </button>
+                                                        <a class="fas fa-pencil-alt btn btn-success" href="" >Editer</a>
+                                                        
+                                                       <button type="button" class="btn btn-danger delete_livraison" value="{{$items->id}}">Supprimer</button>
 
                                                 </td> 
                                             </tr>
                                             @empty
                                             <tr>
-                                               <td colspan="5">Aucune catégorie enregistrée </td> 
+                                               <td colspan="5">Aucun point de livraison enregistrée </td> 
                                             </tr>
                                         @endforelse
                                             
@@ -101,4 +121,15 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+       
+                $(document).on('click';'.delete_livraison', function () {
+                e.preventDefault();
+               var livraison_id = $(this).val();
+               $('#livraison_id').val(livraison_id);
+               $('#deleteModal').modal('show');
+            });
+        });
+        </script>
 @endsection

@@ -9,6 +9,7 @@ use App\Models\PointLivraison;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreLivraisonRequest;
 use App\Http\Requests\UpdateLivraisonRequest;
+use Illuminate\Support\Facades\Redirect;
 
 class LivraisonController extends Controller
 {
@@ -101,8 +102,15 @@ class LivraisonController extends Controller
      * @param  \App\Models\Livraison  $livraison
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Livraison $livraison)
+    public function destroy($id)
     {
-        //
+        $livraison= Livraison::find($id);
+        if ($livraison) {
+            $livraison->indexlivraison()->delete();
+            $livraison->delete();
+            return Redirect('superadmin.livraison')->with('message','livraison supprimer avec succes');
+        }else{
+            return Redirect('superadmin.livraison')->with('message','id de livraison non trouvez');
+        }
     }
 }

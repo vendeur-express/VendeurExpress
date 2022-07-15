@@ -42,7 +42,7 @@
                                         </button>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="signin-remember-2">
-                                            <label class="custom-control-label" for="signin-remember-2">Me souvenir
+                                            <label class="custom-control-label" for="signin-remember-2">se souvenir
                                                 de</label>
                                         </div><!-- End .custom-checkbox -->
 

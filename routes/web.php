@@ -104,10 +104,11 @@ Route::get('/categorie',[CategorieController::class,'index'])->name('categorie')
 Route::post('/admin/categorie.store',[CategorieController::class,'store'])->name('categorie.store');
 Route::post('/superadmin/produit',[ProduitsController::class, 'store'])->name('produits.store');
 Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
+Route::post('/supprimer_livraison/{livraison_id}', [LivraisonController::class, 'destroy']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
-// Route::get('/delete_categorie/{id}', [CategorieProduitController::class, 'delete_categorie']);
+// Route::get('/delete_categorie/{id}', [CategorieProduitController::class,  'delete_categorie']);
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 // Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
