@@ -85,8 +85,7 @@ Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name(
 
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
 Route::get('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
-Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('pointlivraison');
-
+Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('livraisons');
 
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');
 Route::get('/avis', [AdminController::class, 'avis'])->name('avis');

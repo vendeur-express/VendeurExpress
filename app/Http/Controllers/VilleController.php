@@ -15,7 +15,9 @@ class VilleController extends Controller
      */
     public function index()
     {
-        //
+        $ville = Ville::all();
+   
+     
     }
 
     /**

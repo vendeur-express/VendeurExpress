@@ -41,7 +41,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-12 col-lg-4">
-                                <Form class="container" method="post" action="{{route('pointlivraison')}}">
+                                <Form class="container" method="post" action="{{route('livraisons')}}">
                                   @csrf
                                     <div class="row">
                                         <div class="col-12">
@@ -62,7 +62,10 @@
                                             <div class="form-group " id="villeid">
                                                 <select name="idville" class="form-control ">
                                                     <option >choisissez la ville </option>
-                                                    <option ></option>
+                                                    @foreach ($ville as $villes)
+                                                    <option >{{ $villes->id }} </option>
+                                                    @endforeach
+                                   
                                                 </select>
                                             </div>
                                         </div>                                      

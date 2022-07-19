@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\Ville;
 use App\Models\livraison;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -162,8 +163,9 @@ class AdminController extends Controller
         return view('superadmin.superproduit');
     }
     public function indexlivraison(){
-        $livraisons = Livraison::all();
-        return view('superadmin.livraison')->with('livraisons', $livraisons);
+        $livraisons = Livraison::all()->toArray();
+        $ville = Ville::all();
+        return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
     }
     public function publicite(){
         return view('superadmin.publicite');

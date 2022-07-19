@@ -268,7 +268,7 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('livraison') }}" class="nav-link {{ request()->is('livraison') ? 'active' : '' }}">
+                            <a href="{{ route('livraisons') }}" class="nav-link {{ request()->is('livraison') ? 'active' : '' }}">
                                 <i class="fa fa-user nav-icon"></i>
                                 <p>
                                     Point De Livraison

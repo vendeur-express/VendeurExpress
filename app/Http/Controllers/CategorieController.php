@@ -159,7 +159,7 @@ class CategorieController extends Controller
                 $imagecat=CategorieImage::create(["categorie_id"=>$categorie->id,
             "image_id"=>$image->id]);
             }else{
-            dd("categorie non enrégistrée");
+            dd("categorie non enrégistrée");    
             }
             
         }else{

@@ -10,10 +10,11 @@ class Livraison extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'code_bout',
-        'desc',
-        'longitude',
-        'latitude',
+        'nom_li', 
+        'code_li', 
+        'altitude', 
+        'logitude',
+         'ville_id',
         ];
     // Recuperer les infos de la ville ou se trouve le point de livraison
     public function ville()

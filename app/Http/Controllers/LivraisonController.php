@@ -41,7 +41,9 @@ class LivraisonController extends Controller
             'num_boutique' => 'required',
             'bout_desc'  => 'required',
             'latitude'  => 'required',
-            'longitude' => 'required',      
+            'longitude' => 'required',
+
+
         ]); 
         if ($validator->fails()) {
             return redirect(url()->previous())
@@ -49,12 +51,12 @@ class LivraisonController extends Controller
                 ->withInput();
         } else {
 
-            $livraison = PointLivraison::create([
-
-                'code_bout' => $request->num_boutique,
-                'desc' => $request->bout_desc,
-                'longitude' => $request->latitude,
-                'latitude' => $request->longitude,
+            $livraison = Livraison::create([   
+                'code_li'=> $request->num_boutique,
+                'nom_li' => $request->bout_desc,
+                'logitude' => $request->latitude,
+                'altitude' => $request->longitude,
+                'ville_id' => $request->idville,
             ]);
         }
         return view('superadmin.Livraison');
@@ -93,7 +95,7 @@ class LivraisonController extends Controller
      */
     public function update(UpdateLivraisonRequest $request, Livraison $livraison)
     {
-        //
+        
     }
 
     /**
