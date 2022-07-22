@@ -37,7 +37,7 @@
 <?php endif; ?>
                         <div class="tab-content">
                             <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
-                                <form method="POST" action="">
+                                <form method="GET" action="">
                                     <?php echo csrf_field(); ?>
                                     <div class="form-group">
                                         <label for="singin-email-2">Nom d'utilisateur ou adresse e-mail *</label>
@@ -56,7 +56,7 @@
                                         </button>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="signin-remember-2">
-                                            <label class="custom-control-label" for="signin-remember-2">Me souvenir
+                                            <label class="custom-control-label" for="signin-remember-2">se souvenir
                                                 de</label>
                                         </div><!-- End .custom-checkbox -->
 
@@ -88,7 +88,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <select name="Type_de_compte" class="form-control" id="compte">
-                                                <option value=" 0">Client</option>
+                                                <option value="0">Client</option>
                                                 <option value="1">Demarcheur</option>
                                                 <option value="2">Fournisseur</option>
                                                 <option value="3">Vendeur</option>

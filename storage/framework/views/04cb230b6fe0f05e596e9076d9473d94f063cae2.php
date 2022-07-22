@@ -9,7 +9,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <form action="<?php echo e(route('posts.store')); ?>" class="contact-form mb-3" enctype="multipart/form-data">
+                        <form  method="post" action="/ajout_post" class="contact-form mb-3" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
                             <div class="row">
                                 <div class="col-sm-12">

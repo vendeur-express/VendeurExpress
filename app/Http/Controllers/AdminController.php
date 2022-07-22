@@ -162,6 +162,7 @@ class AdminController extends Controller
     }
     public function indexlivraison(){
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         $livraisons = Livraison::all()->toArray();
         $ville = Ville::all();
         return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
@@ -172,6 +173,10 @@ class AdminController extends Controller
         return view('superadmin.livraison', conpact('livraisons'));
 =======
         $livraisons = Livraison::all()->toArray();
+=======
+        $livraisons = Livraison::all();
+        
+>>>>>>> Stashed changes
         $ville = Ville::all();
         return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
 >>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224

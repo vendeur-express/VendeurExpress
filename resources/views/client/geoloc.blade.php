@@ -13,19 +13,22 @@
     <body onload="initialize()">
         <div id="map" style="width:100%; height:100%">
             @php  
-        
-           $longlat = null;
+         
+           $livraisons =$livraisons->toArray();
+           dd($livraisons);
             foreach ($livraisons as $livraison) {
                 $mapData = $livraison;
-                // $code = $mapData["code_bout"];
-                // $desc = $mapData["desc"];
-                $long = $mapData["longitude"];
-                $lat = $mapData["latitude"];
-
+                
+                // $code = $mapData["code_li"];
+                // $desc = $mapData["nom_li"];
+                $long = $mapData["logitude"];
+                $lat = $mapData["altitude"];
+             
                 $longlat[] = [$lat,$long];
                 // $codedesc[] = [$code, $desc];
             }
             $longlat  = json_encode($longlat);
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             dd($longlat)
             // $codedesc  = json_encode($codedesc);
@@ -46,7 +49,12 @@
             // echo "<script>var js_points = ".$longlat."</script>";
 >>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
 >>>>>>> Stashed changes
+=======
+            // $codedesc  = json_encode($codedesc);
+            echo "<script> var js_points = ".$longlat."</script>";
+>>>>>>> Stashed changes
             // echo "<script>var js_desc = ".$codedesc."</script>";
+
             @endphp
         </div>
     </body>
@@ -64,6 +72,7 @@
 
         map.addLayer(osmLayer)
 
+<<<<<<< Updated upstream
         for(var i = 0; i < js_points.length; i++)
         {
             L.marker(js_points[i])
@@ -82,5 +91,13 @@
     
         }    
         // .addTo(map).bindPopup(codedesc[i]).openPopup()
+=======
+     for(var i = 0; i < js_points.length; i++){
+        L.marker(longlat).addTo(map);
+     }
+         
+        //   .bindPopup('VEX_152368 situe a Goughin').openPopup()
+            
+>>>>>>> Stashed changes
     }
  </script>

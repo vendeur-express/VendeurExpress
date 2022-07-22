@@ -86,7 +86,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($livraisons as $items)
+                                    
+                                    @forelse ($livraisons as $items)
                                             <tr>      
                                                 <td >{{ $items->nom_li }}</td>
                                                 <td>{{ $items->code_li }}</td>
@@ -103,7 +104,7 @@
                                             <tr>
                                                <td colspan="5">Aucun point de livraison enregistrée </td> 
                                             </tr>
-                                        @endforelse
+                                        @endforelse 
                                             
                                     </tbody>
                                     <tfoot>

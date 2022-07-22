@@ -36,7 +36,7 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function posts(StorePostRequest $request)
     {
         $validatorPost = Validator::make($request->all(), [
             'post'  => 'required',
@@ -59,6 +59,9 @@ class PostController extends Controller
         } else {
             $fileNameToStore = 'sansimage.png';
         }
+        return redirect('article')
+        ->with('status','post enregistre avec succès');
+
     }
     
 

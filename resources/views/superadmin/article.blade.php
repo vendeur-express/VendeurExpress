@@ -9,7 +9,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('posts.store')}}" class="contact-form mb-3" enctype="multipart/form-data">
+                        <form  method="post" action="/ajout_post" class="contact-form mb-3" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">

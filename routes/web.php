@@ -104,12 +104,12 @@ Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('comme
 Route::get('/livraison', [AdminController::class, 'indexlivraison'])->name('livraison');
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');
-Route::get('/client/create', [ClientController::class, 'create']);
-Route::post('/post', [ClientController::class, 'store']);
+// Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+// Route::get('/posts/create', [PostController::class, 'store'])->name('posts.store');
+// Route::get('/client/create', [ClientController::class, 'create']);
+Route::post('/ajout_post', [PostController::class, 'posts'])->name('ajout_post');
 
 // Function to insert the avatar image
 Route::get('/save_img', [ImageController::class, 'save_avatar']);
 
-require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php'; 

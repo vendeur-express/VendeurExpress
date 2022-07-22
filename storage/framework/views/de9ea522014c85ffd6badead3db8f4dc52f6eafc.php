@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 <!-- Theme style -->
-<link rel="stylesheet" href="admin/dist/css/adminlte.min.css"
+<link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
 
 <?php $__env->startSection('titre'); ?>
     PRODUITS | VENDEUR EXPRESS
@@ -38,20 +38,18 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                      <th>Nom</th>
-                      <th>Prenom</th>
-                      <th>Email</th>
-                      <th>Commande</th>
-                      <th>Contact</th>
-                      <th>Droit</th>
-
+                      <th>Idendtifiant</th>
+                       <th>Nom</th>
+                       <th>Prenom</th>
+                       <th>Email</th>
+                       <th>Contact</th>
+                       <th>Droit</th>
                     </tr>
                     </thead>
                     <tbody>
                   
                       <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                       <tr>
-                       
                         <td><?php echo e(ucfirst($user -> identifiant_us)); ?></td>
                         <td><?php echo e(ucfirst($user -> nom_us)); ?></td>
                         <td ><?php echo e(ucfirst($user -> prenom_us)); ?></td>
@@ -60,15 +58,13 @@
                         <td><?php echo e(explode('\\',$user -> userable_type)[2]); ?></td>
                       </tr>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                   
-
                     </tbody>
                     <tfoot>
                         <tr>
+                          <th>Idendtifiant</th>
                             <th>Nom</th>
                             <th>Prenom</th>
                             <th>Email</th>
-                            <th>Commande</th>
                             <th>Contact</th>
                             <th>Droit</th>
                         </tr>

@@ -16,7 +16,7 @@ class Post extends Model
         'label_pos',
         'dsc_pos',
         'users_id',
-        // 'file'
+       
          ];
     // Recuperer toutes les images de cet post
     public function images()

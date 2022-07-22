@@ -14,7 +14,7 @@ class Livraison extends Model
         'code_li', 
         'altitude', 
         'logitude',
-         'ville_id',
+        'ville_id',
         ];
     // Recuperer les infos de la ville ou se trouve le point de livraison
     public function ville()

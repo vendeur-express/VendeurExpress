@@ -268,7 +268,7 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="<?php echo e(route('livraison')); ?>" class="nav-link <?php echo e(request()->is('livraison') ? 'active' : ''); ?>">
+                            <a href="<?php echo e(route('livraisons')); ?>" class="nav-link <?php echo e(request()->is('livraison') ? 'active' : ''); ?>">
                                 <i class="fa fa-user nav-icon"></i>
                                 <p>
                                     Point De Livraison
