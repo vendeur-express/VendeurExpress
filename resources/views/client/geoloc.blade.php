@@ -26,9 +26,26 @@
                 // $codedesc[] = [$code, $desc];
             }
             $longlat  = json_encode($longlat);
+<<<<<<< Updated upstream
             dd($longlat)
             // $codedesc  = json_encode($codedesc);
             // echo "<script>var js_points = ".$longlat."</script>";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // $codedesc  = json_encode($codedesc);
+            echo "<script>var js_points = ".$longlat."</script>";
+=======
+            dd($longlat)
+            // $codedesc  = json_encode($codedesc);
+            // echo "<script>var js_points = ".$longlat."</script>";
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+=======
+            dd($longlat)
+            // $codedesc  = json_encode($codedesc);
+            // echo "<script>var js_points = ".$longlat."</script>";
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+>>>>>>> Stashed changes
             // echo "<script>var js_desc = ".$codedesc."</script>";
             @endphp
         </div>
@@ -50,8 +67,20 @@
         for(var i = 0; i < js_points.length; i++)
         {
             L.marker(js_points[i])
+<<<<<<< Updated upstream
             // .addTo(map).bindPopup(codedesc[i]).openPopup()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            // .addTo(map).bindPopup(codedesc[i]).openPopup()
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+=======
+            // .addTo(map).bindPopup(codedesc[i]).openPopup()
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+>>>>>>> Stashed changes
     
         }    
+        // .addTo(map).bindPopup(codedesc[i]).openPopup()
     }
  </script>

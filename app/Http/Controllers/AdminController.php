@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Admin;
 use App\Models\Ville;
 use App\Models\livraison;
+use App\Models\PointLivraison;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use function GuzzleHttp\Promise\all;
@@ -163,9 +164,26 @@ class AdminController extends Controller
         return view('superadmin.superproduit');
     }
     public function indexlivraison(){
+<<<<<<< Updated upstream
         $livraisons = Livraison::all()->toArray();
         $ville = Ville::all();
         return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $livraisons = PointLivraison::all();
+        return view('superadmin.livraison', conpact('livraisons'));
+=======
+        $livraisons = Livraison::all()->toArray();
+        $ville = Ville::all();
+        return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+=======
+        $livraisons = Livraison::all()->toArray();
+        $ville = Ville::all();
+        return view('superadmin.livraison')->with('livraisons', $livraisons)->with('ville',$ville);
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+>>>>>>> Stashed changes
     }
     public function publicite(){
         return view('superadmin.publicite');

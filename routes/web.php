@@ -27,19 +27,6 @@ use App\Models\Image;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/acceuil',function(){
-//     return view('acceuil.acceuil');
-// })->name('acceuil');
-
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-
 Route::get('/', [ClientController::class, 'home'])->middleware(['auth'])->name('client');
 Route::get('/acceuil', [ClientController::class, 'index'])->middleware(['auth'])->name('acceuil');
 Route::get('/vexshop', [ClientController::class, 'vexshop'])->name('vexshop');
@@ -62,18 +49,6 @@ Route::get('/rembourser', [AdminController::class, 'rembourser'])->name('rembour
 Route::get('/reglage', [AdminController::class, 'reglage'])->name('reglage');
 Route::get('/retrait', [AdminController::class, 'retrait'])->name('retrait');
 Route::get('/produits', [AdminController::class, 'produits'])->name('produits');
-// Routes des categories
-//Route::get('/categorie', [CategorieController::class,'index'])->name('categorie');
-/* Route::resource('categorie','CategorieController',[
-    'names'=>[
-        'index'=>'categorie',
-        'store'=>'categorie.store',
-        'suprimer_cat'=>'categorie.suprimer_cat'
-] 
-);*/
-// Route::post('/add-categorie',[CategorieController::class,'add_cat'])->name('add.cat');
-// Route::post('/delete-cat',[CategorieController::class,'del_cat'])->name('delete.cat');
-//Route::resource('categorie', CategorieController::class);
 
 // route des attributs
 Route::get('/attribut', [AttributController::class, 'index'])->name('attribut');
@@ -105,12 +80,20 @@ Route::post('/superadmin/produit',[ProduitsController::class, 'store'])->name('p
 Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
 Route::post('/supprimer_livraison/{livraison_id}', [LivraisonController::class, 'destroy']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
+<<<<<<< HEAD
+=======
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
 // Route::get('/delete_categorie/{id}', [CategorieProduitController::class,  'delete_categorie']);
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+=======
+>>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
+>>>>>>> Stashed changes
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
-// Route::get('/categorie', [AdminController::class, 'categorie'])->name('categorie');
 Route::get('/compte', [AdminController::class, 'compte'])->name('compte');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 Route::get('/superproduit', [AdminController::class, 'superproduit'])->name('superproduit');
@@ -119,7 +102,6 @@ Route::get('/parametre', [AdminController::class, 'parametre'])->name('parametre
 Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite');
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
 Route::get('/livraison', [AdminController::class, 'indexlivraison'])->name('livraison');
-
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
