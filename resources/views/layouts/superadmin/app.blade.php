@@ -242,23 +242,13 @@
                             </a>
                         </li>
                         <li class="has-treeview">
-                            <a href="{{ route('publicite') }}" class="nav-link {{ request()->is('publicite') ? 'active' : '' }}">
+                            <a href="{{ route('banniere') }}" class="nav-link {{ request()->is('banniere') ? 'active' : '' }} ">
                                 <i class="fas fa-store-alt nav-icon"></i>
                                 <p>
                                     Publicités
                                 </p>
                             </a>
                         </li>
-
-                        <li class="has-treeview">
-                            <a href="{{ route('banniere') }}" class="nav-link {{ request()->is('banniere') ? 'active' : '' }} ">
-                                <i class="far fa-credit-card nav-icon"></i>
-                                <p>
-                                   Banniere
-                                </p>
-                            </a>
-                        </li>
-
                         <li class="has-treeview">
                             <a href="{{ route('compte') }}" class="nav-link {{ request()->is('compte') ? 'active' : '' }}">
                                 <i class="fa fa-user nav-icon"></i>
@@ -315,8 +305,6 @@
     <script src="admin/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="admin/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-    @livewireScripts
     @yield('script')
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <!-- <script>
@@ -351,4 +339,3 @@
 </body>
 
 </html>
-l>

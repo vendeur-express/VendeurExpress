@@ -59,7 +59,7 @@ Route::post('/add-attr-values', [AttributeValueController::class, 'create'])->na
 Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name('del.attr.val');
 
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
-Route::get('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
+Route::post('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
 Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('livraisons');
 
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');

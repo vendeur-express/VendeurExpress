@@ -9,13 +9,10 @@ use App\Models\livraison;
 use App\Models\PointLivraison;
 use App\Models\Slider;
 use Illuminate\Http\Request;
-use function GuzzleHttp\Promise\all;
 use Illuminate\Support\Facades\Storage;
-
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
 use App\Models\Post;
-
 class AdminController extends Controller
 {
     /**
@@ -196,71 +193,67 @@ class AdminController extends Controller
     // banniere ou pubs d'acceuil
     public function banniere(){
         $sliders=Slider::all();
-        return view('superadmin.banniere',['sliders' => Slider::orderBy('id', 'DESC')->get()]);
+        return view('superadmin.banniere',['sliders' => Slider::orderBy('id', 'DESC')->get(),'status'=>'status']);
+    }
+    public function supprimerSlider($id){
+        $sliders=Slider::find($id);
+        Storage::delete('public/images_sliders'.$sliders->image_slid);
+        $sliders->delete();
+        return back()->with('status', 'La présentation a été supprimer avec succès');
+    }
+    public function activerSlider($id){
+        $sliders=Slider::find($id);
+        $sliders->status=1;
+        $sliders->update();
+        return back();
+    }
+    public function desactiverSlider($id){
+        $sliders=Slider::find($id);
+        $sliders->status=0;
+        $sliders->update();
+        return back();
+    }
+    public function update_slid(Request $request){
+        $this->validate($request,[
+            'titre_slid'=>'required',
+            'dsc_slid'=>'required',
+            'image_slid'=>'image|required|max:1999',
+            'url_slid'=>'required' 
+        ]);
+        $sliders=new Slider();
+        $sliders=Slider::find($request->input('id_slid'));
+        $fileNameWithExt=$request->file('image_slid')->getClientOriginalName();
+        $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+        $extension=$request->file('image_slid')->getClientOriginalExtension();
+        $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+        $path=$request->file('image_slid')->storeAs('/public/images_sliders',$fileNameToStore);
+        $sliders->titre_slid=$request->input('titre_slid');
+        $sliders->dsc_slid=$request->input('dsc_slid');
+        $sliders->url_slid=$request->input('url_slid');
+        $sliders->status=0;
+        $sliders->image_slid=$fileNameToStore;
+        $sliders->update();
+        return back()->with('status','La presentation a été modifiée avec succès');
     }
     public function add_slid(Request $request){
-        if (intval($request->slid_id) == 0){
-
-            if(Slider::where('titre_slid', $request->titre_slid)->first()){
-                return response()->json(['status' => '409 ', 'data' => '[]']);
-            }
-            else {
-                $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
-                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-                $extension = $request->file('image_slid')->getClientOriginalExtension();
-                $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-                $save_slid = Slider::create([
-                    'titre_slid' => $request->titre_slid,
-                    'url_slid' => $request->url_slid,
-                    'dsc_slid'=>$request->dsc_slid,
-                    'image_slid'=>$request->$fileNameToStore
-                ]);
-                if ($save_slid) {
-                    $tbody  = '';
-                    foreach (Slider::orderBy('id', 'DESC')->get() as $key => $value){
-                        $tbody .= '<tr> <td class = "col-7" >' . $value['titre_slid'] . '</td>
-                        <td>'.$value ['dsc_slid'].'</td>
-                        <td class = " d-flex justify-content-center" ><button class = "btn btn-info btn-sm mx-2"type = "button" onclick = "edit_slid(' .  htmlspecialchars($value) . ')" > <i class = "fas fa-pencil-alt" ></i>Editer </button>  </td>'; 
-                    };
-                    return response()->json(['status' => '200', 'data' => $tbody]);
-                }else {
-                    return response()->json(['status' => '422', 'data' => '[]']);
-                }    
-            }
-        }
-        else {
-            $fileNameWithExt = $request->file('image_slid')->getClientOriginalName();
-            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('image_slid')->getClientOriginalExtension();
-            $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            $upd_slid = Slider::where('id', $request->slid_id)->update(
-                [
-                    'titre_slid' => $request->titre_slid,
-                    'url_slid' => $request->url_slid,
-                    'dsc_slid'=>$request->dsc_slid,
-                    'image_slid'=>$request->$fileNameToStore
-                ]);
-            if ($upd_slid) {
-                $tbody  = '';
-                foreach (Slider::orderBy('id', 'DESC')->get() as $key => $value) {
-
-                    $tbody .='<tr> <td class = "col-7" >' . $value['titre_slid'] . '</td>
-                    <td>'.$value ['dsc_slid'].'</td>
-                    <td class = " d-flex justify-content-center" ><button class = "btn btn-info btn-sm mx-2"type = "button" onclick = "edit_slid(' .  htmlspecialchars($value) . ')" > <i class = "fas fa-pencil-alt" ></i>Editer </button>  </td>';
-                };
-                return response()->json(['status' => '200', 'data' =>  $tbody]);
-            } else {
-                return response()->json(['status' => '422', 'data' => '[]']);
-            }
-        }
-    }
-    public function del_bann($id){
-        $categorie=Slider::find($id);
-        if($categorie->image_cat !='sansimage.jpg'){
-            Storage::delete('public/images_sliders/'.$categorie->image_cat);
-        }
-        dd($categorie);
-        $categorie->delete();
-        return back()->with('status','Presentation Supprimée avec success');
+        $this->validate($request,[
+            'titre_slid'=>'required',
+            'dsc_slid'=>'required',
+            'image_slid'=>'image|required|max:1999',
+            'url_slid'=>'required' 
+        ]);
+        $fileNameWithExt=$request->file('image_slid')->getClientOriginalName();
+        $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+        $extension=$request->file('image_slid')->getClientOriginalExtension();
+        $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+        $path=$request->file('image_slid')->storeAs('/public/images_sliders',$fileNameToStore);
+        $sliders=new Slider();
+        $sliders->titre_slid=$request->input('titre_slid');
+        $sliders->dsc_slid=$request->input('dsc_slid');
+        $sliders->url_slid=$request->input('url_slid');
+        $sliders->image_slid=$fileNameToStore;
+        $sliders->status=1;
+        $sliders->save();
+        return back()->with('status','La presentation a été enregistrée avec succès');
     } 
 }

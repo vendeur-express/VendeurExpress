@@ -41,7 +41,6 @@
     </style>
 </head>
 <body>
-    <div class="page-wrapper">
         <header class="header header-intro-clearance header-4 " >
             <div class="header-top " style="background-color:#5450a0 ">
                 <div>
@@ -53,7 +52,7 @@
                                     <li><i class="icon-phone"> </i> +226 78 02 11 57 | </li>
                                     <li><i class="icon-whatsapp"> +226 01 74 74 74 </i></li>
                                     <li><i class="icon-email"> contact@vendeurexpress.com</i></li>
-                                    <li class="my-2 my-lg-0">
+                                    <li class="header-right my-lg-0">
                                         <a href="#"> <i class="icon-facebook "></i></a>
                                         <a href="#"> <i class="icon-twitter"></i></a>
                                         <a href="#"><i class="icon-instagram"></i></a>
@@ -272,7 +271,7 @@
                                 <li class="megamenu-container active ">
                                     <a style="color: white" href="{{route('client')}}" >Acceuil</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a style="color: white" href="{{route('vexshop')}}" >Vex shop</a>
                                 </li>
                                 <li>
@@ -310,9 +309,8 @@
                 </div><!-- End .container -->
             </div><!-- End .header-bottom -->
         </header><!-- End .header -->
-       
+       <br/>
         @yield('contenu')
-        </div>
         <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
         {{-- <!-- Mobile Menu -->
@@ -362,17 +360,16 @@
         </div><!-- End .mobile-menu-container --> --}}
 
             <!-- Mobile Menu -->
-        <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
-
+        <!-- End .mobil-menu-overlay -->
         <div class="mobile-menu-container"{{--  mobile-menu-light " --}} style="background-color: #5450a0">
             <div class="mobile-menu-wrapper">
                 <span class="mobile-menu-close"><i class="icon-close"></i></span>
                 
-                <form action="#" method="get" class="mobile-search">
+                {{-- <form action="#" method="get" class="mobile-search">
                     <label for="mobile-search" class="sr-only">Recherche</label>
                     <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                </form>
+                </form> --}}
 
                 <ul class="nav nav-pills-mobile nav-border-anim" role="tablist">
                     <li class="nav-item">
@@ -380,7 +377,6 @@
                     </li>
                     <li class="nav-item">
                         <ul>
-                        <li><a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a></li>
                         <li><a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Catégories</a></li>
                     </ul>
                     </li>
@@ -431,7 +427,6 @@
                     </div><!-- .End .tab-pane -->
                     
                 </div><!-- End .tab-content -->
-
                 <div class="social-icons">
                     <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
                     <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
@@ -441,20 +436,6 @@
             </div><!-- End .mobile-menu-wrapper -->
         </div><!-- End .mobile-menu-container -->
 
-        <!-- Plugins JS File -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/jquery.hoverIntent.min.js"></script>
-        <script src="assets/js/jquery.waypoints.min.js"></script>
-        <script src="assets/js/superfish.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/bootstrap-input-spinner.js"></script>
-        <script src="assets/js/jquery.plugin.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.countdown.min.js"></script>
-        <!-- Main JS File -->
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/demos/demo-4.js"></script>
         <footer class="footer panel-footer panel-custom">
         	<div class="footer-middle">
 	            <div class="container">
@@ -513,7 +494,7 @@
                                 <div>
                                     <div>
                                         <form action="#">
-                                            <input type="email" class="form-control form-control-rounded" placeholder="Sisissez vote email" aria-label="Email Adress" required>
+                                            <input type="email" class="form-control form-control-rounded" placeholder="Saisissez vote email" aria-label="Email Adress" required>
                                             <button class="btn btn-primary" type="submit"><span>Subscribe</span><i class="icon-long-arrow-right"></i></button>
                                         </form>
                                     </div><!-- End .cta-wrapper -->
@@ -531,17 +512,32 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        VENDEUR EXPRESS
+                         VENDEUR EXPRESS
                     </p><!-- End .footer-copyright -->
                     <div class="header-right">
                         <figure class="header-right">
                             <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
                         </figure><!-- End .footer-payments -->
                     </div>
-                </div>
-                
-                </div><!-- End .container -->
+                </div>   
+            </div><!-- End .container -->
         </div><!-- End .footer-bottom -->
-    </body>
+        <!-- Plugins JS File -->
+        @yield('script')
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.hoverIntent.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/superfish.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/bootstrap-input-spinner.js"></script>
+        <script src="assets/js/jquery.plugin.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/jquery.countdown.min.js"></script>
+        <!-- Main JS File -->
+        
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/demos/demo-4.js"></script>  
+</body>
     <!-- molla/index-4.html  22 Nov 2019 09:54:18 GMT -->
 </html>

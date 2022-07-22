@@ -1,6 +1,6 @@
 @extends('layouts.superadmin.app')
 @section('titre')
-    PRODUITS | VENDEUR EXPRESS
+    ATTRIBUTS | VENDEUR EXPRESS
 @endsection
 
 @section('style')
@@ -56,7 +56,7 @@
                                     <tbody>
                                         @foreach ($attributes as $attr)
                                             <tr>
-                                                <td class="col-7">{{ $attr->label_at }}
+                                                <td class="col-7">{{ $attr->label_at }}</td>
                                                 <td class=" d-flex justify-content-center">
     
                                                     <button class="btn btn-info btn-sm mx-2" type="button"
@@ -217,9 +217,6 @@
             function reload_page() {
                 location.reload();
             }
-
-            //
-            //traitement des attributs
 
             // reset attribut modification
             function reset_modifcation_attr() {

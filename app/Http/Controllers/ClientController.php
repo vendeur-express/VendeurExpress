@@ -7,6 +7,7 @@ use App\Models\PointLivraison;
 use App\Models\Livraison;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
+use App\Models\Slider;
 
 class ClientController extends Controller
 {
@@ -17,7 +18,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('acceuil.acceuil');
+        $sliders=Slider::all()->where('status',1);
+        return view('acceuil.acceuil')->with('sliders',$sliders);
     }
 
     /**

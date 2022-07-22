@@ -12,7 +12,8 @@ class Slider extends Model
         'titre_slid',
         'dsc_slid',
         'image_slid',
-        'url_slid'
+        'url_slid',
+        'status'
     ];
     
 }

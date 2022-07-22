@@ -47,9 +47,9 @@
                         <label for="inputName">Nom catégorie</label>
                         <input type="text" id="label_cat" name='label_cat' class="form-control" required>
                     </div>
-                    <div class="from-group">
+                    <div class="from-group ">
                         <label for="inputDescription">Description</label>
-                        <textarea id="dsc_cat" name='dsc_cat' class="form-control" rows="4"></textarea>
+                        <textarea id="dsc_cat" name='dsc_cat' class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="inputDescription">Image</label>
@@ -125,11 +125,13 @@
                                             style="height:50px;width:100px"
                                             class="elevation-2"> --}}
                                             {{-- {{ dd(asset($category->image_cat)) }} --}}
-                                           
-                                            <img src="{{ asset('storage/images_categorie/'.$category->image_cat ) }}"
+                                            <img src="/storage/images_categories/{{$category->image_cat}}"
                                             style="height:50px; width:100px"
                                             class="{{-- elevation-1 --}} img-responsive">
+
+
                                         </td>
+                                        
                                         <td>
                                             <a href="{{ route('editer_cat',$category->id) }}"
                                                 class="btn btn-primary" data-toggle="modal" data-target="#editcategorie">
@@ -160,9 +162,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-         
     </div>
     {{-- Modal suppression categorie --}}
     <div class="modal fade" id="del_categorie">
