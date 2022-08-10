@@ -60,7 +60,7 @@ Route::post('/del-attr-values', [AttributeValueController::class, 'del'])->name(
 
 Route::get('/banniere', [AdminController::class, 'banniere'])->name('banniere');
 Route::post('/add-slider', [AdminController::class, 'add_slid'])->name('add.slid');
-Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('livraisons');
+// Route::post('/ajoutlivraison', [LivraisonController::class, 'livraison'])->name('livraisons');
 
 Route::get('/ajout_produit', [AdminController::class, 'ajout_produit'])->name('ajout_produit');
 Route::get('/avis', [AdminController::class, 'avis'])->name('avis');
@@ -74,24 +74,17 @@ Route::post('/sauvercategorie', [CategorieController::class, 'sauvercategorie'])
 
 // route sur categorie
 // Route::resource('categorie', CategorieController::class);
-Route::get('/categorie',[CategorieController::class,'index'])->name('categorie');
-Route::post('/admin/categorie.store',[CategorieController::class,'store'])->name('categorie.store');
-Route::post('/superadmin/produit',[ProduitsController::class, 'store'])->name('produits.store');
+Route::get('/categorie', [CategorieController::class, 'index'])->name('categorie');
+Route::post('/admin/categorie.store', [CategorieController::class, 'store'])->name('categorie.store');
+Route::post('/superadmin/produit', [ProduitsController::class, 'store'])->name('produits.store');
 Route::get('/suprimer_cat/{id}', [CategorieController::class, 'suprimer_cat']);
 Route::post('/supprimer_livraison/{livraison_id}', [LivraisonController::class, 'destroy']);
 Route::get('/editer_cat/{id}', [CategorieController::class, 'editer_cat'])->name('editer_cat');
-<<<<<<< HEAD
-=======
+
 // Route::resource('categorie',[CategorieController::class,'index','']);
 // end categorie controller
 // Route::get('/delete_categorie/{id}', [CategorieProduitController::class,  'delete_categorie']);
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
-=======
->>>>>>> dafe2075092c9cdf6b24bf22ec445ae44129d224
->>>>>>> Stashed changes
+
 Route::get('/article', [AdminController::class, 'article'])->name('article');
 Route::get('/superclient', [AdminController::class, 'superclient'])->name('superclient');
 Route::get('/compte', [AdminController::class, 'compte'])->name('compte');
@@ -101,7 +94,7 @@ Route::get('/supercoupon', [AdminController::class, 'supercoupon'])->name('super
 Route::get('/parametre', [AdminController::class, 'parametre'])->name('parametre');
 Route::get('/publicite', [AdminController::class, 'publicite'])->name('publicite');
 Route::get('/commentaire', [AdminController::class, 'commentaire'])->name('commentaire');
-Route::get('/livraison', [AdminController::class, 'indexlivraison'])->name('livraison');
+Route::get('/livraison', [AdminController::class, 'indexlivraison'])->name('livraisons');
 Route::get('/superajout_produit', [AdminController::class, 'superajout_produit'])->name('superajout_produit');
 // Route::resource('/students', StudentsController::class);
 // Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
@@ -112,4 +105,4 @@ Route::post('/ajout_post', [PostController::class, 'posts'])->name('ajout_post')
 // Function to insert the avatar image
 Route::get('/save_img', [ImageController::class, 'save_avatar']);
 
-require __DIR__ . '/auth.php'; 
+require __DIR__ . '/auth.php';

@@ -24,11 +24,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::ZeCFWN2EcOlXOGXM',
-=======
-            '_route' => 'generated::gfeflNsYCW72hdGE',
->>>>>>> Stashed changes
+            '_route' => 'generated::QLrFK7uCkDaRdW55',
           ),
           1 => NULL,
           2 => 
@@ -67,11 +63,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::jJYVl7qmRMdr2Eo6',
-=======
-            '_route' => 'generated::bHtxrcNjGj3ohtGx',
->>>>>>> Stashed changes
+            '_route' => 'generated::hyRIOOuwACspGpHo',
           ),
           1 => NULL,
           2 => 
@@ -91,11 +83,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::BFFj6ov01UNcyUfq',
-=======
-            '_route' => 'generated::sgSnbADc3oAzujzh',
->>>>>>> Stashed changes
+            '_route' => 'generated::1A94TXSR8UNg2kiE',
           ),
           1 => NULL,
           2 => 
@@ -173,11 +161,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::fbaFkhqg64mCqCNi',
-=======
-            '_route' => 'generated::V92Dp7RmzKoVuhOl',
->>>>>>> Stashed changes
+            '_route' => 'generated::HZio55SXlAs4dnn8',
           ),
           1 => NULL,
           2 => 
@@ -727,33 +711,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/add-slider' => 
+      '/add-slider' => 
       array (
         0 => 
         array (
           0 => 
           array (
             '_route' => 'add.slid',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/ajoutlivraison' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'livraisons',
           ),
           1 => NULL,
           2 => 
@@ -1104,35 +1068,12 @@ app('router')->setCompiledRoutes(
         ),
       ),
       '/livraison' => 
-<<<<<<< Updated upstream
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'livraison',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/superajout_produit' => 
-=======
->>>>>>> Stashed changes
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'livraison',
+            '_route' => 'livraisons',
           ),
           1 => NULL,
           2 => 
@@ -1152,11 +1093,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::cT27vN5YMxcTiDM8',
-=======
             '_route' => 'superajout_produit',
->>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1176,11 +1113,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::bPFbwksiqM5S0AON',
-=======
             '_route' => 'ajout_post',
->>>>>>> Stashed changes
           ),
           1 => NULL,
           2 => 
@@ -1199,11 +1132,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::Fd3ikwcA2doxP9Ta',
-=======
-            '_route' => 'generated::3iKZITp4yMnWkODk',
->>>>>>> Stashed changes
+            '_route' => 'generated::iqyEiwg0FzyoXNQm',
           ),
           1 => NULL,
           2 => 
@@ -1240,11 +1169,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::cixzHiLT9caRefuh',
-=======
-            '_route' => 'generated::G1EixzNyyvTLdEt7',
->>>>>>> Stashed changes
+            '_route' => 'generated::xVxaPCxPazZMMeph',
           ),
           1 => NULL,
           2 => 
@@ -1280,11 +1205,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::4WBnScsWABDIZlka',
-=======
-            '_route' => 'generated::eHO5NsoqmmgF16AN',
->>>>>>> Stashed changes
+            '_route' => 'generated::DnZbPX7D3mfuiWxy',
           ),
           1 => NULL,
           2 => 
@@ -1414,11 +1335,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::tVDKwJb29A7rkdQj',
-=======
-            '_route' => 'generated::NfWDUXLqLePtaaDi',
->>>>>>> Stashed changes
+            '_route' => 'generated::VJKNg3dlENrJrkQB',
           ),
           1 => NULL,
           2 => 
@@ -1453,11 +1370,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-<<<<<<< Updated upstream
-      0 => '{^(?|/livewire/(?|message/([^/]++)(*:36)|preview\\-file/([^/]++)(*:65))|/admin/(?|desactiverSlider/([^/]++)(*:108)|activerSlider/([^/]++)(*:138)|editerSlider/([^/]++)(*:167))|/del\\-slider/([^/]++)(*:197)|/update\\-slider/([^/]++)(*:229)|/suprimer_cat/([^/]++)(*:259)|/editer_cat/([^/]++)(*:287)|/posts/(?|([^/]++)(*:313)|create(*:327))|/reset\\-password/([^/]++)(*:361)|/verify\\-email/([^/]++)/([^/]++)(*:401))/?$}sDu',
-=======
       0 => '{^(?|/livewire/(?|message/([^/]++)(*:36)|preview\\-file/([^/]++)(*:65))|/sup(?|rimer_cat/([^/]++)(*:98)|primer_livraison/([^/]++)(*:130))|/editer_cat/([^/]++)(*:159)|/reset\\-password/([^/]++)(*:192)|/verify\\-email/([^/]++)/([^/]++)(*:232))/?$}sDu',
->>>>>>> Stashed changes
     ),
     3 => 
     array (
@@ -1506,44 +1419,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-<<<<<<< Updated upstream
-      108 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'desactiverSlider',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      138 => 
-=======
       98 => 
->>>>>>> Stashed changes
       array (
         0 => 
         array (
           0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'activerSlider',
-=======
-            '_route' => 'generated::6JHFP0Vi7BIZomSi',
->>>>>>> Stashed changes
+            '_route' => 'generated::T2alKiicr1noeUHc',
           ),
           1 => 
           array (
@@ -1560,108 +1442,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-<<<<<<< Updated upstream
-      167 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'editerSlider',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      197 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'SupprimerSlider',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      229 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'update.slid',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      259 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::mxoyGVDAjED1njkF',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      287 => 
-=======
       130 => 
->>>>>>> Stashed changes
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::NEh9shaB2csWRX0R',
+            '_route' => 'generated::YxzCHb2y2TPBB4dz',
           ),
           1 => 
           array (
@@ -1677,11 +1464,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-<<<<<<< Updated upstream
-      313 => 
-=======
       159 => 
->>>>>>> Stashed changes
       array (
         0 => 
         array (
@@ -1704,33 +1487,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-<<<<<<< Updated upstream
-      327 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'posts.store',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      361 => 
-=======
       192 => 
->>>>>>> Stashed changes
       array (
         0 => 
         array (
@@ -1753,11 +1510,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-<<<<<<< Updated upstream
-      401 => 
-=======
       232 => 
->>>>>>> Stashed changes
       array (
         0 => 
         array (
@@ -1796,11 +1549,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-<<<<<<< Updated upstream
-    'generated::ZeCFWN2EcOlXOGXM' => 
-=======
-    'generated::gfeflNsYCW72hdGE' => 
->>>>>>> Stashed changes
+    'generated::QLrFK7uCkDaRdW55' => 
     array (
       'methods' => 
       array (
@@ -1821,11 +1570,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::ZeCFWN2EcOlXOGXM',
-=======
-        'as' => 'generated::gfeflNsYCW72hdGE',
->>>>>>> Stashed changes
+        'as' => 'generated::QLrFK7uCkDaRdW55',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1935,11 +1680,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::jJYVl7qmRMdr2Eo6' => 
-=======
-    'generated::bHtxrcNjGj3ohtGx' => 
->>>>>>> Stashed changes
+    'generated::hyRIOOuwACspGpHo' => 
     array (
       'methods' => 
       array (
@@ -1951,11 +1692,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-<<<<<<< Updated upstream
-        'as' => 'generated::jJYVl7qmRMdr2Eo6',
-=======
-        'as' => 'generated::bHtxrcNjGj3ohtGx',
->>>>>>> Stashed changes
+        'as' => 'generated::hyRIOOuwACspGpHo',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1971,11 +1708,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::BFFj6ov01UNcyUfq' => 
-=======
-    'generated::sgSnbADc3oAzujzh' => 
->>>>>>> Stashed changes
+    'generated::1A94TXSR8UNg2kiE' => 
     array (
       'methods' => 
       array (
@@ -1987,11 +1720,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-<<<<<<< Updated upstream
-        'as' => 'generated::BFFj6ov01UNcyUfq',
-=======
-        'as' => 'generated::sgSnbADc3oAzujzh',
->>>>>>> Stashed changes
+        'as' => 'generated::1A94TXSR8UNg2kiE',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2116,11 +1845,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::fbaFkhqg64mCqCNi' => 
-=======
-    'generated::V92Dp7RmzKoVuhOl' => 
->>>>>>> Stashed changes
+    'generated::HZio55SXlAs4dnn8' => 
     array (
       'methods' => 
       array (
@@ -2137,21 +1862,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-<<<<<<< Updated upstream
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000743b1f8e000000000f0dadc5";}";s:4:"hash";s:44:"UpcfR/GuHUc5HKnjcv7YMrhRwTr2MiFDcRwqTWvPcRg=";}}',
-=======
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006170000000000000000";}";s:4:"hash";s:44:"0w5enTCmMJsaX2oe7nfAi8wBJhYwwpoZP7zVmDMgHBA=";}}',
->>>>>>> Stashed changes
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006b10000000000000000";}";s:4:"hash";s:44:"P1vuDn+Xy5dwm0PBx3N4jaH0H7Fx/hcmK9bHp92aflA=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::fbaFkhqg64mCqCNi',
-=======
-        'as' => 'generated::V92Dp7RmzKoVuhOl',
->>>>>>> Stashed changes
+        'as' => 'generated::HZio55SXlAs4dnn8',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3168,10 +2885,9 @@ app('router')->setCompiledRoutes(
     array (
       'methods' => 
       array (
-        0 => 'GET',
-        1 => 'HEAD',
+        0 => 'POST',
       ),
-      'uri' => 'admin/add-slider',
+      'uri' => 'add-slider',
       'action' => 
       array (
         'middleware' => 
@@ -3186,207 +2902,6 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'add.slid',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'desactiverSlider' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'admin/desactiverSlider/{id}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\AdminController@desactiverSlider',
-        'controller' => 'App\\Http\\Controllers\\AdminController@desactiverSlider',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'desactiverSlider',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'activerSlider' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'admin/activerSlider/{id}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\AdminController@activerSlider',
-        'controller' => 'App\\Http\\Controllers\\AdminController@activerSlider',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'activerSlider',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'editerSlider' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'admin/editerSlider/{id}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\AdminController@editerSlider',
-        'controller' => 'App\\Http\\Controllers\\AdminController@editerSlider',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'editerSlider',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'SupprimerSlider' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'del-slider/{id}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\AdminController@supprimerSlider',
-        'controller' => 'App\\Http\\Controllers\\AdminController@supprimerSlider',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'SupprimerSlider',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'update.slid' => 
-=======
-    'livraisons' => 
->>>>>>> Stashed changes
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-<<<<<<< Updated upstream
-      'uri' => 'update-slider/{id}',
-=======
-      'uri' => 'ajoutlivraison',
->>>>>>> Stashed changes
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-<<<<<<< Updated upstream
-        'uses' => 'App\\Http\\Controllers\\AdminController@update_slid',
-        'controller' => 'App\\Http\\Controllers\\AdminController@update_slid',
-=======
-        'uses' => 'App\\Http\\Controllers\\LivraisonController@livraison',
-        'controller' => 'App\\Http\\Controllers\\LivraisonController@livraison',
->>>>>>> Stashed changes
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-<<<<<<< Updated upstream
-        'as' => 'update.slid',
-=======
-        'as' => 'livraisons',
->>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -3734,7 +3249,6 @@ app('router')->setCompiledRoutes(
       'withTrashed' => false,
     ),
     'produits.store' => 
-<<<<<<< Updated upstream
     array (
       'methods' => 
       array (
@@ -3770,49 +3284,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::mxoyGVDAjED1njkF' => 
-=======
->>>>>>> Stashed changes
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'superadmin/produit',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ProduitsController@store',
-        'controller' => 'App\\Http\\Controllers\\ProduitsController@store',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-<<<<<<< Updated upstream
-        'as' => 'generated::mxoyGVDAjED1njkF',
-=======
-        'as' => 'produits.store',
->>>>>>> Stashed changes
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::6JHFP0Vi7BIZomSi' => 
+    'generated::T2alKiicr1noeUHc' => 
     array (
       'methods' => 
       array (
@@ -3833,7 +3305,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::6JHFP0Vi7BIZomSi',
+        'as' => 'generated::T2alKiicr1noeUHc',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3849,7 +3321,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::NEh9shaB2csWRX0R' => 
+    'generated::YxzCHb2y2TPBB4dz' => 
     array (
       'methods' => 
       array (
@@ -3869,7 +3341,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::NEh9shaB2csWRX0R',
+        'as' => 'generated::YxzCHb2y2TPBB4dz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4107,48 +3579,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'livraison' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'livraison',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\AdminController@livraison',
-        'controller' => 'App\\Http\\Controllers\\AdminController@livraison',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'livraison',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'superajout_produit' => 
-=======
     'publicite' => 
->>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -4222,7 +3653,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'livraison' => 
+    'livraisons' => 
     array (
       'methods' => 
       array (
@@ -4243,7 +3674,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'livraison',
+        'as' => 'livraisons',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4259,11 +3690,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::cT27vN5YMxcTiDM8' => 
-=======
     'superajout_produit' => 
->>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -4284,11 +3711,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::cT27vN5YMxcTiDM8',
-=======
         'as' => 'superajout_produit',
->>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -4304,11 +3727,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::bPFbwksiqM5S0AON' => 
-=======
     'ajout_post' => 
->>>>>>> Stashed changes
     array (
       'methods' => 
       array (
@@ -4328,11 +3747,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::bPFbwksiqM5S0AON',
-=======
         'as' => 'ajout_post',
->>>>>>> Stashed changes
       ),
       'fallback' => false,
       'defaults' => 
@@ -4348,11 +3763,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::Fd3ikwcA2doxP9Ta' => 
-=======
-    'generated::3iKZITp4yMnWkODk' => 
->>>>>>> Stashed changes
+    'generated::iqyEiwg0FzyoXNQm' => 
     array (
       'methods' => 
       array (
@@ -4373,11 +3784,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::Fd3ikwcA2doxP9Ta',
-=======
-        'as' => 'generated::3iKZITp4yMnWkODk',
->>>>>>> Stashed changes
+        'as' => 'generated::iqyEiwg0FzyoXNQm',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4431,11 +3838,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::cixzHiLT9caRefuh' => 
-=======
-    'generated::G1EixzNyyvTLdEt7' => 
->>>>>>> Stashed changes
+    'generated::xVxaPCxPazZMMeph' => 
     array (
       'methods' => 
       array (
@@ -4456,11 +3859,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::cixzHiLT9caRefuh',
-=======
-        'as' => 'generated::G1EixzNyyvTLdEt7',
->>>>>>> Stashed changes
+        'as' => 'generated::xVxaPCxPazZMMeph',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4514,11 +3913,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::4WBnScsWABDIZlka' => 
-=======
-    'generated::eHO5NsoqmmgF16AN' => 
->>>>>>> Stashed changes
+    'generated::DnZbPX7D3mfuiWxy' => 
     array (
       'methods' => 
       array (
@@ -4539,11 +3934,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::4WBnScsWABDIZlka',
-=======
-        'as' => 'generated::eHO5NsoqmmgF16AN',
->>>>>>> Stashed changes
+        'as' => 'generated::DnZbPX7D3mfuiWxy',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4863,11 +4254,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::tVDKwJb29A7rkdQj' => 
-=======
-    'generated::NfWDUXLqLePtaaDi' => 
->>>>>>> Stashed changes
+    'generated::VJKNg3dlENrJrkQB' => 
     array (
       'methods' => 
       array (
@@ -4888,11 +4275,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::tVDKwJb29A7rkdQj',
-=======
-        'as' => 'generated::NfWDUXLqLePtaaDi',
->>>>>>> Stashed changes
+        'as' => 'generated::VJKNg3dlENrJrkQB',
       ),
       'fallback' => false,
       'defaults' => 

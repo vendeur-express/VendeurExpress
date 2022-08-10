@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Support\Str;
 use App\Models\Pay;
 use App\Models\Image;
@@ -18,8 +19,8 @@ class Produit extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'label_pro' ,
-        'dsc_pro' ,
+        'label_pro',
+        'dsc_pro',
         'prix_pro',
     ];
     protected static function boot()
@@ -54,7 +55,6 @@ class Produit extends Model
     public function images()
     {
         return $this->belongsToMany(Image::class);
-        
     }
 
     // Recuperer tous les attributs de cet produit
